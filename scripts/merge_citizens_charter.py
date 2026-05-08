@@ -17,7 +17,7 @@ import json
 import re
 import os
 from pathlib import Path
-from typing import Any
+from typing import Any, Set
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -51,7 +51,7 @@ def slugify(text: str) -> str:
     return slug
 
 
-def generate_service_slug(service_number: str, service_name: str, existing_slugs: set[str]) -> str:
+def generate_service_slug(service_number: str, service_name: str, existing_slugs: Set[str]) -> str:
     """Generate a unique slug for a service
 
     Pattern: {section}-{service_number}-{kebab-case-name} for duplicates

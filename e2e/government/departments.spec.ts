@@ -34,7 +34,7 @@ test.describe('Departments Pages', () => {
 
     // Search for a specific department
     const searchInput = page.locator('input[placeholder*="Search"]');
-    await searchInput.fill('Health');
+    await searchInput.fill('Agriculture');
 
     // Wait for filtering to apply
     await page.waitForTimeout(300);
