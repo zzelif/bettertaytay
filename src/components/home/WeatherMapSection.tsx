@@ -65,8 +65,8 @@ export default function WeatherMapSection() {
       try {
         setLoading(true);
         const data = await fetchWeatherData(); // WeatherData[]
-        const losBanos = data[0]; // Only 1 city
-        setWeather(losBanos);
+        const city = data[0]; // Only 1 city
+        setWeather(city);
       } catch (err: unknown) {
         setError(
           err instanceof Error ? err.message : 'Failed to fetch weather data'
@@ -170,15 +170,14 @@ export default function WeatherMapSection() {
   }, []);
 
   // Safe hourly forecast
-  const hourlyForecast: HourlyForecast[] =
+  const hourlyForecast: Partial<HourlyForecast>[] =
     weather?.hourly && weather.hourly.length > 0
       ? weather.hourly.slice(0, 4)
       : Array.from({ length: 4 }, (_, i) => ({
           hour: `${i + 1}PM`,
-          temperature: weather?.temperature ?? 30,
+          temp: weather?.temperature ?? 30,
           icon: weather?.icon ?? 'Sun',
         }));
-
   const WeatherIcon = weather ? lucideIconMap[weather.icon || 'Sun'] : Sun;
 
   return (
@@ -193,7 +192,7 @@ export default function WeatherMapSection() {
 
         <div className='flex flex-col items-stretch gap-6 md:flex-row'>
           {/* Weather Card - using Card component */}
-          <Card className='w-full flex-1 md:min-w-[200px]'>
+          <Card className='w-full flex-1 md:min-w-50'>
             <CardContent className='p-4 md:p-6'>
               {loading ? (
                 <div className='text-kapwa-text-disabled flex items-center gap-2'>
@@ -236,16 +235,14 @@ export default function WeatherMapSection() {
                   {/* Bottom: Hourly forecast */}
                   <div className='flex justify-between gap-2'>
                     {hourlyForecast.map((h, idx) => {
-                      const IconComp = lucideIconMap[h.icon] || Sun;
+                      const IconComp = lucideIconMap[h.icon || 'Sun'] || Sun;
                       return (
                         <div
                           key={idx}
                           className='hover:bg-kapwa-bg-surface-brand bg-kapwa-bg-hover flex w-full flex-col items-center gap-1.5 rounded-xl p-2 transition-all duration-200 hover:-translate-y-0.5 sm:flex-1 sm:p-3'
                         >
                           <IconComp className='text-kapwa-text-brand h-6 w-6' />
-                          <div className='text-base font-bold'>
-                            {h.temperature}°
-                          </div>
+                          <div className='text-base font-bold'>{h.temp}°</div>
                           <div className='text-kapwa-text-disabled text-xs'>
                             {h.hour}
                           </div>

@@ -11,8 +11,14 @@
       "barangay_name": { "type": "string" },
       "address": { "type": "string" },
       "trunkline": {
-        "type": "array",
-        "items": { "type": "string" }
+        "oneOf": [
+          {
+            "type": "array",
+            "items": { "type": ["string", "null"] }
+          },
+          { "type": "null" }
+        ],
+        "description": "Array of phone numbers (items can be null) or null"
       },
       "website": {
         "type": ["string", "null"],

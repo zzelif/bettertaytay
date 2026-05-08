@@ -49,9 +49,9 @@ function getCorsHeaders(origin: string | null): Record<string, string> {
 
 // CONFIGURATION - Easy to change for other municipalities
 const DEFAULT_CITY: CityCoordinates = {
-  name: 'Los Baños',
-  lat: 14.1763,
-  lon: 121.2219,
+  name: 'Taytay',
+  lat: 14.5522,
+  lon: 121.1306,
 };
 
 // Optional: Add more cities if needed
@@ -166,7 +166,7 @@ async function fetchWeatherData(
   specificCity: string | null = null
 ): Promise<WeatherResponseData> {
   // Get API key from environment variable
-  const apiKey = env.OPENWEATHERMAP_API_KEY;
+  const apiKey = env.OPENWEATHERMAP_API_KEY || env.WEATHER_API_KEY;
   if (!apiKey) {
     throw new Error(
       'OpenWeatherMap API key not found in environment variables'

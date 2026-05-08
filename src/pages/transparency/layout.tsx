@@ -20,7 +20,7 @@ export default function TransparencyLayout() {
           <PageHeader
             variant='centered'
             title='Transparency Portal'
-            description='A community-led initiative to make Los Baños public data accessible, readable, and verifiable for every citizen.'
+            description='A community-led initiative to make Taytay public data accessible, readable, and verifiable for every citizen.'
           />
         ) : (
           <PageHeader

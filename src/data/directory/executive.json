@@ -1,27 +1,27 @@
 [
   {
     "slug": "office-of-the-mayor",
-    "name": "Niel Andrew N. Nocon",
+    "name": "Allan Martine S. De Leon",
     "role": "Mayor",
     "office": "Office of the Mayor",
-    "address": "Municipal Hall, Los Baños",
-    "phone": "530-2981 ext 3000",
-    "email": "mayorsoffice@losbanos.gov.ph",
+    "address": "Municipal Hall, Taytay",
+    "phone": "(+63) 915 9421 768",
+    "email": "allanmartine.deleon@taytayrizal.gov.ph",
     "website": "https://www.facebook.com/alagangNOCON",
     "isElected": true,
-    "personId": "nocon-niel-andrew-n"
+    "personId": "de-leon-allan-martine-s"
   },
   {
     "slug": "office-of-the-vice-mayor",
-    "name": "Marlo PJ A. Alipon",
+    "name": "Jan Victor B. Cabitac",
     "role": "Vice Mayor",
     "office": "Office of the Vice Mayor",
-    "address": "Municipal Hall, Los Baños",
-    "phone": "530-2981 ext 2000",
-    "email": "vmo@losbanos.gov.ph",
+    "address": "Municipal Hall, Taytay",
+    "phone": "(02) 8 286 4799",
+    "email": "JV.Cabitac@taytayrizal.gov.ph",
     "website": "https://www.facebook.com/profile.php?id=100064361905801",
     "isElected": true,
-    "personId": "alipon-marlo-pj-a"
+    "personId": "cabitac-jan-victor-b"
   },
   {
     "slug": "chief-of-staff",

@@ -23,8 +23,27 @@ export const getRandomNumber = (min: number, max: number): number => {
 };
 
 /**
+ * Parses an array of strings (or a single string) containing multiple
+ * phone numbers separated by slashes or commas into a flat, clean array.
+ */
+export function parsePhones(
+  phones: (string | null)[] | string | null
+): string[] {
+  if (!phones) return [];
+
+  // Ensure it is an array (handles both string and string[] inputs)
+  const phoneArray = Array.isArray(phones) ? phones : [phones];
+
+  return phoneArray
+    .filter((p): p is string => Boolean(p))
+    .flatMap(p => p.split(/(?:\/|,)\s*/))
+    .map(p => p.trim())
+    .filter(p => p.length > 0);
+}
+
+/**
  * Convert phone number to tel: URI format (E.164)
- * Handles various formats:
+ *  * Handles various formats:
  * - "530-2981 ext 3000" → "tel:+63495302981"
  * - "530-2981, 3000" → "tel:+63495302981"
  * - "049 536 7965" → "tel:+63495367965"
@@ -35,22 +54,41 @@ export function toTelUri(phone: string | null): string | null {
 
   // Remove extension keywords and everything after
   const mainNumber = phone
-    .split(/(?:ext|ex|x|,)\s*/i)[0]
+    .split(/(?:\/|,|ext|ex|x)\s*/i)[0]
     .replace(/[^\d+]/g, ''); // Keep only digits
 
   if (!mainNumber) return null;
 
-  // Handle different formats
-  if (mainNumber.length === 7) {
-    // Local: 5302981 → add 049 area code → +63495302981
-    return `tel:+6349${mainNumber}`;
-  } else if (mainNumber.length === 10 && mainNumber.startsWith('049')) {
-    // With area code: 0495367965 → +63495367965 (remove leading 0)
+  if (mainNumber.length === 10 && mainNumber.startsWith('02')) {
+    // With area code: (02) 8284 4756 → 0282844756
     return `tel:+63${mainNumber.slice(1)}`;
-  } else if (mainNumber.length === 11 && mainNumber.startsWith('0')) {
-    // Mobile: 09275091198 → +639275091198
+  } else if (mainNumber.length === 8) {
+    // Without area code: 8284 4756 → 82844756
+    return `tel:+632${mainNumber}`;
+  } else if (mainNumber.length === 11 && mainNumber.startsWith('09')) {
+    // Mobile: 09275091198
     return `tel:+63${mainNumber.slice(1)}`;
+  } else if (mainNumber.startsWith('63') || mainNumber.startsWith('+63')) {
+    // Mobile: +639275091198
+    return `tel:+${mainNumber.replace('+', '')}`;
+  } else if (mainNumber.length === 9 && mainNumber.startsWith('8700')) {
+    // 8 700 144 98 -> tel:+632870014498
+    return `tel:+632${mainNumber}`;
   }
 
   return null;
+}
+
+/**
+ * Parses a raw string containing multiple emails separated by slashes or commas
+ * and returns a clean array of valid email addresses.
+ * parseEmails("admin@taytay.gov.ph / tmg@taytay.gov.ph") → ["admin@taytay.gov.ph", "tmg@taytay.gov.ph"]
+ */
+export function parseEmails(emailStr: string | null): string[] {
+  if (!emailStr) return [];
+
+  return emailStr
+    .split(/(?:\/|,)\s*/)
+    .map(e => e.trim())
+    .filter(e => e.length > 0 && e.includes('@'));
 }

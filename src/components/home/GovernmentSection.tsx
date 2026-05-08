@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -10,9 +10,14 @@ import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardGrid } from '@/components/ui/Card';
 
+import departmentsData from '@/data/directory/departments.json';
+import barangayData from '@/data/directory/barangays.json';
+
 const GovernmentSection: FC = () => {
   const { t } = useTranslation('common');
   const navigate = useNavigate();
+
+  const [search] = useState('');
 
   const branches = [
     {
@@ -44,6 +49,16 @@ const GovernmentSection: FC = () => {
     },
   ];
 
+  const filtered = departmentsData
+    .filter(d => d.office_name.toLowerCase().includes(search.toLowerCase()))
+    .sort((a, b) => {
+      const clean = (name: string) =>
+        name.replace(/DEPARTMENT OF |MUNICIPAL |LOCAL /g, '');
+      return clean(a.office_name).localeCompare(clean(b.office_name));
+    }).length;
+
+  const barangays = barangayData.length;
+
   return (
     <section className='bg-kapwa-bg-surface py-12'>
       <div className='container mx-auto px-4'>
@@ -59,10 +74,10 @@ const GovernmentSection: FC = () => {
         {/* Quick stats using documented Badge component */}
         <div className='flex flex-wrap justify-center gap-4 mb-8'>
           <Badge variant='primary' className='px-4 py-2 text-sm'>
-            18 Barangays
+            {barangays} Barangays
           </Badge>
           <Badge variant='secondary' className='px-4 py-2 text-sm'>
-            15 Departments
+            {filtered} Departments
           </Badge>
           <Badge variant='slate' className='px-4 py-2 text-sm'>
             Elected Officials

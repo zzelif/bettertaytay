@@ -3,21 +3,19 @@ import { GlobeIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 
 import { toTitleCase } from '@/lib/stringUtils';
+import { config } from '@/lib/lguConfig';
+import { parsePhones, toTelUri } from '@/lib';
 
 interface BarangayHeaderProps {
   barangay: {
     barangay_name: string;
     address?: string;
-    trunkline?: string[];
+    trunkline?: (string | null)[] | null;
     website?: string;
   };
 }
 
 export function BarangayHeader({ barangay }: BarangayHeaderProps) {
-  const contactValue = Array.isArray(barangay.trunkline)
-    ? barangay.trunkline[0]
-    : barangay.trunkline;
-
   return (
     <header
       className='bg-kapwa-bg-surface border-kapwa-border-weak rounded-xl border p-6 shadow-sm'
@@ -44,21 +42,22 @@ export function BarangayHeader({ barangay }: BarangayHeaderProps) {
       {/* Middle: Address */}
       {barangay.address && (
         <p className='text-kapwa-text-support mb-4 text-sm'>
-          {barangay.address}, Los Baños, Laguna
+          {barangay.address}, {config.lgu.name}, {config.lgu.province}
         </p>
       )}
 
       {/* Bottom: Contact Row */}
       <div className='flex flex-col gap-4 text-sm md:flex-row md:gap-6'>
-        {contactValue && (
+        {parsePhones(barangay.trunkline ?? null).map((contactValue, index) => (
           <a
-            href={`tel:${contactValue}`}
+            key={index}
+            href={toTelUri(contactValue) || '#'}
             className='text-kapwa-text-support hover:text-kapwa-text-brand flex items-center gap-2 transition-colors'
           >
             <PhoneIcon aria-hidden='true' className='h-4 w-4' />
             <span>{contactValue}</span>
           </a>
-        )}
+        ))}
         {barangay.website && (
           <a
             href={barangay.website}

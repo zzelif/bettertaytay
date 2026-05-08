@@ -75,7 +75,7 @@ export const Navbar: FC = () => {
               <span className='hidden sm:inline'>Official Gov.ph</span>
             </a>
             <Link
-              to='https://hotlines.bettergov.ph/?city=los%20baños&province=laguna'
+              to='https://hotlines.bettergov.ph/?city=taytay&province=rizal'
               className='hover:text-kapwa-text-brand inline-flex text-[9px] font-bold tracking-widest whitespace-nowrap text-kapwa-text-support uppercase sm:text-[10px] md:text-xs'
             >
               Hotlines
@@ -117,7 +117,7 @@ export const Navbar: FC = () => {
                 {config.portal.name}
               </div>
               <div className='line-clamp-2 text-[9px] leading-tight font-medium text-kapwa-text-support md:line-clamp-1 md:text-xs md:leading-normal'>
-                A Community-run portal for the Municipality of Los Baños
+                A Community-run portal for the Municipality of {config.lgu.name}
               </div>
             </div>
           </Link>
@@ -211,7 +211,7 @@ export const Navbar: FC = () => {
 
       {/* 3. MOBILE MENU OVERLAY: RESTORED NESTING */}
       {isOpen && (
-        <div className='animate-in slide-in-from-right fixed inset-0 top-[104px] z-40 overflow-y-auto bg-kapwa-bg-surface duration-300 lg:hidden'>
+        <div className='animate-in slide-in-from-right fixed inset-0 top-26 z-40 overflow-y-auto bg-kapwa-bg-surface duration-300 lg:hidden'>
           <div className='flex flex-col p-4 pb-20'>
             {mainNavigation.map(item => {
               const hasChildren = item.children && item.children.length > 0;

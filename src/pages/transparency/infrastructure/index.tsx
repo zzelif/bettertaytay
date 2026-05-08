@@ -124,7 +124,9 @@ export default function InfrastructurePage() {
     // Most recent year
     const infraYear = Math.max(
       ...results.map(item => Number(item.infraYear) || 0)
-    );
+    )
+      .toLocaleString()
+      .replace(/,/g, '');
 
     return {
       totalBudget,
@@ -201,7 +203,7 @@ export default function InfrastructurePage() {
       {/* Header + Search + Status Toggle  */}
       <ModuleHeader
         title='Infrastructure Projects'
-        description='Monitoring of national DPWH infrastructure projects within Los Baños.'
+        description='Monitoring of national DPWH infrastructure projects within Taytay.'
       >
         <div className='flex w-full flex-col items-center gap-4 md:w-auto md:flex-row'>
           <SearchInput
@@ -343,7 +345,7 @@ export default function InfrastructurePage() {
                             {item.location.barangay
                               ? `${item.location.barangay}, `
                               : ''}
-                            {item.location.municipality || 'Los Baños'}
+                            {item.location.municipality || 'Taytay'}
                           </span>
                         </span>
                       </div>

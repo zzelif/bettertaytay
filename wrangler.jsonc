@@ -1,24 +1,24 @@
 {
-  "name": "betterlb",
+  "name": "bettertaytay",
   "pages_build_output_dir": "dist",
-  "compatibility_date": "2026-01-13",
+  "compatibility_date": "2026-05-03",
   "kv_namespaces": [
     {
       "binding": "WEATHER_KV",
-      "id": "a6daec9904a04769918521d0b3d836e3"
+      "id": "87a8014b559e48659a072ec5dcdb5c65"
     }
   ],
   "d1_databases": [
     {
-      "binding": "BETTERLB_DB",
-      "database_name": "betterlb_openlgu",
-      "database_id": "67f71e98-fece-4460-b3b6-40f6f8742d89",
+      "binding": "BETTERTAYTAY_DB",
+      "database_name": "bettertaytay_openlgu",
+      "database_id": "5175d7f6-efb0-4477-8cc9-c9d0eb4d8c22",
       "migrations_dir": "db/migrations",
       "remote": true
     }
   ],
   "vars": {
-    "GITHUB_REPO": "BetterLosBanos/betterlb",
+    "GITHUB_REPO": "zzelif/bettertaytay",
     "GITHUB_CLIENT_ID": "__GITHUB_CLIENT_ID__",
     "GITHUB_CLIENT_SECRET": "__GITHUB_CLIENT_SECRET__",
     "GOOGLE_CLIENT_ID": "__GOOGLE_CLIENT_ID__",

@@ -35,8 +35,12 @@ export default function BarangayDetail() {
     o.role.includes('SB Member')
   );
   const skOfficials = barangay.officials?.filter(o => o.role.includes('SK'));
-  const secretary = barangay.officials?.find(o => o.role.includes('Secretary'));
-  const treasurer = barangay.officials?.find(o => o.role.includes('Treasurer'));
+  const secretary = barangay.officials?.find(o =>
+    o.role.includes('Barangay Secretary')
+  );
+  const treasurer = barangay.officials?.find(o =>
+    o.role.includes('Barangay Treasurer')
+  );
 
   return (
     <div className='animate-in fade-in space-y-6 pb-20 duration-500'>
@@ -137,7 +141,7 @@ export default function BarangayDetail() {
                 <OfficialCard
                   key={sk.name}
                   official={sk}
-                  role={sk.role.replace('SK ', '')}
+                  role={sk.role.replace('Member', 'Kagawad')}
                   icon={GraduationCapIcon}
                 />
               ))}

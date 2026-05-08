@@ -159,6 +159,11 @@ export const footerNavigation = {
           href: config.lgu.provinceWebsite,
           target: '_blank',
         },
+        {
+          label: 'PhilAtlas',
+          href: 'https://www.philatlas.com',
+          target: '_blank',
+        },
         // { label: 'Privacy Policy', href: '/privacy' },
         // { label: 'Accessibility', href: '/accessibility' },
       ],
@@ -167,17 +172,12 @@ export const footerNavigation = {
   socialLinks: [
     {
       label: 'Facebook',
-      href: 'https://facebook.com/betterlb.org',
-      target: '_blank',
-    },
-    {
-      label: 'Discord',
-      href: 'https://discord.gg/dA6tkU4FYS',
+      href: '',
       target: '_blank',
     },
     {
       label: 'GitHub',
-      href: 'https://github.com/BetterLosBanos/betterlb',
+      href: 'https://github.com/zzelif/bettertaytay',
       target: '_blank',
     },
   ],

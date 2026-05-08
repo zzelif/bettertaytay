@@ -22,10 +22,11 @@ import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent } from '@/components/ui/Card';
 
 import { toTitleCase } from '@/lib/stringUtils';
-import { toTelUri } from '@/lib/utils';
+import { parseEmails, parsePhones, toTelUri } from '@/lib/utils';
 
 import departmentsData from '@/data/directory/departments.json';
 import mergedServicesData from '@/data/citizens-charter/merged-services.json';
+import { config } from '@/lib/lguConfig';
 
 export default function DepartmentDetail() {
   const { department: slug } = useParams();
@@ -53,10 +54,6 @@ export default function DepartmentDetail() {
         Office Not Found
       </div>
     );
-
-  const contactValue = Array.isArray(dept.trunkline)
-    ? dept.trunkline[0]
-    : dept.trunkline;
 
   return (
     <div className='animate-in fade-in space-y-6 pb-20 duration-500'>
@@ -112,21 +109,22 @@ export default function DepartmentDetail() {
         {/* Middle: Address */}
         {dept.address && (
           <p className='text-kapwa-text-support mb-4 text-sm'>
-            {dept.address}, Los Baños, Laguna
+            {dept.address}, {config.lgu.name}, {config.lgu.province}
           </p>
         )}
 
         {/* Bottom: Contact Row */}
         <div className='flex flex-col gap-4 text-sm md:flex-row md:gap-6'>
-          {contactValue && (
+          {parsePhones(dept.trunkline).map((individualContact, index) => (
             <a
-              href={toTelUri(contactValue) || '#'}
+              key={index}
+              href={toTelUri(individualContact) || '#'}
               className='text-kapwa-text-support hover:text-kapwa-text-brand flex items-center gap-2 transition-colors'
             >
-              <PhoneIcon aria-hidden='true' className='h-4 w-4' />
-              <span>{contactValue}</span>
+              <PhoneIcon aria-hidden='true' className='h-4 w-4 shrink-0' />
+              <span>{individualContact}</span>
             </a>
-          )}
+          ))}
           {dept.website && (
             <a
               href={dept.website}
@@ -138,15 +136,16 @@ export default function DepartmentDetail() {
               <span>Website</span>
             </a>
           )}
-          {dept.email && (
+          {parseEmails(dept.email).map((individualEmail, index) => (
             <a
-              href={`mailto:${dept.email}`}
+              key={index}
+              href={`mailto:${individualEmail}`}
               className='text-kapwa-text-support hover:text-kapwa-text-brand flex items-center gap-2 transition-colors'
             >
-              <MailIcon aria-hidden='true' className='h-4 w-4' />
-              <span>{dept.email}</span>
+              <MailIcon aria-hidden='true' className='h-4 w-4 shrink-0' />
+              <span>{individualEmail}</span>
             </a>
-          )}
+          ))}
         </div>
       </header>
 
@@ -175,14 +174,17 @@ export default function DepartmentDetail() {
                   <Badge variant='secondary' className='mt-1'>
                     Department Head
                   </Badge>
-                  {dept.department_head.email && (
-                    <a
-                      href={`mailto:${dept.department_head.email}`}
-                      className='text-kapwa-text-brand mt-2 flex items-center gap-2 text-sm'
-                    >
-                      <MailIcon className='h-4 w-4' />
-                      {dept.department_head.email}
-                    </a>
+                  {parseEmails(dept.department_head.email).map(
+                    (individualEmail, index) => (
+                      <a
+                        key={index}
+                        href={`mailto:${individualEmail}`}
+                        className='text-kapwa-text-brand mt-2 flex items-center gap-2 text-sm'
+                      >
+                        <MailIcon className='h-4 w-4' />
+                        {individualEmail}
+                      </a>
+                    )
                   )}
                 </div>
               </div>
@@ -245,7 +247,7 @@ export default function DepartmentDetail() {
             <CardContent className='p-6'>
               <p className='text-kapwa-text-support text-sm leading-relaxed'>
                 The {toTitleCase(dept.office_name)} is a frontline office of the
-                Municipal Government of Los Baños. It is responsible for
+                Municipal Government of {config.lgu.name}. It is responsible for
                 executing administrative mandates and technical functions to
                 ensure the delivery of high-quality public services within the
                 Science and Nature City.

@@ -90,7 +90,7 @@ export default function DepartmentsIndex() {
                     </div>
                   ) : (
                     // Spacer if no head listed to keep cards aligned
-                    <div className='h-[46px]' aria-hidden='true' />
+                    <div className='h-11.5' aria-hidden='true' />
                   )}
 
                   {/* Bottom Row: Contact & Website */}

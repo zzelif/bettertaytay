@@ -18,7 +18,7 @@ export * from './budgetUtils';
 export * from './exportData';
 
 // Domain-specific utilities
-export * from './legislation';
+export * from './openlgu';
 export * from './lgu';
 export * from './weather';
 export * from './forex';

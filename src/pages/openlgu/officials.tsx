@@ -114,8 +114,8 @@ export default function OfficialsIndex() {
 
   return (
     <IndexPageLayout
-      title='Officials of Los Baños'
-      description='Browse the historical collection of all LGU politicians who have served Los Baños.'
+      title='Officials of Taytay'
+      description='Browse the historical collection of all LGU politicians who have served Taytay.'
       breadcrumbs={breadcrumbs}
       search={{
         value: searchQuery,

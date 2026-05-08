@@ -18,12 +18,14 @@ export function PageHero({
   children,
   breadcrumb,
   metadata,
+  heroActions,
 }: {
   title: string;
   description?: string;
   children?: ReactNode;
   breadcrumb?: BreadcrumbItem[];
   metadata?: ReactNode;
+  heroActions?: ReactNode;
 }) {
   return (
     <header className='animate-in fade-in flex flex-col justify-center py-8 text-center duration-700 md:py-12'>
@@ -62,6 +64,11 @@ export function PageHero({
         <p className='text-kapwa-text-on-disabled mx-auto max-w-2xl text-sm leading-relaxed md:text-base'>
           {description}
         </p>
+      )}
+      {heroActions && (
+        <div className='mt-4 flex items-center justify-center gap-3'>
+          {heroActions}
+        </div>
       )}
       {metadata && (
         <div className='mt-4 flex items-center justify-center gap-3'>

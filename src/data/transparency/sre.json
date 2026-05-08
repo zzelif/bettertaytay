@@ -3,55 +3,55 @@
     "period": "Q1-2024",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 8.7,
-            "special_education_fund": 10.88,
-            "total": 19.58
+            "general_fund": 50.94,
+            "special_education_fund": 63.67,
+            "total": 114.61
           },
-          "tax_on_business": 45.55,
-          "other_taxes": 2.33,
-          "total_tax_revenue": 67.47
+          "tax_on_business": 231.6,
+          "other_taxes": 7.58,
+          "total_tax_revenue": 353.78
         },
         "non_tax_revenue": {
-          "regulatory_fees": 12.12,
-          "service_user_charges": 3.77,
-          "receipts_from_economic_enterprises": 3.31,
-          "other_receipts": 0.08,
-          "total_non_tax_revenue": 19.29
+          "regulatory_fees": 64.58,
+          "service_user_charges": 18.98,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.5,
+          "total_non_tax_revenue": 83.6
         },
-        "total_local_sources": 86.76
+        "total_local_sources": 437.39
       },
       "external_sources": {
-        "national_tax_allotment": 82.21,
-        "other_shares_from_national_tax_collection": 0.76,
+        "national_tax_allotment": 237.38,
+        "other_shares_from_national_tax_collection": 0.0,
         "inter_local_transfers": 0.0,
         "extraordinary_receipts_grants_donations_aids": 0.0,
-        "total_external_sources": 82.96
+        "total_external_sources": 237.38
       },
-      "total_current_operating_income": 169.72
+      "total_current_operating_income": 674.77
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 40.71,
+      "general_public_services": 165.71,
       "social_services": {
-        "education_culture_sports_manpower_development": 2.12,
-        "health_nutrition_population_control": 6.31,
+        "education_culture_sports_manpower_development": 4.57,
+        "health_nutrition_population_control": 9.78,
         "labor_and_employment": 0.0,
-        "housing_and_community_development": 0.0,
-        "social_services_and_social_welfare": 2.83,
-        "total_social_services": 11.26
+        "housing_and_community_development": 1.17,
+        "social_services_and_social_welfare": 11.63,
+        "total_social_services": 27.15
       },
-      "economic_services": 5.03,
+      "economic_services": 9.19,
       "debt_service_interest_expense": 0.0,
-      "total_current_operating_expenditures": 57.0
+      "total_current_operating_expenditures": 202.05
     },
-    "net_operating_income_loss_from_current_operations": 112.72,
+    "net_operating_income_loss_from_current_operations": 472.72,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -69,81 +69,81 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 0.0,
+        "purchase_construct_of_property_plant_and_equipment": 0.55,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 0.0
+        "total_capital_investment_expenditures": 0.55
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 0.37,
+        "payment_of_loan_amortization": 0.0,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 0.37
+        "total_debt_service_principal_cost": 0.0
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 0.37
+      "total_non_operating_expenditures": 0.55
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 112.43,
-      "add_cash_balance_beginning": 464.08,
-      "fund_cash_available": 576.51,
-      "less_payment_of_prior_years_accounts_payable": 34.45,
-      "continuing_appropriation": 9.66,
-      "fund_cash_balance_end": 532.41
+      "net_increase_decrease_in_funds": 472.18,
+      "add_cash_balance_beginning": 825.98,
+      "fund_cash_available": 1298.15,
+      "less_payment_of_prior_years_accounts_payable": 0.0,
+      "continuing_appropriation": 0.63,
+      "fund_cash_balance_end": 1297.52
     }
   },
   {
     "period": "Q2-2024",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 10.66,
-            "special_education_fund": 13.33,
-            "total": 23.99
+            "general_fund": 53.14,
+            "special_education_fund": 66.42,
+            "total": 119.56
           },
-          "tax_on_business": 53.98,
-          "other_taxes": 2.52,
-          "total_tax_revenue": 80.49
+          "tax_on_business": 295.8,
+          "other_taxes": 8.36,
+          "total_tax_revenue": 423.71
         },
         "non_tax_revenue": {
-          "regulatory_fees": 16.09,
-          "service_user_charges": 4.87,
-          "receipts_from_economic_enterprises": 6.15,
-          "other_receipts": 0.79,
-          "total_non_tax_revenue": 27.89
+          "regulatory_fees": 78.75,
+          "service_user_charges": 27.74,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.1,
+          "total_non_tax_revenue": 106.59
         },
-        "total_local_sources": 108.38
+        "total_local_sources": 530.3
       },
       "external_sources": {
-        "national_tax_allotment": 164.41,
-        "other_shares_from_national_tax_collection": 0.76,
+        "national_tax_allotment": 474.77,
+        "other_shares_from_national_tax_collection": 0.0,
         "inter_local_transfers": 0.0,
-        "extraordinary_receipts_grants_donations_aids": 0.8,
-        "total_external_sources": 165.97
+        "extraordinary_receipts_grants_donations_aids": 0.0,
+        "total_external_sources": 474.77
       },
-      "total_current_operating_income": 274.35
+      "total_current_operating_income": 1005.07
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 87.2,
+      "general_public_services": 412.25,
       "social_services": {
-        "education_culture_sports_manpower_development": 4.19,
-        "health_nutrition_population_control": 12.78,
+        "education_culture_sports_manpower_development": 26.31,
+        "health_nutrition_population_control": 25.09,
         "labor_and_employment": 0.0,
-        "housing_and_community_development": 0.0,
-        "social_services_and_social_welfare": 7.23,
-        "total_social_services": 24.2
+        "housing_and_community_development": 2.42,
+        "social_services_and_social_welfare": 31.18,
+        "total_social_services": 85.0
       },
-      "economic_services": 11.05,
-      "debt_service_interest_expense": 0.46,
-      "total_current_operating_expenditures": 122.91
+      "economic_services": 31.57,
+      "debt_service_interest_expense": 0.08,
+      "total_current_operating_expenditures": 528.9
     },
-    "net_operating_income_loss_from_current_operations": 151.44,
+    "net_operating_income_loss_from_current_operations": 476.17,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -161,81 +161,81 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 0.73,
+        "purchase_construct_of_property_plant_and_equipment": 27.89,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 0.73
+        "total_capital_investment_expenditures": 27.89
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 1.69,
+        "payment_of_loan_amortization": 0.4,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 1.69
+        "total_debt_service_principal_cost": 0.4
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 2.41
+      "total_non_operating_expenditures": 28.29
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 149.03,
-      "add_cash_balance_beginning": 464.08,
-      "fund_cash_available": 613.11,
-      "less_payment_of_prior_years_accounts_payable": 38.16,
-      "continuing_appropriation": 13.43,
-      "fund_cash_balance_end": 561.51
+      "net_increase_decrease_in_funds": 447.87,
+      "add_cash_balance_beginning": 825.98,
+      "fund_cash_available": 1273.85,
+      "less_payment_of_prior_years_accounts_payable": 0.0,
+      "continuing_appropriation": 0.63,
+      "fund_cash_balance_end": 1273.22
     }
   },
   {
     "period": "Q3-2024",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 13.48,
-            "special_education_fund": 16.85,
-            "total": 30.32
+            "general_fund": 65.36,
+            "special_education_fund": 81.7,
+            "total": 147.05
           },
-          "tax_on_business": 61.87,
-          "other_taxes": 2.65,
-          "total_tax_revenue": 94.84
+          "tax_on_business": 376.58,
+          "other_taxes": 8.62,
+          "total_tax_revenue": 532.25
         },
         "non_tax_revenue": {
-          "regulatory_fees": 18.61,
-          "service_user_charges": 5.79,
-          "receipts_from_economic_enterprises": 8.84,
-          "other_receipts": 0.85,
-          "total_non_tax_revenue": 34.08
+          "regulatory_fees": 87.0,
+          "service_user_charges": 39.12,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.15,
+          "total_non_tax_revenue": 126.27
         },
-        "total_local_sources": 128.93
+        "total_local_sources": 658.52
       },
       "external_sources": {
-        "national_tax_allotment": 246.62,
-        "other_shares_from_national_tax_collection": 0.76,
+        "national_tax_allotment": 712.15,
+        "other_shares_from_national_tax_collection": 1.44,
         "inter_local_transfers": 0.0,
-        "extraordinary_receipts_grants_donations_aids": 0.82,
-        "total_external_sources": 248.2
+        "extraordinary_receipts_grants_donations_aids": 0.0,
+        "total_external_sources": 713.59
       },
-      "total_current_operating_income": 377.12
+      "total_current_operating_income": 1372.12
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 144.19,
+      "general_public_services": 756.66,
       "social_services": {
-        "education_culture_sports_manpower_development": 7.03,
-        "health_nutrition_population_control": 22.11,
+        "education_culture_sports_manpower_development": 42.59,
+        "health_nutrition_population_control": 40.4,
         "labor_and_employment": 0.0,
-        "housing_and_community_development": 0.0,
-        "social_services_and_social_welfare": 12.45,
-        "total_social_services": 41.6
+        "housing_and_community_development": 3.55,
+        "social_services_and_social_welfare": 53.56,
+        "total_social_services": 140.11
       },
-      "economic_services": 18.15,
-      "debt_service_interest_expense": 0.46,
-      "total_current_operating_expenditures": 204.39
+      "economic_services": 87.65,
+      "debt_service_interest_expense": 0.08,
+      "total_current_operating_expenditures": 985.49
     },
-    "net_operating_income_loss_from_current_operations": 172.74,
+    "net_operating_income_loss_from_current_operations": 386.62,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -253,81 +253,81 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 7.32,
+        "purchase_construct_of_property_plant_and_equipment": 107.53,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 7.32
+        "total_capital_investment_expenditures": 107.53
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 2.06,
+        "payment_of_loan_amortization": 0.4,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 2.06
+        "total_debt_service_principal_cost": 0.4
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 9.38
+      "total_non_operating_expenditures": 107.93
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 163.36,
-      "add_cash_balance_beginning": 464.08,
-      "fund_cash_available": 627.44,
-      "less_payment_of_prior_years_accounts_payable": 47.09,
-      "continuing_appropriation": 29.98,
-      "fund_cash_balance_end": 550.37
+      "net_increase_decrease_in_funds": 278.7,
+      "add_cash_balance_beginning": 825.98,
+      "fund_cash_available": 1104.67,
+      "less_payment_of_prior_years_accounts_payable": 0.0,
+      "continuing_appropriation": 0.63,
+      "fund_cash_balance_end": 1104.04
     }
   },
   {
     "period": "Q4-2024",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 15.32,
-            "special_education_fund": 19.15,
-            "total": 34.47
+            "general_fund": 73.54,
+            "special_education_fund": 95.8,
+            "total": 169.34
           },
-          "tax_on_business": 69.66,
-          "other_taxes": 2.75,
-          "total_tax_revenue": 106.87
+          "tax_on_business": 431.72,
+          "other_taxes": 8.71,
+          "total_tax_revenue": 609.78
         },
         "non_tax_revenue": {
-          "regulatory_fees": 20.87,
-          "service_user_charges": 6.71,
-          "receipts_from_economic_enterprises": 11.49,
-          "other_receipts": 0.45,
-          "total_non_tax_revenue": 39.53
+          "regulatory_fees": 84.03,
+          "service_user_charges": 56.87,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.39,
+          "total_non_tax_revenue": 141.3
         },
-        "total_local_sources": 146.41
+        "total_local_sources": 751.07
       },
       "external_sources": {
-        "national_tax_allotment": 328.82,
-        "other_shares_from_national_tax_collection": 1.11,
+        "national_tax_allotment": 949.53,
+        "other_shares_from_national_tax_collection": 1.44,
         "inter_local_transfers": 0.0,
-        "extraordinary_receipts_grants_donations_aids": 2.25,
-        "total_external_sources": 332.18
+        "extraordinary_receipts_grants_donations_aids": 0.0,
+        "total_external_sources": 950.98
       },
-      "total_current_operating_income": 478.58
+      "total_current_operating_income": 1702.05
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 265.13,
+      "general_public_services": 1071.36,
       "social_services": {
-        "education_culture_sports_manpower_development": 25.04,
-        "health_nutrition_population_control": 39.3,
+        "education_culture_sports_manpower_development": 77.83,
+        "health_nutrition_population_control": 91.85,
         "labor_and_employment": 0.0,
-        "housing_and_community_development": 0.01,
-        "social_services_and_social_welfare": 24.31,
-        "total_social_services": 88.66
+        "housing_and_community_development": 5.07,
+        "social_services_and_social_welfare": 149.92,
+        "total_social_services": 324.67
       },
-      "economic_services": 30.6,
-      "debt_service_interest_expense": 0.93,
-      "total_current_operating_expenditures": 385.31
+      "economic_services": 113.8,
+      "debt_service_interest_expense": 0.08,
+      "total_current_operating_expenditures": 1509.91
     },
-    "net_operating_income_loss_from_current_operations": 93.27,
+    "net_operating_income_loss_from_current_operations": 192.14,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -345,81 +345,81 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 29.54,
+        "purchase_construct_of_property_plant_and_equipment": 279.44,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 29.54
+        "total_capital_investment_expenditures": 279.44
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 3.35,
+        "payment_of_loan_amortization": 0.4,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 3.35
+        "total_debt_service_principal_cost": 0.4
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 32.89
+      "total_non_operating_expenditures": 279.84
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 60.38,
-      "add_cash_balance_beginning": 464.08,
-      "fund_cash_available": 524.46,
-      "less_payment_of_prior_years_accounts_payable": 82.93,
-      "continuing_appropriation": 30.25,
-      "fund_cash_balance_end": 411.28
+      "net_increase_decrease_in_funds": -87.69,
+      "add_cash_balance_beginning": 825.98,
+      "fund_cash_available": 738.28,
+      "less_payment_of_prior_years_accounts_payable": 0.0,
+      "continuing_appropriation": 39.75,
+      "fund_cash_balance_end": 698.53
     }
   },
   {
     "period": "Q1-2025",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 11.48,
-            "special_education_fund": 14.35,
-            "total": 25.83
+            "general_fund": 56.88,
+            "special_education_fund": 50.49,
+            "total": 107.37
           },
-          "tax_on_business": 49.84,
-          "other_taxes": 2.43,
-          "total_tax_revenue": 78.1
+          "tax_on_business": 245.73,
+          "other_taxes": 8.2,
+          "total_tax_revenue": 361.3
         },
         "non_tax_revenue": {
-          "regulatory_fees": 12.81,
-          "service_user_charges": 3.5,
-          "receipts_from_economic_enterprises": 3.22,
-          "other_receipts": 0.02,
-          "total_non_tax_revenue": 19.55
+          "regulatory_fees": 59.22,
+          "service_user_charges": 22.62,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.14,
+          "total_non_tax_revenue": 81.98
         },
-        "total_local_sources": 97.65
+        "total_local_sources": 443.28
       },
       "external_sources": {
-        "national_tax_allotment": 97.6,
-        "other_shares_from_national_tax_collection": 0.0,
+        "national_tax_allotment": 281.96,
+        "other_shares_from_national_tax_collection": 0.22,
         "inter_local_transfers": 0.0,
-        "extraordinary_receipts_grants_donations_aids": 0.4,
-        "total_external_sources": 98.0
+        "extraordinary_receipts_grants_donations_aids": 0.0,
+        "total_external_sources": 282.18
       },
-      "total_current_operating_income": 195.65
+      "total_current_operating_income": 725.45
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 34.82,
+      "general_public_services": 259.79,
       "social_services": {
-        "education_culture_sports_manpower_development": 1.19,
-        "health_nutrition_population_control": 7.11,
-        "labor_and_employment": 0.0,
+        "education_culture_sports_manpower_development": 9.19,
+        "health_nutrition_population_control": 25.08,
+        "labor_and_employment": 0.93,
         "housing_and_community_development": 0.0,
-        "social_services_and_social_welfare": 7.26,
-        "total_social_services": 15.56
+        "social_services_and_social_welfare": 15.41,
+        "total_social_services": 50.61
       },
-      "economic_services": 5.33,
+      "economic_services": 46.9,
       "debt_service_interest_expense": 0.0,
-      "total_current_operating_expenditures": 55.7
+      "total_current_operating_expenditures": 357.3
     },
-    "net_operating_income_loss_from_current_operations": 139.95,
+    "net_operating_income_loss_from_current_operations": 368.15,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -437,81 +437,81 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 0.69,
+        "purchase_construct_of_property_plant_and_equipment": 4.08,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 0.69
+        "total_capital_investment_expenditures": 4.08
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 0.37,
+        "payment_of_loan_amortization": 0.0,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 0.37
+        "total_debt_service_principal_cost": 0.0
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 1.06
+      "total_non_operating_expenditures": 4.08
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 138.89,
-      "add_cash_balance_beginning": 415.08,
-      "fund_cash_available": 553.97,
-      "less_payment_of_prior_years_accounts_payable": 51.99,
-      "continuing_appropriation": 5.33,
-      "fund_cash_balance_end": 496.65
+      "net_increase_decrease_in_funds": 364.07,
+      "add_cash_balance_beginning": 698.53,
+      "fund_cash_available": 1062.6,
+      "less_payment_of_prior_years_accounts_payable": 0.0,
+      "continuing_appropriation": 0.68,
+      "fund_cash_balance_end": 1061.93
     }
   },
   {
     "period": "Q2-2025",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 14.03,
-            "special_education_fund": 17.53,
-            "total": 31.56
+            "general_fund": 61.63,
+            "special_education_fund": 56.43,
+            "total": 118.06
           },
-          "tax_on_business": 58.86,
-          "other_taxes": 2.56,
-          "total_tax_revenue": 92.98
+          "tax_on_business": 332.87,
+          "other_taxes": 8.57,
+          "total_tax_revenue": 459.5
         },
         "non_tax_revenue": {
-          "regulatory_fees": 15.51,
-          "service_user_charges": 4.31,
-          "receipts_from_economic_enterprises": 5.77,
-          "other_receipts": 0.09,
-          "total_non_tax_revenue": 25.68
+          "regulatory_fees": 71.74,
+          "service_user_charges": 35.98,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.1,
+          "total_non_tax_revenue": 107.82
         },
-        "total_local_sources": 118.66
+        "total_local_sources": 567.32
       },
       "external_sources": {
-        "national_tax_allotment": 195.2,
-        "other_shares_from_national_tax_collection": 0.37,
+        "national_tax_allotment": 563.91,
+        "other_shares_from_national_tax_collection": 4.3,
         "inter_local_transfers": 0.0,
-        "extraordinary_receipts_grants_donations_aids": 0.41,
-        "total_external_sources": 195.98
+        "extraordinary_receipts_grants_donations_aids": 0.0,
+        "total_external_sources": 568.21
       },
-      "total_current_operating_income": 314.65
+      "total_current_operating_income": 1135.53
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 91.44,
+      "general_public_services": 565.29,
       "social_services": {
-        "education_culture_sports_manpower_development": 5.98,
-        "health_nutrition_population_control": 18.82,
-        "labor_and_employment": 0.0,
+        "education_culture_sports_manpower_development": 37.68,
+        "health_nutrition_population_control": 53.13,
+        "labor_and_employment": 2.16,
         "housing_and_community_development": 0.0,
-        "social_services_and_social_welfare": 11.45,
-        "total_social_services": 36.26
+        "social_services_and_social_welfare": 67.45,
+        "total_social_services": 160.41
       },
-      "economic_services": 12.1,
-      "debt_service_interest_expense": 0.44,
-      "total_current_operating_expenditures": 140.24
+      "economic_services": 56.47,
+      "debt_service_interest_expense": 0.0,
+      "total_current_operating_expenditures": 782.17
     },
-    "net_operating_income_loss_from_current_operations": 174.41,
+    "net_operating_income_loss_from_current_operations": 353.35,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -529,81 +529,81 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 16.09,
+        "purchase_construct_of_property_plant_and_equipment": 52.94,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 16.09
+        "total_capital_investment_expenditures": 52.94
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 1.71,
+        "payment_of_loan_amortization": 0.0,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 1.71
+        "total_debt_service_principal_cost": 0.0
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 17.8
+      "total_non_operating_expenditures": 52.94
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 156.61,
-      "add_cash_balance_beginning": 415.08,
-      "fund_cash_available": 571.69,
-      "less_payment_of_prior_years_accounts_payable": 72.94,
-      "continuing_appropriation": 17.36,
-      "fund_cash_balance_end": 481.39
+      "net_increase_decrease_in_funds": 300.42,
+      "add_cash_balance_beginning": 698.53,
+      "fund_cash_available": 998.95,
+      "less_payment_of_prior_years_accounts_payable": 0.0,
+      "continuing_appropriation": 0.68,
+      "fund_cash_balance_end": 998.28
     }
   },
   {
     "period": "Q3-2025",
     "location_info": {
       "region": "Region IV-A",
-      "province": "Laguna",
-      "lgu_name": "Los Baños",
+      "province": "Rizal",
+      "lgu_name": "Taytay",
       "lgu_type": "Municipality"
     },
     "current_operating_income": {
       "local_sources": {
         "tax_revenue": {
           "real_property_tax": {
-            "general_fund": 15.93,
-            "special_education_fund": 19.91,
-            "total": 35.84
+            "general_fund": 67.51,
+            "special_education_fund": 63.77,
+            "total": 131.28
           },
-          "tax_on_business": 66.24,
-          "other_taxes": 2.69,
-          "total_tax_revenue": 104.78
+          "tax_on_business": 400.52,
+          "other_taxes": 9.04,
+          "total_tax_revenue": 540.84
         },
         "non_tax_revenue": {
-          "regulatory_fees": 18.24,
-          "service_user_charges": 5.09,
-          "receipts_from_economic_enterprises": 8.57,
-          "other_receipts": 0.61,
-          "total_non_tax_revenue": 32.5
+          "regulatory_fees": 82.62,
+          "service_user_charges": 50.04,
+          "receipts_from_economic_enterprises": 0.0,
+          "other_receipts": 0.16,
+          "total_non_tax_revenue": 132.81
         },
-        "total_local_sources": 137.28
+        "total_local_sources": 673.66
       },
       "external_sources": {
-        "national_tax_allotment": 292.81,
-        "other_shares_from_national_tax_collection": 0.71,
+        "national_tax_allotment": 845.87,
+        "other_shares_from_national_tax_collection": 5.57,
         "inter_local_transfers": 0.0,
-        "extraordinary_receipts_grants_donations_aids": 0.46,
-        "total_external_sources": 293.97
+        "extraordinary_receipts_grants_donations_aids": 0.0,
+        "total_external_sources": 851.44
       },
-      "total_current_operating_income": 431.26
+      "total_current_operating_income": 1525.09
     },
     "total_current_operating_expenditures": {
-      "general_public_services": 137.76,
+      "general_public_services": 849.78,
       "social_services": {
-        "education_culture_sports_manpower_development": 23.78,
-        "health_nutrition_population_control": 29.9,
-        "labor_and_employment": 0.0,
+        "education_culture_sports_manpower_development": 58.27,
+        "health_nutrition_population_control": 82.63,
+        "labor_and_employment": 3.2,
         "housing_and_community_development": 0.0,
-        "social_services_and_social_welfare": 20.36,
-        "total_social_services": 74.04
+        "social_services_and_social_welfare": 95.41,
+        "total_social_services": 239.5
       },
-      "economic_services": 18.37,
-      "debt_service_interest_expense": 0.44,
-      "total_current_operating_expenditures": 230.61
+      "economic_services": 107.27,
+      "debt_service_interest_expense": 0.0,
+      "total_current_operating_expenditures": 1196.55
     },
-    "net_operating_income_loss_from_current_operations": 200.65,
+    "net_operating_income_loss_from_current_operations": 328.54,
     "non_income_receipts": {
       "capital_investment_receipts": {
         "proceeds_from_sale_of_assets": 0.0,
@@ -621,26 +621,26 @@
     },
     "non_operating_expenditures": {
       "capital_investment_expenditures": {
-        "purchase_construct_of_property_plant_and_equipment": 24.41,
+        "purchase_construct_of_property_plant_and_equipment": 101.13,
         "purchase_of_debt_securities_of_other_entities": 0.0,
         "grant_make_loan_to_other_entities": 0.0,
-        "total_capital_investment_expenditures": 24.41
+        "total_capital_investment_expenditures": 101.13
       },
       "debt_service_principal_cost": {
-        "payment_of_loan_amortization": 1.71,
+        "payment_of_loan_amortization": 0.0,
         "retirement_redemption_of_bonds_debt_securities": 0.0,
-        "total_debt_service_principal_cost": 1.71
+        "total_debt_service_principal_cost": 0.0
       },
       "other_non_operating_expenditures": 0.0,
-      "total_non_operating_expenditures": 26.12
+      "total_non_operating_expenditures": 101.13
     },
     "fund_summary": {
-      "net_increase_decrease_in_funds": 174.53,
-      "add_cash_balance_beginning": 415.08,
-      "fund_cash_available": 589.61,
-      "less_payment_of_prior_years_accounts_payable": 74.64,
-      "continuing_appropriation": 30.47,
-      "fund_cash_balance_end": 484.5
+      "net_increase_decrease_in_funds": 227.41,
+      "add_cash_balance_beginning": 698.53,
+      "fund_cash_available": 925.94,
+      "less_payment_of_prior_years_accounts_payable": 228.66,
+      "continuing_appropriation": 0.68,
+      "fund_cash_balance_end": 696.61
     }
   }
 ]

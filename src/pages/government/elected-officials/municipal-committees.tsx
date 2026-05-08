@@ -28,7 +28,7 @@ export default function MunicipalCommitteesPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const sbData = legislativeData.find(
-    item => item.slug === '12th-sangguniang-bayan'
+    item => item.slug === '13th-sangguniang-bayan'
   );
 
   const committees = useMemo(
@@ -71,7 +71,7 @@ export default function MunicipalCommitteesPage() {
       />
 
       {/* Back link */}
-      <div className='flex items-center gap-1.5'>
+      <div className='flex items-center gap-1.5 pb-4'>
         <Link
           to='/government/elected-officials'
           className='text-kapwa-text-brand hover:text-kapwa-text-brand-bold flex items-center gap-1 text-[11px] font-bold tracking-widest uppercase transition-colors'
@@ -162,7 +162,7 @@ export default function MunicipalCommitteesPage() {
 
       {/* Summary footer */}
       {filteredCommittees.length > 0 && (
-        <p className='text-kapwa-text-disabled text-center text-xs'>
+        <p className='text-kapwa-text-disabled text-center text-xs pt-4'>
           Showing {filteredCommittees.length} of {committees.length} committees
         </p>
       )}

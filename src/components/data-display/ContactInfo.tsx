@@ -10,7 +10,7 @@ interface ContactItemProps {
   icon: LucideIcon;
   label: string;
   value?: string | string[] | null;
-  href?: string;
+  href?: string | null;
   isExternal?: boolean;
   className?: string;
 }

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { Button } from '@bettergov/kapwa/button';
 import {
+  AlertCircle,
   BarChart3,
   Briefcase,
   Building2,
@@ -36,16 +37,7 @@ export default function ProcurementPage() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<PhilgepsDoc[]>([]);
   const [loading, setLoading] = useState(true);
-
-  // Pagination
-  const [resultsPerPage, setResultsPerPage] = useState(10);
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(results.length / resultsPerPage);
-  const paginatedResults = results.slice(
-    (currentPage - 1) * resultsPerPage,
-    (currentPage - 1) * resultsPerPage + resultsPerPage
-  );
+  const [error, setError] = useState(false);
 
   // Statistics
   const [precomputedStats, setPrecomputedStats] =
@@ -83,7 +75,7 @@ export default function ProcurementPage() {
   // Helper function to get badge variant based on business category
   const getBusinessCategoryBadgeVariant = (
     category: string | undefined
-  ): 'primary' | 'secondary' | 'warning' | 'success' => {
+  ): 'primary' | 'secondary' | 'warning' | 'success' | 'slate' => {
     if (!category) return 'slate';
     const cat = category.toLowerCase();
     if (
@@ -113,10 +105,40 @@ export default function ProcurementPage() {
     return 'primary';
   };
 
+  // --- Derived Statistics ---
+  const detailedStats = useMemo(() => {
+    // Use precomputed totals if available (more accurate), otherwise sum the deep fetch
+    const totalContractAmount =
+      precomputedStats?.total ||
+      chartDataResults.reduce(
+        (sum, item) => sum + Number(item.contract_amount || 0),
+        0
+      );
+    const totalContractCount =
+      precomputedStats?.count || chartDataResults.length;
+
+    // Calculate Averages
+    const averageCost =
+      totalContractCount > 0 ? totalContractAmount / totalContractCount : 0;
+
+    // Unique Categories
+    const uniqueCategories = new Set(
+      chartDataResults.map(i => i.business_category).filter(Boolean)
+    );
+
+    return {
+      uniqueCategories: uniqueCategories.size,
+      totalContractAmount,
+      totalContractCount,
+      averageCost,
+    };
+  }, [chartDataResults, precomputedStats]);
+
   // --- Data Loading ---
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      setError(false);
 
       try {
         const index = client.index(INDICES.PHILGEPS);
@@ -126,8 +148,7 @@ export default function ProcurementPage() {
         const searchPromise = index.search(query, {
           filter: ORG_FILTER,
           sort: ['award_date:desc'],
-          limit: resultsPerPage,
-          offset: (currentPage - 1) * resultsPerPage,
+          limit: 1000, // Rows for Municipality of Taytay after filtering on Transparency.Bettergov.ph
         });
 
         // 2. Fetch Precomputed Stats (Fast Total)
@@ -164,6 +185,7 @@ export default function ProcurementPage() {
         );
       } catch (err) {
         console.error('Search error:', err);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -171,36 +193,17 @@ export default function ProcurementPage() {
 
     const timer = setTimeout(fetchData, 400);
     return () => clearTimeout(timer);
-  }, [query, currentPage, resultsPerPage]); // eslint-disable-line react-hooks/exhaustive-deps -- ORG_NAME and ORG_FILTER are config-derived constants; precomputedStats is only read conditionally
+  }, [query]); // eslint-disable-line react-hooks/exhaustive-deps -- ORG_NAME and ORG_FILTER are config-derived constants; precomputedStats is only read conditionally
 
-  // --- Derived Statistics ---
-  const detailedStats = useMemo(() => {
-    // Use precomputed totals if available (more accurate), otherwise sum the deep fetch
-    const totalContractAmount =
-      precomputedStats?.total ||
-      chartDataResults.reduce(
-        (sum, item) => sum + Number(item.contract_amount || 0),
-        0
-      );
-    const totalContractCount =
-      precomputedStats?.count || chartDataResults.length;
+  // Pagination
+  const [resultsPerPage, setResultsPerPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
 
-    // Calculate Averages
-    const averageCost =
-      totalContractCount > 0 ? totalContractAmount / totalContractCount : 0;
-
-    // Unique Categories
-    const uniqueCategories = new Set(
-      chartDataResults.map(i => i.business_category).filter(Boolean)
-    );
-
-    return {
-      uniqueCategories: uniqueCategories.size,
-      totalContractAmount,
-      totalContractCount,
-      averageCost,
-    };
-  }, [chartDataResults, precomputedStats]);
+  const totalPages = Math.ceil(results.length / resultsPerPage);
+  const paginatedResults = results.slice(
+    (currentPage - 1) * resultsPerPage,
+    (currentPage - 1) * resultsPerPage + resultsPerPage
+  );
 
   // --- Helpers ---
   const formatDate = (dateStr: string) =>
@@ -240,9 +243,10 @@ export default function ProcurementPage() {
 
   return (
     <div className='animate-in fade-in mx-auto max-w-full space-y-8 px-4 pb-20 duration-500 md:px-8'>
+      {/* Header + Search + Download Button  */}
       <ModuleHeader
         title='Procurement Transparency'
-        description='Real-time database of bids and awards from the Municipality of Los Baños.'
+        description='Real-time database of bids and awards from the Municipality of Taytay.'
       >
         <div className='flex w-full flex-col items-center gap-4 md:w-auto md:flex-row'>
           <SearchInput
@@ -304,13 +308,19 @@ export default function ProcurementPage() {
       {/* --- RESULTS TABLE --- */}
       {loading ? (
         <div className='space-y-4'>
-          {[1, 2, 3, 4, 5].map(i => (
+          {[1, 2, 3].map(i => (
             <div
               key={i}
               className='bg-kapwa-bg-surface-raised h-16 animate-pulse rounded-xl'
             />
           ))}
         </div>
+      ) : error ? (
+        <EmptyState
+          title='Unavailable'
+          message='Could not connect to transparency engine.'
+          icon={AlertCircle}
+        />
       ) : results.length === 0 ? (
         <EmptyState
           title='No Records Found'
@@ -361,13 +371,13 @@ export default function ProcurementPage() {
                           )}
                           className='max-w-full text-[9px] sm:h-4 sm:px-1.5 sm:py-0'
                         >
-                          <span className='truncate max-w-[100px] sm:max-w-[150px]'>
+                          <span className='truncate max-w-25 sm:max-w-37.5'>
                             {row.business_category}
                           </span>
                         </Badge>
                         {row.awardee_name && (
                           <span
-                            className='text-kapwa-text-disabled max-w-[150px] truncate text-xs sm:max-w-[200px]'
+                            className='text-kapwa-text-disabled max-w-37.5 truncate text-xs sm:max-w-50'
                             title={row.awardee_name}
                           >
                             • {row.awardee_name}
@@ -386,7 +396,7 @@ export default function ProcurementPage() {
                         variant={getAwardStatusBadgeVariant(row.award_status)}
                         className='max-w-full text-[10px]'
                       >
-                        <span className='truncate max-w-[80px] sm:max-w-[120px] inline-block align-bottom'>
+                        <span className='truncate max-w-20 sm:max-w-30 inline-block align-bottom'>
                           {row.award_status}
                         </span>
                       </Badge>
@@ -424,7 +434,7 @@ export default function ProcurementPage() {
               </h4>
               <p className='text-kapwa-text-disabled text-xs leading-relaxed'>
                 View detailed spending charts, top supplier breakdowns, and
-                historical procurement trends for Los Baños.
+                historical procurement trends for {config.lgu.name}.
               </p>
             </div>
           </div>
@@ -434,7 +444,7 @@ export default function ProcurementPage() {
             rel='noreferrer'
             className='text-kapwa-text-inverse bg-kapwa-brand-600 hover:bg-kapwa-brand-700 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-bold transition-colors'
           >
-            View Los Baños Charts <ExternalLink className='h-3 w-3' />
+            View {config.lgu.name} Charts <ExternalLink className='h-3 w-3' />
           </a>
         </div>
 
@@ -457,7 +467,7 @@ export default function ProcurementPage() {
           <a
             href='https://transparency.bettergov.ph/procurement'
             target='_blank'
-            rel='noreferrer'
+            rel='noreferrer noopener'
             className='text-kapwa-text-inverse bg-kapwa-brand-600 hover:bg-kapwa-brand-700 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-bold transition-colors'
           >
             View Dashboard <ExternalLink className='h-3 w-3' />

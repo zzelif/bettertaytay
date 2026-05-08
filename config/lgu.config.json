@@ -1,51 +1,51 @@
 {
   "lgu": {
-    "name": "Los Baños",
-    "fullName": "Municipality of Los Baños",
-    "province": "Laguna",
-    "districtEngineeringOffice": "Laguna 2nd DEO",
+    "name": "Taytay",
+    "fullName": "Municipality of Taytay",
+    "province": "Rizal",
+    "districtEngineeringOffice": "Rizal 1st DEO",
     "region": "Region IV-A",
     "regionCode": "CALABARZON",
     "type": "municipality",
     "logoPath": "/logos/png/betterlb-blue.png",
-    "officialWebsite": "https://losbanos.gov.ph",
-    "provinceWebsite": "https://laguna.gov.ph"
+    "officialWebsite": "https://www.taytayrizal.gov.ph",
+    "provinceWebsite": "https://rizalprovince.ph"
   },
   "portal": {
-    "name": "BetterLB",
-    "domain": "betterlb.org",
-    "baseUrl": "https://betterlb.org",
-    "tagline": "Community Powered Los Baños Portal",
-    "description": "Community-powered portal of the Municipality of Los Baños.",
+    "name": "BetterTaytay",
+    "domain": "",
+    "baseUrl": "",
+    "tagline": "Community Powered Taytay Portal",
+    "description": "Community-powered portal of the Municipality of Taytay.",
     "brandColor": "#0066eb",
     "navbarTagline": "A Community-run portal for",
-    "footerBrandName": "Better Los Baños",
+    "footerBrandName": "Better Taytay",
     "footerTagline": "Community Civic Portal",
     "logoWhitePath": "/logos/webp/betterlb-white-outline.webp"
   },
   "location": {
     "coordinates": {
-      "lat": 14.1763,
-      "lon": 121.2219
+      "lat": 14.5522,
+      "lon": 121.1306
     },
     "weather": {
-      "defaultCity": "Los Baños"
+      "defaultCity": "Taytay"
     }
   },
   "transparency": {
     "procurement": {
-      "organizationName": "MUNICIPALITY OF LOS BAÑOS, LAGUNA",
+      "organizationName": "MUNICIPALITY OF TAYTAY, RIZAL",
       "externalDashboard": "https://transparency.bettergov.ph/organizations/"
     },
     "infrastructure": {
-      "searchString": "Los Baños",
-      "exactMatchTargets": ["los baños", "los banos"]
+      "searchString": "Taytay",
+      "exactMatchTargets": ["taytay"]
     }
   },
   "dataPaths": {
-    "departments": "src/data/lgu/losbanos/directory/departments.json",
-    "barangays": "src/data/lgu/losbanos/directory/barangays.json",
-    "services": "src/data/lgu/losbanos/services/categories"
+    "departments": "src/data/directory/departments.json",
+    "barangays": "src/data/directory/barangays.json",
+    "services": "src/data/services/categories"
   },
   "features": {
     "openLGU": true,

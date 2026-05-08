@@ -117,7 +117,7 @@ export const Footer: FC = () => {
             </p>
             <span className='hidden w-1 h-1 rounded-full bg-kapwa-border-strong md:block' />
             <p className='text-xs font-bold md:text-sm'>
-              Cost to the People of Los Baños ={' '}
+              Cost to the People of {config.lgu.name} ={' '}
               <span className='text-kapwa-text-success'>₱0</span>
             </p>
           </div>
@@ -130,9 +130,9 @@ export const Footer: FC = () => {
           </p>
           <div className='flex gap-6'>
             <a
-              href='https://github.com/BetterLosBanos/betterlb'
+              href='https://github.com/zzelif/bettertaytay'
               target='_blank'
-              rel='noreferrer'
+              rel='noreferrer noopener'
               className='text-[10px] font-bold tracking-widest text-kapwa-text-disabled uppercase hover:text-kapwa-text-inverse'
             >
               GitHub

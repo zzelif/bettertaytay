@@ -193,7 +193,7 @@ export default function CompetitivenessPage() {
                 key={p.name}
                 onClick={() => setSelectedPillar(p.name)}
                 className={cn(
-                  'flex min-h-[56px] w-full items-center justify-between rounded-2xl border p-4 text-left transition-all',
+                  'flex min-h-14 w-full items-center justify-between rounded-2xl border p-4 text-left transition-all',
                   selectedPillar === p.name
                     ? 'bg-kapwa-bg-surface border-kapwa-border-brand shadow-sm'
                     : 'border-kapwa-border-weak bg-kapwa-bg-surface'
@@ -225,7 +225,7 @@ export default function CompetitivenessPage() {
                 {currentPillar?.indicators.map((ind, idx) => (
                   <div
                     key={idx}
-                    className='border-kapwa-border-weak bg-kapwa-bg-surface flex min-h-[100px] flex-col justify-between rounded-xl border p-4 shadow-xs'
+                    className='border-kapwa-border-weak bg-kapwa-bg-surface flex min-h-25 flex-col justify-between rounded-xl border p-4 shadow-xs'
                   >
                     <span className='text-kapwa-text-disabled text-[10px] leading-tight font-bold tracking-widest uppercase'>
                       {ind.name}
@@ -267,7 +267,7 @@ export default function CompetitivenessPage() {
             <a
               href='https://cmci.dti.gov.ph/data-portal.php'
               target='_blank'
-              rel='noreferrer'
+              rel='noreferrer noopener'
               className='underline hover:text-kapwa-text-brand'
             >
               {cmciData.meta.source}

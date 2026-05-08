@@ -32,7 +32,7 @@ export default function TransparencyIndex() {
       description:
         'Community tracking of road repairs, building constructions, and local infrastructure projects.',
       icon: HardHat,
-      href: '/transparency/infrastructure-projects',
+      href: '/transparency/infrastructure',
       color: 'orange',
       badge: 'Monitoring',
     },
@@ -60,10 +60,10 @@ export default function TransparencyIndex() {
               Independent Grassroots Initiative
             </h3>
             <p className='text-sm leading-relaxed text-kapwa-orange-600'>
-              Better LB is <strong>not an official government portal</strong>.
-              We are a volunteer movement mirroring public records to empower
-              citizens with the information they need to engage in local
-              governance.
+              Better Taytay is{' '}
+              <strong>not an official government portal</strong>. We are a
+              volunteer movement mirroring public records to empower citizens
+              with the information they need to engage in local governance.
             </p>
           </div>
         </div>
@@ -136,9 +136,9 @@ export default function TransparencyIndex() {
               know.
             </p>
             <a
-              href='https://github.com/BetterLosBanos/betterlb/issues'
+              href='https://github.com/zzelif/bettertaytay/issues'
               target='_blank'
-              rel='noreferrer'
+              rel='noreferrer noopener'
               className='text-kapwa-text-inverse bg-kapwa-brand-600 hover:bg-kapwa-brand-700 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-bold transition-colors'
             >
               <Users className='h-4 w-4' /> Report an Issue
@@ -159,7 +159,7 @@ export default function TransparencyIndex() {
               <a
                 href='https://transparency.bettergov.ph'
                 target='_blank'
-                rel='noreferrer'
+                rel='noreferrer noopener'
                 className='text-kapwa-text-inverse bg-kapwa-brand-600 hover:bg-kapwa-brand-700 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-bold transition-colors'
               >
                 Transparency Dashboard <ExternalLink className='h-3 w-3' />
@@ -167,7 +167,7 @@ export default function TransparencyIndex() {
               <a
                 href='https://data.bettergov.ph/'
                 target='_blank'
-                rel='noreferrer'
+                rel='noreferrer noopener'
                 className='text-kapwa-text-inverse bg-kapwa-brand-600 hover:bg-kapwa-brand-700 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-xs font-bold transition-colors'
               >
                 BetterGov Data Portal <ExternalLink className='h-3 w-3' />

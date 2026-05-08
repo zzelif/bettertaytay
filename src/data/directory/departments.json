@@ -1,117 +1,735 @@
 [
   {
-    "slug": "operation-center",
-    "office_name": "OPERATION CENTER",
-    "address": null,
-    "trunkline": ["530-2981 ext 1000"],
+    "slug": "accounting-office",
+    "office_name": "ACCOUNTING OFFICE",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8284 4756"
+    ],
     "website": null,
-    "email": "opcen@losbanos.gov.ph",
+    "email": "accounting@taytayrizal.gov.ph / tmg.accountingoffice@lgutaytayrizal.com.ph",
     "department_head": {
-      "name": null,
+      "name": "Ms. Maria Fenina M. Gil, CPA, MPA",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "gender-and-development-office",
-    "office_name": "GENDER AND DEVELOPMENT OFFICE",
-    "address": "2F Municipal Hall",
-    "trunkline": ["530-2981 ext 2013"],
-    "website": "https://losbanos.gov.ph/3",
-    "email": "gado@losbanos.gov.ph",
+    "slug": "administration-office",
+    "office_name": "ADMINISTRATION OFFICE",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4780 / (02) 8284 4781"
+    ],
+    "website": null,
+    "email": "administrator@taytayrizal.gov.ph",
     "department_head": {
-      "name": null,
+      "name": "Atty. Aldrick Daven M. Mendoza, MPA",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "local-civil-registry-office",
-    "office_name": "LOCAL CIVIL REGISTRY OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 1003"],
-    "website": "https://losbanos.gov.ph/7",
-    "email": "mcr@losbanos.gov.ph",
+    "slug": "agriculture-office",
+    "office_name": "AGRICULTURE OFFICE",
+    "address": "NTPM Road",
+    "trunkline": [
+      "8 700 144 98"
+    ],
+    "website": null,
+    "email": "agriculture@taytayrizal.gov.ph",
     "department_head": {
-      "name": null,
+      "name": "Dr. Ramsen S. Andres, DVM",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-planning-and-development-office",
-    "office_name": "MUNICIPAL PLANNING AND DEVELOPMENT OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 1005"],
-    "website": "https://losbanos.gov.ph/8",
-    "email": "mpdo@losbanos.gov.ph",
+    "slug": "assessors-office",
+    "office_name": "ASSESSOR'S OFFICE",
+    "address": "2nd Flr.",
+    "trunkline": [
+      "(02) 8284 4708"
+    ],
+    "website": null,
+    "email": "asessors@taytayrizal.gov.ph",
     "department_head": {
-      "name": "TWILA T. TORRES",
+      "name": "Interim Head: Atty. Aldrick Daven M. Mendoza, MPA",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-engineering-office",
-    "office_name": "MUNICIPAL ENGINEERING OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 1007"],
-    "website": "https://www.facebook.com/EngineeringOfficeLB",
-    "email": "meo@losbanos.gov.ph",
-    "department_head": {
-      "name": "Ricky R. Estopace",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-assessors-office",
-    "office_name": "MUNICIPAL ASSESSOR'S OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 1014"],
-    "website": "https://losbanos.gov.ph/10",
-    "email": "assessor@losbanos.gov.ph",
-    "department_head": {
-      "name": "OLIVER D. MANAIG",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-social-welfare-development-office",
-    "office_name": "MUNICIPAL SOCIAL WELFARE DEVELOPMENT OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 1016"],
-    "website": "https://losbanos.gov.ph/11",
-    "email": "mswdo@losbanos.gov.ph",
-    "department_head": {
-      "name": "HANNA ERIKA E. LAVIÑA",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-environment-and-natural-resources-office",
-    "office_name": "MUNICIPAL ENVIRONMENT AND NATURAL RESOURCES OFFICE",
-    "address": "2F Municipal Hall",
-    "trunkline": ["530-2981 ext 2015"],
-    "website": "https://losbanos.gov.ph/12",
-    "email": "menro@losbanos.gov.ph",
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-treasurers-office",
-    "office_name": "MUNICIPAL TREASURER'S OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 1011"],
-    "website": "https://losbanos.gov.ph/13",
+    "slug": "bids-and-awards-committee-bac",
+    "office_name": "BIDS AND AWARDS COMMITTEE (BAC)",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4787 (Engineering Office)"
+    ],
+    "website": null,
     "email": null,
     "department_head": {
-      "name": "MARIA LUISA G. DIAZ",
+      "name": "April Rose V. Bautista, JD, MBA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "budget-office",
+    "office_name": "BUDGET OFFICE",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8284 4757 / (02) 8284 4772"
+    ],
+    "website": null,
+    "email": "budget@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Ms. Jastella M. Reyes, CPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "bureau-of-fire-protection-bfp",
+    "office_name": "BUREAU OF FIRE PROTECTION (BFP)",
+    "address": "3rd Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "0917 148 9964"
+    ],
+    "website": null,
+    "email": "taytayfirestation@yahoo.com",
+    "department_head": {
+      "name": "Sr. Insp. Ronaldo P. Nalog",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "business-permit-and-licensing-office",
+    "office_name": "BUSINESS PERMIT AND LICENSING OFFICE",
+    "address": "Ground Flr.",
+    "trunkline": [
+      "(02) 8284 4788 (Dept. Head) / (02) 8286 6185 / (02) 8284 4789 (Staff)"
+    ],
+    "website": null,
+    "email": "bplo@taytayrizal.gov.ph / kingdefante@gmail.com",
+    "department_head": {
+      "name": "Atty. Joaquin J. Defante II, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "cctv-command-center",
+    "office_name": "CCTV COMMAND CENTER",
+    "address": "3rd Flr. (New Taytay Public Market)",
+    "trunkline": [
+      "(02) 8254 0431 / 0985 488 3352"
+    ],
+    "website": null,
+    "email": "cctvcommandcenter@taytayrizal.gov.ph / tmdrrmo@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Paul Oliver Domingo",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "coa-auditors-office",
+    "office_name": "COA - AUDITOR'S OFFICE",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8286 6145"
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "Mr. Carla Gabrielle Eusebio",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "comelec-taytay-field-office",
+    "office_name": "COMELEC - TAYTAY FIELD OFFICE",
+    "address": "Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "(02) 8284 4719"
+    ],
+    "website": null,
+    "email": "comelectaytay@gmail.com",
+    "department_head": {
+      "name": "Election Officer IV: Ms. Rhodora G. Aquino - Yanes",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "data-privacy-officer",
+    "office_name": "DATA PRIVACY OFFICER",
+    "address": "Legal Services Office (4th Flr.)",
+    "trunkline": [
+      "(02) 8 284 4774 (Legal Services Office)"
+    ],
+    "website": null,
+    "email": "dataprotectionofficer@taytayrizal.gov.ph",
+    "department_head": {
+      "name": null,
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "dilg-taytay-field-office",
+    "office_name": "DILG - TAYTAY FIELD OFFICE",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4801"
+    ],
+    "website": null,
+    "email": "dilg.foreigntravelauthority1@gmail.com / taytaydilg@gmail.com",
+    "department_head": {
+      "name": "Engr. Jennylynne Alvarez-Sicat, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "economic-enterprise-development-and-management-eedm-ntpm",
+    "office_name": "ECONOMIC ENTERPRISE DEVELOPMENT AND MANAGEMENT (EEDM) - NTPM",
+    "address": "NTPM",
+    "trunkline": [
+      "(02) 8 284 4715 (Treasury Office) (02) 8 640 5894 / 0968 892 8690"
+    ],
+    "website": null,
+    "email": "ntpm.smile@gmail.com",
+    "department_head": {
+      "name": "Mr. Helito A. Basco",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "engineering-flood-control-section",
+    "office_name": "ENGINEERING - FLOOD CONTROL SECTION",
+    "address": "NTPM",
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "Mr. Vener Esguerra",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "engineering-office",
+    "office_name": "ENGINEERING OFFICE",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4787"
+    ],
+    "website": null,
+    "email": "smiletaytayengineering@gmail.com",
+    "department_head": {
+      "name": "Engr. Rodel Gatapia",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "engineering-office-taytay-public-cemetery",
+    "office_name": "ENGINEERING OFFICE - TAYTAY PUBLIC CEMETERY",
+    "address": null,
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "Mr. Boycie Tagle",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "environment-and-natural-resources-office-menro",
+    "office_name": "ENVIRONMENT AND NATURAL RESOURCES OFFICE (MENRO)",
+    "address": "Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "(02) 8284 4794"
+    ],
+    "website": null,
+    "email": "menro@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Ms. Lyric Jo D. Dagandan",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "gender-and-development-office-gad",
+    "office_name": "GENDER AND DEVELOPMENT OFFICE (GAD)",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8284 4778"
+    ],
+    "website": null,
+    "email": "gad@taytayrizal.gov.ph / genderanddevelopmenttaytay01@gmail.com",
+    "department_head": {
+      "name": "Ms. Ammilyn E. Naval",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "general-services-office-gso",
+    "office_name": "GENERAL SERVICES OFFICE (GSO)",
+    "address": "Ground Flr.",
+    "trunkline": [
+      "(02) 8286 4706 / (02) 8286 4783"
+    ],
+    "website": null,
+    "email": "gsosmiletaytay@gmail.com / gso@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Emilio G. Solisa, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "gso-impounding-section",
+    "office_name": "GSO - IMPOUNDING SECTION",
+    "address": "4th Flr.",
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "Ms. Agnes Lumogdang",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "gso-kalayaan-park-field-office",
+    "office_name": "GSO - KALAYAAN PARK FIELD OFFICE",
+    "address": "OTPM",
+    "trunkline": [
+      "0906 280 1778"
+    ],
+    "website": null,
+    "email": "gsoofficetaytaybayan@gmail.com",
+    "department_head": {
+      "name": "Mr. Dan Leycer Cruz",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "gso-motor-pool",
+    "office_name": "GSO - MOTOR POOL",
+    "address": "NTPM",
+    "trunkline": [
+      "7 119 5236"
+    ],
+    "website": null,
+    "email": "motorpoolsection2023@gmail.com",
+    "department_head": {
+      "name": "Mr. Ciarlino Payra",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "gso-solid-waste-management",
+    "office_name": "GSO - SOLID WASTE MANAGEMENT",
+    "address": "Floodway",
+    "trunkline": [
+      "(02) 8282 5737"
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "Engr. Jess Tanap",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "health-office-central-supplies-office",
+    "office_name": "HEALTH OFFICE - CENTRAL SUPPLIES OFFICE",
+    "address": "Emergency Hospital",
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": "centralsupplyofficeteh@gmail.com",
+    "department_head": {
+      "name": "Dra. Mary Elinore B. Sta. Ana, M.D. (Dra. Boots)",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "health-office-epidemiology-and-surveillance-unite-mesu",
+    "office_name": "HEALTH OFFICE - EPIDEMIOLOGY AND SURVEILLANCE UNITE (MESU)",
+    "address": "Emergency Hospital",
+    "trunkline": [
+      "0998 595 1145 / 0917 625 0065"
+    ],
+    "website": null,
+    "email": "mhomesu.data@gmail.com / taytaymho.fieldservice@gmail.com",
+    "department_head": {
+      "name": "Ms. Michelle L. Medina",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "health-office-health-officer",
+    "office_name": "HEALTH OFFICE - HEALTH OFFICER",
+    "address": "Emergency Hospital",
+    "trunkline": [
+      "0981 754 3554"
+    ],
+    "website": null,
+    "email": "mhosmiletaytay@gmail.com",
+    "department_head": {
+      "name": "Dr. Aldwin S. Aguinaldo, M.D.",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "health-office-records-section",
+    "office_name": "HEALTH OFFICE - RECORDS SECTION",
+    "address": "Emergency Hospital",
+    "trunkline": [
+      "0993 761 1708"
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": "Ms. Sarah Jane Borja",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "health-office-social-hygiene-section",
+    "office_name": "HEALTH OFFICE - SOCIAL HYGIENE SECTION",
+    "address": "Emergency Hospital",
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": "taytaysocialhygieneclinic@gmail.com",
+    "department_head": {
+      "name": null,
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "human-resource-office",
+    "office_name": "HUMAN RESOURCE OFFICE",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8 284 4776 (Staff) / (02) 8 284 4777 (Dept. Head)"
+    ],
+    "website": null,
+    "email": "hrmo_lgutaytay@yahoo.com / hrmo@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Ms. Lore Jean Pitular Araullo",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "information-desk",
+    "office_name": "INFORMATION DESK",
+    "address": "2nd Flr.",
+    "trunkline": [
+      "(02) 8 284 4771"
+    ],
+    "website": null,
+    "email": null,
+    "department_head": {
+      "name": null,
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "land-tax-section",
+    "office_name": "LAND TAX SECTION",
+    "address": "2nd Flr.",
+    "trunkline": [
+      "(02) 8284 4717"
+    ],
+    "website": null,
+    "email": "treasury@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Herlito A. Basco",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "legal-services-office",
+    "office_name": "LEGAL SERVICES OFFICE",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8284 4774 / (02) 8284 4775"
+    ],
+    "website": null,
+    "email": "legal@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Atty. Czarmaine Angeli T. Villalobos, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "local-civil-registry-office-lcr",
+    "office_name": "LOCAL CIVIL REGISTRY OFFICE (LCR)",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4720"
+    ],
+    "website": null,
+    "email": "lcr@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Atty. Loren Marie B. Manda",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "local-economic-development-investment-promotions-office-ledipo",
+    "office_name": "LOCAL ECONOMIC DEVELOPMENT INVESTMENT PROMOTIONS OFFICE (LEDIPO)",
+    "address": "NTMP - 3rd Flr.",
+    "trunkline": [
+      "0951 732 1664"
+    ],
+    "website": null,
+    "email": "ledipo.taytay@gmaill.com / ledipo@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Atty. Joaquin J. Defante II, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "local-poverty-reduction-action-office-lprao",
+    "office_name": "LOCAL POVERTY REDUCTION ACTION OFFICE (LPRAO)",
+    "address": "NTMP - 3rd Flr.",
+    "trunkline": [
+      "0963 324 5517"
+    ],
+    "website": null,
+    "email": "lpraooffice@gmail.com / LPRAOTaytay@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Ms. Gracia Balangue",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "management-information-system-services-office-misso",
+    "office_name": "MANAGEMENT INFORMATION SYSTEM SERVICES OFFICE (MISSO)",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4765"
+    ],
+    "website": null,
+    "email": "mis@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Marion D. De Leon, MCP",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "market-collectors-office",
+    "office_name": "MARKET COLLECTOR'S OFFICE",
+    "address": "3rd. Flr New Taytay Market",
+    "trunkline": [
+      "(02) 8640 5659"
+    ],
+    "website": null,
+    "email": "judittines@gmail.com",
+    "department_head": {
+      "name": "Ms. Judit T. Ines, MM",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "municipal-city-anti-drug-abuse-council-madac",
+    "office_name": "MUNICIPAL CITY ANTI-DRUG ABUSE COUNCIL (MADAC)",
+    "address": "NTPM (Beside McDonald's)",
+    "trunkline": [
+      "0917 134 9576"
+    ],
+    "website": null,
+    "email": "madac@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Dexter B. Pangilinan",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "municipal-trial-court",
+    "office_name": "MUNICIPAL TRIAL COURT",
+    "address": "Ground Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "0967 380 9575"
+    ],
+    "website": null,
+    "email": "mtc2tty000@judiciary.gov.ph",
+    "department_head": {
+      "name": null,
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "nutrition-office",
+    "office_name": "NUTRITION OFFICE",
+    "address": "San Juan Gym",
+    "trunkline": [
+      "0945 785 2638"
+    ],
+    "website": null,
+    "email": "mnao@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Emmanoel S. Matela, RND",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "office-of-senior-citizen-affairs-osca",
+    "office_name": "OFFICE OF SENIOR CITIZEN AFFAIRS (OSCA)",
+    "address": "OTPM",
+    "trunkline": [
+      "(02) 8289 8661"
+    ],
+    "website": null,
+    "email": "osca@taytayrizal.gov.ph / oscataytayoffice@gmail.com",
+    "department_head": {
+      "name": "Ms. Alicia DL. Matienzo",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "old-taytay-public-market-otpm",
+    "office_name": "OLD TAYTAY PUBLIC MARKET (OTPM)",
+    "address": "OTPM",
+    "trunkline": [
+      "0926 116 7546"
+    ],
+    "website": null,
+    "email": "smiletaytayotpm@gmail.com",
+    "department_head": {
+      "name": "Mr. Rafael \"Pidolskie\" R. Lacanaria",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "peoples-law-enforcement-board-pleb",
+    "office_name": "PEOPLE'S LAW ENFORCEMENT BOARD (PLEB)",
+    "address": null,
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": "plebnamayngiti@gmail.com",
+    "department_head": {
+      "name": "Atty. Randy A. Orlino",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "persons-with-disability-affairs-office-pdao",
+    "office_name": "PERSONS WITH DISABILITY AFFAIRS OFFICE (PDAO)",
+    "address": "Ground Flr.",
+    "trunkline": [
+      "(02) 8284 4710 (MSWD) / 0915 695 5037"
+    ],
+    "website": null,
+    "email": "pdaotaytayrizal@gmail.com",
+    "department_head": {
+      "name": "Mr. Aquilino R. Raymundo, Jr.",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "planning-and-development-coordinator-mpdo",
+    "office_name": "PLANNING AND DEVELOPMENT COORDINATOR (MPDO)",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8284 4784 / (02) 8284 4785"
+    ],
+    "website": null,
+    "email": "mpdo@taytayrizal.gov.ph / mpdo.taytay@gmail.com",
+    "department_head": {
+      "name": "Ms. Ma. Fatima G. Garcia, EnP.",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "pnp-taytay",
+    "office_name": "PNP TAYTAY",
+    "address": "San Juan Gym",
+    "trunkline": [
+      "0917 163 3556 / 0998 598 5730"
+    ],
+    "website": null,
+    "email": "taypsrizal@yahoo.com",
+    "department_head": {
+      "name": "PLT Col. Marlo N. Selero",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "procurement-office",
+    "office_name": "PROCUREMENT OFFICE",
+    "address": "Ground Flr.",
+    "trunkline": [
+      "(02) 8286 6124 / 0920 602 0736"
+    ],
+    "website": null,
+    "email": "mpotaytay@gmail.com",
+    "department_head": {
+      "name": "Atty. Joaquin J. Defante II, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "public-employment-service-office-peso",
+    "office_name": "PUBLIC EMPLOYMENT SERVICE OFFICE (PESO)",
+    "address": "4th Floor",
+    "trunkline": [
+      "(02) 8284 4790 / (02) 8284 4791"
+    ],
+    "website": null,
+    "email": "peso@taytayrizal.gov.ph / pesotaytay2009@yahoo.com",
+    "department_head": {
+      "name": "Ms. Gina De Leon - Pineda",
       "contact": null,
       "email": null
     }
@@ -119,164 +737,205 @@
   {
     "slug": "public-information-office",
     "office_name": "PUBLIC INFORMATION OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 3017"],
-    "website": "https://losbanos.gov.ph/14",
-    "email": "pio@losbanos.gov.ph",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8286 6149 / 0917 167 6453"
+    ],
+    "website": null,
+    "email": "pio@taytayrizal.gov.ph / smiletaytaypio@gmail.com / mr.anne.francisco@gmail.com",
     "department_head": {
-      "name": "JOHN MARVIN S. CANARIA",
+      "name": "Ma. Rojanie R. Francisco",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-budget-office",
-    "office_name": "MUNICIPAL BUDGET OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 3006"],
-    "website": "https://losbanos.gov.ph/15",
-    "email": "ombo@losbanos.gov.ph",
+    "slug": "public-safety-department-mpsd",
+    "office_name": "PUBLIC SAFETY DEPARTMENT (MPSD)",
+    "address": "Ground Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "(02) 8286 6187 / 0907 074 8822"
+    ],
+    "website": null,
+    "email": "mpsd@taytayrizal.gov.ph / deleoncherryann373@gmail.com",
     "department_head": {
-      "name": null,
+      "name": "Atty. Justice Pajarillo",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-accounting-office",
-    "office_name": "MUNICIPAL ACCOUNTING OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 3008"],
-    "website": "https://losbanos.gov.ph/16",
-    "email": "omacc@losbanos.gov.ph",
+    "slug": "sangguniang-bayan-sb-secretariat",
+    "office_name": "SANGGUNIANG BAYAN (SB) SECRETARIAT",
+    "address": "5th Flr.",
+    "trunkline": [
+      "(02) 8284 4759"
+    ],
+    "website": null,
+    "email": "sbsecretariat.taytay@gmail.com",
     "department_head": {
-      "name": null,
+      "name": "Ms. Julieta M. Juanillo",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-human-resource-management-office",
-    "office_name": "MUNICIPAL HUMAN RESOURCE MANAGEMENT OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 3015"],
-    "website": "https://losbanos.gov.ph/17",
-    "email": "hrmo@losbanos.gov.ph",
+    "slug": "security-office-mbss",
+    "office_name": "SECURITY OFFICE (MBSS)",
+    "address": "Beside Taytay Municipal Hall",
+    "trunkline": [
+      "(02) 8284 4707"
+    ],
+    "website": null,
+    "email": "mbss@taytayrizal.gov.ph / mbsstaytaygov123@gmail.com",
     "department_head": {
-      "name": "MIRAFLOR O. TADO",
+      "name": "Mr. Jeffrey M. Bernardez Rcrim, CSP, MPA",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-tourism-office",
-    "office_name": "MUNICIPAL TOURISM OFFICE",
+    "slug": "smile-it-lab-section-tech4ed-center",
+    "office_name": "SMILE I.T. LAB SECTION (TECH4ED CENTER )",
+    "address": "5th Flr.",
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": "smiletech4edLab@taytayrizal.gov.ph / smile.tech4edlab@gmail.com",
+    "department_head": {
+      "name": "Manager: Enrico A. Marquez, Jr., LPT, MPA",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "smile-taytay-artwork-and-creative-services-stacs-office",
+    "office_name": "SMILE TAYTAY ARTWORK AND CREATIVE SERVICES (STACS) OFFICE",
+    "address": "5th Flr.",
+    "trunkline": [
+      null
+    ],
+    "website": null,
+    "email": "stacsoffice2023@gmail.com",
+    "department_head": {
+      "name": "Mr. John Carlo G. Ramos",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "smile-traffic-action-group-stag",
+    "office_name": "SMILE TRAFFIC ACTION GROUP (STAG)",
+    "address": "NTPM (Beside McDonald's)",
+    "trunkline": [
+      "(02) 8361 2307 / 0968 647 8165"
+    ],
+    "website": null,
+    "email": "stag@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Benedicto Dela Cruz III",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "social-welfare-and-development-office-mswd",
+    "office_name": "SOCIAL WELFARE AND DEVELOPMENT OFFICE (MSWD)",
+    "address": "Ground Flr.",
+    "trunkline": [
+      "(02) 8284 4170 / 0921 284 3685"
+    ],
+    "website": null,
+    "email": "mswd@taytayrizal.gov.ph / mswdtaytayrizal@gmail.com",
+    "department_head": {
+      "name": "Ms. Grethel L. Tañote, RSW, MPA, JD",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "sports-development-office",
+    "office_name": "SPORTS DEVELOPMENT OFFICE",
+    "address": "San Juan Gym",
+    "trunkline": [
+      "(02) 8286 6184 / 0956 879 5720 / 0977 788 2928 / 0908 313 3281"
+    ],
+    "website": null,
+    "email": "smiletaytaysports@gmail.com / mariagiacarilao123@gmail.com",
+    "department_head": {
+      "name": "Mr. Edward M. Medina",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "taytay-fire-brigade",
+    "office_name": "TAYTAY FIRE BRIGADE",
+    "address": "NTPM (Beside McDonald's)",
+    "trunkline": [
+      "0917 825 0857"
+    ],
+    "website": null,
+    "email": "tmdrrmofirerescue@gmail.com",
+    "department_head": {
+      "name": "Major Erineo M. Servillejo (Ret.)",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "taytay-kalayaan-park-office",
+    "office_name": "TAYTAY KALAYAAN PARK OFFICE",
+    "address": "OTPM",
+    "trunkline": [
+      "0945 364 4407"
+    ],
+    "website": null,
+    "email": "kalayaanparksmiletaytay@gmail.com",
+    "department_head": {
+      "name": "Mr. Noel Salandanan",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "taytay-municipal-disaster-risk-reduction-management-office-tmdrrmo",
+    "office_name": "TAYTAY MUNICIPAL DISASTER RISK REDUCTION MANAGEMENT OFFICE (TMDRRMO)",
+    "address": "NTMP - 3rd Flr.",
+    "trunkline": [
+      "(02) 8252 1805 / 0952 619 9511 / 0970 884 3791"
+    ],
+    "website": null,
+    "email": "taytaylrdmmo@gmail.com / tmdrrmo@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Mr. Paul Oliver C. Domingo",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "taytay-municipal-tricycle-franchising-regulatory-office-tmtfro",
+    "office_name": "TAYTAY MUNICIPAL TRICYCLE FRANCHISING REGULATORY OFFICE (TMTFRO)",
+    "address": "Ground Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "0968 647 8165"
+    ],
+    "website": null,
+    "email": "tmtfro@taytayrizal.gov.ph",
+    "department_head": {
+      "name": "Atty. Dustin G. Regalado",
+      "contact": null,
+      "email": null
+    }
+  },
+  {
+    "slug": "taytay-muslim-affairs-office",
+    "office_name": "TAYTAY MUSLIM AFFAIRS OFFICE",
     "address": null,
-    "trunkline": ["530-2981 ext 4000"],
-    "website": "https://losbanos.gov.ph/18",
-    "email": "tourism@losbanos.gov.ph",
-    "department_head": {
-      "name": "EDMARIE Z. CALUNGSOD",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "information-and-communication-systems-office",
-    "office_name": "INFORMATION AND COMMUNICATION SYSTEMS OFFICE",
-    "address": "1F Municipal Hall",
-    "trunkline": ["530-2981 ext 3013"],
-    "website": "https://losbanos.gov.ph/19",
-    "email": "icso@losbanos.gov.ph",
-    "department_head": {
-      "name": "ANTONIO L. ADILLE IV",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "local-youth-and-development-office",
-    "office_name": "LOCAL YOUTH AND DEVELOPMENT OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 3014"],
-    "website": "https://losbanos.gov.ph/20",
-    "email": "lydo@losbanos.gov.ph",
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-agriculture-office",
-    "office_name": "MUNICIPAL AGRICULTURE OFFICE",
-    "address": null,
-    "trunkline": [null],
-    "website": "https://losbanos.gov.ph/21",
-    "email": null,
-    "department_head": {
-      "name": "Cheryl L. Gonzales",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-mdrrmo-office",
-    "office_name": "MUNICIPAL DISASTER RISK REDUCTION AND MANAGEMENT OFFICE",
-    "address": null,
-    "trunkline": ["0977 204 9641"],
-    "website": "https://losbanos.gov.ph/21",
-    "email": null,
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-police-station",
-    "office_name": "Municipal Police Station",
-    "address": null,
-    "trunkline": ["0927 509 1198"],
-    "website": "https://www.facebook.com/losbanospnpwebsite",
-    "email": null,
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-health-office",
-    "office_name": "Municipal Health Office",
-    "address": null,
-    "trunkline": ["530-2981 ext 4004"],
-    "website": "https://www.facebook.com/LBMHO",
-    "email": "rhu@losbanos.gov.ph",
-    "department_head": {
-      "name": "ALVIN A. ISIDORO",
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "bureau-fire-protection",
-    "office_name": "Bureau of Fire Protection",
-    "address": null,
-    "trunkline": ["049 536 7965", "049 310 9572", "0939 432 5837"],
-    "website": "https://www.facebook.com/lbfirestation",
-    "email": null,
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "business-permit-and-licensing-office",
-    "office_name": "Business Permit and Licensing Office",
-    "address": null,
-    "trunkline": [null],
+    "trunkline": [
+      null
+    ],
     "website": null,
     "email": null,
     "department_head": {
@@ -286,144 +945,61 @@
     }
   },
   {
-    "slug": "municipal-general-services-office",
-    "office_name": "MUNICIPAL GENERAL SERVICES OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 4002"],
+    "slug": "taytay-youth-development-office",
+    "office_name": "TAYTAY YOUTH DEVELOPMENT OFFICE",
+    "address": "3rd Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
+    "trunkline": [
+      "(02) 8284 4782"
+    ],
     "website": null,
-    "email": "gso@losbanos.gov.ph",
+    "email": "taytayyd@taytayrizal.gov.ph / taytayyouthdevelopmentoffice@gmail.com",
     "department_head": {
-      "name": "Raymond Joseph B. Paraiso",
+      "name": "Mr. John Michael M. Lacson, LPT",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "persons-with-disability-affairs-office",
-    "office_name": "PERSONS WITH DISABILITY AFFAIRS OFFICE (PDAO)",
-    "address": null,
-    "trunkline": ["530-2981 ext 1004"],
+    "slug": "tourism-office",
+    "office_name": "TOURISM OFFICE",
+    "address": "4th Flr.",
+    "trunkline": [
+      "(02) 8284 4786"
+    ],
     "website": null,
-    "email": "pdao@losbanos.gov.ph",
+    "email": "tourism@taytayrizal.gov.ph / tourism.lgutaytay@gmail.com",
     "department_head": {
-      "name": "SHIRLEY D. ANDRADE",
+      "name": "Roel Villar Supendio, MBA",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "municipal-urban-development-and-housing-office",
-    "office_name": "MUNICIPAL URBAN DEVELOPMENT AND HOUSING OFFICE",
-    "address": "3F Municipal Hall",
-    "trunkline": ["530-2981 ext 3012"],
+    "slug": "treasury-office",
+    "office_name": "TREASURY OFFICE",
+    "address": "2nd Flr.",
+    "trunkline": [
+      "(02) 8284 4715"
+    ],
     "website": null,
-    "email": "mudho@losbanos.gov.ph",
+    "email": "treasury@taytayrizal.gov.ph",
     "department_head": {
-      "name": "Raymond Joseph B. Paraiso",
+      "name": "Ms. Rose B. Isidro",
       "contact": null,
       "email": null
     }
   },
   {
-    "slug": "office-senior-citizens-affairs",
-    "office_name": "OFFICE FOR THE SENIOR CITIZENS' AFFAIRS",
-    "address": "1F Municipal Hall",
-    "trunkline": [null],
-    "website": "https://www.facebook.com/profile.php?id=61559573828843",
-    "email": null,
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-nutrition-office",
-    "office_name": "MUNICIPAL NUTRITION OFFICE",
-    "address": null,
-    "trunkline": ["530-2981 ext 3011"],
+    "slug": "urban-poor-affairs-office-upao",
+    "office_name": "URBAN POOR AFFAIRS OFFICE (UPAO)",
+    "address": "3rd Flr.",
+    "trunkline": [
+      "(02) 8284 4773"
+    ],
     "website": null,
-    "email": "lbnutritionoffice@gmail.com",
+    "email": "upao@taytayrizal.gov.ph / upaotaytay@gmail.com",
     "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "public-employment-service-office",
-    "office_name": "PUBLIC EMPLOYMENT SERVICE OFFICE",
-    "address": null,
-    "trunkline": ["530-2981 ext 4008"],
-    "website": null,
-    "email": "peso@losbanos.gov.ph",
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "municipal-local-government-operations-office",
-    "office_name": "MUNICIPAL LOCAL GOVERNMENT OPERATIONS OFFICE (DILG)",
-    "address": null,
-    "trunkline": [null],
-    "website": null,
-    "email": "mlgoolosbanos2@gmail.com",
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "bids-and-awards-committee",
-    "office_name": "BIDS AND AWARDS COMMITTEE",
-    "address": null,
-    "trunkline": ["530-2981 ext 3006"],
-    "website": null,
-    "email": "bac@losbanos.gov.ph",
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "market",
-    "office_name": "MUNICIPAL ECONOMIC ENTERPRISE - MARKET",
-    "address": null,
-    "trunkline": [null],
-    "website": null,
-    "email": null,
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "slaughterhouse",
-    "office_name": "MUNICIPAL ECONOMIC ENTERPRISE - SLAUGHTERHOUSE",
-    "address": null,
-    "trunkline": [null],
-    "website": null,
-    "email": null,
-    "department_head": {
-      "name": null,
-      "contact": null,
-      "email": null
-    }
-  },
-  {
-    "slug": "public-order-and-safety-office",
-    "office_name": "PUBLIC ORDER AND SAFETY OFFICE",
-    "address": null,
-    "trunkline": [null],
-    "website": null,
-    "email": null,
-    "department_head": {
-      "name": null,
+      "name": "Ms. Mary Jasmin De Leon Salipsip",
       "contact": null,
       "email": null
     }

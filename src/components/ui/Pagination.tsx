@@ -74,6 +74,7 @@ export function PaginationControls({
           <span>Rows:</span>
           <select
             value={resultsPerPage}
+            title='Select number of rows per page'
             onChange={e => onResultsPerPageChange(Number(e.target.value))}
             className='focus:border-kapwa-border-brand focus:ring-kapwa-border-brand border-kapwa-border-weak bg-kapwa-bg-surface text-kapwa-text-support h-8 rounded-lg text-xs font-medium'
           >

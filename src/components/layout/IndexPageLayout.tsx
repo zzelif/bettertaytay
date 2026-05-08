@@ -24,7 +24,7 @@ export interface FilterConfig {
   }>;
 }
 
-interface IndexPageLayoutProps {
+export interface IndexPageLayoutProps {
   title: string;
   description?: string;
   breadcrumbs?: BreadcrumbItem[];

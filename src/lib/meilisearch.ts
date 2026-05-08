@@ -16,6 +16,19 @@ export const INDICES = {
   PHILGEPS_ORGS: 'philgeps_organizations',
 } as const;
 
+{
+  /* 
+const index = client.index(INDICES.PHILGEPS);
+const response = await index.search('TAYTAY', {
+  limit: 100,
+  attributesToRetrieve: ['MUNICIPALITY OF TAYTAY, RIZAL'],
+});
+
+const orgs = [...new Set(response.hits.map(h => h.organization_name))];
+console.log(orgs);
+*/
+}
+
 // 2. PhilGEPS Types
 export interface PhilgepsDoc {
   id: string;

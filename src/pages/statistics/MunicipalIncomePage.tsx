@@ -109,7 +109,7 @@ export default function MunicipalIncomePage() {
 
       {/* Chart wrapped in DetailSection */}
       <div className='mb-kapwa-lg'>
-        <DetailSection title='Revenue Composition' icon={Landmark}>
+        <DetailSection title='Revenue Composition (Million)' icon={Landmark}>
           <div className='flex justify-center'>
             <FinancialPieChart
               title='Overview'
@@ -127,7 +127,7 @@ export default function MunicipalIncomePage() {
       </div>
 
       {/* Full Financial Itemization */}
-      <DetailSection title='Full Financial Itemization' icon={Coins}>
+      <DetailSection title='Full Financial Itemization (Million)' icon={Coins}>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
           <div className='space-y-4'>
             <h4 className='text-kapwa-text-accent-orange border-b pb-2 text-[10px] font-black tracking-widest uppercase'>
@@ -243,7 +243,7 @@ export default function MunicipalIncomePage() {
             <a
               href='https://data.bettergov.ph/datasets/9/resources/31'
               target='_blank'
-              rel='noreferrer'
+              rel='noreferrer noopener'
               className='hover:text-kapwa-text-brand underline'
             >
               Bureau of Local Government Finance (BLGF)

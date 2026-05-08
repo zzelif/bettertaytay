@@ -12,6 +12,7 @@ import {
   GlobeIcon,
   Landmark,
   MapPinIcon,
+  PhoneIcon,
   ShieldCheck,
   UserIcon,
   UsersIcon,
@@ -29,6 +30,7 @@ import { toTitleCase } from '@/lib/stringUtils';
 
 import executiveData from '@/data/directory/executive.json';
 import legislativeData from '@/data/directory/legislative.json';
+import { toTelUri } from '@/lib';
 
 // --- Types ---
 interface ExecutiveOfficial {
@@ -106,9 +108,10 @@ function ElectedLeaderCard({ leader }: { leader: ExecutiveOfficial }) {
                 href={leader.email ? `mailto:${leader.email}` : undefined}
               />
               <ContactItem
-                icon={Briefcase}
+                icon={PhoneIcon}
                 label='Office Line'
                 value={leader.phone}
+                href={leader.phone ? toTelUri(leader.phone) : undefined}
               />
             </ContactContainer>
           </div>
@@ -245,7 +248,7 @@ export default function ElectedOfficialsPage() {
   );
 
   const sbData = legislativeData.find(
-    item => item.slug === '12th-sangguniang-bayan'
+    item => item.slug === '13th-sangguniang-bayan'
   );
 
   const getChairedCommittees = (memberName: string): Committee[] =>

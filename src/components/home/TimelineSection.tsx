@@ -3,13 +3,17 @@ import { useState } from 'react';
 import { Button } from '@bettergov/kapwa/button';
 import {
   ChevronDown,
+  Church,
   Feather,
+  ForkKnifeCrossed,
   Gavel,
   Leaf,
   LucideIcon,
   MapPin,
   Mountain,
   Scroll,
+  Shirt,
+  ToolCase,
   Waves,
 } from 'lucide-react';
 
@@ -28,6 +32,10 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Gavel,
   Mountain,
   MapPin,
+  ForkKnifeCrossed,
+  Church,
+  Shirt,
+  ToolCase,
 };
 
 export default function TimelineSection() {
