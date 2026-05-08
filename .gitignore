@@ -33,6 +33,7 @@ e2e/**/__snapshots__/
 *.sln
 *.sw?
 .env
+.venv
 .windsurf/
 .claude/
 
