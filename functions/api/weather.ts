@@ -17,8 +17,8 @@ import type {
  * Development: localhost for local development
  */
 const ALLOWED_ORIGINS = [
-  'https://betterlb.pages.dev',
-  'https://betterlb.gov.ph', // Custom domain if configured
+  'https://bettertaytay.pages.dev',
+  'https://bettertaytay.gov', // Custom domain if configured
   'http://localhost:5173', // Vite dev server
   'http://localhost:8788', // Wrangler dev server
 ];
