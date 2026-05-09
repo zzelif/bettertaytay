@@ -17,26 +17,11 @@
       "remote": true
     }
   ],
-  "assets": {
-    "directory": "./dist"
-  },
   "vars": {
     "GITHUB_REPO": "zzelif/bettertaytay",
     "OPEN_WEATHER_API_URL": "https://api.openweathermap.org/data/2.5"
   },
-  "env": {
-    "preview": {
-      "vars": {
-        "VITE_MEILISEARCH_HOST": "https://search2.bettergov.ph"
-      }
-    },
-    "production": {
-      "vars": {
-        "VITE_MEILISEARCH_HOST": "https://search2.bettergov.ph"
-      }
-    }
-  },
-  "triggers_cron": {
-    "weather": "0 * * * *" // Every hour
+  "triggers": {
+    "crons": "0 * * * *" // Every hour
   }
 }
