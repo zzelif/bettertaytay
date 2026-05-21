@@ -117,39 +117,29 @@ describe('getRandomNumber() - random number generation', () => {
 });
 
 describe('toTelUri() - phone number to tel: URI conversion', () => {
-  it('converts local 7-digit number with area code 049', () => {
-    const result = toTelUri('530-2981');
-    expect(result).toBe('tel:+63495302981');
+  it('converts local 8-digit number with no area code', () => {
+    const result = toTelUri('8284-4756');
+    expect(result).toBe('tel:+63282844756');
   });
 
-  it('handles number with extension keyword', () => {
-    const result = toTelUri('530-2981 ext 3000');
-    expect(result).toBe('tel:+63495302981');
+  it('converts 9-digit number starting with 8700', () => {
+    const result = toTelUri('8 700 144 98');
+    expect(result).toBe('tel:+632870014498');
   });
 
-  it('handles number with comma extension separator', () => {
-    const result = toTelUri('530-2981, 3000');
-    expect(result).toBe('tel:+63495302981');
+  it('converts 10-digit number with area code 02', () => {
+    const result = toTelUri('02 8284 4756');
+    expect(result).toBe('tel:+63282844756');
   });
 
-  it('converts 9-digit number starting with 049', () => {
-    const result = toTelUri('049 536 7965');
-    expect(result).toBe('tel:+63495367965');
-  });
-
-  it('converts 11-digit mobile number starting with 0', () => {
+  it('converts 11-digit mobile number starting with 09', () => {
     const result = toTelUri('0927 509 1198');
     expect(result).toBe('tel:+639275091198');
   });
 
-  it('handles various extension formats', () => {
-    const result = toTelUri('530-2981 ex 3000');
-    expect(result).toBe('tel:+63495302981');
-  });
-
-  it('handles "x" extension format', () => {
-    const result = toTelUri('530-2981 x3000');
-    expect(result).toBe('tel:+63495302981');
+  it('converts 12-digit mobile number starting with 63 or +63', () => {
+    const result = toTelUri('+63 927 509 1198');
+    expect(result).toBe('tel:+639275091198');
   });
 
   it('returns null for null input', () => {
@@ -167,18 +157,28 @@ describe('toTelUri() - phone number to tel: URI conversion', () => {
     expect(result).toBeNull();
   });
 
-  it('handles 7-digit number with spaces', () => {
-    const result = toTelUri('530 2981');
-    expect(result).toBe('tel:+63495302981');
+  it('handles 8-digit number with spaces', () => {
+    const result = toTelUri('8284 4756');
+    expect(result).toBe('tel:+63282844756');
   });
 
-  it('handles 9-digit number with hyphens', () => {
-    const result = toTelUri('049-536-7965');
-    expect(result).toBe('tel:+63495367965');
+  it('handles 9-digit number with hypens', () => {
+    const result = toTelUri('8700-144-98');
+    expect(result).toBe('tel:+632870014498');
   });
 
-  it('handles mobile number with hyphens', () => {
+  it('handles 10-digit number with hyphens', () => {
+    const result = toTelUri('02-8284-4756');
+    expect(result).toBe('tel:+63282844756');
+  });
+
+  it('handles 11-digit mobile number with hyphens', () => {
     const result = toTelUri('0927-509-1198');
+    expect(result).toBe('tel:+639275091198');
+  });
+
+  it('handles 12-digit mobile number with hyphens', () => {
+    const result = toTelUri('+63-927-509-1198');
     expect(result).toBe('tel:+639275091198');
   });
 });

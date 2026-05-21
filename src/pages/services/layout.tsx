@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 
-import { Outlet, useLocation, useSearchParams } from 'react-router-dom';
+import {
+  Outlet,
+  useLocation,
+  useSearchParams,
+  useNavigate,
+} from 'react-router-dom';
 
 import { useQueryState } from 'nuqs';
 
@@ -27,6 +32,7 @@ export interface ServicesOutletContext {
 
 export default function ServicesLayout() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
   const isIndexPage =
@@ -38,7 +44,12 @@ export default function ServicesLayout() {
 
   const handleCategoryChange = (slug: string) => {
     setSelectedCategorySlug(slug);
-    setSearchParams({ category: slug });
+
+    if (isIndexPage) {
+      setSearchParams({ category: slug });
+    } else {
+      navigate(`/services?category=${slug}`);
+    }
   };
 
   useEffect(() => {

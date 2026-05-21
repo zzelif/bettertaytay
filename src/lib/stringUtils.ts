@@ -11,7 +11,16 @@ export function formatGovName(text: string, _type: 'department' | 'barangay') {
   const minorWords = ['of', 'the', 'and', 'for', 'in', 'on'];
 
   // 3. Define acronyms that should stay uppercase
-  const acronyms = ['ICT', 'HR', 'BFP', 'PNP', 'MDRRMO', 'MSWDO', 'MPDC'];
+  const acronyms = [
+    'ICT',
+    'HR',
+    'BFP',
+    'PNP',
+    'MDRRMO',
+    'MSWDO',
+    'MPDC',
+    'NDRRMC',
+  ];
 
   return cleanText
     .toLowerCase()
@@ -49,6 +58,7 @@ export function toTitleCase(text: string) {
     'BFP',
     'PNP',
     'RHU',
+    'NDRRMC',
   ];
 
   return text
@@ -67,4 +77,19 @@ export function toTitleCase(text: string) {
       return word.charAt(0).toUpperCase() + word.slice(1);
     })
     .join(' ');
+}
+
+export function getShortHotlineName(name: string) {
+  const upperName = name.toUpperCase();
+  if (upperName.includes('NATIONAL DISASTER RISK REDUCTION')) return 'NDRRMC';
+  if (upperName.includes('PHILIPPINE NATIONAL POLICE') || upperName === 'PNP')
+    return 'PNP';
+  if (upperName.includes('BUREAU OF FIRE PROTECTION') || upperName === 'BFP')
+    return 'BFP';
+  if (upperName.includes('RED CROSS')) return 'Red Cross';
+  if (upperName.includes('MENTAL HEALTH')) return 'Mental Health';
+  if (upperName.includes('WOMEN') || upperName.includes('VAWC')) return 'VAWC';
+  if (upperName.includes('COAST GUARD')) return 'Coast Guard';
+
+  return name;
 }

@@ -3,9 +3,7 @@
     "slug": "accounting-office",
     "office_name": "ACCOUNTING OFFICE",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8284 4756"
-    ],
+    "trunkline": ["(02) 8284 4756"],
     "website": null,
     "email": "accounting@taytayrizal.gov.ph / tmg.accountingoffice@lgutaytayrizal.com.ph",
     "department_head": {
@@ -18,9 +16,7 @@
     "slug": "administration-office",
     "office_name": "ADMINISTRATION OFFICE",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4780 / (02) 8284 4781"
-    ],
+    "trunkline": ["(02) 8284 4780 / (02) 8284 4781"],
     "website": null,
     "email": "administrator@taytayrizal.gov.ph",
     "department_head": {
@@ -33,9 +29,7 @@
     "slug": "agriculture-office",
     "office_name": "AGRICULTURE OFFICE",
     "address": "NTPM Road",
-    "trunkline": [
-      "8 700 144 98"
-    ],
+    "trunkline": ["8 700 144 98"],
     "website": null,
     "email": "agriculture@taytayrizal.gov.ph",
     "department_head": {
@@ -48,9 +42,7 @@
     "slug": "assessors-office",
     "office_name": "ASSESSOR'S OFFICE",
     "address": "2nd Flr.",
-    "trunkline": [
-      "(02) 8284 4708"
-    ],
+    "trunkline": ["(02) 8284 4708"],
     "website": null,
     "email": "asessors@taytayrizal.gov.ph",
     "department_head": {
@@ -63,9 +55,7 @@
     "slug": "bids-and-awards-committee-bac",
     "office_name": "BIDS AND AWARDS COMMITTEE (BAC)",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4787 (Engineering Office)"
-    ],
+    "trunkline": ["(02) 8284 4787 (Engineering Office)"],
     "website": null,
     "email": null,
     "department_head": {
@@ -78,9 +68,7 @@
     "slug": "budget-office",
     "office_name": "BUDGET OFFICE",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8284 4757 / (02) 8284 4772"
-    ],
+    "trunkline": ["(02) 8284 4757 / (02) 8284 4772"],
     "website": null,
     "email": "budget@taytayrizal.gov.ph",
     "department_head": {
@@ -93,9 +81,7 @@
     "slug": "bureau-of-fire-protection-bfp",
     "office_name": "BUREAU OF FIRE PROTECTION (BFP)",
     "address": "3rd Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "0917 148 9964"
-    ],
+    "trunkline": ["0917 148 9964"],
     "website": null,
     "email": "taytayfirestation@yahoo.com",
     "department_head": {
@@ -123,9 +109,7 @@
     "slug": "cctv-command-center",
     "office_name": "CCTV COMMAND CENTER",
     "address": "3rd Flr. (New Taytay Public Market)",
-    "trunkline": [
-      "(02) 8254 0431 / 0985 488 3352"
-    ],
+    "trunkline": ["(02) 8254 0431 / 0985 488 3352"],
     "website": null,
     "email": "cctvcommandcenter@taytayrizal.gov.ph / tmdrrmo@taytayrizal.gov.ph",
     "department_head": {
@@ -138,9 +122,7 @@
     "slug": "coa-auditors-office",
     "office_name": "COA - AUDITOR'S OFFICE",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8286 6145"
-    ],
+    "trunkline": ["(02) 8286 6145"],
     "website": null,
     "email": null,
     "department_head": {
@@ -153,9 +135,7 @@
     "slug": "comelec-taytay-field-office",
     "office_name": "COMELEC - TAYTAY FIELD OFFICE",
     "address": "Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "(02) 8284 4719"
-    ],
+    "trunkline": ["(02) 8284 4719"],
     "website": null,
     "email": "comelectaytay@gmail.com",
     "department_head": {
@@ -168,9 +148,7 @@
     "slug": "data-privacy-officer",
     "office_name": "DATA PRIVACY OFFICER",
     "address": "Legal Services Office (4th Flr.)",
-    "trunkline": [
-      "(02) 8 284 4774 (Legal Services Office)"
-    ],
+    "trunkline": ["(02) 8 284 4774 (Legal Services Office)"],
     "website": null,
     "email": "dataprotectionofficer@taytayrizal.gov.ph",
     "department_head": {
@@ -183,9 +161,7 @@
     "slug": "dilg-taytay-field-office",
     "office_name": "DILG - TAYTAY FIELD OFFICE",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4801"
-    ],
+    "trunkline": ["(02) 8284 4801"],
     "website": null,
     "email": "dilg.foreigntravelauthority1@gmail.com / taytaydilg@gmail.com",
     "department_head": {
@@ -213,9 +189,7 @@
     "slug": "engineering-flood-control-section",
     "office_name": "ENGINEERING - FLOOD CONTROL SECTION",
     "address": "NTPM",
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": null,
     "department_head": {
@@ -228,9 +202,7 @@
     "slug": "engineering-office",
     "office_name": "ENGINEERING OFFICE",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4787"
-    ],
+    "trunkline": ["(02) 8284 4787"],
     "website": null,
     "email": "smiletaytayengineering@gmail.com",
     "department_head": {
@@ -243,9 +215,7 @@
     "slug": "engineering-office-taytay-public-cemetery",
     "office_name": "ENGINEERING OFFICE - TAYTAY PUBLIC CEMETERY",
     "address": null,
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": null,
     "department_head": {
@@ -258,9 +228,7 @@
     "slug": "environment-and-natural-resources-office-menro",
     "office_name": "ENVIRONMENT AND NATURAL RESOURCES OFFICE (MENRO)",
     "address": "Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "(02) 8284 4794"
-    ],
+    "trunkline": ["(02) 8284 4794"],
     "website": null,
     "email": "menro@taytayrizal.gov.ph",
     "department_head": {
@@ -273,9 +241,7 @@
     "slug": "gender-and-development-office-gad",
     "office_name": "GENDER AND DEVELOPMENT OFFICE (GAD)",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8284 4778"
-    ],
+    "trunkline": ["(02) 8284 4778"],
     "website": null,
     "email": "gad@taytayrizal.gov.ph / genderanddevelopmenttaytay01@gmail.com",
     "department_head": {
@@ -288,9 +254,7 @@
     "slug": "general-services-office-gso",
     "office_name": "GENERAL SERVICES OFFICE (GSO)",
     "address": "Ground Flr.",
-    "trunkline": [
-      "(02) 8286 4706 / (02) 8286 4783"
-    ],
+    "trunkline": ["(02) 8286 4706 / (02) 8286 4783"],
     "website": null,
     "email": "gsosmiletaytay@gmail.com / gso@taytayrizal.gov.ph",
     "department_head": {
@@ -303,9 +267,7 @@
     "slug": "gso-impounding-section",
     "office_name": "GSO - IMPOUNDING SECTION",
     "address": "4th Flr.",
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": null,
     "department_head": {
@@ -318,9 +280,7 @@
     "slug": "gso-kalayaan-park-field-office",
     "office_name": "GSO - KALAYAAN PARK FIELD OFFICE",
     "address": "OTPM",
-    "trunkline": [
-      "0906 280 1778"
-    ],
+    "trunkline": ["0906 280 1778"],
     "website": null,
     "email": "gsoofficetaytaybayan@gmail.com",
     "department_head": {
@@ -333,9 +293,7 @@
     "slug": "gso-motor-pool",
     "office_name": "GSO - MOTOR POOL",
     "address": "NTPM",
-    "trunkline": [
-      "7 119 5236"
-    ],
+    "trunkline": ["7 119 5236"],
     "website": null,
     "email": "motorpoolsection2023@gmail.com",
     "department_head": {
@@ -348,9 +306,7 @@
     "slug": "gso-solid-waste-management",
     "office_name": "GSO - SOLID WASTE MANAGEMENT",
     "address": "Floodway",
-    "trunkline": [
-      "(02) 8282 5737"
-    ],
+    "trunkline": ["(02) 8282 5737"],
     "website": null,
     "email": null,
     "department_head": {
@@ -363,9 +319,7 @@
     "slug": "health-office-central-supplies-office",
     "office_name": "HEALTH OFFICE - CENTRAL SUPPLIES OFFICE",
     "address": "Emergency Hospital",
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": "centralsupplyofficeteh@gmail.com",
     "department_head": {
@@ -378,9 +332,7 @@
     "slug": "health-office-epidemiology-and-surveillance-unite-mesu",
     "office_name": "HEALTH OFFICE - EPIDEMIOLOGY AND SURVEILLANCE UNITE (MESU)",
     "address": "Emergency Hospital",
-    "trunkline": [
-      "0998 595 1145 / 0917 625 0065"
-    ],
+    "trunkline": ["0998 595 1145 / 0917 625 0065"],
     "website": null,
     "email": "mhomesu.data@gmail.com / taytaymho.fieldservice@gmail.com",
     "department_head": {
@@ -393,9 +345,7 @@
     "slug": "health-office-health-officer",
     "office_name": "HEALTH OFFICE - HEALTH OFFICER",
     "address": "Emergency Hospital",
-    "trunkline": [
-      "0981 754 3554"
-    ],
+    "trunkline": ["0981 754 3554"],
     "website": null,
     "email": "mhosmiletaytay@gmail.com",
     "department_head": {
@@ -408,9 +358,7 @@
     "slug": "health-office-records-section",
     "office_name": "HEALTH OFFICE - RECORDS SECTION",
     "address": "Emergency Hospital",
-    "trunkline": [
-      "0993 761 1708"
-    ],
+    "trunkline": ["0993 761 1708"],
     "website": null,
     "email": null,
     "department_head": {
@@ -423,9 +371,7 @@
     "slug": "health-office-social-hygiene-section",
     "office_name": "HEALTH OFFICE - SOCIAL HYGIENE SECTION",
     "address": "Emergency Hospital",
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": "taytaysocialhygieneclinic@gmail.com",
     "department_head": {
@@ -438,9 +384,7 @@
     "slug": "human-resource-office",
     "office_name": "HUMAN RESOURCE OFFICE",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8 284 4776 (Staff) / (02) 8 284 4777 (Dept. Head)"
-    ],
+    "trunkline": ["(02) 8 284 4776 (Staff) / (02) 8 284 4777 (Dept. Head)"],
     "website": null,
     "email": "hrmo_lgutaytay@yahoo.com / hrmo@taytayrizal.gov.ph",
     "department_head": {
@@ -453,9 +397,7 @@
     "slug": "information-desk",
     "office_name": "INFORMATION DESK",
     "address": "2nd Flr.",
-    "trunkline": [
-      "(02) 8 284 4771"
-    ],
+    "trunkline": ["(02) 8 284 4771"],
     "website": null,
     "email": null,
     "department_head": {
@@ -468,9 +410,7 @@
     "slug": "land-tax-section",
     "office_name": "LAND TAX SECTION",
     "address": "2nd Flr.",
-    "trunkline": [
-      "(02) 8284 4717"
-    ],
+    "trunkline": ["(02) 8284 4717"],
     "website": null,
     "email": "treasury@taytayrizal.gov.ph",
     "department_head": {
@@ -483,9 +423,7 @@
     "slug": "legal-services-office",
     "office_name": "LEGAL SERVICES OFFICE",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8284 4774 / (02) 8284 4775"
-    ],
+    "trunkline": ["(02) 8284 4774 / (02) 8284 4775"],
     "website": null,
     "email": "legal@taytayrizal.gov.ph",
     "department_head": {
@@ -498,9 +436,7 @@
     "slug": "local-civil-registry-office-lcr",
     "office_name": "LOCAL CIVIL REGISTRY OFFICE (LCR)",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4720"
-    ],
+    "trunkline": ["(02) 8284 4720"],
     "website": null,
     "email": "lcr@taytayrizal.gov.ph",
     "department_head": {
@@ -513,9 +449,7 @@
     "slug": "local-economic-development-investment-promotions-office-ledipo",
     "office_name": "LOCAL ECONOMIC DEVELOPMENT INVESTMENT PROMOTIONS OFFICE (LEDIPO)",
     "address": "NTMP - 3rd Flr.",
-    "trunkline": [
-      "0951 732 1664"
-    ],
+    "trunkline": ["0951 732 1664"],
     "website": null,
     "email": "ledipo.taytay@gmaill.com / ledipo@taytayrizal.gov.ph",
     "department_head": {
@@ -528,9 +462,7 @@
     "slug": "local-poverty-reduction-action-office-lprao",
     "office_name": "LOCAL POVERTY REDUCTION ACTION OFFICE (LPRAO)",
     "address": "NTMP - 3rd Flr.",
-    "trunkline": [
-      "0963 324 5517"
-    ],
+    "trunkline": ["0963 324 5517"],
     "website": null,
     "email": "lpraooffice@gmail.com / LPRAOTaytay@taytayrizal.gov.ph",
     "department_head": {
@@ -543,9 +475,7 @@
     "slug": "management-information-system-services-office-misso",
     "office_name": "MANAGEMENT INFORMATION SYSTEM SERVICES OFFICE (MISSO)",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4765"
-    ],
+    "trunkline": ["(02) 8284 4765"],
     "website": null,
     "email": "mis@taytayrizal.gov.ph",
     "department_head": {
@@ -558,9 +488,7 @@
     "slug": "market-collectors-office",
     "office_name": "MARKET COLLECTOR'S OFFICE",
     "address": "3rd. Flr New Taytay Market",
-    "trunkline": [
-      "(02) 8640 5659"
-    ],
+    "trunkline": ["(02) 8640 5659"],
     "website": null,
     "email": "judittines@gmail.com",
     "department_head": {
@@ -573,9 +501,7 @@
     "slug": "municipal-city-anti-drug-abuse-council-madac",
     "office_name": "MUNICIPAL CITY ANTI-DRUG ABUSE COUNCIL (MADAC)",
     "address": "NTPM (Beside McDonald's)",
-    "trunkline": [
-      "0917 134 9576"
-    ],
+    "trunkline": ["0917 134 9576"],
     "website": null,
     "email": "madac@taytayrizal.gov.ph",
     "department_head": {
@@ -588,9 +514,7 @@
     "slug": "municipal-trial-court",
     "office_name": "MUNICIPAL TRIAL COURT",
     "address": "Ground Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "0967 380 9575"
-    ],
+    "trunkline": ["0967 380 9575"],
     "website": null,
     "email": "mtc2tty000@judiciary.gov.ph",
     "department_head": {
@@ -603,9 +527,7 @@
     "slug": "nutrition-office",
     "office_name": "NUTRITION OFFICE",
     "address": "San Juan Gym",
-    "trunkline": [
-      "0945 785 2638"
-    ],
+    "trunkline": ["0945 785 2638"],
     "website": null,
     "email": "mnao@taytayrizal.gov.ph",
     "department_head": {
@@ -618,9 +540,7 @@
     "slug": "office-of-senior-citizen-affairs-osca",
     "office_name": "OFFICE OF SENIOR CITIZEN AFFAIRS (OSCA)",
     "address": "OTPM",
-    "trunkline": [
-      "(02) 8289 8661"
-    ],
+    "trunkline": ["(02) 8289 8661"],
     "website": null,
     "email": "osca@taytayrizal.gov.ph / oscataytayoffice@gmail.com",
     "department_head": {
@@ -633,9 +553,7 @@
     "slug": "old-taytay-public-market-otpm",
     "office_name": "OLD TAYTAY PUBLIC MARKET (OTPM)",
     "address": "OTPM",
-    "trunkline": [
-      "0926 116 7546"
-    ],
+    "trunkline": ["0926 116 7546"],
     "website": null,
     "email": "smiletaytayotpm@gmail.com",
     "department_head": {
@@ -648,9 +566,7 @@
     "slug": "peoples-law-enforcement-board-pleb",
     "office_name": "PEOPLE'S LAW ENFORCEMENT BOARD (PLEB)",
     "address": null,
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": "plebnamayngiti@gmail.com",
     "department_head": {
@@ -663,9 +579,7 @@
     "slug": "persons-with-disability-affairs-office-pdao",
     "office_name": "PERSONS WITH DISABILITY AFFAIRS OFFICE (PDAO)",
     "address": "Ground Flr.",
-    "trunkline": [
-      "(02) 8284 4710 (MSWD) / 0915 695 5037"
-    ],
+    "trunkline": ["(02) 8284 4710 (MSWD) / 0915 695 5037"],
     "website": null,
     "email": "pdaotaytayrizal@gmail.com",
     "department_head": {
@@ -678,9 +592,7 @@
     "slug": "planning-and-development-coordinator-mpdo",
     "office_name": "PLANNING AND DEVELOPMENT COORDINATOR (MPDO)",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8284 4784 / (02) 8284 4785"
-    ],
+    "trunkline": ["(02) 8284 4784 / (02) 8284 4785"],
     "website": null,
     "email": "mpdo@taytayrizal.gov.ph / mpdo.taytay@gmail.com",
     "department_head": {
@@ -693,9 +605,7 @@
     "slug": "pnp-taytay",
     "office_name": "PNP TAYTAY",
     "address": "San Juan Gym",
-    "trunkline": [
-      "0917 163 3556 / 0998 598 5730"
-    ],
+    "trunkline": ["0917 163 3556 / 0998 598 5730"],
     "website": null,
     "email": "taypsrizal@yahoo.com",
     "department_head": {
@@ -708,9 +618,7 @@
     "slug": "procurement-office",
     "office_name": "PROCUREMENT OFFICE",
     "address": "Ground Flr.",
-    "trunkline": [
-      "(02) 8286 6124 / 0920 602 0736"
-    ],
+    "trunkline": ["(02) 8286 6124 / 0920 602 0736"],
     "website": null,
     "email": "mpotaytay@gmail.com",
     "department_head": {
@@ -723,9 +631,7 @@
     "slug": "public-employment-service-office-peso",
     "office_name": "PUBLIC EMPLOYMENT SERVICE OFFICE (PESO)",
     "address": "4th Floor",
-    "trunkline": [
-      "(02) 8284 4790 / (02) 8284 4791"
-    ],
+    "trunkline": ["(02) 8284 4790 / (02) 8284 4791"],
     "website": null,
     "email": "peso@taytayrizal.gov.ph / pesotaytay2009@yahoo.com",
     "department_head": {
@@ -738,9 +644,7 @@
     "slug": "public-information-office",
     "office_name": "PUBLIC INFORMATION OFFICE",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8286 6149 / 0917 167 6453"
-    ],
+    "trunkline": ["(02) 8286 6149 / 0917 167 6453"],
     "website": null,
     "email": "pio@taytayrizal.gov.ph / smiletaytaypio@gmail.com / mr.anne.francisco@gmail.com",
     "department_head": {
@@ -753,9 +657,7 @@
     "slug": "public-safety-department-mpsd",
     "office_name": "PUBLIC SAFETY DEPARTMENT (MPSD)",
     "address": "Ground Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "(02) 8286 6187 / 0907 074 8822"
-    ],
+    "trunkline": ["(02) 8286 6187 / 0907 074 8822"],
     "website": null,
     "email": "mpsd@taytayrizal.gov.ph / deleoncherryann373@gmail.com",
     "department_head": {
@@ -768,9 +670,7 @@
     "slug": "sangguniang-bayan-sb-secretariat",
     "office_name": "SANGGUNIANG BAYAN (SB) SECRETARIAT",
     "address": "5th Flr.",
-    "trunkline": [
-      "(02) 8284 4759"
-    ],
+    "trunkline": ["(02) 8284 4759"],
     "website": null,
     "email": "sbsecretariat.taytay@gmail.com",
     "department_head": {
@@ -783,9 +683,7 @@
     "slug": "security-office-mbss",
     "office_name": "SECURITY OFFICE (MBSS)",
     "address": "Beside Taytay Municipal Hall",
-    "trunkline": [
-      "(02) 8284 4707"
-    ],
+    "trunkline": ["(02) 8284 4707"],
     "website": null,
     "email": "mbss@taytayrizal.gov.ph / mbsstaytaygov123@gmail.com",
     "department_head": {
@@ -798,9 +696,7 @@
     "slug": "smile-it-lab-section-tech4ed-center",
     "office_name": "SMILE I.T. LAB SECTION (TECH4ED CENTER )",
     "address": "5th Flr.",
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": "smiletech4edLab@taytayrizal.gov.ph / smile.tech4edlab@gmail.com",
     "department_head": {
@@ -813,9 +709,7 @@
     "slug": "smile-taytay-artwork-and-creative-services-stacs-office",
     "office_name": "SMILE TAYTAY ARTWORK AND CREATIVE SERVICES (STACS) OFFICE",
     "address": "5th Flr.",
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": "stacsoffice2023@gmail.com",
     "department_head": {
@@ -828,9 +722,7 @@
     "slug": "smile-traffic-action-group-stag",
     "office_name": "SMILE TRAFFIC ACTION GROUP (STAG)",
     "address": "NTPM (Beside McDonald's)",
-    "trunkline": [
-      "(02) 8361 2307 / 0968 647 8165"
-    ],
+    "trunkline": ["(02) 8361 2307 / 0968 647 8165"],
     "website": null,
     "email": "stag@taytayrizal.gov.ph",
     "department_head": {
@@ -843,9 +735,7 @@
     "slug": "social-welfare-and-development-office-mswd",
     "office_name": "SOCIAL WELFARE AND DEVELOPMENT OFFICE (MSWD)",
     "address": "Ground Flr.",
-    "trunkline": [
-      "(02) 8284 4170 / 0921 284 3685"
-    ],
+    "trunkline": ["(02) 8284 4170 / 0921 284 3685"],
     "website": null,
     "email": "mswd@taytayrizal.gov.ph / mswdtaytayrizal@gmail.com",
     "department_head": {
@@ -873,9 +763,7 @@
     "slug": "taytay-fire-brigade",
     "office_name": "TAYTAY FIRE BRIGADE",
     "address": "NTPM (Beside McDonald's)",
-    "trunkline": [
-      "0917 825 0857"
-    ],
+    "trunkline": ["0917 825 0857"],
     "website": null,
     "email": "tmdrrmofirerescue@gmail.com",
     "department_head": {
@@ -888,9 +776,7 @@
     "slug": "taytay-kalayaan-park-office",
     "office_name": "TAYTAY KALAYAAN PARK OFFICE",
     "address": "OTPM",
-    "trunkline": [
-      "0945 364 4407"
-    ],
+    "trunkline": ["0945 364 4407"],
     "website": null,
     "email": "kalayaanparksmiletaytay@gmail.com",
     "department_head": {
@@ -903,9 +789,7 @@
     "slug": "taytay-municipal-disaster-risk-reduction-management-office-tmdrrmo",
     "office_name": "TAYTAY MUNICIPAL DISASTER RISK REDUCTION MANAGEMENT OFFICE (TMDRRMO)",
     "address": "NTMP - 3rd Flr.",
-    "trunkline": [
-      "(02) 8252 1805 / 0952 619 9511 / 0970 884 3791"
-    ],
+    "trunkline": ["(02) 8252 1805 / 0952 619 9511 / 0970 884 3791"],
     "website": null,
     "email": "taytaylrdmmo@gmail.com / tmdrrmo@taytayrizal.gov.ph",
     "department_head": {
@@ -918,9 +802,7 @@
     "slug": "taytay-municipal-tricycle-franchising-regulatory-office-tmtfro",
     "office_name": "TAYTAY MUNICIPAL TRICYCLE FRANCHISING REGULATORY OFFICE (TMTFRO)",
     "address": "Ground Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "0968 647 8165"
-    ],
+    "trunkline": ["0968 647 8165"],
     "website": null,
     "email": "tmtfro@taytayrizal.gov.ph",
     "department_head": {
@@ -933,9 +815,7 @@
     "slug": "taytay-muslim-affairs-office",
     "office_name": "TAYTAY MUSLIM AFFAIRS OFFICE",
     "address": null,
-    "trunkline": [
-      null
-    ],
+    "trunkline": [null],
     "website": null,
     "email": null,
     "department_head": {
@@ -948,9 +828,7 @@
     "slug": "taytay-youth-development-office",
     "office_name": "TAYTAY YOUTH DEVELOPMENT OFFICE",
     "address": "3rd Flr. Manila East Arcade 2 Building (Beside Taytay Municipal Hall)",
-    "trunkline": [
-      "(02) 8284 4782"
-    ],
+    "trunkline": ["(02) 8284 4782"],
     "website": null,
     "email": "taytayyd@taytayrizal.gov.ph / taytayyouthdevelopmentoffice@gmail.com",
     "department_head": {
@@ -963,9 +841,7 @@
     "slug": "tourism-office",
     "office_name": "TOURISM OFFICE",
     "address": "4th Flr.",
-    "trunkline": [
-      "(02) 8284 4786"
-    ],
+    "trunkline": ["(02) 8284 4786"],
     "website": null,
     "email": "tourism@taytayrizal.gov.ph / tourism.lgutaytay@gmail.com",
     "department_head": {
@@ -978,9 +854,7 @@
     "slug": "treasury-office",
     "office_name": "TREASURY OFFICE",
     "address": "2nd Flr.",
-    "trunkline": [
-      "(02) 8284 4715"
-    ],
+    "trunkline": ["(02) 8284 4715"],
     "website": null,
     "email": "treasury@taytayrizal.gov.ph",
     "department_head": {
@@ -993,9 +867,7 @@
     "slug": "urban-poor-affairs-office-upao",
     "office_name": "URBAN POOR AFFAIRS OFFICE (UPAO)",
     "address": "3rd Flr.",
-    "trunkline": [
-      "(02) 8284 4773"
-    ],
+    "trunkline": ["(02) 8284 4773"],
     "website": null,
     "email": "upao@taytayrizal.gov.ph / upaotaytay@gmail.com",
     "department_head": {

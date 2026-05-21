@@ -2,19 +2,60 @@ import { config } from '../lib/lguConfig';
 import { NavigationItem } from '../types';
 import serviceCategories from './service_categories.json';
 
-interface Category {
-  name: string;
-  slug: string;
-}
+const getCat = (slug: string) => {
+  const cat = serviceCategories.categories.find(c => c.slug === slug);
+  return {
+    label: cat?.name || slug,
+    href: `/services?category=${slug}`,
+  };
+};
 
 export const mainNavigation: NavigationItem[] = [
   {
     label: 'Services',
     href: '/services',
-    children: (serviceCategories.categories as Category[]).map(category => ({
-      label: category.name,
-      href: `/services?category=${category.slug}`,
-    })),
+    children: [
+      {
+        label: 'Personal & Social',
+        isGroup: true,
+        children: [
+          getCat('certificates-vital-records'),
+          getCat('social-services-assistance'),
+          getCat('health-wellness'),
+          getCat('education-scholarship'),
+          getCat('sports-youth'),
+        ],
+      },
+      {
+        label: 'Economy & Business',
+        isGroup: true,
+        children: [
+          getCat('business-trade-investment'),
+          getCat('taxation-payments'),
+          getCat('labor-employment'),
+          getCat('agriculture-economic-development'),
+          getCat('tourism-culture'),
+        ],
+      },
+      {
+        label: 'City Operations',
+        isGroup: true,
+        children: [
+          getCat('infrastructure-public-works'),
+          getCat('environment-natural-resources'),
+          getCat('public-safety-security'),
+        ],
+      },
+      {
+        label: 'Internal',
+        isGroup: true,
+        children: [
+          getCat('internal-government-services'),
+          getCat('legal-services'),
+          getCat('information-technology'),
+        ],
+      },
+    ],
   },
   {
     label: 'Government',

@@ -51,15 +51,16 @@ export interface GovernmentBranch {
 
 export interface NavigationItem {
   label: string;
-  href: string;
+  href?: string;
   target?: string;
+  isGroup?: boolean;
   children?: NavigationItem[];
 }
 
 export interface ServiceCategory {
   name: string;
   slug: string;
-  services: Service[];
+  services?: Service[];
 }
 
 export interface QuickInfo {
@@ -136,6 +137,15 @@ export interface WeatherData {
   pressure: number;
   visibility: number;
   hourly: HourlyForecast[];
+}
+
+export interface CityData {
+  name: string;
+  main?: { temp?: number; humidity?: number; pressure?: number };
+  weather?: Array<{ description?: string; icon?: string }>;
+  wind?: { speed?: number };
+  hourly?: HourlyForecast[];
+  visibility?: number;
 }
 
 export interface ForexData {

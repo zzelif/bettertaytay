@@ -127,7 +127,11 @@ export default function MunicipalIncomePage() {
       </div>
 
       {/* Full Financial Itemization */}
-      <DetailSection title='Full Financial Itemization (Million)' icon={Coins}>
+      <DetailSection
+        title='Full Financial Itemization (Million)'
+        icon={Coins}
+        className='mb-kapwa-lg'
+      >
         <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
           <div className='space-y-4'>
             <h4 className='text-kapwa-text-accent-orange border-b pb-2 text-[10px] font-black tracking-widest uppercase'>
@@ -218,7 +222,7 @@ export default function MunicipalIncomePage() {
       </DetailSection>
 
       {/* Footer */}
-      <footer className='border-kapwa-border-weak space-y-4 border-t pt-10 text-center'>
+      <footer className='border-kapwa-border-weak space-y-4 border-t pt-kapwa-lg text-center'>
         <div className='bg-kapwa-bg-success-weak text-kapwa-text-success mx-auto flex h-6 w-6 items-center justify-center rounded-full'>
           <svg
             className='h-4 w-4'

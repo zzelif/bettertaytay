@@ -1,7 +1,14 @@
 import { useMemo, useState } from 'react';
 
 import { CHART_THEME, standardAxisProps } from '@/constants/charts';
-import { ArrowUp, BarChart3, Target, TrendingUp, Trophy } from 'lucide-react';
+import {
+  ArrowUp,
+  BarChart3,
+  Info,
+  Target,
+  TrendingUp,
+  Trophy,
+} from 'lucide-react';
 import {
   CartesianGrid,
   Legend,
@@ -97,8 +104,8 @@ export default function CompetitivenessPage() {
         />
         <StatCard
           label='Official Rank'
-          value='33'
-          subtext='1st Class Municipality'
+          value='2'
+          subtext='1st to 2nd Class Municipality'
           variant='secondary'
         >
           <div className='flex items-center gap-0.5 rounded-full border border-kapwa-border-success bg-kapwa-bg-success-weak px-2 py-0.5 text-kapwa-text-success'>
@@ -140,53 +147,70 @@ export default function CompetitivenessPage() {
 
       {/* Trends Chart wrapped in DetailSection */}
       {activeTab === 'trends' ? (
-        <DetailSection title='Pillar Trends' icon={TrendingUp}>
-          <ResponsiveChart height={384}>
-            <LineChart
-              data={trendData}
-              margin={{ top: 10, right: 10, left: -20, bottom: 20 }}
-            >
-              <CartesianGrid
-                vertical={false}
-                stroke={CHART_THEME.grid}
-                strokeDasharray='3 3'
-              />
-              <XAxis dataKey='year' {...standardAxisProps} dy={10} />
-              <YAxis {...standardAxisProps} />
-              <Tooltip content={<ChartTooltip />} />
-              <Legend
-                verticalAlign='top'
-                iconType='circle'
-                wrapperStyle={{
-                  paddingBottom: '20px',
-                  fontSize: '10px',
-                  fontWeight: 'bold',
-                  textTransform: 'uppercase',
-                }}
-              />
-              <Line
-                type='monotone'
-                dataKey='Overall'
-                stroke={PILLAR_COLORS.Overall}
-                strokeWidth={4}
-                dot={{ r: 4 }}
-                activeDot={{ r: 8 }}
-              />
-              {cmciData.pillars.map(p => (
-                <Line
-                  key={p.name}
-                  type='monotone'
-                  dataKey={p.name}
-                  stroke={PILLAR_COLORS[p.name]}
-                  strokeWidth={2}
-                  dot={false}
+        <div>
+          <DetailSection
+            title='Pillar Trends'
+            icon={TrendingUp}
+            className='mb-kapwa-lg'
+          >
+            <ResponsiveChart height={384}>
+              <LineChart
+                data={trendData}
+                margin={{ top: 10, right: 10, left: -20, bottom: 20 }}
+              >
+                <CartesianGrid
+                  vertical={false}
+                  stroke={CHART_THEME.grid}
+                  strokeDasharray='3 3'
                 />
-              ))}
-            </LineChart>
-          </ResponsiveChart>
-        </DetailSection>
+                <XAxis dataKey='year' {...standardAxisProps} dy={10} />
+                <YAxis {...standardAxisProps} />
+                <Tooltip content={<ChartTooltip />} />
+                <Legend
+                  verticalAlign='top'
+                  iconType='circle'
+                  wrapperStyle={{
+                    paddingBottom: '20px',
+                    fontSize: '10px',
+                    fontWeight: 'bold',
+                    textTransform: 'uppercase',
+                  }}
+                />
+                <Line
+                  type='monotone'
+                  dataKey='Overall'
+                  stroke={PILLAR_COLORS.Overall}
+                  strokeWidth={4}
+                  dot={{ r: 4 }}
+                  activeDot={{ r: 8 }}
+                />
+                {cmciData.pillars.map(p => (
+                  <Line
+                    key={p.name}
+                    type='monotone'
+                    dataKey={p.name}
+                    stroke={PILLAR_COLORS[p.name]}
+                    strokeWidth={2}
+                    dot={false}
+                  />
+                ))}
+              </LineChart>
+            </ResponsiveChart>
+          </DetailSection>
+          <DetailSection
+            title='How to read this data'
+            icon={Info}
+            className='mb-kapwa-lg'
+          >
+            <p className='text-xs italic leading-relaxed text-kapwa-text-disabled'>
+              This chart shows the trends of each pillar over the years. You can
+              hover over the lines to see specific values for each year from
+              2014 to current.
+            </p>
+          </DetailSection>
+        </div>
       ) : (
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-12'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-12 mb-kapwa-lg'>
           <div className='space-y-3 lg:col-span-5'>
             {cmciData.pillars.map(p => (
               <button
@@ -238,11 +262,52 @@ export default function CompetitivenessPage() {
               </div>
             </DetailSection>
           </div>
+          <DetailSection
+            title='How to read this data'
+            icon={Info}
+            className='lg:col-span-12'
+          >
+            <p className='text-xs italic leading-relaxed text-kapwa-text-support'>
+              The{' '}
+              <strong>
+                Cities and Municipalities Competitiveness Index (CMCI)
+              </strong>{' '}
+              is an annual ranking developed by the DTI, which measures local
+              performance across five critical pillars:
+            </p>
+            <div className='mt-3 space-y-2 text-sm leading-tight text-kapwa-text-support'>
+              <p>
+                <strong>Economic Dynamism:</strong> Measures local business
+                activity, employment, and the investment climate that drive
+                growth.
+              </p>
+              <p>
+                <strong>Government Efficiency:</strong> Assesses the quality,
+                transparency, and responsiveness of municipal services and
+                administrative processes.
+              </p>
+              <p>
+                <strong>Infrastructure:</strong> Evaluates the availability and
+                condition of roads, utilities, and public facilities that
+                support commerce and residents&apos; quality of life.
+              </p>
+              <p>
+                <strong>Resiliency:</strong> Looks at disaster preparedness,
+                environmental management, and the capacity to recover from
+                shocks and disruptions.
+              </p>
+              <p>
+                <strong>Innovation:</strong> Captures adoption of technology,
+                digital services, and local initiatives that improve
+                productivity and service delivery.
+              </p>
+            </div>
+          </DetailSection>
         </div>
       )}
 
       {/* Footer */}
-      <footer className='pt-10 space-y-4 text-center border-t border-kapwa-border-weak'>
+      <footer className='pt-kapwa-lg space-y-4 text-center border-t border-kapwa-border-weak'>
         <div className='flex justify-center items-center mx-auto w-6 h-6 rounded-full bg-kapwa-bg-success-weak text-kapwa-text-success'>
           <svg
             className='w-4 h-4'

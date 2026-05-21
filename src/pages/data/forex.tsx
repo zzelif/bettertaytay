@@ -207,6 +207,8 @@ const ForexPage: FC = () => {
                       Currencies
                     </h2>
                     <button
+                      type='button'
+                      title='Search for currency'
                       onClick={() => setIsSearchOpen(true)}
                       className='text-kapwa-text-disabled hover:bg-kapwa-bg-hover hover:text-kapwa-text-support rounded-md p-2 transition-colors'
                     >
@@ -233,6 +235,8 @@ const ForexPage: FC = () => {
                     />
                     <div className='absolute inset-y-0 right-0 flex items-center pr-3'>
                       <button
+                        type='button'
+                        title='Clear search'
                         onClick={() => {
                           setSearchTerm('');
                           setIsSearchOpen(false);
@@ -245,7 +249,7 @@ const ForexPage: FC = () => {
                   </div>
                 )}
               </div>
-              <div className='scrollbar-thin h-[520px] overflow-y-auto px-6 pb-6'>
+              <div className='scrollbar-thin h-130 overflow-y-auto px-6 pb-6'>
                 {filteredForexRates.length > 0 ? (
                   <div className='space-y-2 pt-2'>
                     {filteredForexRates.map(rate => (

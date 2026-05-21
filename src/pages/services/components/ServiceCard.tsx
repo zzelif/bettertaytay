@@ -53,7 +53,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <Link
       to={`/services/${service.slug}`}
-      className='group min-h-[200px]'
+      className='group min-h-50'
       data-testid='service-card'
       data-service-slug={service.slug}
       aria-label={`View details for ${service.plainLanguageName || service.service}`}

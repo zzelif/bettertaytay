@@ -55,7 +55,7 @@ const GovernmentSection: FC = () => {
       const clean = (name: string) =>
         name.replace(/DEPARTMENT OF |MUNICIPAL |LOCAL /g, '');
       return clean(a.office_name).localeCompare(clean(b.office_name));
-    }).length;
+    });
 
   const barangays = barangayData.length;
 
@@ -77,7 +77,7 @@ const GovernmentSection: FC = () => {
             {barangays} Barangays
           </Badge>
           <Badge variant='secondary' className='px-4 py-2 text-sm'>
-            {filtered} Departments
+            {filtered.length} Departments
           </Badge>
           <Badge variant='slate' className='px-4 py-2 text-sm'>
             Elected Officials

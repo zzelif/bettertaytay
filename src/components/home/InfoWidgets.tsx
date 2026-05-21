@@ -20,7 +20,9 @@ const InfoWidgets: FC = () => {
 
   // Function to get weather icon component
   const getWeatherIcon = (iconName: string) => {
-    const Icon = LucideIcons[iconName as keyof typeof LucideIcons];
+    const Icon = LucideIcons[
+      iconName as keyof typeof LucideIcons
+    ] as React.ElementType;
     return Icon ? <Icon className='h-8 w-8' /> : null;
   };
 
@@ -79,7 +81,7 @@ const InfoWidgets: FC = () => {
   }, []);
 
   return (
-    <section className='bg-kapwa-bg-surface py-12'>
+    <section className='bg-kapwa-bg-surface-raised py-12'>
       <div className='container mx-auto px-4'>
         <div className='mb-12 text-center'>
           <h2 className='text-kapwa-text-strong mb-4 text-3xl font-bold'>
@@ -110,7 +112,7 @@ const InfoWidgets: FC = () => {
                 </div>
               ) : (
                 <div className='grid grid-cols-2 gap-4 @md:grid-cols-4'>
-                  {weatherData.map(location => (
+                  {weatherData.slice(0, 4).map(location => (
                     <div
                       key={location.location}
                       className='border-kapwa-border-weak bg-kapwa-bg-surface flex flex-col items-center rounded-lg border p-3 uppercase'

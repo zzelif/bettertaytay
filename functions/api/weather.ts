@@ -56,8 +56,12 @@ const DEFAULT_CITY: CityCoordinates = {
 
 // Optional: Add more cities if needed
 const ADDITIONAL_CITIES: CityCoordinates[] = [
-  // { name: 'Bay', lat: 14.1833, lon: 121.2833 },
-  // { name: 'Calamba', lat: 14.2167, lon: 121.1667 },
+  // Neighboring Rizal & East Metro
+  { name: 'Cainta', lat: 14.5786, lon: 121.1222 },
+  { name: 'Antipolo', lat: 14.5842, lon: 121.1763 },
+  { name: 'Angono', lat: 14.5244, lon: 121.1541 },
+  { name: 'Pasig', lat: 14.5869, lon: 121.0614 },
+  { name: 'Marikina', lat: 14.6507, lon: 121.1029 },
 ];
 
 const ALL_CITIES = [DEFAULT_CITY, ...ADDITIONAL_CITIES];

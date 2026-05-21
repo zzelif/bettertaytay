@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useMatch } from 'react-router-dom';
 
 import { FileText, PlusCircle } from 'lucide-react';
 
@@ -9,18 +9,33 @@ import {
 
 import { scrollToTop } from '@/lib/scrollUtils';
 import { getCategoryIconBySlug } from '@/lib/serviceIcons';
+import { getCategorySlugByServiceSlug } from '@/lib/services';
 
 import serviceCategories from '@/data/service_categories.json';
+import { config } from '@/lib/lguConfig';
 
 interface ServicesSidebarProps {
   selectedCategorySlug: string;
   handleCategoryChange: (slug: string) => void;
 }
 
+const sortedServiceCategories = [...serviceCategories.categories].sort((a, b) =>
+  a.name.localeCompare(b.name)
+);
+
 export default function ServicesSidebar({
   selectedCategorySlug,
   handleCategoryChange,
 }: ServicesSidebarProps) {
+  const serviceDetailMatch = useMatch('/services/:serviceSlug');
+  const serviceSlug = serviceDetailMatch?.params.serviceSlug;
+
+  const serviceCategorySlug = serviceSlug
+    ? getCategorySlugByServiceSlug(serviceSlug)
+    : undefined;
+
+  const activeCategorySlug = serviceCategorySlug ?? selectedCategorySlug;
+
   return (
     <div className='space-y-6'>
       <SidebarContainer title='Categories'>
@@ -28,7 +43,7 @@ export default function ServicesSidebar({
         <SidebarItem
           label='All Services'
           icon={FileText}
-          isActive={selectedCategorySlug === 'all'}
+          isActive={activeCategorySlug === 'all'}
           onClick={() => {
             scrollToTop();
             handleCategoryChange('all');
@@ -36,12 +51,12 @@ export default function ServicesSidebar({
         />
 
         {/* Dynamic Categories */}
-        {serviceCategories.categories.map(category => (
+        {sortedServiceCategories.map(category => (
           <SidebarItem
             key={category.slug}
             label={category.name}
             icon={getCategoryIconBySlug(category.slug)}
-            isActive={selectedCategorySlug === category.slug}
+            isActive={activeCategorySlug === category.slug}
             onClick={() => {
               scrollToTop();
               handleCategoryChange(category.slug);
@@ -60,8 +75,8 @@ export default function ServicesSidebar({
         </div>
 
         <p className='text-xs leading-relaxed text-kapwa-text-on-disabled'>
-          Better LB is community-maintained. Help your fellow citizens by
-          suggesting a new service directory.
+          {config.portal.name} is community-maintained. Help your fellow
+          citizens by suggesting a new service directory.
         </p>
 
         <Link

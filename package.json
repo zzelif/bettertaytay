@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && npm run merge:services && vite build",
+    "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",
     "format": "prettier --write .",
     "test": "vitest",

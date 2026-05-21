@@ -1,0 +1,5403 @@
+{
+  "meta": {
+    "title": "Citizens Charter – Municipal Government of Taytay, Rizal",
+    "edition": "2025 1st Edition",
+    "source_document": "citizens-charter.pdf",
+    "creation_date": "2026-05-20",
+    "total_services": 119
+  },
+  "services": [
+    {
+      "service_number": "1.1",
+      "service_name": "Dog and Cat Registration and Anti-Rabies Vaccination (ARV)",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "General Public",
+      "requirements": [
+        {
+          "requirement": "Dog or cat must be 3 months old and above, and healthy",
+          "where_to_secure": "Pet owner"
+        },
+        {
+          "requirement": "No history of medication or animal bite/scratch incident for the past 2 weeks",
+          "where_to_secure": "Pet owner"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Visit the Office and request for ARV and pet registration."
+        },
+        {
+          "step": 2,
+          "action": "Present and handle the cat/dog to be vaccinated."
+        },
+        {
+          "step": 3,
+          "action": "Claim the Certificate of Vaccination."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "9 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register your pet and get anti-rabies vaccination"
+    },
+    {
+      "service_number": "1.2",
+      "service_name": "Animal Control (Stray Cats and Stray Dogs)",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "General Public",
+      "requirements": [
+        {
+          "requirement": "For private subdivision or within a private property: Request letter addressed to the Office of the Municipal Mayor",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit a request letter to the Office of the Municipal Mayor."
+        },
+        {
+          "step": 2,
+          "action": "Present the request letter received by the Office of the Municipal Mayor."
+        },
+        {
+          "step": 3,
+          "action": "Assist the animal control team during the operation."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1 hour",
+      "turnaround_time": "",
+      "plain_language_name": "Report and have stray animals controlled"
+    },
+    {
+      "service_number": "1.3",
+      "service_name": "Mass Anti-Rabies Vaccination for Cats and Dogs",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "General Public",
+      "requirements": [
+        {
+          "requirement": "Request letter addressed to the Municipal Mayor",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit the request letter to the Office of the Municipal Mayor."
+        },
+        {
+          "step": 2,
+          "action": "Provide a covered venue and assist the Vaccination team during the activity."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2–3 hours",
+      "turnaround_time": "",
+      "plain_language_name": "Request a mass anti-rabies vaccination drive"
+    },
+    {
+      "service_number": "1.4",
+      "service_name": "Issuance of Veterinary Health Certificate for Travel Purpose of Cats and Dogs",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "General Public",
+      "requirements": [
+        {
+          "requirement": "Cat or dog must be vaccinated 14 days prior to departure (anti-rabies, not expired)",
+          "where_to_secure": "Pet owner"
+        },
+        {
+          "requirement": "Cat or dog must be healthy and at least 18 months old",
+          "where_to_secure": "Pet owner"
+        },
+        {
+          "requirement": "Vaccination Record",
+          "where_to_secure": "Pet owner"
+        },
+        {
+          "requirement": "Official Receipt of Payment",
+          "where_to_secure": "Treasury Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Bring your pet and vaccination record."
+        },
+        {
+          "step": 2,
+          "action": "Request for Veterinary Health Certificate for Travel Purpose."
+        },
+        {
+          "step": 3,
+          "action": "Present the pet for physical assessment."
+        },
+        {
+          "step": 4,
+          "action": "Proceed to the Treasury Office to pay the certification fee (Php 130.00)."
+        },
+        {
+          "step": 5,
+          "action": "Present the Official Receipt to the Agriculture Office and claim the Certificate."
+        }
+      ],
+      "fees": {
+        "amount": "130.00",
+        "description": "Php 130.00 certification fee"
+      },
+      "processing_time": "12 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a health certificate for your pet before travel"
+    },
+    {
+      "service_number": "1.5",
+      "service_name": "Gulayan sa Paaralan or Community Garden",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Schools, community organizations, and residents",
+      "requirements": [
+        {
+          "requirement": "Request letter addressed to the Municipal Mayor",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit a request letter to the Office of the Municipal Mayor."
+        },
+        {
+          "step": 2,
+          "action": "Assist the technician during the field visitation and ocular inspection."
+        },
+        {
+          "step": 3,
+          "action": "Participate actively in the scheduled seminar/training."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1+ hour",
+      "turnaround_time": "",
+      "plain_language_name": "Get support for a school or community vegetable garden"
+    },
+    {
+      "service_number": "1.6",
+      "service_name": "Redemption of Impounded Animals",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Animal owners",
+      "requirements": [
+        {
+          "requirement": "Government-Issued Identification Card",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "Official Receipt of Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Release, Waiver and Quitclaim Form",
+          "where_to_secure": "Agriculture Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request to redeem the impounded animal; provide proof of ownership and government-issued ID."
+        },
+        {
+          "step": 2,
+          "action": "Fill up the Release, Waiver and Quitclaim Form."
+        },
+        {
+          "step": 3,
+          "action": "Pay the penalty fee at the Treasury Office."
+        },
+        {
+          "step": 4,
+          "action": "Present the Official Receipt to the Agriculture Office to claim the animal."
+        }
+      ],
+      "fees": {
+        "amount": "500.00",
+        "description": "Php 500.00 penalty fee"
+      },
+      "processing_time": "~15 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Reclaim your impounded animal"
+    },
+    {
+      "service_number": "1.7",
+      "service_name": "Adoption of Impounded Animal",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "General public and animal shelters",
+      "requirements": [
+        {
+          "requirement": "Government-Issued Identification",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "For shelter/groups: Shelter permit",
+          "where_to_secure": "Department of Agriculture – Bureau of Animal Industry"
+        },
+        {
+          "requirement": "Animal Cage",
+          "where_to_secure": "Adopter to provide"
+        },
+        {
+          "requirement": "Release, Waiver and Quitclaim Form",
+          "where_to_secure": "Agriculture Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for adoption of an impounded animal."
+        },
+        {
+          "step": 2,
+          "action": "Present government-issued identification."
+        },
+        {
+          "step": 3,
+          "action": "For shelter/groups: provide shelter permit."
+        },
+        {
+          "step": 4,
+          "action": "Fill up the Release, Waiver and Quitclaim Form."
+        },
+        {
+          "step": 5,
+          "action": "Bring the animal cage to the impounding facility."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~15 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Adopt an impounded animal"
+    },
+    {
+      "service_number": "1.8",
+      "service_name": "Surrendering of Cats and Dogs with Owner",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Pet owners",
+      "requirements": [
+        {
+          "requirement": "Government-Issued Identification",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "Animal Surrender Form",
+          "where_to_secure": "Agriculture Office"
+        },
+        {
+          "requirement": "Euthanasia Consent Form",
+          "where_to_secure": "Agriculture Office"
+        },
+        {
+          "requirement": "Declaration of Waiver and Liability Form",
+          "where_to_secure": "Agriculture Office"
+        },
+        {
+          "requirement": "Certificate of Abandonment",
+          "where_to_secure": "Agriculture Office"
+        },
+        {
+          "requirement": "Official Receipt of Payment",
+          "where_to_secure": "Treasury Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for Animal Surrender."
+        },
+        {
+          "step": 2,
+          "action": "Present Government-Issued Identification."
+        },
+        {
+          "step": 3,
+          "action": "Fill up the Animal Surrender Form, Euthanasia Consent Form, Declaration of Waiver and Liability Form, and Certificate of Abandonment."
+        },
+        {
+          "step": 4,
+          "action": "Pay the Surrender fee (Php 500.00 per head) at the Treasury Office."
+        },
+        {
+          "step": 5,
+          "action": "Present the Official Receipt."
+        },
+        {
+          "step": 6,
+          "action": "Bring the animal to the impounding facility."
+        }
+      ],
+      "fees": {
+        "amount": "500.00",
+        "description": "Php 500.00 per head"
+      },
+      "processing_time": "~20 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Formally surrender your cat or dog"
+    },
+    {
+      "service_number": "1.9",
+      "service_name": "Animal Health Services for Small Animals (Cats and Dogs)",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Pet owners",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Make a same-day appointment via call, social media, or personal visit."
+        },
+        {
+          "step": 2,
+          "action": "Bring your pet on the given schedule for veterinary check-up."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "10–15 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a veterinary check-up for your cat or dog"
+    },
+    {
+      "service_number": "1.10",
+      "service_name": "Issuance of Veterinary Health Certificate for Travel Purpose of Poultry",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Poultry owners",
+      "requirements": [
+        {
+          "requirement": "Certificate of Free Status Avian Influenza Type A Subtypes H5 & H7",
+          "where_to_secure": "Bureau of Animal Industry"
+        },
+        {
+          "requirement": "Styrofoam box with ice",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Newcastle Disease Vaccine",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Leg band / wing band",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "At least 2 weeks prior to travel date",
+          "where_to_secure": "Owner to comply"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for a Veterinary Health Certificate for Poultry."
+        },
+        {
+          "step": 2,
+          "action": "Bring the birds with leg/wing bands, Newcastle Disease Vaccine, and Styrofoam box with ice on the scheduled date."
+        },
+        {
+          "step": 3,
+          "action": "Submit collected blood and swab samples to the Bureau of Animal Industry in Quezon City on the same day of collection."
+        },
+        {
+          "step": 4,
+          "action": "Once results are released, submit the Certificate of Free Status Avian Influenza Type A Subtypes H5 & H7 to the Agriculture Office."
+        },
+        {
+          "step": 5,
+          "action": "Pay the certification fee (Php 130.00) at the Treasury Office."
+        },
+        {
+          "step": 6,
+          "action": "Present the Official Receipt to the Agriculture Office."
+        }
+      ],
+      "fees": {
+        "amount": "130.00",
+        "description": "Php 130.00 certification fee"
+      },
+      "processing_time": "~2 weeks (including lab testing)",
+      "turnaround_time": "",
+      "plain_language_name": "Get a health certificate for poultry before travel"
+    },
+    {
+      "service_number": "1.11",
+      "service_name": "Animal Health Services for Livestock and Poultry (Checkup, Medication, Vaccination, Deworming, Sample Collection)",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Livestock and poultry owners",
+      "requirements": [
+        {
+          "requirement": "Certificate of Free Status Avian Influenza Type A Subtypes H5 & H7 (if applicable)",
+          "where_to_secure": "Bureau of Animal Industry"
+        },
+        {
+          "requirement": "Styrofoam box with ice (if applicable)",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Newcastle Disease Vaccine (if applicable)",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Leg band / wing band (if applicable)",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for Animal Health Service."
+        },
+        {
+          "step": 2,
+          "action": "Report initial signs and observations."
+        },
+        {
+          "step": 3,
+          "action": "Assist the veterinarian or technician during the farm visitation."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "10+ minutes per animal",
+      "turnaround_time": "",
+      "plain_language_name": "Get veterinary services for your livestock or poultry"
+    },
+    {
+      "service_number": "1.12",
+      "service_name": "Distribution of Assorted Vegetable Seeds and Seedlings",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Residents and farmers",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for assorted vegetable seeds."
+        },
+        {
+          "step": 2,
+          "action": "Provide basic information: Name, Address, and size of planting area."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~10 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get free vegetable seeds and seedlings"
+    },
+    {
+      "service_number": "1.13",
+      "service_name": "Annual Kangkong Registration",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Kangkong farmers",
+      "requirements": [
+        {
+          "requirement": "Official Receipt of Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Government-Issued Identification",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "RSBSA Registration",
+          "where_to_secure": "Agriculture Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for kangkong registration."
+        },
+        {
+          "step": 2,
+          "action": "Present government-issued identification."
+        },
+        {
+          "step": 3,
+          "action": "Pay the kangkong registration permit fee (Php 500.00 per hectare)."
+        },
+        {
+          "step": 4,
+          "action": "Present the official receipt."
+        }
+      ],
+      "fees": {
+        "amount": "500.00",
+        "description": "Php 500.00 per hectare"
+      },
+      "processing_time": "~47 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Annually register your kangkong farm"
+    },
+    {
+      "service_number": "1.14",
+      "service_name": "Registry System for Basic Sector in Agriculture (RSBSA) for Livestock, Poultry, High Value Crops and Rice",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Farmers, livestock/poultry raisers, and fisherfolk",
+      "requirements": [
+        {
+          "requirement": "Government-Issued Identification",
+          "where_to_secure": "Government agency"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for RSBSA registration."
+        },
+        {
+          "step": 2,
+          "action": "Present Government-issued identification."
+        },
+        {
+          "step": 3,
+          "action": "Assist in the farm visitation and validation."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~45 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register in the national farmers' registry"
+    },
+    {
+      "service_number": "1.15",
+      "service_name": "Insurance for High Value Crops, Rice, Livestock and Poultry from the Philippine Crop Insurance Corporation (PCIC)",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Registered farmers and livestock/poultry raisers",
+      "requirements": [
+        {
+          "requirement": "Government-issued identification",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "RSBSA registration",
+          "where_to_secure": "Agriculture Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for PCIC Insurance."
+        },
+        {
+          "step": 2,
+          "action": "Present Government-issued identification (RSBSA registration validated by coordinator)."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free (PCIC premium applies)"
+      },
+      "processing_time": "~15 minutes (initial)",
+      "turnaround_time": "",
+      "plain_language_name": "Enroll your crops or livestock in government insurance"
+    },
+    {
+      "service_number": "1.16",
+      "service_name": "Damage Report for High Value Crops, Rice, Livestock and Poultry during Natural Calamity",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Registered farmers affected by natural calamities",
+      "requirements": [
+        {
+          "requirement": "Government-issued identification",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "RSBSA registration",
+          "where_to_secure": "Agriculture Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Immediately report the damage to the coordinator within 24 hours after the calamity."
+        },
+        {
+          "step": 2,
+          "action": "Provide supporting documents of the damages."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Initial report: 24 hours; Final report: 3 days after calamity",
+      "turnaround_time": "",
+      "plain_language_name": "File a damage report after a natural calamity"
+    },
+    {
+      "service_number": "1.17",
+      "service_name": "Agricultural Trainings and Seminars",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Farmers, schools, and communities",
+      "requirements": [
+        {
+          "requirement": "Request letter addressed to the Municipal Mayor",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit the request letter to the Office of the Municipal Mayor."
+        },
+        {
+          "step": 2,
+          "action": "Provide the necessary logistics if applicable."
+        },
+        {
+          "step": 3,
+          "action": "Assist the coordinator and speakers during the event."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Depends on training/seminar",
+      "turnaround_time": "",
+      "plain_language_name": "Request an agricultural training or seminar"
+    },
+    {
+      "service_number": "1.18",
+      "service_name": "Technical Consultation on Agriculture, Fisheries and Other Related Sectors",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Farmers and general public",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Provide necessary information on the case to be consulted."
+        },
+        {
+          "step": 2,
+          "action": "Assist the coordinator during the visitation if applicable."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~45 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get free agricultural or fisheries consultation"
+    },
+    {
+      "service_number": "1.19",
+      "service_name": "Fish Registration (FishR) and Boat Registration Services",
+      "office_division": "OFFICE OF AGRICULTURAL SERVICES",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Fisherfolk and boat owners",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for fish and boat registration."
+        },
+        {
+          "step": 2,
+          "action": "Assist the coordinator during the registration process."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~34 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register as a fisherfolk and register your boat"
+    },
+    {
+      "service_number": "2.1",
+      "service_name": "Application for Transfer of Ownership",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Certified True Copy of Title",
+          "where_to_secure": "Assessor's Office / Assessment Division"
+        },
+        {
+          "requirement": "Deed of Absolute Sale / Deed of Donation / Extrajudicial Settlement, BIR CAR, Transfer Fee, Tax Clearance, Affidavit of Publication (for Extrajudicial Settlement), Special Power of Attorney, Secretary Certificate (if any)",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Affidavit of Consolidation and Certificate of Sale (for Foreclosed Property)",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Notarized Sworn Statement",
+          "where_to_secure": "Notary Public"
+        },
+        {
+          "requirement": "Updated Realty Tax Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Filled up Sworn Statement",
+          "where_to_secure": "Assessor's Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present and submit all required documents to the Assessor's Office."
+        },
+        {
+          "step": 2,
+          "action": "Fill up Sworn Statement."
+        },
+        {
+          "step": 3,
+          "action": "Pay corresponding fee (Php 200.00) at the Treasurer's Office."
+        },
+        {
+          "step": 4,
+          "action": "Wait for processing and release of owner's copy of Tax Declaration (approximately 3 days)."
+        }
+      ],
+      "fees": {
+        "amount": "200.00",
+        "description": "Php 200.00 (Sworn Statement: Php 100.00 + Notary: Php 100.00)"
+      },
+      "processing_time": "Approximately 3 days (depending on volume)",
+      "turnaround_time": "",
+      "plain_language_name": "Transfer a property's tax declaration to a new owner",
+      "supporting_documents_detail": {
+        "note": "Lack of any requirement will NOT be considered ACCEPTED."
+      }
+    },
+    {
+      "service_number": "2.2",
+      "service_name": "Application for Appraisal and Assessment of New Buildings and Improvements",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Floor Plan",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Occupancy Permit",
+          "where_to_secure": "Municipal Engineering Office"
+        },
+        {
+          "requirement": "Certificate of Completion",
+          "where_to_secure": "Municipal Engineering Office"
+        },
+        {
+          "requirement": "Building Permit",
+          "where_to_secure": "Municipal Engineering Office"
+        },
+        {
+          "requirement": "Picture of Improvement",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Updated Realty Tax Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Secretary Certificate (if owned by Corp.)",
+          "where_to_secure": "Corporation"
+        },
+        {
+          "requirement": "Notarized Sworn Statement",
+          "where_to_secure": "Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present and submit requirements for appraisal and assessment."
+        },
+        {
+          "step": 2,
+          "action": "Wait for ocular inspection and FAAS preparation."
+        },
+        {
+          "step": 3,
+          "action": "Wait for Provincial Assessor approval (within 2 weeks)."
+        },
+        {
+          "step": 4,
+          "action": "Receive owner's copy of Tax Declaration and FAAS."
+        }
+      ],
+      "fees": {
+        "amount": "250.00",
+        "description": "Php 250.00 (Sworn Statement: Php 100.00 + Notary: Php 100.00 + Documentary Stamps: Php 50.00)"
+      },
+      "processing_time": "~2 weeks (including Provincial Assessor approval)",
+      "turnaround_time": "",
+      "plain_language_name": "Get your new building assessed for taxes",
+      "supporting_documents_detail": {
+        "note": "If not the land owner, support any proof (Deed of Sale, Deed of Usufruct, Letter of Consent, etc.)."
+      }
+    },
+    {
+      "service_number": "2.3",
+      "service_name": "Issuance of Certified True Copy of Tax Declaration and Certified Copy of Tax Map",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B/G2G",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Updated Realty Tax Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Authority from the owner if the requesting party is not the owner",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present updated Realty Tax Payment and fill up request slip / request letter."
+        },
+        {
+          "step": 2,
+          "action": "Secure Order of Payment and pay at Treasurer's Office."
+        },
+        {
+          "step": 3,
+          "action": "Receive Certified True Copy of Tax Declaration and/or Certified Tax Map."
+        }
+      ],
+      "fees": {
+        "amount": "100.00",
+        "description": "Php 100.00 per Tax Declaration + Php 30.00 Documentary Stamps; Php 100.00 per Tax Map"
+      },
+      "processing_time": "10–30 minutes (per document)",
+      "turnaround_time": "",
+      "plain_language_name": "Get a certified copy of your tax declaration or tax map"
+    },
+    {
+      "service_number": "2.4",
+      "service_name": "Issuance of Certificate of No Property or Landholdings",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Updated Realty Tax Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Authority from the owner if the requesting party is not the owner",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present latest Realty Tax Payment and fill up request slip."
+        },
+        {
+          "step": 2,
+          "action": "Secure Order of Payment and pay at Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Receive the approved certification."
+        }
+      ],
+      "fees": {
+        "amount": "130.00",
+        "description": "Php 130.00 (Certification: Php 100.00 + Documentary Stamps: Php 30.00)"
+      },
+      "processing_time": "~11 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a certificate proving you have no property"
+    },
+    {
+      "service_number": "2.5",
+      "service_name": "Application for Reclassification of Real Property",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter",
+          "where_to_secure": "Assessor's Office"
+        },
+        {
+          "requirement": "Lot Plan",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Updated Realty Tax Payment",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Picture of the Property",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Notarized Sworn Statement",
+          "where_to_secure": "Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present all requirements and fill up Sworn Statement."
+        },
+        {
+          "step": 2,
+          "action": "Pay corresponding fee at the Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Wait for ocular inspection and FAAS preparation."
+        },
+        {
+          "step": 4,
+          "action": "Receive owner's copy of Tax Declaration after Provincial Assessor approval (~2 weeks)."
+        }
+      ],
+      "fees": {
+        "amount": "200.00",
+        "description": "Php 200.00 (Sworn Statement: Php 100.00 + Notary: Php 50.00 + Documentary Stamps: Php 50.00)"
+      },
+      "processing_time": "~2 weeks (including Provincial Assessor approval)",
+      "turnaround_time": "",
+      "plain_language_name": "Reclassify your property's land use",
+      "supporting_documents_detail": {
+        "note": "A duly approved zoning ordinance also serves as basis in the reclassification of lands."
+      }
+    },
+    {
+      "service_number": "2.6",
+      "service_name": "Application for Lot Segregation or Consolidation",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter",
+          "where_to_secure": "Assessor's Office"
+        },
+        {
+          "requirement": "2 copies of Subdivision / Consolidation Plan",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Certified true copy of TCT",
+          "where_to_secure": "Registry of Deeds"
+        },
+        {
+          "requirement": "Updated Real Property Tax",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Notarized Sworn Statement",
+          "where_to_secure": "Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present all requirements and fill up Sworn Statement."
+        },
+        {
+          "step": 2,
+          "action": "Pay corresponding fee at the Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Wait for tax mapping and encoding of subdivided/consolidated parcels."
+        },
+        {
+          "step": 4,
+          "action": "Receive new Tax Declarations and Notice of Assessment."
+        }
+      ],
+      "fees": {
+        "amount": "100.00",
+        "description": "Php 100.00 (Sworn Statement: Php 100.00)"
+      },
+      "processing_time": "~1 week (depending on number of parcels)",
+      "turnaround_time": "",
+      "plain_language_name": "Subdivide or consolidate your land's tax declaration"
+    },
+    {
+      "service_number": "2.7",
+      "service_name": "Application for Newly Acquired Machineries",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2B",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter",
+          "where_to_secure": "Assessor's Office"
+        },
+        {
+          "requirement": "Duly certified copy of itemized list of machineries",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Original cost and date of operation/acquisition of machineries",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Notarized/Filled up Sworn Statement",
+          "where_to_secure": "Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present all requirements and fill up Sworn Statement."
+        },
+        {
+          "step": 2,
+          "action": "Pay corresponding fee at the Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Wait for ocular inspection and FAAS preparation."
+        },
+        {
+          "step": 4,
+          "action": "Receive Tax Declaration and Notice of Assessment after Provincial Assessor approval (~2 weeks)."
+        }
+      ],
+      "fees": {
+        "amount": "200.00",
+        "description": "Php 200.00 (Sworn Statement: Php 100.00 + Notary: Php 50.00 + Documentary Stamps: Php 50.00)"
+      },
+      "processing_time": "~2 weeks (including Provincial Assessor approval)",
+      "turnaround_time": "",
+      "plain_language_name": "Declare and assess newly acquired machinery for taxes"
+    },
+    {
+      "service_number": "2.8",
+      "service_name": "Application for Newly Declared Real Property (Land)",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter",
+          "where_to_secure": "Assessor's Office"
+        },
+        {
+          "requirement": "Approved Plan",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Lot Data Computation",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Cadastral Map",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "DENR Certification",
+          "where_to_secure": "DENR"
+        },
+        {
+          "requirement": "Certification of Alienable/Disposable",
+          "where_to_secure": "DENR"
+        },
+        {
+          "requirement": "Affidavit of Ownership",
+          "where_to_secure": "Notary Public"
+        },
+        {
+          "requirement": "Affidavit of Adjoining Owner",
+          "where_to_secure": "Notary Public"
+        },
+        {
+          "requirement": "Affidavit of Waiver of Rights",
+          "where_to_secure": "Notary Public"
+        },
+        {
+          "requirement": "Barangay Certification",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "Photocopy of Identification Card of Owner",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Picture of the Property",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Notarized Sworn Statement",
+          "where_to_secure": "Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present all requirements and fill up Sworn Statement."
+        },
+        {
+          "step": 2,
+          "action": "Pay corresponding fee at the Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Wait for ocular inspection and FAAS preparation. Note: owner required to pay 10 years back taxes."
+        },
+        {
+          "step": 4,
+          "action": "Receive Tax Declaration after Provincial Assessor approval (~2 weeks)."
+        }
+      ],
+      "fees": {
+        "amount": "200.00",
+        "description": "Php 200.00 + 10 years back taxes"
+      },
+      "processing_time": "~2 weeks (including Provincial Assessor approval)",
+      "turnaround_time": "",
+      "plain_language_name": "Declare a new piece of land for real property tax"
+    },
+    {
+      "service_number": "2.9",
+      "service_name": "Annotation and Cancellation of Mortgage, Adverse Claim, Hold Transaction and Other Annotations",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2G",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter",
+          "where_to_secure": "Assessor's Office"
+        },
+        {
+          "requirement": "Two (2) copies of the documents (Mortgage / Cancellation of Mortgage)",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Official receipt for Annotation",
+          "where_to_secure": "Treasury Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present all requirements."
+        },
+        {
+          "step": 2,
+          "action": "Wait for preparation of indorsement letter to Provincial Assessor's Office."
+        },
+        {
+          "step": 3,
+          "action": "Annotation/Cancellation is done after Provincial Assessor approval (~2 weeks)."
+        }
+      ],
+      "fees": {
+        "amount": "100.00",
+        "description": "Php 100.00"
+      },
+      "processing_time": "~2 weeks (including Provincial Assessor approval)",
+      "turnaround_time": "",
+      "plain_language_name": "Annotate or cancel a mortgage or claim on your property"
+    },
+    {
+      "service_number": "2.10",
+      "service_name": "Annotation and Cancellation of Warrant of Levy",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Indorsement of Notice of Annotation and Notice of Cancellation of Warrant of Levy",
+          "where_to_secure": "Provincial Assessor's Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit the Indorsement of Notice of Annotation or Notice of Cancellation of Warrant of Levy."
+        },
+        {
+          "step": 2,
+          "action": "Wait for verification and annotation/cancellation on FAAS and Tax Declaration."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~15 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Annotate or cancel a warrant of levy on a tax declaration"
+    },
+    {
+      "service_number": "2.11",
+      "service_name": "Application for Verification of Property",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All taxpayers",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present request slip for verification and pay corresponding fee at the Treasurer's Office."
+        },
+        {
+          "step": 2,
+          "action": "Receive verification result (computerized and/or manual tax mapping)."
+        }
+      ],
+      "fees": {
+        "amount": "100.00",
+        "description": "Php 100.00 per RPU (Real Property Unit)"
+      },
+      "processing_time": "~5–10 minutes per RPU",
+      "turnaround_time": "",
+      "plain_language_name": "Verify property ownership and location details"
+    },
+    {
+      "service_number": "2.12",
+      "service_name": "Application for Cancellation of Assessment for Land, Improvement and Machineries",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2G",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter for cancellation of assessment",
+          "where_to_secure": "Assessor's Office"
+        },
+        {
+          "requirement": "Fire Certificate (for property razed by fire)",
+          "where_to_secure": "Bureau of Fire Protection"
+        },
+        {
+          "requirement": "Demolition Permit (for demolished improvement)",
+          "where_to_secure": "Municipal Engineering Office"
+        },
+        {
+          "requirement": "Updated Real Property Tax",
+          "where_to_secure": "Treasury Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present and submit all requirements."
+        },
+        {
+          "step": 2,
+          "action": "Wait for ocular inspection and preparation of Notice of Cancellation."
+        },
+        {
+          "step": 3,
+          "action": "Receive owner's copy of Notice of Cancellation after Provincial Assessor approval (~2 weeks)."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~2 weeks (including Provincial Assessor approval)",
+      "turnaround_time": "",
+      "plain_language_name": "Cancel the tax assessment on a demolished or burned property"
+    },
+    {
+      "service_number": "2.13",
+      "service_name": "Issuance of Certified True Copy of Documents",
+      "office_division": "ASSESSOR'S OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B/G2G",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Request Letter stating the purpose",
+          "where_to_secure": "Owner / Representative to provide"
+        },
+        {
+          "requirement": "Authorization Letter if the requestee is not the registered owner",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present and submit required documents."
+        },
+        {
+          "step": 2,
+          "action": "Pay corresponding fee at the Treasurer's Office."
+        },
+        {
+          "step": 3,
+          "action": "Receive certified requested documents."
+        }
+      ],
+      "fees": {
+        "amount": "130.00",
+        "description": "Php 130.00 (Certified Xerox Copy: Php 100.00 + Documentary Stamps: Php 30.00)"
+      },
+      "processing_time": "1–4 days (depending on document year)",
+      "turnaround_time": "",
+      "plain_language_name": "Get a certified copy of documents on file at the Assessor's Office"
+    },
+    {
+      "service_number": "3.1",
+      "service_name": "Assisting Clients",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2G",
+      "who_may_avail": "All",
+      "requirements": [
+        {
+          "requirement": "Visitor's Logbook registration",
+          "where_to_secure": "Gender and Development Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Register in Visitor's Logbook."
+        },
+        {
+          "step": 2,
+          "action": "Proceed to the concerned offices as endorsed by GAD staff."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~6 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get directed to the right office for your concern"
+    },
+    {
+      "service_number": "3.2",
+      "service_name": "Trainings and Seminars (GAD)",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "GAD Focal Persons, Barangays, GFPS Members, and all concerned",
+      "requirements": [
+        {
+          "requirement": "Request letter for Venue, Chairs, Tables and Sound system",
+          "where_to_secure": "Other Offices for GAD office conducted training"
+        },
+        {
+          "requirement": "Project Proposal",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Letter of Invitation / Program of Invitation",
+          "where_to_secure": "GAD Office / other concerned office"
+        },
+        {
+          "requirement": "Attendance",
+          "where_to_secure": "GAD Office / other concerned office"
+        },
+        {
+          "requirement": "Certificate of Participation",
+          "where_to_secure": "GAD Office / other concerned office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Wait for the announcement from the GAD office."
+        },
+        {
+          "step": 2,
+          "action": "Comply with requirements and instructions from the concerned offices."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Days to weeks before training/seminar",
+      "turnaround_time": "",
+      "plain_language_name": "Attend or request a GAD training or seminar"
+    },
+    {
+      "service_number": "3.3",
+      "service_name": "PAPs – Projects, Activities and Programs (Events)",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "GAD Focal Persons and Barangays",
+      "requirements": [
+        {
+          "requirement": "Request letter for Venue, Chairs, Tables and Sound system",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Project Proposal",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Letter of Invitation / Program of Invitation",
+          "where_to_secure": "GAD Office / other concerned office"
+        },
+        {
+          "requirement": "Attendance",
+          "where_to_secure": "GAD Office / other concerned office"
+        },
+        {
+          "requirement": "Certificate of Participation",
+          "where_to_secure": "GAD Office / other concerned office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Wait for the announcement from the GAD office."
+        },
+        {
+          "step": 2,
+          "action": "Comply with requirements and instructions from the concerned offices."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Days to weeks before event",
+      "turnaround_time": "",
+      "plain_language_name": "Participate in GAD-funded projects, activities, and programs"
+    },
+    {
+      "service_number": "3.4",
+      "service_name": "Project Management, Research and Reporting (GAD)",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "GAD-related personnel and offices",
+      "requirements": [
+        {
+          "requirement": "2 to 3 copies of the said report from/to concerned Department or Client",
+          "where_to_secure": "GAD Office / Other concerned departments"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to the Municipal GAD office or concerned departments."
+        },
+        {
+          "step": 2,
+          "action": "Submit required documents."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1–2 days",
+      "turnaround_time": "",
+      "plain_language_name": "Submit or process GAD-related reports and research"
+    },
+    {
+      "service_number": "3.5",
+      "service_name": "Meetings (GAD)",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "All",
+      "requirements": [
+        {
+          "requirement": "Request letter for Venue, Chairs, Tables and Sound system",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Program of expense",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Letter of Invitation / Program of Invitation",
+          "where_to_secure": "GAD Office / other concerned offices"
+        },
+        {
+          "requirement": "Sex Disaggregated Data",
+          "where_to_secure": "GAD Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Wait for the announcement from the GAD office or concerned departments."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2–4 hours",
+      "turnaround_time": "",
+      "plain_language_name": "Attend a GAD-organized meeting"
+    },
+    {
+      "service_number": "3.6",
+      "service_name": "Conventions (GAD)",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "GAD Focal Persons and Barangays",
+      "requirements": [
+        {
+          "requirement": "Request letter for Venue",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Project Proposal",
+          "where_to_secure": "GAD Office"
+        },
+        {
+          "requirement": "Letter of Invitation / Program of Invitation",
+          "where_to_secure": "GAD Office / other concerned offices"
+        },
+        {
+          "requirement": "Certificate of Participation and Recognition",
+          "where_to_secure": "GAD Office / other concerned offices"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Wait for the announcement from the GAD office."
+        },
+        {
+          "step": 2,
+          "action": "Comply with requirements and instructions from the concerned offices."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Days to weeks before convention",
+      "turnaround_time": "",
+      "plain_language_name": "Participate in a GAD convention"
+    },
+    {
+      "service_number": "3.7",
+      "service_name": "Anti-Sexual Harassment – Committee on Decorum and Investigation (CODI)",
+      "office_division": "GENDER AND DEVELOPMENT OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "GAD Focal Persons, Barangays, and employees",
+      "requirements": [
+        {
+          "requirement": "Notarized letter of complaints",
+          "where_to_secure": "Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit notarized letter of complaints."
+        },
+        {
+          "step": 2,
+          "action": "Undergo short interview."
+        },
+        {
+          "step": 3,
+          "action": "Wait for the invitation by the CODI Council."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Days to weeks (depending on case)",
+      "turnaround_time": "",
+      "plain_language_name": "File an anti-sexual harassment complaint"
+    },
+    {
+      "service_number": "4.1",
+      "service_name": "Implementation of IATF Disciplinary Guidelines",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Taytay Residents",
+      "requirements": [
+        {
+          "requirement": "IATF Guidelines, Related Ordinances, Ordinance 33 S. 2020",
+          "where_to_secure": "GSO Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Pay Violation Ticket."
+        }
+      ],
+      "fees": {
+        "amount": "3500.00",
+        "description": "Php 1,000 (driver's license release) + Php 2,500 (vehicle release) = Php 3,500"
+      },
+      "processing_time": "1 hour",
+      "turnaround_time": "",
+      "plain_language_name": "Pay IATF violation and claim impounded vehicle or license"
+    },
+    {
+      "service_number": "4.2",
+      "service_name": "Implementation of Solid Waste Management Program (SWMO)",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Taytay Residents",
+      "requirements": [
+        {
+          "requirement": "R.A. 9003, Ordinance 15 S. 2008, Ordinance 12 S. 2017",
+          "where_to_secure": "GSO / SWMO Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Pay Violation Ticket."
+        }
+      ],
+      "fees": {
+        "amount": "3500.00",
+        "description": "Php 1,000 (driver's license release) + Php 2,500 (vehicle release) = Php 3,500"
+      },
+      "processing_time": "1 hour",
+      "turnaround_time": "",
+      "plain_language_name": "Pay solid waste management violation and claim impounded vehicle or license"
+    },
+    {
+      "service_number": "4.3",
+      "service_name": "Clean and Green",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Taytay Residents",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit request letter."
+        },
+        {
+          "step": 2,
+          "action": "Service is provided within 24 hours."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "24 hours",
+      "turnaround_time": "",
+      "plain_language_name": "Request a clean-up or greening service"
+    },
+    {
+      "service_number": "4.4",
+      "service_name": "Central Supply Unit – Dispensing of Medical Supplies",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All sections or departments of Health Office",
+      "requirements": [
+        {
+          "requirement": "Requisition and Issue Slip (RIS)",
+          "where_to_secure": "Clinical Area"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Fill up RIS form."
+        },
+        {
+          "step": 2,
+          "action": "Wait for preparation of requested supplies (availability check)."
+        },
+        {
+          "step": 3,
+          "action": "Receive issued supplies and validate quantity."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "32 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request medical supplies from the Central Supply Unit"
+    },
+    {
+      "service_number": "4.5",
+      "service_name": "Central Supply Unit – Printing of Forms",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All sections or departments of Health Office",
+      "requirements": [
+        {
+          "requirement": "Service Request Slip",
+          "where_to_secure": "Printing Unit"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for printing of needed forms/documents."
+        },
+        {
+          "step": 2,
+          "action": "Receive printed forms/documents."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "40 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request printing of health forms and documents"
+    },
+    {
+      "service_number": "4.6",
+      "service_name": "Central Supply Unit – Replenishment of Oxygen Tanks",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All sections or departments of Health Office",
+      "requirements": [
+        {
+          "requirement": "Acknowledgement Form",
+          "where_to_secure": "Requesting Areas / Patients"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for refill/replenishment of Oxygen Tanks."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1 hour 5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request oxygen tank refilling for patients"
+    },
+    {
+      "service_number": "4.7",
+      "service_name": "Central Supply Unit – Collection and Transport of General and Hazardous Waste",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All sections or departments of Health Office",
+      "requirements": [
+        {
+          "requirement": "Permit to Transport",
+          "where_to_secure": "Requesting Sections"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for collection of general and hazardous wastes."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "12 hours",
+      "turnaround_time": "",
+      "plain_language_name": "Request collection and transport of hazardous waste"
+    },
+    {
+      "service_number": "4.8",
+      "service_name": "Central Supply Unit – Repair of Medical Equipment",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All sections or departments of Health Office",
+      "requirements": [
+        {
+          "requirement": "Notice of Request for Inspection",
+          "where_to_secure": "Requesting Sections"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit filled request for repair and quotation of supplier."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "30 minutes (inspection)",
+      "turnaround_time": "",
+      "plain_language_name": "Request repair of medical equipment"
+    },
+    {
+      "service_number": "4.9",
+      "service_name": "Delivery of Supplies and Properties",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "Requesting office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Fill out Notice of Delivery and Request for Inspection."
+        },
+        {
+          "step": 2,
+          "action": "Deliver items to Supply or Property Management Section."
+        },
+        {
+          "step": 3,
+          "action": "Inspection of delivery and endorsement of complete documents."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1 hour 5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Process delivery of government supplies and properties"
+    },
+    {
+      "service_number": "4.10",
+      "service_name": "Issuance of Office Supplies and Properties",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "Requesting office"
+        },
+        {
+          "requirement": "Approved Requisition and Issue Slip (RIS)",
+          "where_to_secure": "GSO"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for office, janitorial, electrical, and other supplies."
+        },
+        {
+          "step": 2,
+          "action": "Accept requested supplies after preparation and recording."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "55 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request and receive office supplies from the GSO"
+    },
+    {
+      "service_number": "4.11",
+      "service_name": "Property Management – Release of Equipment",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "Requesting office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Forward letter-request for provision of items/equipment."
+        },
+        {
+          "step": 2,
+          "action": "Wait for Property Management Section to check availability and prepare PAR and ICS."
+        },
+        {
+          "step": 3,
+          "action": "Receive and acknowledge equipment."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1 hour 20 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request and receive government equipment from the GSO"
+    },
+    {
+      "service_number": "4.12",
+      "service_name": "Property Management – Return of Unserviceable Properties",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All government departments, units, offices, and divisions",
+      "requirements": [
+        {
+          "requirement": "Property Return Slip (PRS)",
+          "where_to_secure": "GSO authorized representative"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Secure Property Return Slip (PRS) form and fill out required information."
+        },
+        {
+          "step": 2,
+          "action": "Submit PRS form to the GSO authorized representative."
+        },
+        {
+          "step": 3,
+          "action": "Coordinate with GSO for turn-over of properties to the warehouse."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "1 hour 15 minutes (depending on volume)",
+      "turnaround_time": "",
+      "plain_language_name": "Return unserviceable government properties"
+    },
+    {
+      "service_number": "4.13",
+      "service_name": "Property Management – Issuance of Clearance from Property Accountability",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Resigned, retired, transferred, and deceased employees",
+      "requirements": [
+        {
+          "requirement": "Letter of Request addressed to the General Services Officer",
+          "where_to_secure": "Employee"
+        },
+        {
+          "requirement": "Cedula / Sedula",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Employee's ID",
+          "where_to_secure": "Employee"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit a request for clearance from accountabilities."
+        },
+        {
+          "step": 2,
+          "action": "Wait for inventory check and inspection of accountable properties."
+        },
+        {
+          "step": 3,
+          "action": "Receive Clearance from Property Accountability."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~37 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get cleared from property accountability upon separation from service"
+    },
+    {
+      "service_number": "4.14",
+      "service_name": "Property Insurance and Registration Unit (PIRU) – Vehicle Insurance and LTO Registration",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2B",
+      "who_may_avail": "Municipal employees of Taytay / Authorized drivers",
+      "requirements": [
+        {
+          "requirement": "Land Transportation Office (LTO) Form",
+          "where_to_secure": "GSO / LTO"
+        },
+        {
+          "requirement": "Original Receipt and Certificate of Registration (OR, CR)",
+          "where_to_secure": "LTO"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Visit GSO and approach the Property Insurance and Registration Unit (PIRU)."
+        },
+        {
+          "step": 2,
+          "action": "Submit required documents for GSIS insurance or LTO registration."
+        },
+        {
+          "step": 3,
+          "action": "Receive processed documents and registration."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free (government-funded)"
+      },
+      "processing_time": "~35 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register and insure government vehicles"
+    },
+    {
+      "service_number": "4.15",
+      "service_name": "Utilities – Processing of Payment of Government Bills",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2B",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Statement of Account (SOA) from the Utility Provider",
+          "where_to_secure": "Utility Provider"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Provide Statement of Account (SOA) to GSO Utilities staff."
+        },
+        {
+          "step": 2,
+          "action": "Documents are endorsed to Administrator's Office, Budget Office, Accounting Office, and Treasury Office for signature and payment."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free (internal process)"
+      },
+      "processing_time": "~2 weeks",
+      "turnaround_time": "",
+      "plain_language_name": "Process payment of government utility bills"
+    },
+    {
+      "service_number": "4.16",
+      "service_name": "Food Distribution or Supplies",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Local Government Offices",
+      "requirements": [
+        {
+          "requirement": "Attendance sheet of attendees",
+          "where_to_secure": "Mayor's Office / Procurement Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Deliver the food items/goods from the supplier to the General Services Office."
+        },
+        {
+          "step": 2,
+          "action": "GSO food supplies management section receives, counts, and distributes foods at official activities."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~3 hours 40 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Arrange food distribution for official municipal activities"
+    },
+    {
+      "service_number": "4.17",
+      "service_name": "Request for Fuel Allocation for Government Equipment and Vehicles",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Authorized drivers",
+      "requirements": [
+        {
+          "requirement": "Valid driver's license",
+          "where_to_secure": "Driver"
+        },
+        {
+          "requirement": "Official Receipt and Certificate of Registration (OR/CR) of the vehicle",
+          "where_to_secure": "Driver"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit a letter-request to the General Services Officer requesting fuel allocation approval."
+        },
+        {
+          "step": 2,
+          "action": "Submit a copy of valid driver's license and OR/CR of the vehicle."
+        },
+        {
+          "step": 3,
+          "action": "If approved, request is endorsed to the Legal Office for issuance of Fuel Allocation Slip."
+        },
+        {
+          "step": 4,
+          "action": "Present the signed fuel slip to UNIOIL (located at C6, Taytay, Rizal) for fuel release."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~30 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a fuel allocation slip for a government vehicle"
+    },
+    {
+      "service_number": "4.18",
+      "service_name": "Resources Management – Tent, Drum Fan, Air Cooler, Tarpaulin Installation, and Additional Manpower",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2G",
+      "who_may_avail": "Taytay Residents and Municipal Employees",
+      "requirements": [
+        {
+          "requirement": "Request letter (must specify date, occasion, address, and contact number)",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit or forward a letter request to the Office of the Municipal Mayor through the General Services Officer."
+        },
+        {
+          "step": 2,
+          "action": "Must specify date, occasion, address, and contact number."
+        },
+        {
+          "step": 3,
+          "action": "GSO schedules the activity and notifies requestor for confirmation."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~5 hours 25 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request tents, fans, sound, tarpaulin, or manpower for events"
+    },
+    {
+      "service_number": "4.19",
+      "service_name": "Building Maintenance",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal Offices of Taytay",
+      "requirements": [
+        {
+          "requirement": "Filled out Job Order Form or Request letter signed by the Supervising Head",
+          "where_to_secure": "Building Maintenance Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Fill out the Job Order Form or Request letter and have it signed by the Supervising Head."
+        },
+        {
+          "step": 2,
+          "action": "GSO building maintenance section assesses and carries out the required repairs."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~20 minutes (initial); varies by work required",
+      "turnaround_time": "",
+      "plain_language_name": "Request repair or maintenance of a municipal building"
+    },
+    {
+      "service_number": "4.20",
+      "service_name": "Sound System Services",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "LGUs, organizations, and interested individuals",
+      "requirements": [
+        {
+          "requirement": "Request letter (must specify date, time, venue, and contact number)",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit a Request letter specifying the date, time, venue, and contact number."
+        },
+        {
+          "step": 2,
+          "action": "GSO schedules and sets up the sound system for the event."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~50 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request a government sound system for events"
+    },
+    {
+      "service_number": "4.21",
+      "service_name": "Vehicle Maintenance and Motorpool Services",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "Requesting office"
+        },
+        {
+          "requirement": "Government-issued vehicle",
+          "where_to_secure": "Employee's department"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit PMS request letter."
+        },
+        {
+          "step": 2,
+          "action": "Bring the government-issued vehicle to the Motorpool Section."
+        },
+        {
+          "step": 3,
+          "action": "Wait for inspection, repair, and final inspection before vehicle release."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~4 hours (varies by repair)",
+      "turnaround_time": "",
+      "plain_language_name": "Get a government vehicle repaired or maintained"
+    },
+    {
+      "service_number": "4.22",
+      "service_name": "Solid Waste Management Section – Garbage Collection",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "Requesting party"
+        },
+        {
+          "requirement": "Government-issued vehicle (if applicable)",
+          "where_to_secure": "Department"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for garbage collection as per schedule."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~25 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request or monitor scheduled garbage collection"
+    },
+    {
+      "service_number": "4.23",
+      "service_name": "Impounding Section – Claiming of Impounded Vehicles or Goods",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "General Public",
+      "requirements": [
+        {
+          "requirement": "Proof of Ownership",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Driver's License",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "OR/CR",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit receipt or proof of payment and other related documents."
+        },
+        {
+          "step": 2,
+          "action": "GSO verifies documents and releases impounded vehicle or items to the rightful owner."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per violation receipt"
+      },
+      "processing_time": "~25 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Claim your impounded vehicle or confiscated goods"
+    },
+    {
+      "service_number": "4.24",
+      "service_name": "CCTV Footage Request (Municipal Building Security Section – MBSS)",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees and general public",
+      "requirements": [
+        {
+          "requirement": "Request Form (MBSS Office, Municipal Building)",
+          "where_to_secure": "Security Office, Municipal Building"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Properly accomplish the request form with: Name, Address, Contact Number, Details and purpose, Date and Time of Incident, and Location."
+        },
+        {
+          "step": 2,
+          "action": "MBSS personnel reviews the requested CCTV footage (~40 minutes)."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~45 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Request a review of CCTV footage for incident documentation"
+    },
+    {
+      "service_number": "4.25",
+      "service_name": "Lost and Found (Municipal Building Security Section – MBSS)",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees and general public",
+      "requirements": [
+        {
+          "requirement": "Lost and Found Form",
+          "where_to_secure": "Security Office, Municipal Building"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Properly accomplish the Lost and Found Form with: Name, Address, Contact Number, Date and Time of Incident, and Location."
+        },
+        {
+          "step": 2,
+          "action": "Present complete requirements and valid ID with precise item description."
+        },
+        {
+          "step": 3,
+          "action": "If ownership is proven, receive the found item and sign the blotter logbook."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~15 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Report a lost item or claim a found item at the Municipal Building"
+    },
+    {
+      "service_number": "4.26",
+      "service_name": "GSO Free Water Refilling Station",
+      "office_division": "GENERAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Municipal employees of Taytay",
+      "requirements": [
+        {
+          "requirement": "Water bottles or water container",
+          "where_to_secure": "Employee to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Visit the GSO and approach the personnel-in-charge at the water refilling station."
+        },
+        {
+          "step": 2,
+          "action": "Staff cleans, inspects, and refills your water bottles."
+        },
+        {
+          "step": 3,
+          "action": "Receive refilled water bottles."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~20 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get free drinking water at the GSO Water Refilling Station"
+    },
+    {
+      "service_number": "5.1",
+      "service_name": "Timely Registration of Certificate of Live Birth (Born in Taytay, Rizal)",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Parents, guardians, hospitals, maternity/lying-in clinics, and birth attendants of registrants born in Taytay",
+      "requirements": [
+        {
+          "requirement": "Properly accomplished Municipal Form No. 102 – Certificate of Live Birth (1 set, all original, black ink)",
+          "where_to_secure": "Hospital, Maternity/Lying-In Clinics, other birthing facilities"
+        },
+        {
+          "requirement": "Certificate of Marriage of Parents (if married)",
+          "where_to_secure": "PSA"
+        },
+        {
+          "requirement": "Notarized Affidavit of Admission of Paternity (if child acknowledged – for Illegitimate Child)",
+          "where_to_secure": "LCRO, Law Offices, Notary Public"
+        },
+        {
+          "requirement": "Notarized Affidavit to Use the Surname of the Father (if applicable – for Illegitimate Child)",
+          "where_to_secure": "LCRO, Law Offices, Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present properly accomplished Municipal Form No. 102 – Certificate of Live Birth and all requirements within 30 days from birth."
+        },
+        {
+          "step": 2,
+          "action": "LCRO checks completeness of entries and assigns registry number."
+        },
+        {
+          "step": 3,
+          "action": "Receive released personal copy of the document."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~17 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register your baby's birth certificate within 30 days"
+    },
+    {
+      "service_number": "5.2",
+      "service_name": "Late Registration of Certificate of Live Birth (Born in Taytay, Rizal)",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Highly Technical",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Parents, guardians, and registrants born in Taytay – filing after the 30-day period",
+      "requirements": [
+        {
+          "requirement": "Certificate of Live Birth for Late Registration (1 Set)",
+          "where_to_secure": "Hospital, Maternity/Lying-In Clinics, other birthing facilities"
+        },
+        {
+          "requirement": "Negative Result from PSA (1 Original)",
+          "where_to_secure": "PSA"
+        },
+        {
+          "requirement": "Baptismal Certificate (1 Original, 1 Photocopy)",
+          "where_to_secure": "Church / Place of Baptism"
+        },
+        {
+          "requirement": "Personal Appearance of registrant or parent/guardian (as applicable)",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "For Legitimate Child (17 and below): Certified True Copy of Parents' Certificate of Marriage, Notarized Joint Affidavit of Two Disinterested Persons, Affidavit of Late Registration, Notarized Affidavit of Registrant per PSA MC No. 2024-17A, Form 137/School Records, Philsys National ID/transaction slip, 2x2 ID Photo, Government-issued IDs, Barangay Certification of Residency, Certificate of Death of parent/s (if applicable)",
+          "where_to_secure": "Various agencies"
+        },
+        {
+          "requirement": "For Illegitimate Child (17 and below): Same as above plus Notarized Affidavit of Admission of Paternity, Notarized Affidavit to Use the Surname of the Father, Notarized Sworn Attestation (for children 7–17)",
+          "where_to_secure": "LCRO, Law Offices, Notary Public"
+        },
+        {
+          "requirement": "For Applicants 18 and above: All above plus NBI Clearance, Police Clearance, SSS E-1, Philhealth MDR, GSIS Service Record, Voter's Registration Record, Income Tax Return, Medical Records, Affidavit of Abandonment (if applicable)",
+          "where_to_secure": "NBI, PNP, SSS, Philhealth, GSIS, COMELEC"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present accomplished COLB form and submit all required documents."
+        },
+        {
+          "step": 2,
+          "action": "Conduct of interview with the client/parents/registrant."
+        },
+        {
+          "step": 3,
+          "action": "Registration after 10-day posting period."
+        },
+        {
+          "step": 4,
+          "action": "Receive owner's copy after posting period."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free (Out-of-town courier: Php 90–150 depending on location)"
+      },
+      "processing_time": "11 days, 17 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register a birth certificate after the 30-day deadline"
+    },
+    {
+      "service_number": "5.3",
+      "service_name": "Application and Issuance of Marriage License (Residents of Taytay, Rizal)",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Highly Technical",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Marriage applicants who are at least 18 years of age, with at least one applicant residing in Taytay",
+      "requirements": [
+        {
+          "requirement": "Accomplished Application Form for Marriage License (AML) – 2 Copies",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Personal Appearance of both contracting parties",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Birth Certificate or Baptismal Certificate (1 Original, 1 Photocopy)",
+          "where_to_secure": "LCRO / PSA / Church"
+        },
+        {
+          "requirement": "Community Tax Certificate (Cedula)",
+          "where_to_secure": "Municipal Treasury Office"
+        },
+        {
+          "requirement": "Valid IDs of both applicants (at least one showing residency in Taytay, Rizal)",
+          "where_to_secure": "Applicants to provide"
+        },
+        {
+          "requirement": "Certificate of No Marriage (CENOMAR) from PSA for both contracting parties (issued within 6 months)",
+          "where_to_secure": "PSA"
+        },
+        {
+          "requirement": "Pre-Marriage Orientation and Counseling Certificate (Family Planning and Marriage Counseling)",
+          "where_to_secure": "POPCOM / LGU"
+        },
+        {
+          "requirement": "Parental Consent Form (Municipal Form No. 92) for ages 18–20 (if applicable)",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Parental Advice (Municipal Form No. 8) for ages 21–25 (if applicable)",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Certificate of Legal Capacity to Marry (for foreigners)",
+          "where_to_secure": "Embassy of country of origin"
+        },
+        {
+          "requirement": "Certificate of Death of spouse (for widow/widower)",
+          "where_to_secure": "LCRO where death was registered / PSA"
+        },
+        {
+          "requirement": "Certified True Copy of Decree of Annulment / Absolute Nullity of Marriage (if applicable)",
+          "where_to_secure": "Court where decree was issued"
+        },
+        {
+          "requirement": "Photocopy of valid passport (for foreigners)",
+          "where_to_secure": "Applicant to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Secure marriage license application form, present with required documents, and both applicants will be interviewed."
+        },
+        {
+          "step": 2,
+          "action": "Pay the corresponding fees (Php 600.00) at the Municipal Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Attend family planning and marriage counseling (PMOC) every Friday morning."
+        },
+        {
+          "step": 4,
+          "action": "Receive Marriage License after 10-day posting and payment of Municipal Form No. 10 (Php 2.00)."
+        }
+      ],
+      "fees": {
+        "amount": "602.00",
+        "description": "Php 600.00 marriage fees + Php 2.00 (Accountable Form No. 54)"
+      },
+      "processing_time": "11 days + 2–3 hours PMOC",
+      "turnaround_time": "",
+      "plain_language_name": "Apply for a marriage license",
+      "supporting_documents_detail": {
+        "note": "Marriage License is valid for 120 days from date of issuance, in any part of the Philippines."
+      }
+    },
+    {
+      "service_number": "5.4",
+      "service_name": "Timely Registration of Certificate of Marriage (Married in Taytay, Rizal)",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Contracting parties married in Taytay, Rizal",
+      "requirements": [
+        {
+          "requirement": "Signed and Accomplished Marriage Certificate",
+          "where_to_secure": "Church / Place of Marriage"
+        },
+        {
+          "requirement": "Marriage License",
+          "where_to_secure": "LCRO where the Marriage License was issued"
+        },
+        {
+          "requirement": "Request for the Celebration of Marriage in a place other than those authorized by law (if applicable)",
+          "where_to_secure": "Place of Marriage"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit the Certificate of Marriage for registration."
+        },
+        {
+          "step": 2,
+          "action": "LCRO registers the Certificate of Marriage and assigns Registry Number."
+        },
+        {
+          "step": 3,
+          "action": "Receive owner's copy of the Certificate of Marriage."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~17 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register a marriage certificate within the prescribed period"
+    },
+    {
+      "service_number": "5.5",
+      "service_name": "Late Registration of Certificate of Marriage (Married in Taytay, Rizal)",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Highly Technical",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Solemnizing officers and contracting parties whose marriage was not registered within the prescribed period",
+      "requirements": [
+        {
+          "requirement": "Duly Accomplished and Signed Certificate of Marriage (Original or Duplicate Copy)",
+          "where_to_secure": "Solemnizing Officer / Church / Place of Marriage"
+        },
+        {
+          "requirement": "Latest CENOMAR from PSA for both contracting parties (within 6 months of submission)",
+          "where_to_secure": "PSA"
+        },
+        {
+          "requirement": "Affidavit of Delayed Registration of Certificate of Marriage executed by the Solemnizing Officer",
+          "where_to_secure": "Law Offices / Notary Public"
+        },
+        {
+          "requirement": "Sworn Statement/Affidavit of Contracting Parties stating the reason for delay",
+          "where_to_secure": "Law Offices / Notary Public"
+        },
+        {
+          "requirement": "Wedding Pictures",
+          "where_to_secure": "Client to provide"
+        },
+        {
+          "requirement": "Certified Copy of Application for Marriage License (if applicable)",
+          "where_to_secure": "Client's copy"
+        },
+        {
+          "requirement": "Certified True Copy of Birth Certificate of the couple's children with Date and Place of Marriage (if with children)",
+          "where_to_secure": "LCRO where children were born / PSA"
+        },
+        {
+          "requirement": "Affidavit of Cohabitation (if exempt from Marriage License requirement under Article 34)",
+          "where_to_secure": "Law Offices / Notary Public"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit the signed Certificate of Marriage and all requirements."
+        },
+        {
+          "step": 2,
+          "action": "Accomplish the new Certificate of Marriage following the information in the old copy (no changes to entries)."
+        },
+        {
+          "step": 3,
+          "action": "Registration after 10-day posting period."
+        },
+        {
+          "step": 4,
+          "action": "Receive owner's copy after posting period."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "11 days, 17 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register a marriage certificate after the prescribed period"
+    },
+    {
+      "service_number": "5.6",
+      "service_name": "Timely Registration of Certificate of Death",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Funeral parlors and general public whose relatives died in Taytay, Rizal",
+      "requirements": [
+        {
+          "requirement": "Duly accomplished Municipal Form No. 103 – Certificate of Death/Fetal Death Form (1 Set)",
+          "where_to_secure": "Hospitals / Funeral Parlors"
+        },
+        {
+          "requirement": "Autopsy Report (if applicable)",
+          "where_to_secure": "PNP Medico-Legal Section"
+        },
+        {
+          "requirement": "Certification of Health Officer (Certificate of Death)",
+          "where_to_secure": "Municipal Health Office"
+        },
+        {
+          "requirement": "Certification of Embalmer (back portion of Certificate of Death)",
+          "where_to_secure": "Funeral Parlor"
+        },
+        {
+          "requirement": "Post Mortem of Death Certificate (if applicable)",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Burial/Cremation Permit",
+          "where_to_secure": "LCR / Municipal Treasury Office"
+        },
+        {
+          "requirement": "Transfer of Cadaver (if applicable)",
+          "where_to_secure": "LCRO / Municipal Health Office"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present accomplished Certificate of Death with complete signatures."
+        },
+        {
+          "step": 2,
+          "action": "Pay Burial/Cremation Permit fee (Php 150.00) at the Municipal Treasury Office (if applicable)."
+        },
+        {
+          "step": 3,
+          "action": "Pay Transfer Permit fee (Php 150.00) at the Municipal Treasury Office (if applicable)."
+        },
+        {
+          "step": 4,
+          "action": "LCRO registers the Certificate of Death and assigns Registry Number."
+        },
+        {
+          "step": 5,
+          "action": "Receive owner's copy after signing of documents."
+        }
+      ],
+      "fees": {
+        "amount": "150.00",
+        "description": "Php 150.00 (burial/cremation permit or transfer permit, if applicable)"
+      },
+      "processing_time": "~17–22 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register a death certificate within the prescribed period"
+    },
+    {
+      "service_number": "5.7",
+      "service_name": "Late Registration of Certificate of Death",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Highly Technical",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Funeral parlors and general public whose relatives died in Taytay, Rizal – filing after 30-day period",
+      "requirements": [
+        {
+          "requirement": "Duly accomplished Municipal Form No. 103 – Certificate of Death/Fetal Death Form (1 Set)",
+          "where_to_secure": "Hospitals / Funeral Parlors"
+        },
+        {
+          "requirement": "Autopsy Report (if applicable)",
+          "where_to_secure": "PNP Medico-Legal Section"
+        },
+        {
+          "requirement": "Certification of Health Officer",
+          "where_to_secure": "Municipal Health Office"
+        },
+        {
+          "requirement": "Certification of Embalmer",
+          "where_to_secure": "Funeral Parlor"
+        },
+        {
+          "requirement": "Post Mortem of Death Certificate (if applicable)",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Certification from the Cemetery or Burial Permit",
+          "where_to_secure": "Cemetery"
+        },
+        {
+          "requirement": "Certificate of Service/Certification from the Funeral Service Provider",
+          "where_to_secure": "Funeral Parlors"
+        },
+        {
+          "requirement": "PSA Negative Certification",
+          "where_to_secure": "PSA"
+        },
+        {
+          "requirement": "Notarized Joint Affidavit of Two Witnesses",
+          "where_to_secure": "Law Offices / Notary Public"
+        },
+        {
+          "requirement": "Picture of Tombstone (Lapida)",
+          "where_to_secure": "Cemetery"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit Certificate of Death with complete signatures for late registration."
+        },
+        {
+          "step": 2,
+          "action": "Registration after 10-day posting period."
+        },
+        {
+          "step": 3,
+          "action": "Receive owner's copy after signing of documents."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "11 days, 7 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register a death certificate after the prescribed period"
+    },
+    {
+      "service_number": "5.8",
+      "service_name": "Registration of Court Decrees and Orders",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Petitioners and persons subject of court decrees/orders",
+      "requirements": [
+        {
+          "requirement": "Certified True Copy of Court Decision/Order",
+          "where_to_secure": "Court"
+        },
+        {
+          "requirement": "Certified True Copy of Certificate of Finality",
+          "where_to_secure": "Court"
+        },
+        {
+          "requirement": "Certified True Copy of Certificate of Authenticity and Certificate of Registration",
+          "where_to_secure": "LCR Office where case was filed"
+        },
+        {
+          "requirement": "All documents signed and certified by the municipal or city registrar where the case was filed",
+          "where_to_secure": "LCR Office where case was filed"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Present all required documents."
+        },
+        {
+          "step": 2,
+          "action": "Pay filing fee (Php 1,500.00) and cost of certified copies from court (Php 115.00 per certified page) at the Municipal Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Submitted documents are subject to review, verification, and preparation of letter to court for authentication."
+        },
+        {
+          "step": 4,
+          "action": "Receive owner's copy for submission to PSA Main Office after review."
+        }
+      ],
+      "fees": {
+        "amount": "1500.00",
+        "description": "Php 1,500.00 filing fee + Php 115.00 per certified page of court documents"
+      },
+      "processing_time": "4 working days (or depending on court's timeline)",
+      "turnaround_time": "",
+      "plain_language_name": "Register a court order affecting civil registry records"
+    },
+    {
+      "service_number": "5.9",
+      "service_name": "Correction of Civil Registry Documents (R.A. 9048 and R.A. 10172)",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Highly Technical",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Persons whose civil registry documents have clerical/typographical errors, wrong entry of sex, or wrong day/month of date of birth",
+      "requirements": [
+        {
+          "requirement": "Certified True Copy of the civil registry document sought to be corrected (PSA copy)",
+          "where_to_secure": "PSA"
+        },
+        {
+          "requirement": "Certified True Copy of the civil registry document sought to be corrected (Local copy)",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Personal Appearance of Petitioner",
+          "where_to_secure": "Petitioner to appear in person"
+        },
+        {
+          "requirement": "Supporting documents showing the correct entry (Baptismal Certificate, Marriage Certificate, Voter's Registration, GSIS/SSS records, School records, Government IDs, Passport, etc.) – Original copies to be presented, Certified True Copies to be submitted",
+          "where_to_secure": "Various agencies"
+        },
+        {
+          "requirement": "For Correction of Sex: Medical Certificate from June V. Zapanta Emergency Hospital or accredited government physician",
+          "where_to_secure": "June V. Zapanta Emergency Hospital / Accredited government physician"
+        },
+        {
+          "requirement": "NBI Clearance (latest) – purpose: Petition to Correct Date of Birth/Sex",
+          "where_to_secure": "NBI"
+        },
+        {
+          "requirement": "Police Clearance (latest, with 6 months validity) – purpose: Petition to Correct Date of Birth/Sex",
+          "where_to_secure": "Police District Office"
+        },
+        {
+          "requirement": "Certificate of Employment with No Pending Case (if employed)",
+          "where_to_secure": "Company/Employer of Petitioner"
+        },
+        {
+          "requirement": "Affidavit of Non-Employment (if not employed)",
+          "where_to_secure": "Law Offices / Notary Public"
+        },
+        {
+          "requirement": "Other relevant documents as required by the Municipal Civil Registrar",
+          "where_to_secure": "As applicable"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Client inquiry and interview; assessment of applicable requirements."
+        },
+        {
+          "step": 2,
+          "action": "Present accomplished correction form with all required documents."
+        },
+        {
+          "step": 3,
+          "action": "Pay the prescribed correction fees at the Municipal Treasury Office."
+        },
+        {
+          "step": 4,
+          "action": "Receive petition receipt; wait for mandatory 10-day posting and 2-week publication period."
+        },
+        {
+          "step": 5,
+          "action": "Await PSA decision (3–4 months)."
+        }
+      ],
+      "fees": {
+        "amount": "1000.00",
+        "description": "Php 1,000.00 (Correction of Clerical Error) or Php 3,000.00 (Change of First Name, Entry of Sex, or Date of Birth) + Php 115.00 per Certified True Copy from LCRO"
+      },
+      "processing_time": "~5 months total (including PSA processing)",
+      "turnaround_time": "",
+      "plain_language_name": "Correct errors in your birth, marriage, or death certificate",
+      "supporting_documents_detail": {
+        "note": "Only the Civil Registrar has the quasi-judicial power to implement R.A. 10172. Incomplete requirements will not be received."
+      }
+    },
+    {
+      "service_number": "5.10",
+      "service_name": "Issuance of Certified True Copies of Local Civil Registry Documents",
+      "office_division": "LOCAL CIVIL REGISTRY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Document owners and authorized representatives",
+      "requirements": [
+        {
+          "requirement": "Request Form for Birth, Marriage, or Death Certificate",
+          "where_to_secure": "LCRO"
+        },
+        {
+          "requirement": "Special Power of Attorney or Authorization Letter (if not the document owner)",
+          "where_to_secure": "Law Office / Notary Public / Document Owner"
+        },
+        {
+          "requirement": "Valid Government-Issued ID of the document owner and authorized representative",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "Pertinent information: Name of Document Owner, Complete Date of Vital Event (day, month, year), Name of Requester and Relationship with Document Owner",
+          "where_to_secure": "Client to provide"
+        },
+        {
+          "requirement": "Requested Document (if available)",
+          "where_to_secure": "Client's copy"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit necessary documents and accomplished Request Form."
+        },
+        {
+          "step": 2,
+          "action": "Pay corresponding fee (Php 115.00 per Certified True Copy) at the Municipal Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Present Official Receipt to LCRO personnel."
+        },
+        {
+          "step": 4,
+          "action": "Receive signed Certified True Copy of the requested document."
+        }
+      ],
+      "fees": {
+        "amount": "115.00",
+        "description": "Php 115.00 per Certified True Copy of document"
+      },
+      "processing_time": "~19–34 minutes (depending on document)",
+      "turnaround_time": "",
+      "plain_language_name": "Get a certified copy of a birth, marriage, or death certificate registered in Taytay"
+    },
+    {
+      "service_number": "6.1",
+      "service_name": "Review of Memorandum of Agreement (MOA) or Memorandum of Understanding (MOU)",
+      "office_division": "LEGAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All departments/offices and employees under the Municipal Government of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request Letter/Endorsement Letter",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Hard Copy and Soft Copy of the draft document to be reviewed/formulated",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Details of the Focal Person handling the document (from the requesting office)",
+          "where_to_secure": "Concerned Office/s"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit request/endorsement letter with draft document (soft and hard copy) to the Legal Services Office."
+        },
+        {
+          "step": 2,
+          "action": "Documents are endorsed to the assigned lawyers."
+        },
+        {
+          "step": 3,
+          "action": "Legal personnel coordinate with requesting office for clarifications (1–2 days)."
+        },
+        {
+          "step": 4,
+          "action": "The document is reviewed/formulated by the assigned lawyer."
+        },
+        {
+          "step": 5,
+          "action": "Receive the reviewed/finalized document."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Simple: 1 day; Complex: 5 days; Highly Technical: 18 days",
+      "turnaround_time": "",
+      "plain_language_name": "Get an MOA or MOU reviewed by the Legal Office"
+    },
+    {
+      "service_number": "6.2",
+      "service_name": "Review of Contracts",
+      "office_division": "LEGAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All departments/offices and employees under the Municipal Government of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request Letter/Endorsement Letter",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Hard Copy and Soft Copy of the draft document to be reviewed/formulated",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Details of the Focal Person handling the document (from the requesting office)",
+          "where_to_secure": "Concerned Office/s"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit request/endorsement letter with draft document (soft and hard copy) to the Legal Services Office."
+        },
+        {
+          "step": 2,
+          "action": "Documents are endorsed to the assigned lawyers."
+        },
+        {
+          "step": 3,
+          "action": "Legal personnel coordinate with requesting office for clarifications (1–2 days)."
+        },
+        {
+          "step": 4,
+          "action": "The document is reviewed/formulated by the assigned lawyer."
+        },
+        {
+          "step": 5,
+          "action": "Receive the reviewed/finalized document."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Simple: 1 day; Complex: 5 days; Highly Technical: 18 days",
+      "turnaround_time": "",
+      "plain_language_name": "Get a contract reviewed by the Legal Office"
+    },
+    {
+      "service_number": "6.3",
+      "service_name": "Rendering of Legal Opinion",
+      "office_division": "LEGAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All departments/offices and employees under the Municipal Government of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request Letter/Endorsement Letter",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Hard Copy and Soft Copy of the draft document to be reviewed/formulated",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Details of the Focal Person handling the document (from the requesting office)",
+          "where_to_secure": "Concerned Office/s"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit request/endorsement letter with draft document (soft and hard copy) to the Legal Services Office."
+        },
+        {
+          "step": 2,
+          "action": "Documents are endorsed to the assigned lawyers."
+        },
+        {
+          "step": 3,
+          "action": "Legal personnel coordinate with requesting office for clarifications (1–2 days)."
+        },
+        {
+          "step": 4,
+          "action": "The document is reviewed/formulated by the assigned lawyer."
+        },
+        {
+          "step": 5,
+          "action": "Receive the reviewed/finalized document."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Simple: 1 day; Complex: 5 days; Highly Technical: 18 days",
+      "turnaround_time": "",
+      "plain_language_name": "Request a legal opinion from the Legal Office"
+    },
+    {
+      "service_number": "6.4",
+      "service_name": "Formulation and/or Review of Executive Orders, Resolutions, and Ordinances",
+      "office_division": "LEGAL SERVICES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All departments/offices and employees under the Municipal Government of Taytay",
+      "requirements": [
+        {
+          "requirement": "Request Letter/Endorsement Letter",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Hard Copy and Soft Copy of the draft document to be reviewed/formulated",
+          "where_to_secure": "Concerned Office/s"
+        },
+        {
+          "requirement": "Details of the Focal Person handling the document (from the requesting office)",
+          "where_to_secure": "Concerned Office/s"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit request/endorsement letter with draft document (soft and hard copy) to the Legal Services Office."
+        },
+        {
+          "step": 2,
+          "action": "Documents are endorsed to the assigned lawyers."
+        },
+        {
+          "step": 3,
+          "action": "Legal personnel coordinate with requesting office for clarifications (1–2 days)."
+        },
+        {
+          "step": 4,
+          "action": "The document is reviewed/formulated by the assigned lawyer."
+        },
+        {
+          "step": 5,
+          "action": "Receive the reviewed/finalized document."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Simple: 1 day; Complex: 5 days; Highly Technical: 18 days",
+      "turnaround_time": "",
+      "plain_language_name": "Get an executive order, resolution, or ordinance drafted or reviewed"
+    },
+    {
+      "service_number": "7.1",
+      "service_name": "Technical Assistance for Computer Hardware and Software Issues",
+      "office_division": "MANAGEMENT INFORMATION SERVICE SYSTEM",
+      "classification": "Simple/Complex/Highly Technical",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Taytay LGU employees and national agencies housed by Taytay LGU",
+      "requirements": [
+        {
+          "requirement": "MISS Request Form",
+          "where_to_secure": "MISS Administrative / Technical Unit"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Inform MISS personnel of the concern via phone call or personal appearance."
+        },
+        {
+          "step": 2,
+          "action": "Fill up the MISS Service Request Form."
+        },
+        {
+          "step": 3,
+          "action": "MISS personnel troubleshoot the equipment/device on-site or at the MISS Office."
+        },
+        {
+          "step": 4,
+          "action": "Documentation and recording of resolved issue for future reference."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Varies by difficulty",
+      "turnaround_time": "",
+      "plain_language_name": "Get IT support for your computer or device"
+    },
+    {
+      "service_number": "7.2",
+      "service_name": "Posting of Articles and Content Updating of the Taytay, Rizal LGU Website",
+      "office_division": "MANAGEMENT INFORMATION SERVICE SYSTEM",
+      "classification": "Simple/Complex",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "LGU Taytay offices",
+      "requirements": [
+        {
+          "requirement": "Hard and Soft Copies of the articles (hard copy and flash drive/portable hard disk)",
+          "where_to_secure": "Public Information Office and other offices"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Provide hard and soft copies of the articles to MISS."
+        },
+        {
+          "step": 2,
+          "action": "MISS reviews data/articles for completeness and compatibility before uploading to the LGU website."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2–5 minutes per upload; varies by volume",
+      "turnaround_time": "",
+      "plain_language_name": "Post articles or update content on the LGU website"
+    },
+    {
+      "service_number": "7.3",
+      "service_name": "Systems Maintenance for LGU Offices",
+      "office_division": "MANAGEMENT INFORMATION SERVICE SYSTEM",
+      "classification": "Simple/Complex/Highly Technical",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Taytay LGU system-generated offices, including Taytay Emergency Hospital",
+      "requirements": [
+        {
+          "requirement": "Hard and Soft Copies of the Articles (if applicable)",
+          "where_to_secure": "Public Information Office and other offices"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for assistance via phone call or personal appearance to MISS."
+        },
+        {
+          "step": 2,
+          "action": "Fill up request form."
+        },
+        {
+          "step": 3,
+          "action": "MISS system personnel resolve the system concern on-site. On-site service provider is notified if needed."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Varies by difficulty",
+      "turnaround_time": "",
+      "plain_language_name": "Request maintenance of a government software system"
+    },
+    {
+      "service_number": "7.4",
+      "service_name": "Monitoring of LGU Network Backbone and SMILE KONEK Free Wi-Fi Network Service",
+      "office_division": "MANAGEMENT INFORMATION SERVICE SYSTEM",
+      "classification": "Complex/Highly Technical",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Taytayeños and government personnel",
+      "requirements": [
+        {
+          "requirement": "Letter of Request / Service Request Form",
+          "where_to_secure": "MISS"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request for Network Service Access."
+        },
+        {
+          "step": 2,
+          "action": "Submit required documents (request form, letter, ticketing system)."
+        },
+        {
+          "step": 3,
+          "action": "Await confirmation as MISS assesses network capacity and availability (~1 hour)."
+        },
+        {
+          "step": 4,
+          "action": "Receive access credentials."
+        },
+        {
+          "step": 5,
+          "action": "Test access and report issues if any."
+        },
+        {
+          "step": 6,
+          "action": "Regular periodic monitoring and maintenance is conducted on an ongoing basis."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~3 hours (initial access); ongoing monitoring",
+      "turnaround_time": "",
+      "plain_language_name": "Request access to the LGU network or SMILE KONEK Wi-Fi"
+    },
+    {
+      "service_number": "7.5",
+      "service_name": "National Agencies Coordination on ICT Projects",
+      "office_division": "MANAGEMENT INFORMATION SERVICE SYSTEM",
+      "classification": "Simple/Complex",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "Taytayeños and Taytay LGU offices",
+      "requirements": [
+        {
+          "requirement": "Letter sent through mail, fax, or delivered to the MISS office",
+          "where_to_secure": "MISS"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit or receive letter to/from national agencies for collaboration on an ICT project."
+        },
+        {
+          "step": 2,
+          "action": "Coordinate with the project via call or email."
+        },
+        {
+          "step": 3,
+          "action": "Meet in person or online for project discussion."
+        },
+        {
+          "step": 4,
+          "action": "Execute the project in coordination with national agencies and concerned departments."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "Varies depending on project schedules",
+      "turnaround_time": "",
+      "plain_language_name": "Coordinate with national agencies on ICT programs"
+    },
+    {
+      "service_number": "8.1",
+      "service_name": "Application for Environmental Permit to Operate (Business Permit Requirement)",
+      "office_division": "MUNICIPAL ENVIRONMENT AND NATURAL RESOURCES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All government agencies, LGUs, GOCCs, and other government instrumentalities",
+      "requirements": [
+        {
+          "requirement": "Certificate of Non-Coverage (CNC)",
+          "where_to_secure": "DENR / LLDA"
+        },
+        {
+          "requirement": "Environmental Compliance Certificate (ECC)",
+          "where_to_secure": "DENR"
+        },
+        {
+          "requirement": "LLDA Clearance",
+          "where_to_secure": "Laguna Lake Development Authority"
+        },
+        {
+          "requirement": "Discharge Permit",
+          "where_to_secure": "DENR"
+        },
+        {
+          "requirement": "Permit to Operate (PTO)",
+          "where_to_secure": "DENR"
+        },
+        {
+          "requirement": "Pollution Control Officer (PCO) accreditation",
+          "where_to_secure": "DENR"
+        },
+        {
+          "requirement": "Sewage Treatment Plant (STP) documents",
+          "where_to_secure": "Applicant to provide"
+        },
+        {
+          "requirement": "Waste Water Treatment Facility (WWTF) documents",
+          "where_to_secure": "Applicant to provide"
+        },
+        {
+          "requirement": "Other anti-pollution device documentation",
+          "where_to_secure": "Applicant to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit all required documents to the MENRO for review."
+        },
+        {
+          "step": 2,
+          "action": "Completion of requirements; MENRO creates the Environmental Permit to Operate."
+        },
+        {
+          "step": 3,
+          "action": "Proceed to the Treasury Office to pay Php 130.00."
+        }
+      ],
+      "fees": {
+        "amount": "130.00",
+        "description": "Php 130.00 Environmental Permit to Operate fee"
+      },
+      "processing_time": "~20 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get an environmental clearance for your business"
+    },
+    {
+      "service_number": "8.2",
+      "service_name": "Application for Tree Cutting Permit",
+      "office_division": "MUNICIPAL ENVIRONMENT AND NATURAL RESOURCES OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All government agencies, LGUs, GOCCs, and other government instrumentalities",
+      "requirements": [
+        {
+          "requirement": "Request Letter addressed to the Municipal Mayor (Hon. Allan Martine S. De Leon, MPA)",
+          "where_to_secure": "Requesting party"
+        },
+        {
+          "requirement": "Land Title / Tax Declaration",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Barangay No Objection Certification for Tree Cutting/Trimming",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "Home Owner's Association No Objection Certification (if inside a village/subdivision)",
+          "where_to_secure": "HOA"
+        },
+        {
+          "requirement": "Picture of the tree",
+          "where_to_secure": "Requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit all required documents to MENRO for review (~10 minutes)."
+        },
+        {
+          "step": 2,
+          "action": "MENRO conducts site inspection (~1 day)."
+        },
+        {
+          "step": 3,
+          "action": "Complete requirements; MENRO creates the Endorsement Letter and No Objection Certification (~5 minutes)."
+        },
+        {
+          "step": 4,
+          "action": "Proceed to Treasury Office to pay (Php 130 certification + Php 300 per tree)."
+        },
+        {
+          "step": 5,
+          "action": "Proceed to MENRO to receive the Endorsement Letter and No Objection Certificate for submission to PENRO."
+        }
+      ],
+      "fees": {
+        "amount": "430.00",
+        "description": "Php 130.00 (certification) + Php 300.00 per tree"
+      },
+      "processing_time": "1 day 30 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a permit to cut a tree on your property"
+    },
+    {
+      "service_number": "9.1",
+      "service_name": "Daily Employment Facilitation",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Job seekers, employers, students, OSY, OFW",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "PESO evaluates applicant's resume."
+        },
+        {
+          "step": 2,
+          "action": "PESO staff interviews the applicants."
+        },
+        {
+          "step": 3,
+          "action": "Applicants fill up NMRS Form."
+        },
+        {
+          "step": 4,
+          "action": "PESO checks the NMRS Form."
+        },
+        {
+          "step": 5,
+          "action": "PESO issues/releases Recommendation Letter."
+        },
+        {
+          "step": 6,
+          "action": "Recommendation Letter is endorsed to applicants."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "24 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Find a job or get a job referral from PESO"
+    },
+    {
+      "service_number": "9.2",
+      "service_name": "Skills Registration System",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Job seekers, employers, students, OSY, OFW",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Applicant gathers and fills out NMRS Form."
+        },
+        {
+          "step": 2,
+          "action": "PESO staff encodes the NMRS through SRS online/offline system."
+        },
+        {
+          "step": 3,
+          "action": "PESO generates the monthly report."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "45 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Register your skills with the government employment system"
+    },
+    {
+      "service_number": "9.3",
+      "service_name": "Local Recruitment Activity and Special Recruitment Activity (LRA/SRA)",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Job seekers, employers, students, OSY, OFW",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Request letter submitted by the private company through PESO Manager."
+        },
+        {
+          "step": 2,
+          "action": "PESO Manager approves the date of activity."
+        },
+        {
+          "step": 3,
+          "action": "Activity is conducted after completion of requirements (~2 hours)."
+        },
+        {
+          "step": 4,
+          "action": "Job vacancies are posted and uploaded on social media and barangay boards (~20 minutes)."
+        },
+        {
+          "step": 5,
+          "action": "Conducting of LRA/SRA: orientation, screening, and actual interview by company."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2 hours 48 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Attend or join a local job recruitment activity"
+    },
+    {
+      "service_number": "9.4",
+      "service_name": "OB Fair Activity",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Job seekers, employers, students, OSY, OFW",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Complete company requirements and receive approval."
+        },
+        {
+          "step": 2,
+          "action": "Company invitation and confirmation."
+        },
+        {
+          "step": 3,
+          "action": "Post and upload company job vacancies."
+        },
+        {
+          "step": 4,
+          "action": "Conduct the Job Fair."
+        },
+        {
+          "step": 5,
+          "action": "Fill up NMRS Form from the applicant."
+        },
+        {
+          "step": 6,
+          "action": "Applicant evaluation and interview by the company."
+        },
+        {
+          "step": 7,
+          "action": "Company submits summary report to PESO Manager."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "55 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Participate in a job fair organized by PESO"
+    },
+    {
+      "service_number": "9.5",
+      "service_name": "Special Program for Employment of Students (SPES)",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Students and out-of-school youth",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Initial interview by PESO Manager."
+        },
+        {
+          "step": 2,
+          "action": "Final interview by DOLE."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "10 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Apply for the DOLE Special Program for Employment of Students"
+    },
+    {
+      "service_number": "9.6",
+      "service_name": "Career and Employment Advocacy (CEA) – Labor Education for Graduating Students (LEGS)",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Graduating students from national high schools and colleges",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "PESO coordinates with all national high schools and colleges."
+        },
+        {
+          "step": 2,
+          "action": "Advocacy sessions are conducted with representatives from PESO, DOLE, and provincial PESO."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "4 hours",
+      "turnaround_time": "",
+      "plain_language_name": "Attend a career guidance and employment advocacy program"
+    },
+    {
+      "service_number": "9.7",
+      "service_name": "Livelihood Activity",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "Organized groups and associations",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit request letter of an organization."
+        },
+        {
+          "step": 2,
+          "action": "Interview the officers of the organization."
+        },
+        {
+          "step": 3,
+          "action": "Review and revise the livelihood proposal."
+        },
+        {
+          "step": 4,
+          "action": "Email the proposal to DOLE for implementation/monitoring."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "35 minutes (initial processing)",
+      "turnaround_time": "",
+      "plain_language_name": "Request a livelihood training or program for your organization"
+    },
+    {
+      "service_number": "9.8",
+      "service_name": "OFW Help Desk",
+      "office_division": "PUBLIC EMPLOYMENT SERVICE OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G/G2C",
+      "who_may_avail": "OFWs and their families",
+      "requirements": [
+        {
+          "requirement": "Request letter",
+          "where_to_secure": "PESO Manager"
+        },
+        {
+          "requirement": "DOLE Certificate (No pending Case – DOLE Rizal)",
+          "where_to_secure": "PESO Assistant"
+        },
+        {
+          "requirement": "Company Profile",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "Job Vacancies with qualifications",
+          "where_to_secure": "Company"
+        },
+        {
+          "requirement": "SEC Permit",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "DTI Permit",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "Business Permit",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Mayor's Permit",
+          "where_to_secure": "Mayor's Office"
+        },
+        {
+          "requirement": "BIR 2303 Phil-jobnet",
+          "where_to_secure": "Bureau of Internal Revenue"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Interview relative of OFW."
+        },
+        {
+          "step": 2,
+          "action": "Photocopy all papers of OFW."
+        },
+        {
+          "step": 3,
+          "action": "Make a written request for absent OFW repatriation."
+        },
+        {
+          "step": 4,
+          "action": "Email to OWWA the written request."
+        },
+        {
+          "step": 5,
+          "action": "Follow up with OWWA after 2 days."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~30 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get assistance for an OFW's repatriation or concerns"
+    },
+    {
+      "service_number": "10.1",
+      "service_name": "Provision of Sports Supplies, Medals and Trophies",
+      "office_division": "TAYTAY SPORTS DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All citizens (public)",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit Letter Request via email and/or hard copy to TSDO."
+        },
+        {
+          "step": 2,
+          "action": "TSDO receives and records the request, attaches route slip, and forwards to the appropriate office/department."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2 minutes (initial processing)",
+      "turnaround_time": "",
+      "plain_language_name": "Request sports equipment, medals, or trophies"
+    },
+    {
+      "service_number": "10.2",
+      "service_name": "Provision of Vehicle Service for Athletes and Sports Clubs",
+      "office_division": "TAYTAY SPORTS DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All citizens (public)",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit Letter Request via email and/or hard copy to TSDO."
+        },
+        {
+          "step": 2,
+          "action": "TSDO receives and records the request, attaches route slip, and forwards to the appropriate office/department."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2 minutes (initial processing)",
+      "turnaround_time": "",
+      "plain_language_name": "Request vehicle service for athletes or sports clubs"
+    },
+    {
+      "service_number": "10.3",
+      "service_name": "Provision of Medical Certificate for Athletes",
+      "office_division": "TAYTAY SPORTS DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All citizens (public)",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit Letter Request via email and/or hard copy to TSDO."
+        },
+        {
+          "step": 2,
+          "action": "TSDO receives and records the request, attaches route slip, and forwards to the appropriate office/department."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2 minutes (initial processing)",
+      "turnaround_time": "",
+      "plain_language_name": "Request a medical certificate for athletes"
+    },
+    {
+      "service_number": "10.4",
+      "service_name": "Request for Facilities and Sound System for Sports Events",
+      "office_division": "TAYTAY SPORTS DEVELOPMENT OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "All citizens (public)",
+      "requirements": [],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit Letter Request via email and/or hard copy to TSDO."
+        },
+        {
+          "step": 2,
+          "action": "TSDO receives and records the request, attaches route slip, and forwards to the appropriate office/department."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "2 minutes (initial processing)",
+      "turnaround_time": "",
+      "plain_language_name": "Request sports facilities and sound system"
+    },
+    {
+      "service_number": "11.1",
+      "service_name": "Clearance for Tourism Related-Businesses",
+      "office_division": "TOURISM OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2B",
+      "who_may_avail": "Owners/Operators of tourism establishments and tour guides (primary tourism enterprises)",
+      "requirements": [
+        {
+          "requirement": "For New Applicant: Business Permit Application Form",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "For New Applicant: DTI/SEC Registration",
+          "where_to_secure": "DTI / SEC"
+        },
+        {
+          "requirement": "For New Applicant: Barangay Clearance",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "For New Applicant: Tax bill and Official Receipt for the Current Year",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "For New Applicant: DOT Accreditation or Proof of on-going application",
+          "where_to_secure": "Department of Tourism"
+        },
+        {
+          "requirement": "For Tour Guide: NBI or Police Clearance",
+          "where_to_secure": "NBI / Police District Office"
+        },
+        {
+          "requirement": "For Tour Guide: Certificate of Tour Guiding Seminar or DOT Accreditation",
+          "where_to_secure": "DOT"
+        },
+        {
+          "requirement": "For Tour Guide: Official Receipt for the Current Year",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "For Renewal of Business Permit: Copy of Business Permit Application",
+          "where_to_secure": "Applicant to provide"
+        },
+        {
+          "requirement": "For Renewal of Business Permit: DOT Accreditation or Proof of on-going application",
+          "where_to_secure": "DOT"
+        },
+        {
+          "requirement": "For Renewal of Business Permit: Data on tourist arrivals (same-day and overnight stays)",
+          "where_to_secure": "Applicant to provide"
+        },
+        {
+          "requirement": "For Renewal of Tour Guide: NBI or Police Clearance",
+          "where_to_secure": "NBI / Police District Office"
+        },
+        {
+          "requirement": "For Renewal of Tour Guide: Official Receipt for the Current Year",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "For Renewal of Tour Guide: Certificate of Tour Guiding Seminar or DOT Accreditation",
+          "where_to_secure": "DOT"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Fill up the Tourism Application Form and submit with complete requirements."
+        },
+        {
+          "step": 2,
+          "action": "Wait for processing and release of Tourism Compliance Clearance (~10 minutes for processing, ~5 minutes for signing)."
+        },
+        {
+          "step": 3,
+          "action": "Claim the Tourism Compliance Clearance."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free (as per Municipal Ordinance No. 804 S. 2024)"
+      },
+      "processing_time": "~30 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a tourism compliance clearance for your business",
+      "supporting_documents_detail": {
+        "note": "Processing time starts upon acceptance of application with complete requirements. Legal Mandate: Municipal Ordinance No. 804 series of 2024, Section 11."
+      }
+    },
+    {
+      "service_number": "11.2",
+      "service_name": "Implementation of Tourism Programs, Activities and Projects",
+      "office_division": "TOURISM OFFICE",
+      "classification": "Complex",
+      "type_of_transaction": "G2C/G2B/G2G",
+      "who_may_avail": "Government agencies/organizations, NGOs, civic organizations, and general public",
+      "requirements": [
+        {
+          "requirement": "Communication/Letter from concerned party (1 original copy or e-copy)",
+          "where_to_secure": "Written by concerned party / requesting party"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Forward/email the communication or letter to the tourism receiving desk or email: tourism@taytayrizal.gov.ph / tourismofficetaytayrizal@gmail.com"
+        },
+        {
+          "step": 2,
+          "action": "Leave the office; wait for action on the request."
+        },
+        {
+          "step": 3,
+          "action": "Chief Tourism Officer refers the matter and acts on recommendations (~1 day initial, ~5 days total review)."
+        },
+        {
+          "step": 4,
+          "action": "Attend coordination meetings or queries."
+        },
+        {
+          "step": 5,
+          "action": "Participate in preparation of event/activity/project (~60 days)."
+        },
+        {
+          "step": 6,
+          "action": "Participate/implement the event (~2 days)."
+        },
+        {
+          "step": 7,
+          "action": "Post-event tasks completed (~1 day)."
+        }
+      ],
+      "fees": {
+        "amount": "None",
+        "description": "Free"
+      },
+      "processing_time": "~70 days 2 minutes total (depends on type and magnitude of program)",
+      "turnaround_time": "",
+      "plain_language_name": "Coordinate or participate in tourism programs and activities",
+      "supporting_documents_detail": {
+        "note": "Qualified for multi-stage processing. Total days dependent on date, type, and magnitude of program/activity/project."
+      }
+    },
+    {
+      "service_number": "12.1",
+      "service_name": "Payment of Occupation Permit and Garbage Fee",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All job seekers and taxpayers",
+      "requirements": [
+        {
+          "requirement": "Occupational Form",
+          "where_to_secure": "Window 1"
+        },
+        {
+          "requirement": "CEDULA",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "RPT Official Receipt (House/Building) for garbage fee",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Tax Order of Payment",
+          "where_to_secure": "Concerned office"
+        },
+        {
+          "requirement": "Traffic Violation Receipt (if applicable)",
+          "where_to_secure": "Issuing authority"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Window 1."
+        },
+        {
+          "step": 2,
+          "action": "Present requirements."
+        },
+        {
+          "step": 3,
+          "action": "Pay fees."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Occupational Permit: Php 100 (Local) / Php 200 (Abroad); Garbage Fee: Php 100; Police Clearance: per violation; UPAO Certificate: Php 50"
+      },
+      "processing_time": "3–5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Pay your occupation permit and garbage fee"
+    },
+    {
+      "service_number": "12.2",
+      "service_name": "Assessment and Payment of Real Property Tax",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All real property taxpayers",
+      "requirements": [
+        {
+          "requirement": "Latest Tax Declaration",
+          "where_to_secure": "Owner / Treasury Office"
+        },
+        {
+          "requirement": "Latest Payment Official Receipts",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Windows 2–5."
+        },
+        {
+          "step": 2,
+          "action": "Submit requirements."
+        },
+        {
+          "step": 3,
+          "action": "Pay Real Property Tax."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Basic: 1% of assessed value; SEF: 1% of assessed value; 20% discount for advance payment before January 2; 10% discount for prompt payment; 2% interest per month for late payment"
+      },
+      "processing_time": "2–25 minutes (depending on complexity)",
+      "turnaround_time": "",
+      "plain_language_name": "Pay your real property tax",
+      "supporting_documents_detail": {
+        "note": "Advanced payment (before Jan 2) = 20% discount; Prompt payment (before deadline) = 10% discount; Penalty = 2% interest per month for unpaid years."
+      }
+    },
+    {
+      "service_number": "12.3",
+      "service_name": "Securing Tax Clearances",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All real property taxpayers",
+      "requirements": [
+        {
+          "requirement": "Latest tax declaration",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Official Receipts for current paid taxes",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Windows 2–5."
+        },
+        {
+          "step": 2,
+          "action": "Preparation and payment of tax clearance."
+        },
+        {
+          "step": 3,
+          "action": "For review and signature; pay at Windows 8–9."
+        }
+      ],
+      "fees": {
+        "amount": "115.00",
+        "description": "Php 115.00 (Tax clearance certificate + Documentary Stamps)"
+      },
+      "processing_time": "~7 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a tax clearance certificate"
+    },
+    {
+      "service_number": "12.4",
+      "service_name": "Securing Certification and Other Correspondences (Treasury)",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All real property taxpayers",
+      "requirements": [
+        {
+          "requirement": "Latest tax declaration",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Official Receipts for current paid taxes",
+          "where_to_secure": "Owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Windows 2–5."
+        },
+        {
+          "step": 2,
+          "action": "Write draft, encode, check, and sign."
+        },
+        {
+          "step": 3,
+          "action": "Pay at Windows 8–9."
+        }
+      ],
+      "fees": {
+        "amount": "115.00",
+        "description": "Php 115.00 (Certification + Documentary Stamps)"
+      },
+      "processing_time": "~8 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a certification or correspondence from the Treasury Office"
+    },
+    {
+      "service_number": "12.5",
+      "service_name": "Securing Certified Photocopy of Tax Declaration 1945–1974, Official Receipts and Other Documents",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All real property taxpayers",
+      "requirements": [
+        {
+          "requirement": "Tax Declaration",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Official Receipts",
+          "where_to_secure": "Owner to provide"
+        },
+        {
+          "requirement": "Name of registered owner",
+          "where_to_secure": "Client to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Window 2–5."
+        },
+        {
+          "step": 2,
+          "action": "For review, verification, and approval."
+        },
+        {
+          "step": 3,
+          "action": "Pay at Window 8–9."
+        }
+      ],
+      "fees": {
+        "amount": "115.00",
+        "description": "Php 115.00 (Certified Xerox copy + Documentary Stamps)"
+      },
+      "processing_time": "2–5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get a certified copy of old tax declarations or official receipts"
+    },
+    {
+      "service_number": "12.6",
+      "service_name": "Payment of Bidding Documents, Accreditation Fees, and Cash Performance Bond",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All bidders",
+      "requirements": [
+        {
+          "requirement": "Order of Payment from BAC Secretariat",
+          "where_to_secure": "Bids and Awards Committee Secretariat"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Window 5."
+        },
+        {
+          "step": 2,
+          "action": "Submit Order of Payment from BAC Secretariat and pay."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per BAC's Order of Payment"
+      },
+      "processing_time": "3–5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Pay for bidding documents or accreditation fees"
+    },
+    {
+      "service_number": "12.7",
+      "service_name": "Payment of Liquidation for Cash Advances",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2G",
+      "who_may_avail": "All disbursing officers",
+      "requirements": [
+        {
+          "requirement": "Nature of cash advances",
+          "where_to_secure": "Disbursing Officer to provide"
+        },
+        {
+          "requirement": "Voucher (General Fund, SEF, or Trust Fund)",
+          "where_to_secure": "Disbursing Officer to provide"
+        },
+        {
+          "requirement": "Name of official/employee",
+          "where_to_secure": "Disbursing Officer to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Window 5."
+        },
+        {
+          "step": 2,
+          "action": "Submit requirements and pay."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per liquidating officer"
+      },
+      "processing_time": "3–5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Process liquidation of cash advances"
+    },
+    {
+      "service_number": "12.8",
+      "service_name": "Business Taxes, Licenses, and Other Fees and Charges",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All business taxpayers and concerned citizens",
+      "requirements": [
+        {
+          "requirement": "Approved Tax Order of Payment from BPLO",
+          "where_to_secure": "Business Permit and Licensing Office"
+        },
+        {
+          "requirement": "Community Tax Certificate",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Traffic Violation Receipt (for traffic violators)",
+          "where_to_secure": "Issuing authority"
+        },
+        {
+          "requirement": "Barangay Clearance",
+          "where_to_secure": "Barangay Hall"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to BOSS (4th floor) for payment of Business Tax."
+        },
+        {
+          "step": 2,
+          "action": "Proceed to Windows 8–9 for other fees and charges."
+        },
+        {
+          "step": 3,
+          "action": "Online payment available for Business Permit."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per BPLO Tax Order of Payment and applicable fee schedule"
+      },
+      "processing_time": "3–25 minutes (depending on complexity)",
+      "turnaround_time": "",
+      "plain_language_name": "Pay your business taxes and licenses"
+    },
+    {
+      "service_number": "12.9",
+      "service_name": "Community Tax Certificate (Cedula) – Individual and Corporation",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B/G2G",
+      "who_may_avail": "All taxpayers",
+      "requirements": [
+        {
+          "requirement": "Personal Information: Name, Address, Occupation, Birthday, Birthplace, TIN, Height, Weight, Status, Gross Income",
+          "where_to_secure": "Individual to provide"
+        },
+        {
+          "requirement": "Name of Company/Business Establishment (for corporation)",
+          "where_to_secure": "Corporation to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Windows 6 or 7."
+        },
+        {
+          "step": 2,
+          "action": "Submit personal information."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Individual: Php 5.00 basic + Php 1.00 per Php 1,000 of income/receipts (max Php 5,000); Corporation: Php 500.00 basic + Php 2.00 per Php 5,000 of assets/income (max Php 10,000); Payment without penalty: January 2–February 28; with penalty: March 1–December 31 (2% interest per month)"
+      },
+      "processing_time": "3–5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Get your Community Tax Certificate (Cedula)"
+    },
+    {
+      "service_number": "12.10",
+      "service_name": "Salaries, Wages, Financial Assistances, Honoraria, and Related Payments",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2G",
+      "who_may_avail": "All concerned employees and persons",
+      "requirements": [
+        {
+          "requirement": "Approved Daily Time Record and Accomplishment Report (for salaries and wages)",
+          "where_to_secure": "Human Resource office"
+        },
+        {
+          "requirement": "Approved Petty Cash Voucher from MSWD (for PCSO Financial Assistance)",
+          "where_to_secure": "Municipal Social Welfare and Development Office"
+        },
+        {
+          "requirement": "Valid ID",
+          "where_to_secure": "Employee/person to provide"
+        },
+        {
+          "requirement": "Authorization letter and valid IDs of both authorizing person and representative (if representative)",
+          "where_to_secure": "Employee to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Window 10."
+        },
+        {
+          "step": 2,
+          "action": "Submit requirements."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per payroll amount or Petty Cash Voucher"
+      },
+      "processing_time": "2–3 minutes per transaction",
+      "turnaround_time": "",
+      "plain_language_name": "Receive your salary, wage, or financial assistance"
+    },
+    {
+      "service_number": "12.11",
+      "service_name": "Check Payments and Disbursement",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B/G2G",
+      "who_may_avail": "All concerned persons",
+      "requirements": [
+        {
+          "requirement": "Valid ID",
+          "where_to_secure": "Person to provide"
+        },
+        {
+          "requirement": "Authorization letter and valid IDs (if representative)",
+          "where_to_secure": "Person to provide"
+        },
+        {
+          "requirement": "Official receipt",
+          "where_to_secure": "Person to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Window 11."
+        },
+        {
+          "step": 2,
+          "action": "Submit requirements and receive check payment."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per Disbursement Voucher"
+      },
+      "processing_time": "3–5 minutes (single transaction)",
+      "turnaround_time": "",
+      "plain_language_name": "Receive a government check payment"
+    },
+    {
+      "service_number": "12.12",
+      "service_name": "Hospital and Medical Fees",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B/G2G",
+      "who_may_avail": "All concerned patients",
+      "requirements": [
+        {
+          "requirement": "Patient's card with breakdown of different fees",
+          "where_to_secure": "Cashier/Billing Section"
+        },
+        {
+          "requirement": "Doctor's request",
+          "where_to_secure": "Doctor/Physician"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Cashier's Office at June V. Zapanta Emergency Hospital."
+        },
+        {
+          "step": 2,
+          "action": "Submit requirements and pay hospital or medical fees."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "As per patient's bill and doctor's request"
+      },
+      "processing_time": "3–5 minutes",
+      "turnaround_time": "",
+      "plain_language_name": "Pay your hospital or medical fees at the Taytay Emergency Hospital"
+    },
+    {
+      "service_number": "12.13",
+      "service_name": "Market Stall Fees, Rental of Light and Water",
+      "office_division": "TREASURY OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C/G2B",
+      "who_may_avail": "All market stall owners/vendors and delivery truck operators",
+      "requirements": [
+        {
+          "requirement": "Latest official receipts",
+          "where_to_secure": "Market stall owner to provide"
+        },
+        {
+          "requirement": "Name of market stall holders",
+          "where_to_secure": "Market stall owner to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Proceed to Collector's Office – New Taytay Public Market."
+        },
+        {
+          "step": 2,
+          "action": "Ask for order of payment or submit letter of intent for product promotions."
+        },
+        {
+          "step": 3,
+          "action": "Pay market stall fees, electricity and water consumption, or delivery truck fees."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Market Stall Fees: based on stall size; Electricity and water: based on MERALCO/MWSS rates; Delivery Trucks (single tired): minimum Php 100; Van: minimum Php 50–60"
+      },
+      "processing_time": "1–3 minutes per transaction",
+      "turnaround_time": "",
+      "plain_language_name": "Pay your market stall rent and utilities"
+    },
+    {
+      "service_number": "13.1",
+      "service_name": "Issuance of UPAO Certificate for Residents on Government-Owned Land",
+      "office_division": "URBAN POOR AFFAIRS OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Occupants in government-owned lots",
+      "requirements": [
+        {
+          "requirement": "Yellow Card (Meralco) / Application Form (Manila Water)",
+          "where_to_secure": "Meralco / Manila Water"
+        },
+        {
+          "requirement": "Cedula",
+          "where_to_secure": "Treasury Office"
+        },
+        {
+          "requirement": "Barangay Clearance",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "Photocopy of 3 valid IDs with signature",
+          "where_to_secure": "Government agency"
+        },
+        {
+          "requirement": "HOA Certification",
+          "where_to_secure": "Home Owner's Association"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit a copy of picture of your front house for compliance inspection."
+        },
+        {
+          "step": 2,
+          "action": "C.I. team visits the house for compliance inspection (Tuesday–Friday)."
+        },
+        {
+          "step": 3,
+          "action": "Provide all required documents for review."
+        },
+        {
+          "step": 4,
+          "action": "Proceed to Treasury Office to pay Php 115.00."
+        },
+        {
+          "step": 5,
+          "action": "Sign the affidavit of undertaking and have it notarized (Php 150–200)."
+        },
+        {
+          "step": 6,
+          "action": "Receive UPAO Certificate (released on Wednesdays and Fridays)."
+        }
+      ],
+      "fees": {
+        "amount": "115.00",
+        "description": "Php 115.00 (UPAO) + Php 150–200 (Notary for affidavit of undertaking)"
+      },
+      "processing_time": "1–3 working days",
+      "turnaround_time": "",
+      "plain_language_name": "Get a UPAO certificate for Meralco or Manila Water connection"
+    },
+    {
+      "service_number": "13.2",
+      "service_name": "Issuance of UPAO Certification for HOA Purposes",
+      "office_division": "URBAN POOR AFFAIRS OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2C",
+      "who_may_avail": "Home Owners Associations",
+      "requirements": [
+        {
+          "requirement": "Letter of Request",
+          "where_to_secure": "HOA to prepare"
+        },
+        {
+          "requirement": "HOA Profile submitted to UPAO",
+          "where_to_secure": "HOA to provide"
+        },
+        {
+          "requirement": "DHSUD Registration/SEC Registration (Optional)",
+          "where_to_secure": "DHSUD / SEC"
+        },
+        {
+          "requirement": "List of Officers",
+          "where_to_secure": "HOA to provide"
+        },
+        {
+          "requirement": "List of Members",
+          "where_to_secure": "HOA to provide"
+        },
+        {
+          "requirement": "By Laws and Resolution of HOA",
+          "where_to_secure": "HOA to provide"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit letter of request and required documents."
+        },
+        {
+          "step": 2,
+          "action": "UPAO verifies if the HOA has an existing profile."
+        },
+        {
+          "step": 3,
+          "action": "Ocular inspection of the area to clarify legitimacy of the HOA."
+        },
+        {
+          "step": 4,
+          "action": "Proceed to Treasury Office to pay Php 115.00."
+        },
+        {
+          "step": 5,
+          "action": "Receive printed and signed UPAO Certification."
+        }
+      ],
+      "fees": {
+        "amount": "115.00",
+        "description": "Php 115.00"
+      },
+      "processing_time": "1–2 working days",
+      "turnaround_time": "",
+      "plain_language_name": "Get a UPAO certification certifying your HOA's legitimacy"
+    },
+    {
+      "service_number": "14.1",
+      "service_name": "Issuance of New Business or Mayor's Permit (Face-to-Face)",
+      "office_division": "BUSINESS PERMIT AND LICENSING OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2B",
+      "who_may_avail": "New businesses operating in Taytay, Rizal",
+      "requirements": [
+        {
+          "requirement": "Business Permit Application Form",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "DTI Registration (for sole proprietorship)",
+          "where_to_secure": "Department of Trade and Industry"
+        },
+        {
+          "requirement": "SEC Registration (for corporation/partnership)",
+          "where_to_secure": "Securities and Exchange Commission"
+        },
+        {
+          "requirement": "Barangay Clearance",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "Tax Order of Payment",
+          "where_to_secure": "BPLO / Treasury Office"
+        },
+        {
+          "requirement": "Other applicable documentary requirements (LLDA, MENRO, BFP, etc.)",
+          "where_to_secure": "Various agencies"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit application with complete requirements at the BPLO."
+        },
+        {
+          "step": 2,
+          "action": "Pay computed taxes and fees at the Treasury Office."
+        },
+        {
+          "step": 3,
+          "action": "Printing, scanning, and releasing of permit."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Based on applicable tax schedule and fees"
+      },
+      "processing_time": "See document for details",
+      "turnaround_time": "",
+      "plain_language_name": "Get a new business or mayor's permit"
+    },
+    {
+      "service_number": "14.2",
+      "service_name": "Issuance of Business or Mayor's Permit (Renewal – Face-to-Face)",
+      "office_division": "BUSINESS PERMIT AND LICENSING OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2B",
+      "who_may_avail": "Business owners renewing existing permits",
+      "requirements": [
+        {
+          "requirement": "Photocopy of Previous Year Mayor's Permit/License",
+          "where_to_secure": "Business Owner"
+        },
+        {
+          "requirement": "Photocopy of Official Receipt of Previous Year",
+          "where_to_secure": "Business Owner"
+        },
+        {
+          "requirement": "Basis for computing taxes (ITR/Quarterly/Monthly statements)",
+          "where_to_secure": "Bureau of Internal Revenue"
+        },
+        {
+          "requirement": "Duly Accomplished Business Permit Application Form",
+          "where_to_secure": "BPLO"
+        },
+        {
+          "requirement": "Photocopy of Latest Lease Contract (if renting)",
+          "where_to_secure": "Business Owner"
+        },
+        {
+          "requirement": "Photocopy of Mayor's Permit of Lessor (prior year) if renting",
+          "where_to_secure": "Business Owner"
+        },
+        {
+          "requirement": "List of employees and address",
+          "where_to_secure": "Business Owner"
+        },
+        {
+          "requirement": "Other clearances/permits as applicable",
+          "where_to_secure": "Various agencies"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit requirements."
+        },
+        {
+          "step": 2,
+          "action": "Pay computed tax and fees."
+        },
+        {
+          "step": 3,
+          "action": "Printing, scanning, and releasing of permit."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Based on applicable tax schedule and fees"
+      },
+      "processing_time": "See document for details",
+      "turnaround_time": "",
+      "plain_language_name": "Renew your business or mayor's permit"
+    },
+    {
+      "service_number": "14.3",
+      "service_name": "Issuance of New Business or Mayor's Permit (Online)",
+      "office_division": "BUSINESS PERMIT AND LICENSING OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2B",
+      "who_may_avail": "New businesses applying online in Taytay, Rizal",
+      "requirements": [
+        {
+          "requirement": "Business Permit Application Form (online)",
+          "where_to_secure": "BPLO online portal"
+        },
+        {
+          "requirement": "DTI/SEC Registration",
+          "where_to_secure": "DTI / SEC"
+        },
+        {
+          "requirement": "Barangay Clearance",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "Other applicable online documentary requirements",
+          "where_to_secure": "Various agencies"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit online application with complete requirements."
+        },
+        {
+          "step": 2,
+          "action": "Pay online."
+        },
+        {
+          "step": 3,
+          "action": "Receive Business/Mayor's Permit digitally or via courier."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Based on applicable tax schedule and fees"
+      },
+      "processing_time": "See document for details",
+      "turnaround_time": "",
+      "plain_language_name": "Apply for a new business permit online"
+    },
+    {
+      "service_number": "14.4",
+      "service_name": "Renewal of Business or Mayor's Permit (Online)",
+      "office_division": "BUSINESS PERMIT AND LICENSING OFFICE",
+      "classification": "Simple",
+      "type_of_transaction": "G2B",
+      "who_may_avail": "Businesses renewing permits online",
+      "requirements": [
+        {
+          "requirement": "Copy of previous Business Permit",
+          "where_to_secure": "Business Owner"
+        },
+        {
+          "requirement": "Barangay Clearance",
+          "where_to_secure": "Barangay Hall"
+        },
+        {
+          "requirement": "Tax Order of Payment",
+          "where_to_secure": "BPLO / Treasury Office"
+        },
+        {
+          "requirement": "Other applicable online documentary requirements",
+          "where_to_secure": "Various agencies"
+        }
+      ],
+      "client_steps": [
+        {
+          "step": 1,
+          "action": "Submit online renewal application with complete requirements."
+        },
+        {
+          "step": 2,
+          "action": "Pay online."
+        },
+        {
+          "step": 3,
+          "action": "Receive renewed Business/Mayor's Permit digitally or via courier."
+        }
+      ],
+      "fees": {
+        "amount": "Varies",
+        "description": "Based on applicable tax schedule and fees"
+      },
+      "processing_time": "See document for details",
+      "turnaround_time": "",
+      "plain_language_name": "Renew your business permit online"
+    }
+  ]
+}

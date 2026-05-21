@@ -38,7 +38,8 @@ export const Navbar: FC = () => {
     i18n.changeLanguage(newLanguage);
   };
 
-  const isActiveRoute = (href: string) => {
+  const isActiveRoute = (href?: string) => {
+    if (!href) return false;
     const path = location.pathname.replace(/\/$/, '');
     const target = href.replace(/\/$/, '');
     return path === target || (target !== '' && path.startsWith(target + '/'));
@@ -46,7 +47,7 @@ export const Navbar: FC = () => {
 
   return (
     <nav
-      className='sticky top-0 z-50 border-b border-kapwa-border-weak bg-kapwa-bg-surface shadow-xs'
+      className='sticky top-0 z-100 border-b border-kapwa-border-weak bg-kapwa-bg-surface shadow-xs'
       role='navigation'
     >
       {/* 1. TOP BAR: Responsive & Aligned Right */}
@@ -127,6 +128,7 @@ export const Navbar: FC = () => {
             {mainNavigation.map(item => {
               const active = isActiveRoute(item.href);
               const hasChildren = item.children && item.children.length > 0;
+              const isMegaMenu = item.children?.[0]?.isGroup;
 
               return (
                 <div
@@ -138,7 +140,7 @@ export const Navbar: FC = () => {
                   onMouseLeave={() => setHoveredDropdown(null)}
                 >
                   <Link
-                    to={item.href}
+                    to={item.href || '#'}
                     className={cn(
                       'flex gap-1 items-center px-3 py-2 text-sm font-bold tracking-widest uppercase border-b-2 transition-all',
                       active
@@ -159,17 +161,56 @@ export const Navbar: FC = () => {
 
                   {/* Desktop Dropdown Menu */}
                   {hasChildren && hoveredDropdown === item.label && (
-                    <div className='absolute left-0 top-full py-2 w-64 rounded-b-xl border shadow-xl duration-200 animate-in fade-in slide-in-from-top-2 border-kapwa-border-weak bg-kapwa-bg-surface'>
-                      {item.children?.map(child => (
+                    <div
+                      className={cn(
+                        'absolute left-0 top-full py-4 shadow-xl duration-200 animate-in fade-in slide-in-from-top-2 rounded-b-xl border border-kapwa-border-weak bg-kapwa-bg-surface',
+                        isMegaMenu ? 'w-185 px-6' : 'w-64 px-2'
+                      )}
+                    >
+                      {isMegaMenu ? (
+                        <div className='grid grid-cols-4 gap-6'>
+                          {item.children?.map(group => (
+                            <div key={group.label} className='flex flex-col'>
+                              <h4 className='text-[10px] font-black uppercase tracking-widest text-kapwa-text-support mb-3 pb-1 border-b border-kapwa-border-weak'>
+                                {group.label}
+                              </h4>
+                              <div className='flex flex-col gap-1'>
+                                {group.children?.map(child => (
+                                  <Link
+                                    key={child.label}
+                                    to={child.href || '#'}
+                                    onClick={closeMenu}
+                                    className='block py-1.5 px-2 text-xs font-bold tracking-wide rounded-sm text-kapwa-text-strong hover:text-kapwa-text-link-hover hover:bg-kapwa-bg-surface-raised transition-colors'
+                                  >
+                                    {child.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        item.children?.map(child => (
+                          <Link
+                            key={child.label}
+                            to={child.href || '#'}
+                            onClick={closeMenu}
+                            className='block px-4 py-3 text-xs font-bold tracking-wider uppercase transition-colors rounded-lg hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
+                          >
+                            {child.label}
+                          </Link>
+                        ))
+                      )}
+                      {/* {item.children?.map(child => (
                         <Link
                           key={child.label}
-                          to={child.href}
+                          to={child.href || '#'}
                           className='block px-5 py-3 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-kapwa-bg-surface-raised hover:text-kapwa-text-link-hover text-kapwa-text-strong'
                           onClick={closeMenu}
                         >
                           {child.label}
                         </Link>
-                      ))}
+                      ))} */}
                     </div>
                   )}
                 </div>
@@ -216,6 +257,7 @@ export const Navbar: FC = () => {
             {mainNavigation.map(item => {
               const hasChildren = item.children && item.children.length > 0;
               const isSubOpen = activeMobileSubmenu === item.label;
+              const isMegaMenu = item.children?.[0]?.isGroup;
 
               return (
                 <div
@@ -224,7 +266,7 @@ export const Navbar: FC = () => {
                 >
                   <div className='flex items-center'>
                     <Link
-                      to={item.href}
+                      to={item.href || '#'}
                       onClick={closeMenu}
                       className={cn(
                         'flex-1 p-4 text-lg font-bold transition-colors',
@@ -257,16 +299,34 @@ export const Navbar: FC = () => {
                   {/* Mobile Submenu Items */}
                   {hasChildren && isSubOpen && (
                     <div className='overflow-hidden mx-2 mb-2 rounded-2xl animate-in slide-in-from-top-2 bg-kapwa-bg-surface-raised'>
-                      {item.children?.map(child => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          onClick={closeMenu}
-                          className='block p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {isMegaMenu
+                        ? item.children?.map(group => (
+                            <div key={group.label} className='pt-2'>
+                              <div className='px-4 py-2 text-[10px] font-black uppercase tracking-widest text-kapwa-text-support'>
+                                {group.label}
+                              </div>
+                              {group.children?.map(child => (
+                                <Link
+                                  key={child.label}
+                                  to={child.href || '#'}
+                                  onClick={closeMenu}
+                                  className='block p-4 pl-6 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          ))
+                        : item.children?.map(child => (
+                            <Link
+                              key={child.label}
+                              to={child.href || '#'}
+                              onClick={closeMenu}
+                              className='block p-4 text-sm font-bold border-b border-kapwa-bg-surface text-kapwa-text-strong last:border-0'
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
                     </div>
                   )}
                 </div>

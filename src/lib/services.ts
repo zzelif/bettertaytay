@@ -100,8 +100,8 @@ export function filterServices(options: ServiceFilterOptions): Service[] {
 
   // Filter by classification (Citizens Charter only)
   if (options.classification) {
-    services = services.filter(
-      s => s.classification === options.classification
+    services = services.filter(s =>
+      s.classification?.includes(options.classification || '')
     );
   }
 
@@ -278,4 +278,16 @@ export function getServicesCountBySource(): {
     community: all.filter(s => s.source === 'community').length,
     total: all.length,
   };
+}
+
+/**
+ * Get the category slug of a selected service by its URL slug
+ * @param serviceSlug - The URL slug (e.g., "dog-and-cat-registration-and-anti-rabies-vaccination-arv")
+ * @returns The category slug (e.g., "animal-services") or undefined if not found
+ */
+export function getCategorySlugByServiceSlug(
+  serviceSlug: string
+): string | undefined {
+  return getMergedServices().find(service => service.slug === serviceSlug)
+    ?.category?.slug;
 }

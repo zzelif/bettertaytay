@@ -77,24 +77,15 @@ export default function ServicesPage() {
     return () => observer.disconnect();
   }, [handleLoadMore]);
 
-  // 3. EMPTY STATE
-  if (filteredServices.length === 0) {
-    return (
-      <EmptyState
-        icon={SearchXIcon}
-        title='No services found'
-        message={
-          "We couldn't find any services matching your filters. Try adjusting your search or filters."
-        }
-        actionHref='/contribute'
-        actionLabel='Suggest New Service'
-      />
-    );
-  }
+  // 3. UI Helper for active filters display
+  const hasActiveFilters =
+    selectedOfficeDivision !== 'all' ||
+    selectedSource !== 'all' ||
+    selectedClassification !== 'all';
 
   return (
     <div className='animate-in fade-in space-y-6 duration-500'>
-      {/* Filter Bar */}
+      {/* ─── Filter Bar ─── */}
       <FilterBar
         selectedOfficeDivision={selectedOfficeDivision}
         selectedSource={selectedSource}
@@ -104,7 +95,6 @@ export default function ServicesPage() {
         onClassificationChange={setClassification}
       />
 
-      {/* Results Badge */}
       <div className='flex items-center justify-between'>
         <Badge
           variant='slate'
@@ -113,10 +103,8 @@ export default function ServicesPage() {
           {filteredServices.length} Results
         </Badge>
 
-        {/* Active Filters Display */}
-        {(selectedOfficeDivision !== 'all' ||
-          selectedSource !== 'all' ||
-          selectedClassification !== 'all') && (
+        {/* ─── Active Filter Chips ─── */}
+        {hasActiveFilters && (
           <div className='flex flex-wrap gap-2'>
             {selectedOfficeDivision !== 'all' && (
               <Badge variant='primary' className='gap-1'>
@@ -125,11 +113,13 @@ export default function ServicesPage() {
                   type='button'
                   onClick={() => setOfficeDivision('all')}
                   className='hover:text-kapwa-text-inverse ml-1'
+                  aria-label='Clear office division filter'
                 >
                   ×
                 </button>
               </Badge>
             )}
+
             {selectedSource !== 'all' && (
               <Badge variant='primary' className='gap-1'>
                 {selectedSource === 'citizens-charter'
@@ -139,11 +129,13 @@ export default function ServicesPage() {
                   type='button'
                   onClick={() => setSource('all')}
                   className='hover:text-kapwa-text-inverse ml-1'
+                  aria-label='Clear source filter'
                 >
-                  ×
+                  x
                 </button>
               </Badge>
             )}
+
             {selectedClassification !== 'all' && (
               <Badge variant='primary' className='gap-1'>
                 {selectedClassification}
@@ -151,6 +143,7 @@ export default function ServicesPage() {
                   type='button'
                   onClick={() => setClassification('all')}
                   className='hover:text-kapwa-text-inverse ml-1'
+                  aria-label='Clear classification filter'
                 >
                   ×
                 </button>
@@ -160,24 +153,43 @@ export default function ServicesPage() {
         )}
       </div>
 
-      {/* Services Grid - Using CardGrid for consistency */}
-      <CardGrid columns={filteredServices.length > 12 ? 3 : 2}>
-        {filteredServices
-          .slice(0, currentPage * ITEMS_PER_PAGE)
-          .map(service => (
-            <ServiceCard key={service.slug} service={service} />
-          ))}
+      {/* ─── Empty State ─── */}
+      {filteredServices.length === 0 ? (
+        <EmptyState
+          icon={SearchXIcon}
+          title='No services found'
+          message={
+            hasActiveFilters
+              ? 'No services match your current filters. Try clearing a filter above or searching with different terms.'
+              : "We couldn't find any services matching your search. Try different keywords."
+          }
+          actionHref='/contribute'
+          actionLabel='Suggest New Service'
+        />
+      ) : (
+        <>
+          {/* Results count */}
+          <div className='flex items-center justify-between'></div>
 
-        {/* Infinite Scroll Loader */}
-        {filteredServices.length > currentPage * ITEMS_PER_PAGE && (
-          <div
-            ref={loadMoreRef}
-            className='flex justify-center py-12 col-span-full'
-          >
-            <div className='border-kapwa-border-brand h-6 w-6 animate-spin rounded-full border-2 border-t-transparent' />
-          </div>
-        )}
-      </CardGrid>
+          {/* Services Grid */}
+          <CardGrid columns={filteredServices.length > 12 ? 3 : 2}>
+            {filteredServices
+              .slice(0, currentPage * ITEMS_PER_PAGE)
+              .map(service => (
+                <ServiceCard key={service.slug} service={service} />
+              ))}
+
+            {filteredServices.length > currentPage * ITEMS_PER_PAGE && (
+              <div
+                ref={loadMoreRef}
+                className='col-span-full flex justify-center py-12'
+              >
+                <div className='border-kapwa-border-brand h-6 w-6 animate-spin rounded-full border-2 border-t-transparent' />
+              </div>
+            )}
+          </CardGrid>
+        </>
+      )}
     </div>
   );
 }

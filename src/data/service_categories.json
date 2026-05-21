@@ -49,6 +49,36 @@
       "name": "Environment & Natural Resources",
       "slug": "environment-natural-resources",
       "description": "Environmental permits, waste management, and conservation programs."
+    },
+    {
+      "name": "Labor & Employment",
+      "slug": "labor-employment",
+      "description": "Job fairs, skills registration, student employment, and OFW assistance."
+    },
+    {
+      "name": "Tourism & Culture",
+      "slug": "tourism-culture",
+      "description": "Tourism programs, tour guide accreditation, and cultural events."
+    },
+    {
+      "name": "Sports & Youth",
+      "slug": "sports-youth",
+      "description": "Sports facilities, athlete services, and youth development programs."
+    },
+    {
+      "name": "Legal Services",
+      "slug": "legal-services",
+      "description": "Contract review, legal opinions, and ordinance formulation."
+    },
+    {
+      "name": "Information Technology",
+      "slug": "information-technology",
+      "description": "Network access, free Wi-Fi, and government digital services."
+    },
+    {
+      "name": "Internal Government Services",
+      "slug": "internal-government-services",
+      "description": "Building maintenance, supply requisitions, and government motorpool."
     }
   ]
 }

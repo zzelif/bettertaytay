@@ -46,8 +46,11 @@ export function parsePhones(
  *  * Handles various formats:
  * - "530-2981 ext 3000" → "tel:+63495302981"
  * - "530-2981, 3000" → "tel:+63495302981"
- * - "049 536 7965" → "tel:+63495367965"
+ * - "02 8284 4756" → "tel:+63282844756"
+ * - "8284 4756" → "tel:+63282844756"
  * - "0927 509 1198" → "tel:+639275091198"
+ * - "+63 927 509 1198" → "tel:+639275091198"
+ * - "8 700 144 98" → "tel:+632870014498"
  */
 export function toTelUri(phone: string | null): string | null {
   if (!phone) return null;
@@ -60,20 +63,22 @@ export function toTelUri(phone: string | null): string | null {
   if (!mainNumber) return null;
 
   if (mainNumber.length === 10 && mainNumber.startsWith('02')) {
-    // With area code: (02) 8284 4756 → 0282844756
+    // With area code: (02) 8284 4756 → +63282844756
     return `tel:+63${mainNumber.slice(1)}`;
   } else if (mainNumber.length === 8) {
     // Without area code: 8284 4756 → 82844756
     return `tel:+632${mainNumber}`;
   } else if (mainNumber.length === 11 && mainNumber.startsWith('09')) {
-    // Mobile: 09275091198
+    // Mobile: 0927 509 1198 → +63927 509 1198
     return `tel:+63${mainNumber.slice(1)}`;
   } else if (mainNumber.startsWith('63') || mainNumber.startsWith('+63')) {
-    // Mobile: +639275091198
+    // Mobile: +63927 509 1198 || 63927 509 1198
     return `tel:+${mainNumber.replace('+', '')}`;
   } else if (mainNumber.length === 9 && mainNumber.startsWith('8700')) {
     // 8 700 144 98 -> tel:+632870014498
     return `tel:+632${mainNumber}`;
+  } else {
+    return `tel:${mainNumber}`;
   }
 
   return null;

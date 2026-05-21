@@ -11,6 +11,7 @@ import { NuqsAdapter } from 'nuqs/adapters/react-router/v6';
 import { Footer } from '@/components/layout/Footer';
 // --- Layouts ---
 import { Navbar } from '@/components/layout/Navbar';
+import { HotlineBar } from '@/components/layout/HotlineBar';
 import { SEO } from '@/components/layout/SEO';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
 import Ticker from '@/components/ui/Ticker';
@@ -93,6 +94,7 @@ function AppContent() {
   return (
     <div className='flex flex-col min-h-screen'>
       <SEO />
+      {!isAdminRoute && <HotlineBar />}
       {!isAdminRoute && <Navbar />}
       {!isAdminRoute && <Ticker />}
       <ScrollToTop />

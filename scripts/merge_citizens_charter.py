@@ -21,7 +21,7 @@ from typing import Any, Set
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
-CITIZENS_CHARTER_PATH = PROJECT_ROOT / "src" / "data" / "citizens-charter" / "citizens-charter.json"
+CITIZENS_CHARTER_PATH = PROJECT_ROOT / "src" / "data" / "citizens-charter" / "generated_citizens-charter.json"
 CATEGORY_MAPPING_PATH = PROJECT_ROOT / "src" / "data" / "citizens-charter" / "category-mapping.json"
 SERVICES_JSON_PATH = PROJECT_ROOT / "src" / "data" / "services" / "services.json"
 OUTPUT_DIR = PROJECT_ROOT / "src" / "data" / "citizens-charter"
@@ -85,30 +85,58 @@ def map_office_division_to_category(office_division: str, mapping_data: dict) ->
     Returns:
         {"name": str, "slug": str}
     """
+    category_names = {
+        "business-trade-investment": "Business, Trade & Investment",
+        "taxation-payments": "Taxation & Payments",
+        "infrastructure-public-works": "Infrastructure & Public Works",
+        "certificates-vital-records": "Certificates & Vital Records",
+        "agriculture-economic-development": "Agriculture & Economic Development",
+        "public-safety-security": "Public Safety & Security",
+        "education-scholarship": "Education & Scholarship",
+        "health-wellness": "Health & Wellness",
+        "social-services-assistance": "Social Services & Assistance",
+        "environment-natural-resources": "Environment & Natural Resources",
+        "tourism-culture": "Tourism & Culture",
+        "sports-youth": "Sports & Youth",
+        "legal-services": "Legal Services",
+        "information-technology": "Information Technology",
+        "internal-government-services": "Internal Government Services",
+        "labor-employment": "Labor & Employment",
+    }
+
+    # 1. Hardcoded safety fallbacks
+    office_fallbacks = {
+        "BUSINESS PERMIT AND LICENSING OFFICE": "business-trade-investment",
+        "TREASURY OFFICE": "taxation-payments",
+        "ASSESSOR'S OFFICE": "taxation-payments",
+        "LOCAL CIVIL REGISTRY OFFICE": "certificates-vital-records",
+        "OFFICE OF AGRICULTURAL SERVICES": "agriculture-economic-development",
+        "GENDER AND DEVELOPMENT OFFICE": "social-services-assistance",
+        "GENERAL SERVICES OFFICE": "internal-government-services",
+        "LEGAL SERVICES OFFICE": "legal-services",
+        "MANAGEMENT INFORMATION SERVICE SYSTEM": "information-technology",
+        "MUNICIPAL ENVIRONMENT AND NATURAL RESOURCES OFFICE": "environment-natural-resources",
+        "PUBLIC EMPLOYMENT SERVICE OFFICE": "labor-employment",
+        "TAYTAY SPORTS DEVELOPMENT OFFICE": "sports-youth",
+        "TOURISM OFFICE": "tourism-culture",
+        "URBAN POOR AFFAIRS OFFICE": "social-services-assistance"
+    }
+
+    if office_division in office_fallbacks:
+        slug = office_fallbacks[office_division]
+        return {"name": category_names.get(slug, "Other Services"), "slug": slug}
+
+    # 2. Check JSON Mappings if not found in fallbacks
     for mapping in mapping_data.get("mappings", []):
         if mapping["officeDivision"] == office_division:
-            # Look up category name from slug
             category_slug = mapping["categorySlug"]
-            # Map slugs to display names
-            category_names = {
-                "business-trade-investment": "Business, Trade & Investment",
-                "taxation-payments": "Taxation & Payments",
-                "infrastructure-public-works": "Infrastructure & Public Works",
-                "certificates-vital-records": "Certificates & Vital Records",
-                "agriculture-economic-development": "Agriculture & Economic Development",
-                "public-safety-security": "Public Safety & Security",
-                "education-scholarship": "Education & Scholarship",
-                "health-wellness": "Health & Wellness",
-                "social-services-assistance": "Social Services & Assistance",
-                "environment-natural-resources": "Environment & Natural Resources",
-            }
             return {
                 "name": category_names.get(category_slug, mapping.get("subcategory", "Other Services")),
                 "slug": category_slug
             }
 
-    # Return default category if not found
-    default = mapping_data.get("defaultCategory", {"name": "Infrastructure & Engineering", "slug": "infrastructure-engineering"})
+    # 3. Default fallback
+    default = mapping_data.get("defaultCategory", {"name": "Infrastructure & Public Works", "slug": "infrastructure-public-works"})
     return {"name": default["name"], "slug": default["slug"]}
 
 
@@ -151,17 +179,29 @@ def map_office_division_to_slug(office_division: str) -> str:
     """
     # Map CC office names to slugs used in departments.json
     office_mapping = {
+        "BUSINESS PERMIT AND LICENSING OFFICE": "business-permit-and-licensing-office",
         "BUSINESS PERMIT AND LICENSING OFFICE (BPLO)": "business-permit-and-licensing-office",
+        "TREASURY OFFICE": "municipal-treasurers-office",
         "MUNICIPAL TREASURER'S OFFICE": "municipal-treasurers-office",
-        "MUNICIPAL TREASURER'S OFFICE": "municipal-treasurers-office",
+        "ASSESSOR'S OFFICE": "municipal-assessors-office",
         "MUNICIPAL ASSESSOR'S OFFICE": "municipal-assessors-office",
+        "LOCAL CIVIL REGISTRY OFFICE": "local-civil-registry-office",
+        "OFFICE OF AGRICULTURAL SERVICES": "municipal-agriculture-office",
+        "MUNICIPAL AGRICULTURE OFFICE": "municipal-agriculture-office",
+        "GENDER AND DEVELOPMENT OFFICE": "gender-and-development-office",
+        "GENERAL SERVICES OFFICE": "municipal-general-services-office",
+        "LEGAL SERVICES OFFICE": "legal-services",
+        "MANAGEMENT INFORMATION SERVICE SYSTEM": "information-and-communication-systems-office",
+        "MUNICIPAL ENVIRONMENT AND NATURAL RESOURCES OFFICE": "municipal-environment-and-natural-resources-office",
+        "PUBLIC EMPLOYMENT SERVICE OFFICE": "public-employment-service-office",
+        "TAYTAY SPORTS DEVELOPMENT OFFICE": "sports-development-office",
+        "TOURISM OFFICE": "municipal-tourism-office",
+        "URBAN POOR AFFAIRS OFFICE": "urban-poor-affairs-office",
         "MUNICIPAL ENGINEERING OFFICE": "municipal-engineering-office",
         "MUNICIPAL PLANNING AND DEVELOPMENT COORDINATOR (MPDC)": "municipal-planning-and-development-office",
         "MUNICIPAL PLANNING AND DEVELOPMENT OFFICE": "municipal-planning-and-development-office",
-        "LOCAL CIVIL REGISTRY OFFICE": "local-civil-registry-office",
         "MUNICIPAL ECONOMIC ENTERPRISE - MARKET": "market",
         "MUNICIPAL ECONOMIC ENTERPRISE - SLAUGHTERHOUSE": "slaughterhouse",
-        "MUNICIPAL AGRICULTURE OFFICE": "municipal-agriculture-office",
         "BARANGAY OFFICE": "barangay-office",
         "BIDS AND AWARDS COMMITTEE": "bids-and-awards-committee",
         "INFORMATION AND COMMUNICATION SYSTEMS OFFICE (ICSO)": "information-and-communication-systems-office",
@@ -171,16 +211,13 @@ def map_office_division_to_slug(office_division: str) -> str:
         "MUNICIPAL HEALTH OFFICE (MHO)": "municipal-health-office",
         "MUNICIPAL HUMAN RESOURCE MANAGEMENT OFFICE": "municipal-human-resource-management-office",
         "MUNICIPAL NUTRITION ACTION OFFICE": "municipal-nutrition-office",
-        "MUNICIPAL RECORDS OFFICE": "municipal-general-services-office",
         "MUNICIPAL SOCIAL WELFARE AND DEVELOPMENT OFFICE": "municipal-social-welfare-development-office",
-        "MUNICIPAL TOURISM OFFICE": "municipal-tourism-office",
         "MUNICIPAL URBAN DEVELOPMENT AND HOUSING OFFICE": "municipal-urban-development-and-housing-office",
         "PERSON WITH DISABILITY AFFAIRS OFFICE": "persons-with-disability-affairs-office",
         "PHILIPPINE NATIONAL POLICE (PNP) - LOS BAÑOS MPS": "municipal-police-station",
-        "PUBLIC EMPLOYMENT SERVICE OFFICE": "public-employment-service-office",
-        "SANGGUNIANG BAYAN": "12th-sangguniang-bayan",  # Legislative
-        "MUNICIPAL MAYOR'S OFFICE": "office-of-the-mayor",  # Executive
-        "MUNICIPAL VICE MAYOR'S OFFICE": "office-of-the-vice-mayor",  # Executive
+        "SANGGUNIANG BAYAN": "12th-sangguniang-bayan",
+        "MUNICIPAL MAYOR'S OFFICE": "office-of-the-mayor",
+        "MUNICIPAL VICE MAYOR'S OFFICE": "office-of-the-vice-mayor",
         "PUBLIC ORDER AND SAFETY OFFICE/TRANSPORTATION AND REGULATION UNIT": "public-order-and-safety-office",
     }
     return office_mapping.get(office_division, "")
@@ -250,6 +287,21 @@ def convert_cc_service_to_service(cc_service: dict, category: dict, slug: str, m
     return service
 
 
+def service_sort_key(service):
+    """Sort numerically by primary section number, then secondary number. 
+    Put community services (no number) at the end."""
+    service_num = service.get("serviceNumber")
+    if service_num and isinstance(service_num, str):
+        try:
+            parts = service_num.split('.')
+            primary = int(parts[0])
+            secondary = int(parts[1]) if len(parts) > 1 else 0
+            return (0, primary, secondary)
+        except ValueError:
+            pass
+    return (1, 999, 0)
+
+
 def main():
     """Main merge function"""
     print("Starting Citizens Charter merge...")
@@ -258,14 +310,27 @@ def main():
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     # Load data
-    print(f"Loading Citizens Charter data from {CITIZENS_CHARTER_PATH}")
     cc_data = load_json(CITIZENS_CHARTER_PATH)
+    print(f"Loading Citizens Charter data from {CITIZENS_CHARTER_PATH}")
+    try:
+        category_mapping = load_json(CATEGORY_MAPPING_PATH)
+    except FileNotFoundError:
+        print("Warning: category-mapping.json not found, utilizing internal fallbacks.")
+        category_mapping = {}
 
     print(f"Loading category mapping from {CATEGORY_MAPPING_PATH}")
-    category_mapping = load_json(CATEGORY_MAPPING_PATH)
+    try:
+        category_mapping = load_json(CATEGORY_MAPPING_PATH)
+    except FileNotFoundError:
+        print("Warning: category-mapping.json not found, utilizing internal fallbacks.")
+        category_mapping = {}
 
     print(f"Loading existing services from {SERVICES_JSON_PATH}")
-    existing_services = load_json(SERVICES_JSON_PATH)
+    try:
+        existing_services = load_json(SERVICES_JSON_PATH)
+    except FileNotFoundError:
+        print("Warning: services.json not found. Proceeding with empty existing list.")
+        existing_services = []
 
     # Track used slugs
     used_slugs = {s["slug"] for s in existing_services}
@@ -327,7 +392,7 @@ def main():
     merged_services = cc_services + existing_services
 
     # Sort by service name for better UX
-    merged_services.sort(key=lambda s: s["service"].lower())
+    merged_services.sort(key=service_sort_key)
 
     # Save merged services
     print(f"Saving {len(merged_services)} merged services to {OUTPUT_PATH}")

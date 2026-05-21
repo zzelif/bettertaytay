@@ -170,10 +170,11 @@ export default function WeatherMapSection() {
   }, []);
 
   // Safe hourly forecast
-  const hourlyForecast: Partial<HourlyForecast>[] =
+  const hourlyForecast: HourlyForecast[] =
     weather?.hourly && weather.hourly.length > 0
       ? weather.hourly.slice(0, 4)
       : Array.from({ length: 4 }, (_, i) => ({
+          ...({} as HourlyForecast),
           hour: `${i + 1}PM`,
           temp: weather?.temperature ?? 30,
           icon: weather?.icon ?? 'Sun',

@@ -9,6 +9,7 @@
 
 export { Footer } from './Footer';
 export { Navbar } from './Navbar';
+export { HotlineBar } from './HotlineBar';
 export { ScrollToTop } from './ScrollToTop';
 export { SEO, type SEOProps } from './SEO';
 export { SidebarLayout, type SidebarLayoutProps } from './SidebarLayout';

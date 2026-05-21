@@ -13,7 +13,9 @@ const WeatherPage: FC = () => {
 
   // Function to get weather icon component
   const getWeatherIcon = (iconName: string, size = 'h-8 w-8') => {
-    const Icon = LucideIcons[iconName as keyof typeof LucideIcons];
+    const Icon = LucideIcons[
+      iconName as keyof typeof LucideIcons
+    ] as React.ElementType;
     return Icon ? <Icon className={size} /> : null;
   };
 

@@ -1,4 +1,4 @@
-import { HourlyForecast, WeatherData } from '../types';
+import { CityData, HourlyForecast, WeatherData } from '../types';
 import { fetchWithCache } from './api';
 import { config } from './lguConfig';
 
@@ -30,10 +30,12 @@ export const mapWeatherIconToLucide = (iconCode: string): string => {
 };
 
 /**
- * Fetch weather data for configured LGU and transform to frontend type
+ * Fetch weather data for all configured LGUs and transform to frontend type
  */
 export const fetchWeatherData = async (): Promise<WeatherData[]> => {
-  // Normalize city name for API call (handle special characters)
+  // Fetch for configured LGU
+
+  /* // Normalize city name for API call (handle special characters)
   const cityName = config.location.weather.defaultCity;
   const cityKey = config.lgu.name
     .toLowerCase()
@@ -64,11 +66,12 @@ export const fetchWeatherData = async (): Promise<WeatherData[]> => {
   const hourly: HourlyForecast[] = (city.hourly || [])
     .slice(0, 4)
     .map((h: HourlyForecast) => ({
+      ...h,
       hour: new Date(h.dt * 1000).toLocaleTimeString([], {
         hour: 'numeric',
         hour12: true,
       }),
-      temperature: Math.round(h.temp),
+      temp: Math.round(h.temp),
       icon: mapWeatherIconToLucide(h.icon),
     }));
 
@@ -84,5 +87,66 @@ export const fetchWeatherData = async (): Promise<WeatherData[]> => {
     visibility: Math.round((city.visibility ?? 0) / 1000),
   };
 
-  return [weatherData];
+  return [weatherData]; */
+
+  try {
+    /* 1. Fetch all cities at once in KV Cache.  */
+    let data = await fetchWithCache('/api/weather');
+
+    /* 2. Fallback: If KV is empty, trigger a forced cache update */
+    if (!data || Object.keys(data).length === 0) {
+      data = await fetchWithCache('/api/weather?update=true');
+    }
+
+    if (!data || Object.keys(data).length === 0) {
+      console.warn('No weather data returned from API');
+      return [];
+    }
+
+    /* 3. Transform the dict of cities into array of WeatherData objects */
+    const allCities: WeatherData[] = Object.values(
+      data as Record<string, CityData>
+    ).map(city => {
+      const hourly: HourlyForecast[] = (city.hourly || [])
+        .slice(0, 4)
+        .map((h: HourlyForecast) => ({
+          ...h,
+          hour: new Date(h.dt * 1000).toLocaleTimeString([], {
+            hour: 'numeric',
+            hour12: true,
+          }),
+          temp: Math.round(h.temp),
+          icon: mapWeatherIconToLucide(h.icon),
+        }));
+
+      return {
+        location: city.name || 'Unknown Location',
+        temperature: Math.round(city.main?.temp ?? 0),
+        condition: city.weather?.[0]?.description ?? 'Unknown',
+        humidity: city.main?.humidity ?? 0,
+        windSpeed: city.wind?.speed ?? 0,
+        icon: mapWeatherIconToLucide(city.weather?.[0]?.icon ?? '01d'),
+        hourly,
+        pressure: city.main?.pressure ?? 0,
+        visibility: Math.round((city.visibility ?? 0) / 1000),
+      };
+    });
+
+    const defaultCityName = (
+      config.location.weather.defaultCity || config.lgu.name
+    ).toLowerCase();
+
+    return allCities.sort((a, b) => {
+      const nameA = a.location.toLowerCase();
+      const nameB = b.location.toLowerCase();
+
+      if (nameA === defaultCityName) return -1;
+      if (nameB === defaultCityName) return -1;
+
+      return nameA.localeCompare(nameB);
+    });
+  } catch (error) {
+    console.error('Error processing weather data:', error);
+    return [];
+  }
 };

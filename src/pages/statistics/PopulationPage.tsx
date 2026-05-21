@@ -155,6 +155,7 @@ export default function PopulationPage() {
             : 'Barangay Trends'
         }
         icon={TrendingUp}
+        className='mb-kapwa-lg'
       >
         <ResponsiveChart height={activeTab === 'barangays' ? 550 : 400}>
           {activeTab === 'municipality' ? (
@@ -242,7 +243,11 @@ export default function PopulationPage() {
       </DetailSection>
 
       {/* Info box using DetailSection for consistency */}
-      <DetailSection title='How to read this data' icon={Info}>
+      <DetailSection
+        title='How to read this data'
+        icon={Info}
+        className='mb-kapwa-lg'
+      >
         <p className='text-xs italic leading-relaxed text-kapwa-text-disabled'>
           {activeTab === 'municipality'
             ? 'The municipal growth chart tracks long-term population expansion from 1960 to current estimates.'
@@ -251,7 +256,7 @@ export default function PopulationPage() {
       </DetailSection>
 
       {/* Footer using documented footer pattern */}
-      <footer className='pt-10 space-y-4 text-center border-t border-kapwa-border-weak'>
+      <footer className='pt-kapwa-lg space-y-4 text-center border-t border-kapwa-border-weak'>
         <div className='flex justify-center items-center mx-auto w-6 h-6 rounded-full bg-kapwa-bg-success-weak text-kapwa-text-success'>
           <svg
             className='w-4 h-4'
