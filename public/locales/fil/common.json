@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Maligayang Pagdating sa BetterLB",
+    "title": "Maligayang Pagdating sa BetterTaytay",
     "subtitle": "Ang volunteer-run portal ng Munisipalidad ng Taytay. Maghanap ng impormasyon, i-access ang mga serbisyo ng pamahalaan, manatiling updated sa pinakabagong balita tungkol sa Taytay.",
     "quickAccess": "Mabilisang Puntahan"
   },
@@ -17,7 +17,7 @@
     "title": "Pinakabagong Balita at Updates"
   },
   "footer": {
-    "copyright": "2025 BetterGov.ph - Lahat ng nilalaman ay public domain maliban kung iba ang nakasaad."
+    "copyright": "2026 BetterTaytay.org - Lahat ng nilalaman ay public domain maliban kung iba ang nakasaad."
   },
   "navbar": {
     "philippines": "Pilipinas",
@@ -25,6 +25,7 @@
     "travel": "Paglalakbay",
     "government": "Pamahalaan",
     "flood control projects": "Mga Proyekto sa Pagkontrol ng Baha",
-    "openlgu": "OpenLGU"
+    "openlgu": "OpenLGU",
+    "discover": "Diskubrehin"
   }
 }

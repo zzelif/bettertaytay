@@ -1,0 +1,205 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bettertaytay.org/schemas/citizens-charter.normalized.schema.json",
+  "title": "Citizens Charter Normalized",
+  "description": "Strict schema for normalized Citizens Charter service data",
+  "type": "object",
+  "required": ["services"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/service"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "service": {
+      "type": "object",
+      "required": [
+        "service_number",
+        "service_name",
+        "plain_language_name",
+        "office_division",
+        "classification",
+        "type_of_transaction",
+        "who_may_avail",
+        "requirements",
+        "client_steps",
+        "fees",
+        "processing_time"
+      ],
+      "properties": {
+        "service_number": { "type": "string" },
+        "service_name": { "type": "string" },
+        "plain_language_name": { "type": "string" },
+        "office_division": { "type": "string" },
+        "classification": { "type": "string", "enum": ["Simple", "Complex"] },
+        "type_of_transaction": { "type": "string", "enum": ["G2C", "G2B"] },
+        "who_may_avail": { "type": "string" },
+        "requirements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/requirement" }
+        },
+        "supporting_documents_detail": {
+          "$ref": "#/$defs/supportingDocumentsDetail"
+        },
+        "website": { "type": "string", "format": "uri" },
+        "client_steps": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/clientStep" }
+        },
+        "fees": { "$ref": "#/$defs/fee" },
+        "fee_schedule": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/feeItem" }
+        },
+        "processing_time": { "type": "string" },
+        "turnaround_time": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "requirement": {
+      "type": "object",
+      "required": ["requirement", "where_to_secure"],
+      "properties": {
+        "requirement": { "type": "string" },
+        "where_to_secure": { "type": "string" },
+        "copies": { "type": "string" },
+        "serviceSlug": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "supportingDocument": {
+      "type": "object",
+      "required": ["document", "where_to_secure"],
+      "properties": {
+        "document": { "type": "string" },
+        "where_to_secure": { "type": "string" },
+        "copies": { "type": "string" },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "conditionalRequirement": {
+      "type": "object",
+      "required": ["condition", "document", "where_to_secure"],
+      "properties": {
+        "condition": { "type": "string" },
+        "document": { "type": "string" },
+        "where_to_secure": { "type": "string" },
+        "copies": { "type": "string" },
+        "note": { "type": "string" },
+        "if_unavailable": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "supportingDocumentsDetail": {
+      "type": "object",
+      "required": ["instruction"],
+      "properties": {
+        "instruction": { "type": "string" },
+        "mandatory_requirements": {
+          "type": "object",
+          "required": ["instruction", "documents"],
+          "properties": {
+            "instruction": { "type": "string" },
+            "documents": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/supportingDocument" }
+            }
+          },
+          "additionalProperties": true
+        },
+        "primary_documents": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/supportingDocument" }
+        },
+        "additional_documents": {
+          "type": "object",
+          "required": ["instruction", "documents"],
+          "properties": {
+            "instruction": { "type": "string" },
+            "documents": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/supportingDocument" }
+            }
+          },
+          "additionalProperties": true
+        },
+        "conditional_requirements": {
+          "type": "object",
+          "required": ["instruction", "options"],
+          "properties": {
+            "instruction": { "type": "string" },
+            "options": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/conditionalRequirement" }
+            }
+          },
+          "additionalProperties": true
+        },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "clientStep": {
+      "type": "object",
+      "required": ["step", "action"],
+      "properties": {
+        "step": { "type": "number" },
+        "action": { "type": "string" },
+        "sub_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["letter", "action"],
+            "properties": {
+              "letter": { "type": "string" },
+              "action": { "type": "string" },
+              "details": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "url": { "type": "string", "format": "uri" },
+        "processing_time": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "fee": {
+      "type": "object",
+      "required": ["amount", "description"],
+      "properties": {
+        "amount": { "type": "string" },
+        "description": { "type": "string" },
+        "required": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "feeItem": {
+      "type": "object",
+      "required": ["name", "amount"],
+      "properties": {
+        "name": { "type": "string" },
+        "amount": { "type": "string" },
+        "processing_time": { "type": "string" },
+        "office": { "type": "string" },
+        "category": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

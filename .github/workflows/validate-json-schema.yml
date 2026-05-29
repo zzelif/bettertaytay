@@ -60,6 +60,12 @@ jobs:
             src/data/directory/schema/legislative.schema.json \
             src/data/directory/legislative.json
 
+      - name: Validate citizens-charter JSON file
+        run: |
+          node scripts/validate-json-schema.js \
+            src/data/citizens-charter/citizens-charter.schema.json \
+            src/data/citizens-charter/generated_citizens-charter.json
+
       - name: Validate barangays JSON file
         run: |
           node scripts/validate-json-schema.js \

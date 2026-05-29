@@ -24,7 +24,7 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { toTitleCase } from '@/lib/stringUtils';
 import { parseEmails, parsePhones, toTelUri } from '@/lib/utils';
 
-import departmentsData from '@/data/directory/departments.json';
+import departmentsData from '@/data/directory/generated_departments.json';
 import mergedServicesData from '@/data/citizens-charter/merged-services.json';
 import { config } from '@/lib/lguConfig';
 

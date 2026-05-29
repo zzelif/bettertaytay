@@ -27,7 +27,7 @@ export interface AdminSession {
   role?: UserRole; // Optional for backward compatibility
 }
 
-interface AuthContext {
+export interface AuthContext {
   user: GitHubUser;
   sessionId: string;
   role: UserRole;

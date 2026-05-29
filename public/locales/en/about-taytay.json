@@ -1,0 +1,67 @@
+{
+  "about": {
+    "hero": {
+      "title": "About Taytay, Rizal",
+      "description": "Welcome to the Garment Capital of the Philippines—a vibrant, first-class municipality blending historical roots, booming local industries, and a resilient community."
+    },
+    "facts": {
+      "title": "Quick Facts",
+      "items": {
+        "geography": {
+          "title": "Geography",
+          "description": "Situated within Rizal province, bordered securely by Pasig City, Cainta, Antipolo City, Angono, and the coast of Laguna de Bay."
+        },
+        "population": {
+          "title": "Population",
+          "description": "Home to over 380,000 residents across five highly interconnected, economically vibrant foundational barangays."
+        },
+        "industry": {
+          "title": "Garments & Textiles",
+          "description": "Proudly recognized as the country's textile capital, supplying high-quality, locally tailored garments across the archipelago."
+        },
+        "woodworks": {
+          "title": "Woodcraft & Trade",
+          "description": "Renowned for deep heritage in sturdy wood craftsmanship, master carpentry, and custom furniture production lines."
+        },
+        "climate": {
+          "title": "Climate",
+          "description": "Experiences a warm tropical monsoon climate with defined dry intervals from November to April and rainy periods from May to October."
+        }
+      }
+    },
+    "overview": {
+      "title": "Municipal Overview",
+      "paragraphs": [
+        "Taytay is an aggressive first-class municipality positioned on the progressive slopes of Rizal province. Serving as an essential urban gateway linking Eastern Metro Manila to the Calabarzon region, it achieves a sustainable balance between modern commercial industrialization and rich neighborhood identities.",
+        "Historically recognized as one of the oldest settlements in the lake-bound area, Taytay successfully made the jump from a peaceful riverside farming community to an urban commercial hub. Today, its dynamic local open markets, or tiangges, drive massive decentralized micro-economies that empower thousands of local entrepreneurs."
+      ]
+    },
+    "keyInformation": {
+      "title": "Key Information",
+      "items": {
+        "officialLanguages": {
+          "label": "Official Languages",
+          "value": "Filipino, English"
+        },
+        "classification": {
+          "label": "LGU Income Class",
+          "value": "1st Class Municipality"
+        },
+        "barangaysCount": {
+          "label": "Administrative divisios",
+          "value": "5 Barangays"
+        }
+      }
+    },
+    "relatedLinks": {
+      "title": "Related Links",
+      "items": {
+        "history": "Historical Timeline",
+        "barangays": "Barangays",
+        "culture": "Culture & Festivals",
+        "tourism": "Local Attractions",
+        "map": "Interactive Map"
+      }
+    }
+  }
+}

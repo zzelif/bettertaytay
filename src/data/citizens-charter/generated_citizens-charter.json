@@ -1,11 +1,4 @@
 {
-  "meta": {
-    "title": "Citizens Charter – Municipal Government of Taytay, Rizal",
-    "edition": "2025 1st Edition",
-    "source_document": "citizens-charter.pdf",
-    "creation_date": "2026-05-20",
-    "total_services": 119
-  },
   "services": [
     {
       "service_number": "1.1",
@@ -5312,6 +5305,7 @@
       "classification": "Simple",
       "type_of_transaction": "G2B",
       "who_may_avail": "New businesses applying online in Taytay, Rizal",
+      "website": "https://www.taytayrizal.gov.ph/online-services",
       "requirements": [
         {
           "requirement": "Business Permit Application Form (online)",
@@ -5359,6 +5353,7 @@
       "classification": "Simple",
       "type_of_transaction": "G2B",
       "who_may_avail": "Businesses renewing permits online",
+      "website": "https://www.taytayrizal.gov.ph/online-services",
       "requirements": [
         {
           "requirement": "Copy of previous Business Permit",

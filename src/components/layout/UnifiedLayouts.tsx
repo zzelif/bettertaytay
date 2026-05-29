@@ -100,6 +100,7 @@ const DEFAULT_BREADCRUMB_CONFIG: Record<string, string> = {
   '/statistics': 'Statistics',
   '/about': 'About',
   '/accessibility': 'Accessibility',
+  '/discover': 'Discover',
 };
 
 /**

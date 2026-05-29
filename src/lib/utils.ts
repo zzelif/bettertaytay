@@ -77,7 +77,7 @@ export function toTelUri(phone: string | null): string | null {
   } else if (mainNumber.length === 9 && mainNumber.startsWith('8700')) {
     // 8 700 144 98 -> tel:+632870014498
     return `tel:+632${mainNumber}`;
-  } else {
+  } else if (mainNumber.length === 3 || mainNumber.length === 4) {
     return `tel:${mainNumber}`;
   }
 
@@ -85,15 +85,19 @@ export function toTelUri(phone: string | null): string | null {
 }
 
 /**
- * Parses a raw string containing multiple emails separated by slashes or commas
- * and returns a clean array of valid email addresses.
- * parseEmails("admin@taytay.gov.ph / tmg@taytay.gov.ph") → ["admin@taytay.gov.ph", "tmg@taytay.gov.ph"]
+ * Parses an array of strings (or a single string) containing multiple
+ * emails separated by slashes or commas into a flat, clean array.
  */
-export function parseEmails(emailStr: string | null): string[] {
-  if (!emailStr) return [];
+export function parseEmails(
+  emails: (string | null)[] | string | null
+): string[] {
+  if (!emails) return [];
 
-  return emailStr
-    .split(/(?:\/|,)\s*/)
+  const emailArray = Array.isArray(emails) ? emails : [emails];
+
+  return emailArray
+    .filter((p): p is string => Boolean(p))
+    .flatMap(p => p.split(/(?:\/|,)\s*/))
     .map(e => e.trim())
     .filter(e => e.length > 0 && e.includes('@'));
 }

@@ -8,9 +8,9 @@ import {
 } from '@/components/navigation/SidebarNavigation';
 
 import { officeIcons } from '@/lib/officeIcons';
-import { formatGovName } from '@/lib/stringUtils';
+import { formatGovName, toTitleCase } from '@/lib/stringUtils';
 
-import departmentsData from '@/data/directory/departments.json';
+import departmentsData from '@/data/directory/generated_departments.json';
 
 export default function DepartmentsSidebar() {
   const { department: activeSlug } = useParams();
@@ -37,7 +37,7 @@ export default function DepartmentsSidebar() {
         return (
           <SidebarItem
             key={dept.slug}
-            label={formatGovName(dept.office_name, 'department')}
+            label={toTitleCase(formatGovName(dept.office_name, 'department'))}
             tooltip={dept.office_name}
             icon={IconComponent} // Use the specific icon
             isActive={activeSlug === dept.slug}

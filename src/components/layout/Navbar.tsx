@@ -76,7 +76,7 @@ export const Navbar: FC = () => {
               <span className='hidden sm:inline'>Official Gov.ph</span>
             </a>
             <Link
-              to='https://hotlines.bettergov.ph/?city=taytay&province=rizal'
+              to='/hotlines'
               className='hover:text-kapwa-text-brand inline-flex text-[9px] font-bold tracking-widest whitespace-nowrap text-kapwa-text-support uppercase sm:text-[10px] md:text-xs'
             >
               Hotlines
@@ -142,7 +142,7 @@ export const Navbar: FC = () => {
                   <Link
                     to={item.href || '#'}
                     className={cn(
-                      'flex gap-1 items-center px-3 py-2 text-sm font-bold tracking-widest uppercase border-b-2 transition-all',
+                      'flex gap-1 items-center px-2 py-1.5 text-xs font-bold tracking-widest uppercase border-b-2 transition-all',
                       active
                         ? 'text-kapwa-text-brand border-kapwa-border-brand'
                         : 'border-transparent hover:text-kapwa-text-brand text-kapwa-text-strong'

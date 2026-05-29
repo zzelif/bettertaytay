@@ -11,7 +11,7 @@ import type {
 } from '@/types/citizens-charter';
 
 // Import the data
-import citizensCharterData from '@/data/citizens-charter/citizens-charter.json';
+import citizensCharterData from '@/data/citizens-charter/generated_citizens-charter.json';
 
 /**
  * Get all Citizen's Charter services

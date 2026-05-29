@@ -12,7 +12,7 @@ import { officeIcons } from '@/lib/officeIcons';
 import { formatGovName, toTitleCase } from '@/lib/stringUtils';
 import { toTelUri } from '@/lib/utils';
 
-import departmentsData from '@/data/directory/departments.json';
+import departmentsData from '@/data/directory/generated_departments.json';
 
 export default function DepartmentsIndex() {
   const [search, setSearch] = useState('');

@@ -5,7 +5,7 @@
       "province": "Rizal",
       "municipality": "Taytay"
     },
-    "source": "PSA Census",
+    "source": "https://psa.gov.ph/statistics/population-and-housing/node/1684077791",
     "notes": "2024 data is projected/latest census.",
     "censusDates": {
       "1990": "1990-05-01",
@@ -34,7 +34,7 @@
       { "period": "1990-2000", "rate": 5.81 },
       { "period": "2000-2010", "rate": 3.88 },
       { "period": "2010-2020", "rate": 2.97 },
-      { "period": "2020-2024", "rate": 0.68 }
+      { "period": "2020-2024", "rate": 0.65 }
     ]
   },
   "barangays": [

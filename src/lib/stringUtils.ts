@@ -8,10 +8,11 @@ export function formatGovName(text: string, _type: 'department' | 'barangay') {
       : text.replace(/BARANGAY /gi, '').trim();
 
   // 2. Define words that should stay lowercase
-  const minorWords = ['of', 'the', 'and', 'for', 'in', 'on'];
+  const minorWords = ['of', 'the', 'and', 'for', 'in', 'on', 'with'];
 
   // 3. Define acronyms that should stay uppercase
   const acronyms = [
+    'GAD',
     'ICT',
     'HR',
     'BFP',
@@ -20,14 +21,29 @@ export function formatGovName(text: string, _type: 'department' | 'barangay') {
     'MSWDO',
     'MPDC',
     'NDRRMC',
+    'GSO',
+    'DILG',
+    'COA',
+    'CCTV',
+    'COMELEC',
+    'I.T.',
+    'SB',
+    'MBSS',
+    'TECH4ED',
+    'MENRO',
+    'BAC',
+    'PLEB',
   ];
 
   return cleanText
     .toLowerCase()
     .split(' ')
     .map((word, index) => {
-      // Keep acronyms uppercase (check first before other rules)
-      if (acronyms.includes(word.toUpperCase())) return word.toUpperCase();
+      // Strip out parentheses, commas, periods, etc., for the acronym check
+      const cleanUpperWord = word.replace(/[^a-zA-Z0-9]/g, '').toUpperCase();
+
+      // If the cleaned word is an acronym, uppercase the entire original word (preserving punctuation)
+      if (acronyms.includes(cleanUpperWord)) return word.toUpperCase();
 
       // Always capitalize the first word
       if (index === 0) return word.charAt(0).toUpperCase() + word.slice(1);
@@ -35,7 +51,7 @@ export function formatGovName(text: string, _type: 'department' | 'barangay') {
       // Keep minor words lowercase
       if (minorWords.includes(word)) return word;
 
-      // Default: Title Case
+      // Default Title Case
       return word.charAt(0).toUpperCase() + word.slice(1);
     })
     .join(' ');
@@ -59,6 +75,35 @@ export function toTitleCase(text: string) {
     'PNP',
     'RHU',
     'NDRRMC',
+    'GSO',
+    'DILG',
+    'COA',
+    'CCTV',
+    'COMELEC',
+    'I.T.',
+    'SB',
+    'MBSS',
+    'TECH4ED',
+    'MENRO',
+    'BAC',
+    'MADAC',
+    'LCR',
+    'EEDM',
+    'NTPM',
+    'LEDIPO',
+    'MESU',
+    'MISSO',
+    'OSCA',
+    'OTPM',
+    'PLEB',
+    'PDAO',
+    'MPDO',
+    'LPRAO',
+    'MPSD',
+    'STACS',
+    'STAG',
+    'TMTFRO',
+    'UPAO',
   ];
 
   return text

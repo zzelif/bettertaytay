@@ -99,6 +99,31 @@ export const mainNavigation: NavigationItem[] = [
       },
     ],
   },
+  {
+    label: 'Discover',
+    href: '/discover',
+    children: [
+      { label: 'About Taytay', href: '/discover/about' },
+      { label: 'History', href: '/discover/history' },
+      { label: 'Culture', href: '/discover/culture' },
+      {
+        label: 'Interactive Map',
+        href: '/discover/map',
+      },
+      {
+        label: 'Tourism',
+        href: '/discover/tourism',
+      },
+      {
+        label: 'Forex',
+        href: '/data/forex',
+      },
+      {
+        label: 'Weather',
+        href: '/data/weather',
+      },
+    ],
+  },
 ];
 
 export const footerNavigation = {
@@ -140,6 +165,7 @@ export const footerNavigation = {
         { label: 'Barangay Directory', href: '/government/barangays' },
         { label: 'OpenLGU Portal', href: '/openlgu' },
         { label: 'Transparency', href: '/transparency/financial' },
+        { label: 'Discovery Portal', href: '/discover' },
       ],
     },
     {

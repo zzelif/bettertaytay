@@ -88,7 +88,7 @@ export function SidebarLayout({
           {/* Desktop Expand Button */}
           <div
             className={cn(
-              'absolute top-[6rem] left-0 z-10 hidden transition-all duration-500 ease-in-out md:block',
+              'absolute top-24 left-0 z-10 hidden transition-all duration-500 ease-in-out md:block',
               collapsible && isCollapsed
                 ? 'translate-x-0 opacity-100'
                 : 'pointer-events-none -translate-x-4 opacity-0'
@@ -108,7 +108,7 @@ export function SidebarLayout({
             className={cn(
               'shrink-0',
               mobileMenuOpen ? 'block' : 'hidden',
-              'md:sticky md:top-[6rem] md:block md:self-start',
+              'md:sticky md:top-24 md:block md:self-start',
               'transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
               'overflow-hidden',
               collapsible && isCollapsed

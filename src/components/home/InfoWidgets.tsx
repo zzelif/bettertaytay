@@ -106,7 +106,7 @@ const InfoWidgets: FC = () => {
                   <LucideIcons.Loader className='text-kapwa-text-brand h-8 w-8 animate-spin' />
                 </div>
               ) : weatherError ? (
-                <div className='p-4 text-center text-red-500'>
+                <div className='p-4 text-center text-shadow-kapwa-text-danger'>
                   <LucideIcons.AlertCircle className='mx-auto mb-2 h-8 w-8' />
                   <p>{weatherError}</p>
                 </div>
@@ -117,7 +117,7 @@ const InfoWidgets: FC = () => {
                       key={location.location}
                       className='border-kapwa-border-weak bg-kapwa-bg-surface flex flex-col items-center rounded-lg border p-3 uppercase'
                     >
-                      <div className='text-kapwa-text-accent-yellow mb-1'>
+                      <div className='text-kapwa-bg-accent-yellow-default mb-1'>
                         {getWeatherIcon(location.icon)}
                       </div>
                       <div className='text-lg font-semibold'>

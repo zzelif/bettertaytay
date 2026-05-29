@@ -40,8 +40,9 @@ import { FeesCard } from './components/FeesCard';
 
 import { getServiceBySlug } from '@/lib/services';
 import { toTitleCase } from '@/lib/stringUtils';
+import { resolveOfficeDivision } from '@/lib/departments';
 
-import departmentsData from '@/data/directory/departments.json';
+import departmentsData from '@/data/directory/generated_departments.json';
 import executiveData from '@/data/directory/executive.json';
 import legislativeData from '@/data/directory/legislative.json';
 
@@ -75,41 +76,94 @@ export default function ServiceDetail() {
       </div>
     );
 
+  // const officeSlugs = Array.isArray(service.officeSlug)
+  //   ? service.officeSlug
+  //   : [service.officeSlug].filter(Boolean);
+
+  // // Collect offices from all sources (departments, executive, legislative)
+  // const involvedOffices = [
+  //   ...departmentsData
+  //     .filter(d => officeSlugs.includes(d.slug))
+  //     .map(d => ({
+  //       slug: d.slug,
+  //       name: d.office_name,
+  //       type: 'department',
+  //     })),
+  //   ...executiveData
+  //     .filter(e => officeSlugs.includes(e.slug))
+  //     .map(e => ({
+  //       slug: e.slug,
+  //       name: e.role,
+  //       type: 'executive',
+  //     })),
+  //   ...legislativeData
+  //     .filter(l => officeSlugs.includes(l.slug))
+  //     .map(l => ({
+  //       slug: l.slug,
+  //       name: l.chamber,
+  //       type: 'legislative',
+  //     })),
+  // ];
+  // const isTransaction = service.type === 'transaction';
+  // const updatedAtDate = service.updatedAt ? new Date(service.updatedAt) : null;
+  // const isVerified = updatedAtDate !== null && isValid(updatedAtDate);
+
+  // // Citizens Charter specific
+  // const isOfficialSource = service.source === 'citizens-charter';
+  const needsVerification = service.needsVerification === true;
+
+  // Determine source type first — used below to gate CC-specific resolver.
+  const isOfficialSource = service.source === 'citizens-charter';
+
   const officeSlugs = Array.isArray(service.officeSlug)
     ? service.officeSlug
     : [service.officeSlug].filter(Boolean);
 
-  // Collect offices from all sources (departments, executive, legislative)
+  // For Citizens Charter services, also resolve via the officeDivision string.
+  // This bridges the naming gap between the CC document and the LGU directory
+  // (e.g. "MUNICIPAL PLANNING AND DEVELOPMENT OFFICE" → "planning-and-development-coordinator-mpdo").
+  // The resolver uses a three-step fallback: explicit alias → normalized match → acronym match.
+  // See src/lib/officeDivisionResolver.ts for maintenance instructions.
+  const resolvedCCDept = isOfficialSource
+    ? resolveOfficeDivision(service.officeDivision)
+    : null;
+
+  // Build a deduplicated set of department slugs that includes any CC-resolved slug.
+  const allDeptSlugs = [
+    ...new Set([
+      ...officeSlugs,
+      ...(resolvedCCDept ? [resolvedCCDept.slug] : []),
+    ]),
+  ];
+
+  // Collect offices from all sources (departments, executive, legislative).
   const involvedOffices = [
     ...departmentsData
-      .filter(d => officeSlugs.includes(d.slug))
+      .filter(d => allDeptSlugs.includes(d.slug))
       .map(d => ({
         slug: d.slug,
         name: d.office_name,
-        type: 'department',
+        type: 'department' as const,
       })),
     ...executiveData
       .filter(e => officeSlugs.includes(e.slug))
       .map(e => ({
         slug: e.slug,
         name: e.role,
-        type: 'executive',
+        type: 'executive' as const,
       })),
     ...legislativeData
       .filter(l => officeSlugs.includes(l.slug))
       .map(l => ({
         slug: l.slug,
         name: l.chamber,
-        type: 'legislative',
+        type: 'legislative' as const,
       })),
   ];
+
   const isTransaction = service.type === 'transaction';
   const updatedAtDate = service.updatedAt ? new Date(service.updatedAt) : null;
   const isVerified = updatedAtDate !== null && isValid(updatedAtDate);
-
-  // Citizens Charter specific
-  const isOfficialSource = service.source === 'citizens-charter';
-  const needsVerification = service.needsVerification === true;
 
   const quickInfoArray = service.quickInfo
     ? (Object.entries(service.quickInfo) as [keyof QuickInfo, string][]).map(
@@ -522,7 +576,7 @@ export default function ServiceDetail() {
             </p>
             <Link
               to={`/contribute?edit=${service.slug}`}
-              className='group border-kapwa-border-weak text-kapwa-text-support hover:border-kapwa-border-weak hover:bg-kapwa-bg-surface-raised flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl border-2 px-4 py-2.5 text-xs font-bold transition-all'
+              className='group border-kapwa-border-weak text-kapwa-text-support hover:border-kapwa-border-weak hover:bg-kapwa-bg-surface-raised flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border-2 px-4 py-2.5 text-xs font-bold transition-all'
             >
               <Edit3 className='group-hover:text-kapwa-text-accent-orange text-kapwa-text-disabled h-3.5 w-3.5 transition-colors' />
               Suggest an Edit

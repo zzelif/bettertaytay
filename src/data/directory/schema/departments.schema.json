@@ -33,9 +33,17 @@
         "format": "uri"
       },
       "email": {
-        "type": ["string", "null"],
-        "format": "email",
-        "description": "Official office email address"
+        "oneOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": ["string", "null"],
+              "format": "email"
+            }
+          },
+          { "type": "null" }
+        ],
+        "description": "Array of official office email addresses (items can be null) or null"
       },
       "department_head": {
         "oneOf": [

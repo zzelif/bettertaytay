@@ -6390,6 +6390,7 @@
         "action": "Receive Business/Mayor's Permit digitally or via courier."
       }
     ],
+    "website": "https://www.taytayrizal.gov.ph/online-services",
     "fees": {
       "amount": "Varies",
       "description": "Based on applicable tax schedule and fees"
@@ -6446,6 +6447,7 @@
         "action": "Receive renewed Business/Mayor's Permit digitally or via courier."
       }
     ],
+    "website": "https://www.taytayrizal.gov.ph/online-services",
     "fees": {
       "amount": "Varies",
       "description": "Based on applicable tax schedule and fees"

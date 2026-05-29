@@ -24,6 +24,7 @@ import Ideas from '@/pages/Ideas';
 import JoinUs from '@/pages/JoinUs';
 import NotFound from '@/pages/NotFound';
 import SearchPage from '@/pages/Search';
+import Hotlines from '@/pages/Hotlines';
 import TermsOfService from '@/pages/TermsOfService';
 import AboutPage from '@/pages/about';
 import AccessibilityPage from '@/pages/accessibility';
@@ -46,6 +47,9 @@ import BarangaysLayout from '@/pages/government/barangays/layout';
 import DepartmentsIndex from '@/pages/government/departments';
 import DepartmentDetail from '@/pages/government/departments/[department]';
 import DepartmentsLayout from '@/pages/government/departments/layout';
+// --- Discover Pages ---
+import TaytayMapPortal from '@/pages/discover/map';
+import AboutTaytay from '@/pages/discover/about';
 // --- Directory Modules ---
 import ElectedOfficialsIndex from '@/pages/government/elected-officials';
 import ElectedOfficialsLayout from '@/pages/government/elected-officials/layout';
@@ -90,13 +94,14 @@ function App() {
 function AppContent() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+  const isMapRoute = location.pathname.endsWith('/map');
 
   return (
     <div className='flex flex-col min-h-screen'>
       <SEO />
-      {!isAdminRoute && <HotlineBar />}
-      {!isAdminRoute && <Navbar />}
-      {!isAdminRoute && <Ticker />}
+      {!isAdminRoute && !isMapRoute && <HotlineBar />}
+      {!isAdminRoute && !isMapRoute && <Navbar />}
+      {!isAdminRoute && !isMapRoute && <Ticker />}
       <ScrollToTop />
 
       <Routes>
@@ -106,6 +111,7 @@ function AppContent() {
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/accessibility' element={<AccessibilityPage />} />
         <Route path='/search' element={<SearchPage />} />
+        <Route path='/hotlines' element={<Hotlines />} />
         <Route path='/ideas' element={<Ideas />} />
         <Route path='/join-us' element={<JoinUs />} />
         <Route path='/terms-of-service' element={<TermsOfService />} />
@@ -115,6 +121,13 @@ function AppContent() {
         {/* Data Utilities */}
         <Route path='/data/weather' element={<WeatherPage />} />
         <Route path='/data/forex' element={<ForexPage />} />
+
+        {/* Discover Hub */}
+        <Route path='/discover'>
+          <Route index element={<Navigate to='about' replace />} />
+          <Route path='about' element={<AboutTaytay />} />
+          <Route path='map' element={<TaytayMapPortal />} />
+        </Route>
 
         {/* Services Module (Detail nested in Layout for Sidebar persistence) */}
         <Route path='/services' element={<ServicesLayout />}>
@@ -203,7 +216,7 @@ function AppContent() {
         <Route path='*' element={<NotFound />} />
       </Routes>
 
-      {!isAdminRoute && <Footer />}
+      {!isAdminRoute && !isMapRoute && <Footer />}
     </div>
   );
 }

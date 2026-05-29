@@ -55,7 +55,7 @@ const CriticalHotlinesWidget: FC<HotlineProps> = ({ maxItems = 4 }) => {
 
         <div className='pt-3 mt-4 text-center border-t border-kapwa-border-weak'>
           <Link
-            to='/philippines/hotlines'
+            to='/hotlines'
             className='inline-flex items-center text-sm font-medium text-kapwa-text-info hover:text-blue-800'
           >
             See all emergency hotlines
