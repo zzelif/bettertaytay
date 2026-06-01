@@ -1,0 +1,167 @@
+[
+  {
+    "category": "Basics & Greetings",
+    "phrases": [
+      {
+        "english": "Hello / How are you?",
+        "tagalog": "Kumusta?",
+        "pronunciation": "koo-moos-tah"
+      },
+      {
+        "english": "Good morning",
+        "tagalog": "Magandang umaga",
+        "pronunciation": "mah-gahn-dahng oo-mah-gah"
+      },
+      {
+        "english": "Good afternoon",
+        "tagalog": "Magandang hapon",
+        "pronunciation": "mah-gahn-dahng hah-pohn"
+      },
+      {
+        "english": "Good evening",
+        "tagalog": "Magandang gabi",
+        "pronunciation": "mah-gahn-dahng gah-bee"
+      },
+      {
+        "english": "Thank you",
+        "tagalog": "Salamat",
+        "pronunciation": "sah-lah-maht"
+      },
+      {
+        "english": "Thank you very much",
+        "tagalog": "Maraming salamat",
+        "pronunciation": "mah-rah-mihng sah-lah-maht"
+      },
+      {
+        "english": "You're welcome",
+        "tagalog": "Walang anuman",
+        "pronunciation": "wah-lahng ah-noo-mahn"
+      },
+      {
+        "english": "Yes",
+        "tagalog": "Opo (polite) / Oo (informal)",
+        "pronunciation": "oh-poh / oh-oh"
+      },
+      {
+        "english": "No",
+        "tagalog": "Hindi po (polite) / Hindi",
+        "pronunciation": "hin-dee poh / hin-dee"
+      },
+      {
+        "english": "Excuse me / Please",
+        "tagalog": "Pakiusap / Ipagpaumanhin",
+        "pronunciation": "pah-kee-oo-sahp / ee-pahg-pah-oo-mahn-hin"
+      }
+    ]
+  },
+  {
+    "category": "Directions & Transport",
+    "phrases": [
+      {
+        "english": "Where is the...?",
+        "tagalog": "Saan ang...?",
+        "pronunciation": "sah-ahn ahng"
+      },
+      {
+        "english": "How much is the fare?",
+        "tagalog": "Magkano ang pamasahe?",
+        "pronunciation": "mahg-kah-noh ahng pah-mah-sah-heh"
+      },
+      {
+        "english": "Stop here, please",
+        "tagalog": "Para po! (used in jeepneys/tricycles)",
+        "pronunciation": "pah-rah poh"
+      },
+      {
+        "english": "Where is the toilet/restroom?",
+        "tagalog": "Nasaan ang banyo?",
+        "pronunciation": "nah-sah-ahn ahng bahn-yoh"
+      },
+      {
+        "english": "Left / Right / Straight",
+        "tagalog": "Kaliwa / Kanan / Diretso",
+        "pronunciation": "kah-lee-wah / kah-nahn / dee-reht-soh"
+      }
+    ]
+  },
+  {
+    "category": "Dining & Food",
+    "phrases": [
+      {
+        "english": "Table for [two], please",
+        "tagalog": "Mesa para sa [dalawa], pakiusap",
+        "pronunciation": "meh-sah pah-rah sah dah-lah-wah, pah-kee-oo-sahp"
+      },
+      {
+        "english": "Delicious!",
+        "tagalog": "Masarap!",
+        "pronunciation": "mah-sah-rahp"
+      },
+      {
+        "english": "Water, please",
+        "tagalog": "Tubig nga po, pakiusap",
+        "pronunciation": "too-bihg ngah poh, pah-kee-oo-sahp"
+      },
+      {
+        "english": "The bill, please",
+        "tagalog": "Ang bayad / bill po, pakiusap",
+        "pronunciation": "ahng bah-yahd / bill poh, pah-kee-oo-sahp"
+      },
+      {
+        "english": "What is this?",
+        "tagalog": "Ano po ito?",
+        "pronunciation": "ah-noh poh ee-toh"
+      }
+    ]
+  },
+  {
+    "category": "Shopping & Buying",
+    "phrases": [
+      {
+        "english": "How much is this?",
+        "tagalog": "Magkano ito?",
+        "pronunciation": "mahg-kah-noh ee-toh"
+      },
+      {
+        "english": "Can I get a discount?",
+        "tagalog": "Pwedeng tumawad? / May tawad po?",
+        "pronunciation": "pweh-dehng too-mah-wahd / may tah-wahd poh"
+      },
+      {
+        "english": "I will buy this",
+        "tagalog": "Bilhin ko na ito",
+        "pronunciation": "bil-hin koh nah ee-toh"
+      },
+      {
+        "english": "Do you accept card?",
+        "tagalog": "Tumatanggap po ba kayo ng card?",
+        "pronunciation": "too-mah-tahng-gahp poh bah kah-yoh nhg card"
+      }
+    ]
+  },
+  {
+    "category": "Emergencies",
+    "phrases": [
+      {
+        "english": "Help!",
+        "tagalog": "Tulong!",
+        "pronunciation": "too-lohng"
+      },
+      {
+        "english": "I need help",
+        "tagalog": "Kailangan ko ng tulong",
+        "pronunciation": "kah-ee-lah-ngahn koh nhg too-lohng"
+      },
+      {
+        "english": "Call a doctor / police",
+        "tagalog": "Tumawag ng doktor / pulis",
+        "pronunciation": "too-mah-wahg nhg dohk-tohr / poo-lees"
+      },
+      {
+        "english": "I am lost",
+        "tagalog": "Nawawala ako",
+        "pronunciation": "nah-wah-wah-lah ah-koh"
+      }
+    ]
+  }
+]

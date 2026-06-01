@@ -105,22 +105,30 @@ export const mainNavigation: NavigationItem[] = [
     children: [
       { label: 'About Taytay', href: '/discover/about' },
       { label: 'History', href: '/discover/history' },
-      { label: 'Culture', href: '/discover/culture' },
+      { label: 'Culture & Festivals', href: '/discover/culture' },
+      {
+        label: 'Tourism',
+        href: '/discover/tourism',
+      },
+      {
+        label: 'Travel Hub',
+        href: '/discover/travel',
+      },
       {
         label: 'Interactive Map',
         href: '/discover/map',
       },
       {
-        label: 'Tourism',
-        href: '/discover/tourism',
+        label: 'Weather',
+        href: '/data/weather',
       },
       {
         label: 'Forex',
         href: '/data/forex',
       },
       {
-        label: 'Weather',
-        href: '/data/weather',
+        label: 'Emergency Hotlines',
+        href: '/hotlines',
       },
     ],
   },

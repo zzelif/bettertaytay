@@ -46,7 +46,7 @@ jobs:
         run: |
           node scripts/validate-json-schema.js \
             src/data/directory/schema/departments.schema.json \
-            src/data/directory/departments.json
+            src/data/directory/generated_departments.json
 
       - name: Validate executive JSON file
         run: |

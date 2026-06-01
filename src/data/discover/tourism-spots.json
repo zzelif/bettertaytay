@@ -1,0 +1,2318 @@
+[
+  {
+    "id": "minor-basilica-st-john",
+    "name": "Minor Basilica of St. John the Baptist",
+    "category": "heritage",
+    "description": "One of the oldest parishes in the Philippines, established by Franciscan missionaries in 1579. The Minor Basilica stands atop a hill overlooking the commercial district, serving as Taytay's spiritual and geographic anchor for over four centuries.",
+    "address": "Poblacion, Taytay, Rizal",
+    "tags": [
+      "church",
+      "heritage",
+      "landmark",
+      "spanish-colonial"
+    ],
+    "featured": true,
+    "latitude": 14.555,
+    "longitude": 121.129
+  },
+  {
+    "id": "club-manila-east",
+    "name": "Club Manila East",
+    "category": "recreation",
+    "description": "A popular resort and recreational complex offering multiple swimming pools, water slides, wave pool, function halls, and picnic areas. A go-to weekend destination for families and groups from Metro Manila and neighboring provinces.",
+    "address": "Manila East Road, Brgy. San Juan, Taytay, Rizal",
+    "tags": [
+      "resort",
+      "water-park",
+      "swimming",
+      "family"
+    ],
+    "featured": true,
+    "latitude": 14.5618,
+    "longitude": 121.1331
+  },
+  {
+    "id": "bagpi-garment-center",
+    "name": "Bagpi Garment Center",
+    "category": "shopping",
+    "description": "One of the oldest and largest wholesale garment centers in Taytay, hosting hundreds of local clothing manufacturer stalls offering factory-direct prices on RTW apparel.",
+    "address": "Manila East Road, Brgy. San Juan, Taytay, Rizal",
+    "tags": [
+      "shopping",
+      "garments",
+      "tiangge",
+      "wholesale"
+    ],
+    "featured": true,
+    "latitude": 14.5611,
+    "longitude": 121.1345
+  },
+  {
+    "id": "epalog-de-taytay-main",
+    "name": "Epalog de Taytay",
+    "category": "dining",
+    "description": "Famous street food stall and the birthplace of Taytay's most iconic delicacy — the Epalog: a boiled egg coated in orange flour batter, deep-fried, and served with a house sauce. A must-try culinary landmark.",
+    "address": "Kadlagan Road, Brgy. San Juan, Taytay, Rizal",
+    "tags": [
+      "epalog",
+      "street-food",
+      "dining",
+      "delicacies",
+      "local-cuisine"
+    ],
+    "featured": true,
+    "latitude": 14.5576,
+    "longitude": 121.1298
+  },
+  {
+    "id": "taytay-mega-tiangge",
+    "name": "Taytay Mega Tiangge",
+    "category": "shopping",
+    "description": "A modern and spacious garments market facility offering a massive selection of budget-friendly fashion apparel directly from local sewers and designers.",
+    "address": "Manila East Road, Brgy. San Juan, Taytay, Rizal",
+    "tags": [
+      "shopping",
+      "garments",
+      "tiangge",
+      "wholesale"
+    ],
+    "featured": false,
+    "latitude": 14.5605,
+    "longitude": 121.1339
+  },
+  {
+    "id": "october-eighteen-tiangge",
+    "name": "October 18 Garments Market",
+    "category": "shopping",
+    "description": "A bustling garments tiangge along Manila East Road featuring stalls from local clothing manufacturers and distributors offering wholesale and retail deals on fashion apparel.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "shopping",
+      "garments",
+      "tiangge"
+    ],
+    "featured": false,
+    "latitude": 14.5615,
+    "longitude": 121.1351
+  },
+  {
+    "id": "iglesia-garments-center",
+    "name": "Iglesia Garments Center",
+    "category": "shopping",
+    "description": "A wholesale garments shopping center within the Manila East corridor, offering a wide array of textile goods, ready-to-wear apparel, and accessories from local Taytay manufacturers.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "shopping",
+      "garments",
+      "tiangge",
+      "wholesale"
+    ],
+    "featured": false,
+    "latitude": 14.5622,
+    "longitude": 121.1336
+  },
+  {
+    "id": "sm-center-taytay",
+    "name": "SM Center Taytay",
+    "category": "shopping",
+    "description": "SM Center Taytay is a modern retail complex offering supermarkets, fashion outlets, food courts, cinemas, and essential services — one of the main commercial anchors in the municipality.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "shopping",
+      "mall",
+      "dining",
+      "entertainment",
+      "cinema"
+    ],
+    "featured": false,
+    "latitude": 14.5607,
+    "longitude": 121.132
+  },
+  {
+    "id": "starmall-taytay",
+    "name": "Starmall Taytay",
+    "category": "shopping",
+    "description": "A community shopping center along Manila East Road anchored by grocery chains and local retail brands, offering a convenient one-stop destination for Taytay residents.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "shopping",
+      "mall",
+      "grocery",
+      "retail"
+    ],
+    "featured": false,
+    "latitude": 14.5601,
+    "longitude": 121.1315
+  },
+  {
+    "id": "taytay-public-market",
+    "name": "Taytay Public Market",
+    "category": "shopping",
+    "description": "The traditional public market of Taytay offering fresh produce, meats, seafood, and local goods. A bustling hub of daily commerce where you can source the freshest ingredients for Filipino cooking.",
+    "address": "Poblacion, Taytay, Rizal",
+    "tags": [
+      "market",
+      "food",
+      "produce",
+      "wet-market"
+    ],
+    "featured": false,
+    "latitude": 14.5547,
+    "longitude": 121.1275
+  },
+  {
+    "id": "gora-hills-cafe",
+    "name": "Gora Hills Cafe",
+    "category": "dining",
+    "description": "A scenic hillside cafe in Taytay offering premium coffee drinks, light meals, and pastries with a panoramic view of the Rizal skyline. A popular destination for scenic photography and casual meetups.",
+    "address": "Cabrera Road, Brgy. Dolores, Taytay, Rizal",
+    "tags": [
+      "cafe",
+      "coffee",
+      "view",
+      "dining"
+    ],
+    "featured": false,
+    "latitude": 14.5682,
+    "longitude": 121.1412
+  },
+  {
+    "id": "overlook-cafe-taytay",
+    "name": "Overlook Cafe Taytay",
+    "category": "dining",
+    "description": "An open-air restaurant and cafe perched on Cabrera Road offering fresh refreshments, grilled items, and sweeping views of Taytay and surrounding areas.",
+    "address": "Cabrera Rd, Taytay, Rizal",
+    "tags": [
+      "cafe",
+      "dining",
+      "view",
+      "al-fresco"
+    ],
+    "featured": false,
+    "latitude": 14.5691,
+    "longitude": 121.1425
+  },
+  {
+    "id": "the-gathering-cafe",
+    "name": "The Gathering Cafe",
+    "category": "dining",
+    "description": "A cozy, modern local cafe providing premium espresso drinks, sandwiches, and a peaceful atmosphere ideal for meetings, remote work, or casual hangouts.",
+    "address": "Manila East Road, Brgy. San Juan, Taytay, Rizal",
+    "tags": [
+      "cafe",
+      "coffee",
+      "bistro",
+      "dining"
+    ],
+    "featured": false,
+    "latitude": 14.5598,
+    "longitude": 121.1332
+  },
+  {
+    "id": "chikin-samgyup-taytay",
+    "name": "Chikin Samgyupsal Taytay",
+    "category": "dining",
+    "description": "Popular Korean BBQ restaurant in Brgy. Dolores offering unlimited samgyupsal (grilled pork belly), side dishes (banchan), and local Filipino favorites at budget-friendly prices.",
+    "address": "Manila East Road, Brgy. Dolores, Taytay, Rizal",
+    "tags": [
+      "samgyup",
+      "dining",
+      "korean-bbq",
+      "unlimited"
+    ],
+    "featured": false,
+    "latitude": 14.5645,
+    "longitude": 121.1382
+  },
+  {
+    "id": "monalisa-bakery-taytay",
+    "name": "Monalisa Bakery & Sweets",
+    "category": "dining",
+    "description": "A long-standing local bakery in Poblacion famous for its traditional Filipino breads, custom celebration cakes, kalamay, and native sweets — a community staple for decades.",
+    "address": "Poblacion, Taytay, Rizal",
+    "tags": [
+      "bakery",
+      "sweets",
+      "local-cuisine",
+      "kalamay"
+    ],
+    "featured": false,
+    "latitude": 14.5552,
+    "longitude": 121.1278
+  },
+  {
+    "id": "sienna-hills-resort",
+    "name": "Sienna Hills Private Resort",
+    "category": "recreation",
+    "description": "A private swimming pool resort in the elevated Dolores area offering clean pool facilities, function rooms, and open picnic grounds for family gatherings and group staycations.",
+    "address": "Sienna Hills, Brgy. Dolores, Taytay, Rizal",
+    "tags": [
+      "resort",
+      "pool",
+      "private",
+      "staycation"
+    ],
+    "featured": false,
+    "latitude": 14.5712,
+    "longitude": 121.1448
+  },
+  {
+    "id": "drift-motor-speedway",
+    "name": "Drift Motor Speedway",
+    "category": "recreation",
+    "description": "An indoor karting facility in Taytay offering high-energy go-kart racing for individuals, families, and corporate groups. Features a professionally designed circuit with safety barriers and modern karts.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "karting",
+      "indoor",
+      "recreation",
+      "family",
+      "racing"
+    ],
+    "featured": false,
+    "latitude": 14.5625,
+    "longitude": 121.131
+  },
+  {
+    "id": "taytay-town-plaza",
+    "name": "Taytay Town Plaza",
+    "category": "heritage",
+    "description": "The historic town plaza adjacent to the Minor Basilica, serving as the community's traditional gathering place since the Spanish colonial era. Features monuments, benches, and a peaceful public garden.",
+    "address": "Poblacion, Taytay, Rizal",
+    "tags": [
+      "plaza",
+      "heritage",
+      "landmark",
+      "park"
+    ],
+    "featured": false,
+    "latitude": 14.5548,
+    "longitude": 121.1285
+  },
+  {
+    "id": "tres-marias-monument",
+    "name": "Tres Marias Monument",
+    "category": "heritage",
+    "description": "A civic monument at the heart of the Poblacion commemorating notable figures in Taytay's local history. A recognized local landmark visible from the main road.",
+    "address": "Rizal Ave, Poblacion, Taytay, Rizal",
+    "tags": [
+      "monument",
+      "historic",
+      "landmark"
+    ],
+    "featured": false,
+    "latitude": 14.5556,
+    "longitude": 121.1281
+  },
+  {
+    "id": "christ-the-king-taytay",
+    "name": "Christ the King Parish",
+    "category": "heritage",
+    "description": "A beautifully designed modern parish church in Suburban Heights, serving as a landmark and spiritual community center for the eastern barangays of Taytay.",
+    "address": "Suburban Heights, Brgy. San Juan, Taytay, Rizal",
+    "tags": [
+      "church",
+      "heritage",
+      "landmark"
+    ],
+    "featured": false,
+    "latitude": 14.5638,
+    "longitude": 121.1492
+  },
+  {
+    "id": "taytay-municipal-hall",
+    "name": "Taytay Municipal Hall",
+    "category": "heritage",
+    "description": "The seat of local government for the Municipality of Taytay. The municipal hall complex serves as the administrative center where civic affairs, public services, and community events are conducted.",
+    "address": "Municipal Compound, Poblacion, Taytay, Rizal",
+    "tags": [
+      "government",
+      "landmark",
+      "civic"
+    ],
+    "featured": false,
+    "latitude": 14.5543,
+    "longitude": 121.1268
+  },
+  {
+    "id": "manggahan-floodway-park",
+    "name": "Manggahan Floodway Linear Park",
+    "category": "nature",
+    "description": "A scenic floodway park stretching along the Manggahan Floodway channel. The embankment is developed with jogging paths, benches, and open green spaces — a popular spot for morning runs and weekend relaxation.",
+    "address": "Manggahan Floodway, Taytay, Rizal",
+    "tags": [
+      "nature",
+      "park",
+      "jogging",
+      "walking",
+      "outdoor"
+    ],
+    "featured": false,
+    "latitude": 14.549,
+    "longitude": 121.126
+  },
+  {
+    "id": "taytay-rizal-sports-complex",
+    "name": "Taytay Sports Complex",
+    "category": "recreation",
+    "description": "The municipal sports and recreation center offering basketball courts, covered gymnasiums, and open fields used for local league games, community events, and recreational activities.",
+    "address": "Rizal Ave, Taytay, Rizal",
+    "tags": [
+      "sports",
+      "basketball",
+      "recreation",
+      "gymnasium"
+    ],
+    "featured": false,
+    "latitude": 14.553,
+    "longitude": 121.1255
+  },
+  {
+    "id": "taytay-night-market",
+    "name": "Taytay Night Market (Paluto Area)",
+    "category": "dining",
+    "description": "A popular night market and paluto (cook-to-order seafood) strip near the municipal area offering fresh seafood, barbecue stalls, and a lively street food atmosphere in the evenings.",
+    "address": "Near Poblacion, Taytay, Rizal",
+    "tags": [
+      "night-market",
+      "paluto",
+      "seafood",
+      "street-food",
+      "dining"
+    ],
+    "featured": false,
+    "latitude": 14.5545,
+    "longitude": 121.127
+  },
+  {
+    "id": "sto-nino-chapel-dolores",
+    "name": "Sto. Niño Parish Chapel (Dolores)",
+    "category": "heritage",
+    "description": "A local parish chapel dedicated to the Holy Child Jesus (Sto. Niño) in Barangay Dolores, serving as a spiritual center for the barangay community and holding feast day celebrations each January.",
+    "address": "Brgy. Dolores, Taytay, Rizal",
+    "tags": [
+      "church",
+      "heritage",
+      "chapel",
+      "sto-nino"
+    ],
+    "featured": false,
+    "latitude": 14.566,
+    "longitude": 121.1405
+  },
+  {
+    "id": "gerrys",
+    "name": "Gerry's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.581716,
+    "longitude": 121.131902,
+    "source": "osm"
+  },
+  {
+    "id": "sm-department-store",
+    "name": "SM Department Store",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "department_store"
+    ],
+    "featured": false,
+    "latitude": 14.565128,
+    "longitude": 121.14104,
+    "source": "osm"
+  },
+  {
+    "id": "mels-tea-house",
+    "name": "Mel's Tea House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.571545,
+    "longitude": 121.128745,
+    "source": "osm"
+  },
+  {
+    "id": "pancake-house",
+    "name": "Pancake House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.581479,
+    "longitude": 121.131913,
+    "source": "osm"
+  },
+  {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.564601,
+    "longitude": 121.139368,
+    "source": "osm"
+  },
+  {
+    "id": "14-four-cafe",
+    "name": "14 Four Cafe",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Magnolia Lane, Taytay, Rizal",
+    "tags": [
+      "cafe",
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.57666,
+    "longitude": 121.133918,
+    "source": "osm"
+  },
+  {
+    "id": "shakeys",
+    "name": "Shakey's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.580758,
+    "longitude": 121.132517,
+    "source": "osm"
+  },
+  {
+    "id": "coffee-grounds",
+    "name": "Coffee Grounds",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.57912,
+    "longitude": 121.137748,
+    "source": "osm"
+  },
+  {
+    "id": "kainan-sa-kubo",
+    "name": "Kainan sa Kubo",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Paseo Buenos Aires, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.556301,
+    "longitude": 121.139515,
+    "source": "osm"
+  },
+  {
+    "id": "jollibee",
+    "name": "Jollibee",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Kadalagahan Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.569841,
+    "longitude": 121.131515,
+    "source": "osm"
+  },
+  {
+    "id": "gotohan",
+    "name": "Gotohan",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.562942,
+    "longitude": 121.133601,
+    "source": "osm"
+  },
+  {
+    "id": "simple-snack-house",
+    "name": "Simple Snack House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Avenida Tanchoco, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.555997,
+    "longitude": 121.139459,
+    "source": "osm"
+  },
+  {
+    "id": "senoritas",
+    "name": "Senorita's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.559627,
+    "longitude": 121.135056,
+    "source": "osm"
+  },
+  {
+    "id": "minute-burger",
+    "name": "Minute Burger",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.56267,
+    "longitude": 121.133466,
+    "source": "osm"
+  },
+  {
+    "id": "mcdonalds",
+    "name": "McDonald's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.565767,
+    "longitude": 121.140885,
+    "source": "osm"
+  },
+  {
+    "id": "sm-food-court-2f",
+    "name": "SM Food Court (2F)",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "food_court"
+    ],
+    "featured": false,
+    "latitude": 14.565417,
+    "longitude": 121.140638,
+    "source": "osm"
+  },
+  {
+    "id": "kowloon-house",
+    "name": "Kowloon House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.562417,
+    "longitude": 121.138297,
+    "source": "osm"
+  },
+  {
+    "id": "llaban-eatery",
+    "name": "Llaban Eatery",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.55616,
+    "longitude": 121.136976,
+    "source": "osm"
+  },
+  {
+    "id": "mama-chubbs",
+    "name": "Mama Chubb's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.574331,
+    "longitude": 121.143951,
+    "source": "osm"
+  },
+  {
+    "id": "sr-pedro-lechon-manok",
+    "name": "Sr. Pedro Lechon Manok",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.556227,
+    "longitude": 121.13694,
+    "source": "osm"
+  },
+  {
+    "id": "vinya-eatery",
+    "name": "Vinya Eatery",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.562458,
+    "longitude": 121.138324,
+    "source": "osm"
+  },
+  {
+    "id": "tabz-and-babz",
+    "name": "Tabz and Babz",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.574862,
+    "longitude": 121.143448,
+    "source": "osm"
+  },
+  {
+    "id": "chowking",
+    "name": "Chowking",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.564998,
+    "longitude": 121.139471,
+    "source": "osm"
+  },
+  {
+    "id": "greenwich",
+    "name": "Greenwich",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.565015,
+    "longitude": 121.139551,
+    "source": "osm"
+  },
+  {
+    "id": "mang-inasal",
+    "name": "Mang Inasal",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.564948,
+    "longitude": 121.139233,
+    "source": "osm"
+  },
+  {
+    "id": "rai-rai-ken",
+    "name": "Rai Rai Ken",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.564965,
+    "longitude": 121.139312,
+    "source": "osm"
+  },
+  {
+    "id": "hap-chan-restaurant",
+    "name": "Hap Chan Restaurant",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.580807,
+    "longitude": 121.132349,
+    "source": "osm"
+  },
+  {
+    "id": "andoks",
+    "name": "Andok's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.559262,
+    "longitude": 121.136079,
+    "source": "osm"
+  },
+  {
+    "id": "dairy-queen",
+    "name": "Dairy Queen",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.565182,
+    "longitude": 121.140475,
+    "source": "osm"
+  },
+  {
+    "id": "zarks-burger",
+    "name": "Zark's Burger",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565127,
+    "longitude": 121.140437,
+    "source": "osm"
+  },
+  {
+    "id": "razons",
+    "name": "Razon's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565638,
+    "longitude": 121.140797,
+    "source": "osm"
+  },
+  {
+    "id": "maxs-restaurant",
+    "name": "Max's Restaurant",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565053,
+    "longitude": 121.140385,
+    "source": "osm"
+  },
+  {
+    "id": "pizza-hut",
+    "name": "Pizza Hut",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565264,
+    "longitude": 121.140533,
+    "source": "osm"
+  },
+  {
+    "id": "tokyo-tokyo",
+    "name": "Tokyo Tokyo",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.565575,
+    "longitude": 121.140752,
+    "source": "osm"
+  },
+  {
+    "id": "chooks-to-go",
+    "name": "Chooks to Go",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.55948,
+    "longitude": 121.136431,
+    "source": "osm"
+  },
+  {
+    "id": "classic-savory",
+    "name": "Classic Savory",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565725,
+    "longitude": 121.140858,
+    "source": "osm"
+  },
+  {
+    "id": "lido-cocina-tsina",
+    "name": "Lido Cocina Tsina",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.580144,
+    "longitude": 121.134562,
+    "source": "osm"
+  },
+  {
+    "id": "birds-i-view-resort",
+    "name": "Birds i View Resort",
+    "category": "recreation",
+    "description": "A local recreation establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Cabrera Road, Taytay, Rizal",
+    "tags": [
+      "resort",
+      "hotel",
+      "accommodation"
+    ],
+    "featured": false,
+    "latitude": 14.568652,
+    "longitude": 121.162718,
+    "source": "osm"
+  },
+  {
+    "id": "club-serene-resort",
+    "name": "Club Serene Resort",
+    "category": "recreation",
+    "description": "A local recreation establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Cabrera Road, Taytay, Rizal",
+    "tags": [
+      "resort",
+      "hotel",
+      "accommodation"
+    ],
+    "featured": false,
+    "latitude": 14.571014,
+    "longitude": 121.152312,
+    "source": "osm"
+  },
+  {
+    "id": "playbox-gaming-hub",
+    "name": "PlayBox Gaming Hub",
+    "category": "recreation",
+    "description": "A local recreation establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Dapdap Street, Taytay, Rizal",
+    "tags": [
+      "internet_cafe"
+    ],
+    "featured": false,
+    "latitude": 14.579412,
+    "longitude": 121.131852,
+    "source": "osm"
+  },
+  {
+    "id": "papa-johns",
+    "name": "Papa John's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.580126,
+    "longitude": 121.134665,
+    "source": "osm"
+  },
+  {
+    "id": "instanet-internet-cafe",
+    "name": "Instanet Internet Cafe",
+    "category": "recreation",
+    "description": "A local recreation establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Avenida Tanchoco, Taytay, Rizal",
+    "tags": [
+      "internet_cafe",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.556004,
+    "longitude": 121.13968,
+    "source": "osm"
+  },
+  {
+    "id": "zackys-place",
+    "name": "Zacky's Place",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Paseo Ignacio F. Cruz, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.556545,
+    "longitude": 121.13759,
+    "source": "osm"
+  },
+  {
+    "id": "yellow-cab",
+    "name": "Yellow Cab",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.566017,
+    "longitude": 121.139842,
+    "source": "osm"
+  },
+  {
+    "id": "alidas-tapsilog",
+    "name": "Alida's Tapsilog",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Lucia Naval Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.564049,
+    "longitude": 121.133677,
+    "source": "osm"
+  },
+  {
+    "id": "blugre-coffee",
+    "name": "Blugre Coffee",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Don Hilario Cruz Avenue, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.551959,
+    "longitude": 121.130593,
+    "source": "osm"
+  },
+  {
+    "id": "uling-roaster",
+    "name": "Uling Roaster",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.566064,
+    "longitude": 121.131859,
+    "source": "osm"
+  },
+  {
+    "id": "burrrp",
+    "name": "Burrrp!",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.580338,
+    "longitude": 121.133888,
+    "source": "osm"
+  },
+  {
+    "id": "the-keatchen-food-park",
+    "name": "The Keatchen Food Park",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.567842,
+    "longitude": 121.142353,
+    "source": "osm"
+  },
+  {
+    "id": "pixcone-coffee-shop-and-ice-cream",
+    "name": "PixCone Coffee Shop and Ice Cream",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.572794,
+    "longitude": 121.126291,
+    "source": "osm"
+  },
+  {
+    "id": "budbod-atbp",
+    "name": "Budbod Atbp",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.572778,
+    "longitude": 121.126307,
+    "source": "osm"
+  },
+  {
+    "id": "sedap-malay-kitchen",
+    "name": "Sedap Malay Kitchen",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.554845,
+    "longitude": 121.137696,
+    "source": "osm"
+  },
+  {
+    "id": "baliwag-lechon",
+    "name": "Baliwag Lechon",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.570894,
+    "longitude": 121.130877,
+    "source": "osm"
+  },
+  {
+    "id": "teoniks",
+    "name": "Teoniks",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.570814,
+    "longitude": 121.130785,
+    "source": "osm"
+  },
+  {
+    "id": "dons-korean-bbq-buffet",
+    "name": "Don's Korean BBQ & Buffet",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.552579,
+    "longitude": 121.138824,
+    "source": "osm"
+  },
+  {
+    "id": "shishang-hotpot",
+    "name": "Shishang Hotpot",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.552481,
+    "longitude": 121.138776,
+    "source": "osm"
+  },
+  {
+    "id": "the-shawarma-shack",
+    "name": "The Shawarma Shack",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.569487,
+    "longitude": 121.131064,
+    "source": "osm"
+  },
+  {
+    "id": "kalye-food-park",
+    "name": "Kalye Food Park",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "food_court"
+    ],
+    "featured": false,
+    "latitude": 14.554385,
+    "longitude": 121.137951,
+    "source": "osm"
+  },
+  {
+    "id": "bangs-grill-chill",
+    "name": "Bang's Grill & Chill",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "restaurant",
+      "grill"
+    ],
+    "featured": false,
+    "latitude": 14.545211,
+    "longitude": 121.143678,
+    "source": "osm"
+  },
+  {
+    "id": "maximus-pizza",
+    "name": "Maximus Pizza",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Binhing Pag-asa Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.568259,
+    "longitude": 121.130273,
+    "source": "osm"
+  },
+  {
+    "id": "burrow-café",
+    "name": "Burrow Café",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Beverly Hills Drive, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.575017,
+    "longitude": 121.156261,
+    "source": "osm"
+  },
+  {
+    "id": "tagalog",
+    "name": "Tagalog",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Kings Street, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.555132,
+    "longitude": 121.117839,
+    "source": "osm"
+  },
+  {
+    "id": "tos",
+    "name": "TOS",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Kings Street, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.555128,
+    "longitude": 121.117893,
+    "source": "osm"
+  },
+  {
+    "id": "mirlas-fried-at-kalderetang-itik",
+    "name": "Mirla's Fried at Kalderetang Itik",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.564993,
+    "longitude": 121.132248,
+    "source": "osm"
+  },
+  {
+    "id": "sweet-fashion-rtw",
+    "name": "Sweet Fashion RTW",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Dalanghita Extension Street, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.564762,
+    "longitude": 121.134869,
+    "source": "osm"
+  },
+  {
+    "id": "typica-coffee",
+    "name": "Typica Coffee",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "E. Rodriguez Street, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.574873,
+    "longitude": 121.131961,
+    "source": "osm"
+  },
+  {
+    "id": "win-win",
+    "name": "Win Win",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Market Road, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.559487,
+    "longitude": 121.134012,
+    "source": "osm"
+  },
+  {
+    "id": "mister-donut",
+    "name": "Mister Donut",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Alfonso Sandoval Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.543452,
+    "longitude": 121.106709,
+    "source": "osm"
+  },
+  {
+    "id": "baliwag",
+    "name": "Baliwag",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.580016,
+    "longitude": 121.135262,
+    "source": "osm"
+  },
+  {
+    "id": "the-bang-cafe",
+    "name": "The Bang Cafe",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "J. Asilo Street, Taytay, Rizal",
+    "tags": [
+      "cafe",
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.570025,
+    "longitude": 121.130786,
+    "source": "osm"
+  },
+  {
+    "id": "your-majestea-taytay",
+    "name": "Your MajesTea Taytay",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Velasquez Street, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.543654,
+    "longitude": 121.135675,
+    "source": "osm"
+  },
+  {
+    "id": "macao-imperial-cafe",
+    "name": "Macao Imperial Cafe",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.581598,
+    "longitude": 121.131906,
+    "source": "osm"
+  },
+  {
+    "id": "yellow-cab-pizza",
+    "name": "Yellow Cab Pizza",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.581536,
+    "longitude": 121.131909,
+    "source": "osm"
+  },
+  {
+    "id": "wendys",
+    "name": "Wendy's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.581652,
+    "longitude": 121.131905,
+    "source": "osm"
+  },
+  {
+    "id": "kape-hingahan",
+    "name": "Kape-Hingahan",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Angono, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.550085,
+    "longitude": 121.158767,
+    "source": "osm"
+  },
+  {
+    "id": "j-r-glieza",
+    "name": "J. R. & Glieza",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.571595,
+    "longitude": 121.128553,
+    "source": "osm"
+  },
+  {
+    "id": "dunkin",
+    "name": "Dunkin'",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.55936,
+    "longitude": 121.13556,
+    "source": "osm"
+  },
+  {
+    "id": "angels-burger",
+    "name": "Angel's Burger",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.577968,
+    "longitude": 121.142755,
+    "source": "osm"
+  },
+  {
+    "id": "ngon",
+    "name": "Ngon",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.560271,
+    "longitude": 121.134562,
+    "source": "osm"
+  },
+  {
+    "id": "la-maleta-cafe",
+    "name": "La Maleta Cafe",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Corazon C. Aquino Avenue, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.586581,
+    "longitude": 121.156695,
+    "source": "osm"
+  },
+  {
+    "id": "nette-itok-batangas-lomi",
+    "name": "Nette-Itok Batangas Lomi",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.564513,
+    "longitude": 121.132493,
+    "source": "osm"
+  },
+  {
+    "id": "ketobrew-cafe",
+    "name": "Ketobrew Cafe",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.56471,
+    "longitude": 121.132601,
+    "source": "osm"
+  },
+  {
+    "id": "mk-sushi-bar",
+    "name": "MK Sushi Bar",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565178,
+    "longitude": 121.132129,
+    "source": "osm"
+  },
+  {
+    "id": "jt-s-manukan-grille",
+    "name": "JT 's Manukan Grille",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "restaurant",
+      "grill"
+    ],
+    "featured": false,
+    "latitude": 14.544847,
+    "longitude": 121.143403,
+    "source": "osm"
+  },
+  {
+    "id": "davids-tea-house",
+    "name": "David’s Tea House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Highway 2000, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.557584,
+    "longitude": 121.132414,
+    "source": "osm"
+  },
+  {
+    "id": "divimart",
+    "name": "Divimart",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Market Road, Taytay, Rizal",
+    "tags": [
+      "department_store"
+    ],
+    "featured": false,
+    "latitude": 14.557173,
+    "longitude": 121.13311,
+    "source": "osm"
+  },
+  {
+    "id": "wok-it-out",
+    "name": "Wok It Out",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ilang-ilang Street, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.576652,
+    "longitude": 121.134176,
+    "source": "osm"
+  },
+  {
+    "id": "rabbit-café",
+    "name": "Rabbit Café",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Chestnut Street, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.548874,
+    "longitude": 121.112655,
+    "source": "osm"
+  },
+  {
+    "id": "giardino-trattoria",
+    "name": "Giardino Trattoria",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Chestnut Street, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.548981,
+    "longitude": 121.112262,
+    "source": "osm"
+  },
+  {
+    "id": "but-first-coffee",
+    "name": "But First, Coffee",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Bamboo Street, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.54953,
+    "longitude": 121.111162,
+    "source": "osm"
+  },
+  {
+    "id": "kapitan-uling",
+    "name": "Kapitan Uling",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "E. Rodriguez Street, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.576579,
+    "longitude": 121.133262,
+    "source": "osm"
+  },
+  {
+    "id": "tonis-lugaw-house",
+    "name": "Toni's Lugaw House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.570447,
+    "longitude": 121.131087,
+    "source": "osm"
+  },
+  {
+    "id": "jts-kusina",
+    "name": "JT's Kusina",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Maria Clara Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.568048,
+    "longitude": 121.128824,
+    "source": "osm"
+  },
+  {
+    "id": "gabys-cafe-inc",
+    "name": "Gaby's Cafe Inc.",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Avenida Tanchoco, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.554899,
+    "longitude": 121.141208,
+    "source": "osm"
+  },
+  {
+    "id": "srilankan-skewers",
+    "name": "Srilankan Skewers",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.561599,
+    "longitude": 121.133843,
+    "source": "osm"
+  },
+  {
+    "id": "spud-potato",
+    "name": "Spud Potato",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.561645,
+    "longitude": 121.133886,
+    "source": "osm"
+  },
+  {
+    "id": "rapchibog-goto-pares-house",
+    "name": "Rapchibog Goto Pares House",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.571248,
+    "longitude": 121.130289,
+    "source": "osm"
+  },
+  {
+    "id": "dominos",
+    "name": "Domino's",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Highway 2000, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.557662,
+    "longitude": 121.132468,
+    "source": "osm"
+  },
+  {
+    "id": "lotsa-pizza",
+    "name": "Lots'a Pizza",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Alfonso Sandoval Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.54344,
+    "longitude": 121.10675,
+    "source": "osm"
+  },
+  {
+    "id": "deleng-eatery",
+    "name": "Deleng Eatery",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Naval Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.569253,
+    "longitude": 121.133052,
+    "source": "osm"
+  },
+  {
+    "id": "bahay-kawayan",
+    "name": "Bahay Kawayan",
+    "category": "dining",
+    "description": "The Most Popular Restaurant in the heart of Taytay Rizal Since the late 80's. Many Philippine Celebrities do dine here, even the public officials from senatorial positions and so on. ",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.553681,
+    "longitude": 121.138749,
+    "source": "osm"
+  },
+  {
+    "id": "valley-fair-town-center",
+    "name": "Valley Fair Town Center",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "mall"
+    ],
+    "featured": false,
+    "latitude": 14.579084,
+    "longitude": 121.137788,
+    "source": "osm"
+  },
+  {
+    "id": "marc-square",
+    "name": "Marc Square",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "mall"
+    ],
+    "featured": false,
+    "latitude": 14.559438,
+    "longitude": 121.13562,
+    "source": "osm"
+  },
+  {
+    "id": "east-road-arcade",
+    "name": "East Road Arcade",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "mall"
+    ],
+    "featured": false,
+    "latitude": 14.576336,
+    "longitude": 121.143645,
+    "source": "osm"
+  },
+  {
+    "id": "the-gate",
+    "name": "The Gate",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "mall"
+    ],
+    "featured": false,
+    "latitude": 14.579413,
+    "longitude": 121.139195,
+    "source": "osm"
+  },
+  {
+    "id": "armynavy",
+    "name": "ArmyNavy",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.580048,
+    "longitude": 121.134827,
+    "source": "osm"
+  },
+  {
+    "id": "inengs-special-bbq",
+    "name": "Ineng's Special BBQ",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.579072,
+    "longitude": 121.139529,
+    "source": "osm"
+  },
+  {
+    "id": "mariposa-budget-hotel",
+    "name": "Mariposa Budget Hotel",
+    "category": "recreation",
+    "description": "A local recreation establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Taytay Diversion Road, Taytay, Rizal",
+    "tags": [
+      "hotel",
+      "accommodation"
+    ],
+    "featured": false,
+    "latitude": 14.562499,
+    "longitude": 121.138468,
+    "source": "osm"
+  },
+  {
+    "id": "bricks-and-gables",
+    "name": "Bricks and Gables",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Manila East Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.547293,
+    "longitude": 121.141636,
+    "source": "osm"
+  },
+  {
+    "id": "isaw-haus",
+    "name": "Isaw Haus",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Ortigas Avenue Extension, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.580498,
+    "longitude": 121.133034,
+    "source": "osm"
+  },
+  {
+    "id": "jill-pops",
+    "name": "Jill & Pops",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Avenida Tanchoco, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.555316,
+    "longitude": 121.14101,
+    "source": "osm"
+  },
+  {
+    "id": "squarebox-pizza",
+    "name": "Squarebox Pizza",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.566586,
+    "longitude": 121.13197,
+    "source": "osm"
+  },
+  {
+    "id": "tita-bettys-gotohan",
+    "name": "Tita Betty's Gotohan",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Avenida Tanchoco, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.556009,
+    "longitude": 121.139266,
+    "source": "osm"
+  },
+  {
+    "id": "drip-kofi-kitchen-café",
+    "name": "Drip Kofi, Kitchen + Café",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "E. Rodriguez Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.577353,
+    "longitude": 121.133527,
+    "source": "osm"
+  },
+  {
+    "id": "guy-v-rtw-center",
+    "name": "Guy V. RTW Center",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Magnolia Lane, Taytay, Rizal, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.575924,
+    "longitude": 121.134524,
+    "source": "osm"
+  },
+  {
+    "id": "rossan-carinderia",
+    "name": "Rossan Carinderia",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Malaya Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.56864,
+    "longitude": 121.133238,
+    "source": "osm"
+  },
+  {
+    "id": "pinntomize",
+    "name": "PINNTOMIZE",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Suha, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.547549,
+    "longitude": 121.122684,
+    "source": "osm"
+  },
+  {
+    "id": "doña-marcela",
+    "name": "Doña Marcela",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Don Macario Javier, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.551789,
+    "longitude": 121.133411,
+    "source": "osm"
+  },
+  {
+    "id": "rmvj-cafe",
+    "name": "RMVJ CAFE",
+    "category": "recreation",
+    "description": "A local recreation establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Suha, Taytay, Rizal",
+    "tags": [
+      "internet_cafe",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.547469,
+    "longitude": 121.122692,
+    "source": "osm"
+  },
+  {
+    "id": "caffe-de-montserrat",
+    "name": "Caffe De Montserrat",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Velez Street, Taytay, Rizal",
+    "tags": [
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.559779,
+    "longitude": 121.151557,
+    "source": "osm"
+  },
+  {
+    "id": "jill-pops-kitchen-cafe",
+    "name": "Jill & Pops Kitchen Cafe",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Rizal Avenue, Taytay, Rizal",
+    "tags": [
+      "cafe",
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.565062,
+    "longitude": 121.132109,
+    "source": "osm"
+  },
+  {
+    "id": "fems-foods",
+    "name": "Fem's Foods",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "C6-4, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.532113,
+    "longitude": 121.109,
+    "source": "osm"
+  },
+  {
+    "id": "corktree-park",
+    "name": "Corktree Park",
+    "category": "nature",
+    "description": "A local nature establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Corktree, Cainta, Taytay, Rizal",
+    "tags": [
+      "park"
+    ],
+    "featured": false,
+    "latitude": 14.549455,
+    "longitude": 121.113152,
+    "source": "osm"
+  },
+  {
+    "id": "taytay-divimall",
+    "name": "Taytay Divimall",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Market Road, Taytay, Rizal",
+    "tags": [
+      "mall"
+    ],
+    "featured": false,
+    "latitude": 14.556983,
+    "longitude": 121.133091,
+    "source": "osm"
+  },
+  {
+    "id": "donnappetit-garden-grill",
+    "name": "DonnAppetit Garden Grill",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Noli Pascual Street, Taytay, Rizal",
+    "tags": [
+      "restaurant",
+      "grill"
+    ],
+    "featured": false,
+    "latitude": 14.577779,
+    "longitude": 121.134371,
+    "source": "osm"
+  },
+  {
+    "id": "peacemall",
+    "name": "Peacemall",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Velasquez Street, Taytay, Rizal",
+    "tags": [
+      "mall"
+    ],
+    "featured": false,
+    "latitude": 14.542959,
+    "longitude": 121.127084,
+    "source": "osm"
+  },
+  {
+    "id": "tayo-tayo-kape-kusina",
+    "name": "Tayo Tayo Kape Kusina",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Lucia Naval Street, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.564509,
+    "longitude": 121.134024,
+    "source": "osm"
+  },
+  {
+    "id": "taytay-municipal-tiangge",
+    "name": "Taytay Municipal Tiangge",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Don Hilario Cruz Avenue, Taytay, Rizal",
+    "tags": [
+      "tiangge",
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.557153,
+    "longitude": 121.135337,
+    "source": "osm"
+  },
+  {
+    "id": "contis-bakeshop-restaurant",
+    "name": "Conti's Bakeshop & Restaurant",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Sierra Valley Road, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.582032,
+    "longitude": 121.131793,
+    "source": "osm"
+  },
+  {
+    "id": "tawook-food-hub",
+    "name": "Tawook Food Hub",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Kapalaran Street, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.559865,
+    "longitude": 121.135391,
+    "source": "osm"
+  },
+  {
+    "id": "the-ridge-marketplace",
+    "name": "The Ridge Marketplace",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Mapandan Road, Taytay, Rizal",
+    "tags": [
+      "market",
+      "coffee",
+      "cafe"
+    ],
+    "featured": false,
+    "latitude": 14.586677,
+    "longitude": 121.134999,
+    "source": "osm"
+  },
+  {
+    "id": "no-choice-foodhaus",
+    "name": "No Choice Foodhaus",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Naval Street, Taytay, Rizal",
+    "tags": [
+      "restaurant"
+    ],
+    "featured": false,
+    "latitude": 14.56818,
+    "longitude": 121.13216,
+    "source": "osm"
+  },
+  {
+    "id": "uniqlo",
+    "name": "Uniqlo",
+    "category": "shopping",
+    "description": "A local shopping establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Sierra Valley Road, Taytay, Rizal",
+    "tags": [
+      "clothes",
+      "garments"
+    ],
+    "featured": false,
+    "latitude": 14.582434,
+    "longitude": 121.132307,
+    "source": "osm"
+  },
+  {
+    "id": "kfc",
+    "name": "KFC",
+    "category": "dining",
+    "description": "A local dining establishment in Taytay, Rizal, as recorded in OpenStreetMap.",
+    "address": "Highway 2000, Taytay, Rizal",
+    "tags": [
+      "fast_food"
+    ],
+    "featured": false,
+    "latitude": 14.552221,
+    "longitude": 121.125048,
+    "source": "osm"
+  }
+]

@@ -16,8 +16,28 @@
     "description": "Find important information about Forex: Currency Converter through BetterTaytay.org, the Philippines\u2019 civic information portal."
   },
   "/data/weather": {
-    "title": "BetterTaytay.org | Municipality of Taytay | Community Powered Government Portal",
-    "description": "Find important information about BetterTaytay.org through BetterTaytay.org, the Philippines\u2019 civic information portal."
+    "title": "Weather Forecast | BetterTaytay.org",
+    "description": "Current weather conditions, forecasts, and climate data for Taytay, Rizal and other Philippine cities via PAGASA and OpenWeather."
+  },
+  "/discover/about": {
+    "title": "About Taytay, Rizal | BetterTaytay.org",
+    "description": "Learn about the Municipality of Taytay, Rizal — the Garments Capital of the Philippines. Quick facts, geography, population, and key information."
+  },
+  "/discover/history": {
+    "title": "History of Taytay, Rizal | BetterTaytay.org",
+    "description": "Explore the rich history of Taytay from the Kingdom of Namayan through Spanish colonization, the Philippine Revolution, and its modern identity."
+  },
+  "/discover/culture": {
+    "title": "Culture & Festivals of Taytay, Rizal | BetterTaytay.org",
+    "description": "Discover Taytay's cultural identity — from the Fiesta ng Taytay and garment industry heritage to local craftsmanship and culinary traditions."
+  },
+  "/discover/tourism": {
+    "title": "Tourism & Attractions in Taytay, Rizal | BetterTaytay.org",
+    "description": "Explore tourist spots, dining, shopping, heritage sites, and recreation in Taytay, Rizal — including the famous Taytay Tiangge and Minor Basilica."
+  },
+  "/discover/map": {
+    "title": "Interactive Barangay Map of Taytay, Rizal | BetterTaytay.org",
+    "description": "Interactive map showing the 5 barangay boundaries of the Municipality of Taytay, Rizal with geographic data."
   },
   "/flood-control-projects": {
     "title": "Flood Control Projects in Philippines | BetterTaytay.org",

@@ -182,7 +182,7 @@ export default function WeatherMapSection() {
   const WeatherIcon = weather ? lucideIconMap[weather.icon || 'Sun'] : Sun;
 
   return (
-    <section className='border-kapwa-border-weak border-t py-12 bg-kapwa-bg-surface'>
+    <section className='border-kapwa-border-weak border-t bg-kapwa-bg-surface py-12 relative isolate z-0'>
       <div className='container px-4 mx-auto'>
         {/* Header - restored */}
         <div className='mb-12 text-center'>
@@ -191,7 +191,7 @@ export default function WeatherMapSection() {
           </h2>
         </div>
 
-        <div className='flex flex-col items-stretch gap-6 md:flex-row'>
+        <div className='relative z-0 flex flex-col items-stretch gap-6 md:flex-row'>
           {/* Weather Card - using Card component */}
           <Card className='w-full flex-1 md:min-w-50'>
             <CardContent className='p-4 md:p-6'>
@@ -261,10 +261,10 @@ export default function WeatherMapSection() {
           </Card>
 
           {/* Map Container */}
-          <div className='flex w-full flex-col overflow-hidden rounded-xl shadow-sm hover:shadow-md md:flex-[2.5]'>
+          <div className='relative z-0 flex w-full flex-col overflow-hidden rounded-xl shadow-sm hover:shadow-md md:flex-[2.5]'>
             <div
               id='map-container'
-              className='h-64 w-full md:flex-1'
+              className='relative z-0 h-64 w-full md:flex-1'
               role='application'
               aria-label={`Interactive map of ${config.lgu.fullName} Municipal Hall`}
             >

@@ -1,0 +1,330 @@
+{
+  "lastUpdated": "2026-06-01",
+  "disclaimer": "This tool is for informational purposes only. Immigration policies and entry requirements can change dynamically. Always verify requirements with the official Bureau of Immigration (BI) or the Philippine Embassy/Consulate in your country before traveling.",
+  "entryRequirements": [
+    {
+      "id": "passport-validity",
+      "title": "Passport Validity",
+      "description": "Your passport must be valid for at least 6 months beyond your intended period of stay in the Philippines.",
+      "icon": "passport"
+    },
+    {
+      "id": "return-ticket",
+      "title": "Return or Onward Ticket",
+      "description": "Proof of a confirmed return or onward travel ticket to your port of origin or next destination is required upon arrival.",
+      "icon": "ticket"
+    },
+    {
+      "id": "etravel",
+      "title": "e-Travel Registration",
+      "description": "All arriving passengers must register at the official Philippine e-Travel portal (etravel.gov.ph) within 72 hours before departure.",
+      "icon": "globe",
+      "link": "https://etravel.gov.ph",
+      "linkLabel": "Register at e-Travel Portal"
+    },
+    {
+      "id": "sufficient-funds",
+      "title": "Proof of Sufficient Funds",
+      "description": "Immigration officers may require evidence that you have sufficient funds to support your stay (generally PHP 1,000 per day of stay, or equivalent in foreign currency).",
+      "icon": "wallet"
+    }
+  ],
+  "importantVisaInfo": [
+    {
+      "id": "9a-tourist-visa",
+      "title": "Temporary Visitor's Visa (9a)",
+      "description": "The 9(a) Temporary Visitor's Visa is for foreign nationals visiting the Philippines for business, tourism, medical treatment, or other temporary purposes.",
+      "link": "https://dfa.gov.ph/visa-application",
+      "linkLabel": "Learn more about Temporary Visitor's Visa"
+    },
+    {
+      "id": "visa-extensions",
+      "title": "Visa Extensions",
+      "description": "Visitors who wish to extend their stay in the Philippines beyond their authorized period can apply for an extension at the Bureau of Immigration. Extensions may be granted in increments of up to 2 months at a time.",
+      "link": "https://immigration.gov.ph",
+      "linkLabel": "Visit Bureau of Immigration website"
+    }
+  ],
+  "visaTypes": [
+    {
+      "category": "Non-Immigrant Visas",
+      "description": "For temporary stays for tourism, business, work, or study purposes.",
+      "items": [
+        {
+          "code": "9(a)",
+          "name": "Temporary Visitor's Visa",
+          "description": "For tourism, business visits, medical treatment, or other short-term temporary purposes."
+        },
+        {
+          "code": "9(b)",
+          "name": "Alien Seaman Visa",
+          "description": "For foreign nationals serving as crew members on vessels calling at Philippine ports."
+        },
+        {
+          "code": "9(d)",
+          "name": "Treaty Trader / Treaty Investor Visa",
+          "description": "For nationals of countries with treaties of commerce and navigation with the Philippines involved in trade or investment."
+        },
+        {
+          "code": "9(e)",
+          "name": "Diplomatic / Official Visa",
+          "description": "For accredited diplomats, consular officers, and government officials on official missions."
+        },
+        {
+          "code": "9(f)",
+          "name": "Student Visa",
+          "description": "For foreign nationals pursuing full-time academic or vocational courses at CHED-accredited institutions."
+        },
+        {
+          "code": "9(g)",
+          "name": "Pre-Arranged Employee Visa",
+          "description": "For foreign nationals employed by a local company in a position requiring specialized skills or knowledge."
+        }
+      ]
+    },
+    {
+      "category": "Immigrant Visas",
+      "description": "For foreign nationals seeking to reside permanently in the Philippines.",
+      "items": [
+        {
+          "code": "13(a)",
+          "name": "Non-Quota Immigrant Visa (Spouse)",
+          "description": "For foreign nationals married to Filipino citizens, allowing permanent residency."
+        },
+        {
+          "code": "13(b-g)",
+          "name": "Quota Immigrant Visa",
+          "description": "For foreign nationals who do not qualify for non-quota status; subject to annual numerical quotas per nationality."
+        },
+        {
+          "code": "13(e)",
+          "name": "Returning Former Citizen Visa",
+          "description": "For former Filipino citizens who have acquired foreign citizenship and wish to return to the Philippines for permanent residency."
+        }
+      ]
+    },
+    {
+      "category": "Special Visas",
+      "description": "Visas providing incentives for retirees and investors.",
+      "items": [
+        {
+          "code": "SRRV",
+          "name": "Special Resident Retiree's Visa",
+          "description": "For foreign retirees aged 35 and above who make a qualifying bank deposit. Offers multiple-entry privileges and residency benefits. Issued by the Philippine Retirement Authority (PRA).",
+          "link": "https://pra.gov.ph",
+          "linkLabel": "Philippine Retirement Authority"
+        },
+        {
+          "code": "SIRV",
+          "name": "Special Investor's Resident Visa",
+          "description": "For foreign nationals making a minimum qualifying investment in the Philippines, granting multiple-entry residency."
+        }
+      ]
+    },
+    {
+      "category": "Special Permits",
+      "description": "For short-term work or specific activities without a full employment visa.",
+      "items": [
+        {
+          "code": "SWP",
+          "name": "Special Work Permit",
+          "description": "A temporary permit valid up to 3 months for foreign nationals performing short-term, project-based employment activities in the Philippines."
+        },
+        {
+          "code": "PWP",
+          "name": "Provisional Work Permit",
+          "description": "A bridge permit allowing foreign nationals to legally work while their 9(g) Pre-Arranged Employee Visa application is being processed. Valid up to 6 months."
+        },
+        {
+          "code": "9-day BOC",
+          "name": "9-Day Boat of Convenience Permit",
+          "description": "A short-stay permit for crew members traveling through the Philippines on vessels of convenience for up to 9 days."
+        }
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "name": "United States",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Japan",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "South Korea",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Singapore",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408 / ASEAN)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "United Kingdom",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Australia",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Canada",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Germany",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "France",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Italy",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Spain",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Netherlands",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Switzerland",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "New Zealand",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Malaysia",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408 / ASEAN)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Indonesia",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408 / ASEAN)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Thailand",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408 / ASEAN)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Vietnam",
+      "visaFree": true,
+      "allowedStay": "30 days",
+      "visaType": "Visa-Free (EO 408 / ASEAN)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Brunei",
+      "visaFree": true,
+      "allowedStay": "14 days",
+      "visaType": "Visa-Free (ASEAN)",
+      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Hong Kong",
+      "visaFree": true,
+      "allowedStay": "14 days",
+      "visaType": "Visa-Free (SAR)",
+      "requirements": "HKSAR or BN(O) passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "Taiwan",
+      "visaFree": false,
+      "allowedStay": "30 days",
+      "visaType": "Electronic Travel Authorization (eTA)",
+      "requirements": "Online eTA application required before travel, passport valid for at least 6 months, return/onward ticket, and e-Travel registration."
+    },
+    {
+      "name": "China",
+      "visaFree": false,
+      "allowedStay": "Varies",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Philippine entry visa required from embassy/consulate beforehand. Exception: Chinese nationals holding a valid visa from US, Japan, Australia, Canada, or Schengen member states may enter visa-free for up to 7 days."
+    },
+    {
+      "name": "India",
+      "visaFree": false,
+      "allowedStay": "Varies",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Philippine entry visa required beforehand. Exception: Indian nationals holding a valid AJACSS visa or residence permit (Australia, Japan, US, Canada, Schengen, Singapore, UK) may enter visa-free for up to 14 days."
+    },
+    {
+      "name": "Russia",
+      "visaFree": false,
+      "allowedStay": "N/A",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Philippine tourist visa required from a Philippine Embassy or Consulate before travel."
+    },
+    {
+      "name": "Saudi Arabia",
+      "visaFree": false,
+      "allowedStay": "N/A",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Philippine tourist visa required from a Philippine Embassy or Consulate before travel."
+    },
+    {
+      "name": "Nigeria",
+      "visaFree": false,
+      "allowedStay": "N/A",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Philippine tourist visa required from a Philippine Embassy or Consulate before travel."
+    }
+  ]
+}

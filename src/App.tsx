@@ -50,6 +50,12 @@ import DepartmentsLayout from '@/pages/government/departments/layout';
 // --- Discover Pages ---
 import TaytayMapPortal from '@/pages/discover/map';
 import AboutTaytay from '@/pages/discover/about';
+import HistoryPage from '@/pages/discover/history';
+import CulturePage from '@/pages/discover/culture';
+import TourismPage from '@/pages/discover/tourism';
+import TravelIndex from '@/pages/discover/travel';
+import VisaChecker from '@/pages/discover/travel/visa';
+import DiscoverLayout from '@/pages/discover/layout';
 // --- Directory Modules ---
 import ElectedOfficialsIndex from '@/pages/government/elected-officials';
 import ElectedOfficialsLayout from '@/pages/government/elected-officials/layout';
@@ -123,9 +129,14 @@ function AppContent() {
         <Route path='/data/forex' element={<ForexPage />} />
 
         {/* Discover Hub */}
-        <Route path='/discover'>
+        <Route path='/discover' element={<DiscoverLayout />}>
           <Route index element={<Navigate to='about' replace />} />
           <Route path='about' element={<AboutTaytay />} />
+          <Route path='history' element={<HistoryPage />} />
+          <Route path='culture' element={<CulturePage />} />
+          <Route path='tourism' element={<TourismPage />} />
+          <Route path='travel' element={<TravelIndex />} />
+          <Route path='travel/visa' element={<VisaChecker />} />
           <Route path='map' element={<TaytayMapPortal />} />
         </Route>
 

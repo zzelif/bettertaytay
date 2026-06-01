@@ -36,6 +36,8 @@ e2e/**/__snapshots__/
 .venv
 .windsurf/
 .claude/
+.gemini/
+.agents/
 
 
 functions/wrangler.toml
@@ -52,6 +54,7 @@ pipeline/*
 CLAUDE.md
 .local/
 pipeline/__pycache__/
+skills-markdown/
 
 # Git worktrees
 .worktrees/
