@@ -23,6 +23,6 @@
     "**/__tests__/**",
     "**/*.test.ts",
     "**/*.mock.ts",
-    "test/**"
+    "test/test-types.ts"
   ]
 }

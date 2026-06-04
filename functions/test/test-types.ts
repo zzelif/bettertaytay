@@ -11,7 +11,7 @@ import type {
   PersonMembership,
   Session,
   Term,
-} from '../../../src/lib/openlgu';
+} from '../../src/lib/openlgu';
 
 // Re-export types for test usage
 export type {

@@ -52,24 +52,28 @@ export default defineConfig({
           const normalizedId = id.replace(/\\/g, '/');
           if (normalizedId.includes('node_modules')) {
             if (
-              normalizedId.includes('/react-router-dom/') ||
-              normalizedId.includes('/react-router/') ||
-              normalizedId.includes('/nuqs/')
+              normalizedId.includes('/node_modules/react/') ||
+              normalizedId.includes('/node_modules/react-dom/') ||
+              normalizedId.includes('/node_modules/scheduler/')
+            ) {
+              return 'vendor-react';
+            }
+            if (
+              normalizedId.includes('/node_modules/react-router-dom/') ||
+              normalizedId.includes('/node_modules/react-router/') ||
+              normalizedId.includes('/node_modules/nuqs/')
             ) {
               return 'vendor-router';
             }
-            if (
-              normalizedId.includes('/leaflet/') ||
-              normalizedId.includes('/react-leaflet/')
-            ) {
+            if (normalizedId.includes('leaflet')) {
               return 'vendor-leaflet';
             }
-            if (normalizedId.includes('/recharts/')) {
+            if (normalizedId.includes('/node_modules/recharts/')) {
               return 'vendor-recharts';
             }
             if (
-              normalizedId.includes('/i18next/') ||
-              normalizedId.includes('/react-i18next/')
+              normalizedId.includes('/node_modules/i18next/') ||
+              normalizedId.includes('/node_modules/react-i18next/')
             ) {
               return 'vendor-i18n';
             }

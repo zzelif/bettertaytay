@@ -75,13 +75,13 @@ export class MockD1Database implements D1Database {
     return Promise.resolve(new ArrayBuffer(0));
   }
 
-  exec(_query: string): Promise<D1ExecResult> {
-    // eslint-disable-line @typescript-eslint/no-unused-vars
+  exec(query: string): Promise<D1ExecResult> {
+    void query;
     return Promise.resolve({ count: 0, duration: 0 });
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  withSession(_options?: any): any {
+  withSession(options?: any): any {
+    void options;
     return this;
   }
 }

@@ -29,8 +29,11 @@ const NewsSection: FC = () => {
     const fetchNews = async () => {
       try {
         const response = await fetch('/api/lgu-news');
+        if (!response.ok) {
+          throw new Error(`Failed to load news: ${response.status}`);
+        }
         const data: LGUNewsResponse = await response.json();
-        setPosts(data.posts);
+        setPosts(data.posts || []);
       } catch {
         setError('Failed to load news');
       } finally {
