@@ -1,4 +1,4 @@
-# Contributing to BetterLB
+# Contributing to BetterTaytay
 
 Thank you for your interest in contributing! We welcome developers, designers, writers, and anyone passionate about better government transparency.
 
@@ -8,8 +8,8 @@ Thank you for your interest in contributing! We welcome developers, designers, w
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/<your-username>/betterlb
-   cd betterlb
+   git clone https://github.com/<your-username>/bettertaytay
+   cd bettertaytay
    npm install
    ```
 
@@ -229,9 +229,9 @@ Closes #123
 
 ## Getting Help
 
-- **Issues:** [github.com/BetterLosBanos/betterlb/issues](https://github.com/BetterLosBanos/betterlb/issues)
-- **Discussions:** [github.com/BetterLosBanos/betterlb/discussions](https://github.com/BetterLosBanos/betterlb/discussions)
-- **Live Site:** [https://betterlb.org](https://betterlb.org)
+- **Issues:** [github.com/zzelif/bettertaytay/issues](https://github.com/zzelif/bettertaytay/issues)
+- **Discussions:** [github.com/zzelif/bettertaytay/discussions](https://github.com/zzelif/bettertaytay/discussions)
+- **Live Site:** [https://bettertaytay.org](https://bettertaytay.org) (acknowledging [betterlb.org](https://betterlb.org) as upstream)
 
 ---
 
@@ -241,4 +241,4 @@ By contributing, you agree that your code will be released under the [Creative C
 
 ---
 
-**Thank you for contributing to BetterLB!** 🇵🇭
+**Thank you for contributing to BetterTaytay!** 🇵🇭

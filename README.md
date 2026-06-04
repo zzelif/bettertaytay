@@ -1,8 +1,8 @@
-# 🏛️ Better LB (Los Baños)
+# 🏛️ Better Taytay
 
-A community-led, open-source portal designed to make the government of the **Municipality of Los Baños** accessible, transparent, and user-friendly.
+A community-led, open-source portal designed to make the government of the **Municipality of Taytay** accessible, transparent, and user-friendly.
 
-This project is a municipal-focused fork of [BetterGov.ph](https://bettergov.ph), adapted to meet the specific needs of Los Bañenses.
+This project is a municipal-focused fork of [BetterGov.ph](https://bettergov.ph), adapted to meet the specific needs of Taytayeños, while acknowledging the upstream project [BetterLB](https://betterlb.org) as its primary codebase source.
 
 ---
 ### Inspirations
@@ -12,7 +12,7 @@ BetterSolano.org https://github.com/BetterSolano/bettersolano
 Betterlocalgov https://github.com/iyanski/betterlocalgov
 
 ### Portal Features
-BetterLB provides Los Baños with:
+BetterTaytay provides Taytay with:
 - **Public Services Directory**: Comprehensive guide to municipal services with requirements, fees, and step-by-step processes
 - **Legislative Portal**: Access to ordinances, resolutions, and executive orders from the Sangguniang Bayan
 - **Transparency Dashboard**: Financial data, procurement bids, and infrastructure projects
@@ -23,7 +23,7 @@ BetterLB provides Los Baños with:
 
 ## 🔄 Forking for Your LGU
 
-BetterLB is designed to be easily adapted for any Local Government Unit (LGU) in the Philippines.
+BetterTaytay is designed to be easily adapted for any Local Government Unit (LGU) in the Philippines, building upon BetterLB's forking architecture.
 
 ## Quick Start for Other LGUs
 
@@ -44,18 +44,18 @@ BetterLB is designed to be easily adapted for any Local Government Unit (LGU) in
 
 ### Key Configuration Fields
 
-| Field | Description | Example (Los Baños) |
+| Field | Description | Example (Taytay) |
 |-------|-------------|---------------------|
-| `lgu.name` | Short municipality name | "Los Baños" |
-| `lgu.fullName` | Full official name | "Municipality of Los Baños" |
-| `lgu.province` | Province name | "Laguna" |
+| `lgu.name` | Short municipality name | "Taytay" |
+| `lgu.fullName` | Full official name | "Municipality of Taytay" |
+| `lgu.province` | Province name | "Rizal" |
 | `lgu.region` | Region name | "Region IV-A" |
 | `lgu.regionCode` | Region code | "CALABARZON" |
 | `lgu.type` | LGU type | "municipality" or "city" |
-| `lgu.officialWebsite` | Official LGU website | "https://losbanos.gov.ph" |
-| `portal.name` | Portal name | "BetterLB" |
-| `portal.baseUrl` | Portal base URL | "https://betterlb.org" |
-| `portal.tagline` | Portal tagline | "Community Powered Los Baños Portal" |
+| `lgu.officialWebsite` | Official LGU website | "https://www.taytayrizal.gov.ph" |
+| `portal.name` | Portal name | "BetterTaytay" |
+| `portal.baseUrl` | Portal base URL | "https://bettertaytay.org" |
+| `portal.tagline` | Portal tagline | "Community Powered Taytay Portal" |
 
 **Note:** See [`FORKING.md`](./FORKING.md) for comprehensive forking instructions including database setup for legislative data.
 
@@ -76,7 +76,7 @@ BetterLB is designed to be easily adapted for any Local Government Unit (LGU) in
 ## Project Structure
 
 ```
-betterlb/
+bettertaytay/
 ├── e2e/                         # End-to-end tests
 │   └── utils/                   # Test helpers and shared testing logic
 ├── functions/                   # Serverless / backend functions (Cloudflare Pages)
@@ -158,14 +158,14 @@ betterlb/
 - **Search Integration**: Meilisearch-powered search with real-time indexing
 - **Internationalization**: Multi-language support with i18next
 
-### Los Baños-Specific Data
+### Taytay-Specific Data
 
-BetterLB includes structured data for Los Baños:
+BetterTaytay includes structured data for Taytay:
 
 | Data Type | Location | Description |
 |-----------|----------|-------------|
 | **Departments** | `/src/data/directory/departments.json` | Municipal departments and offices with contact info |
-| **Barangays** | `/src/data/directory/barangays.json` | 14 barangay profiles and officials |
+| **Barangays** | `/src/data/directory/barangays.json` | 5 barangay profiles and officials |
 | **Services** | `/src/data/services/categories/*.json` | Public services by category (BPLO, Assessor, Engineering, etc.) |
 | **Citizens Charter** | `/src/data/citizens-charter/citizens-charter.json` | Service requirements, fees, and client steps |
 | **Legislation** | Cloudflare D1 Database | Ordinances, resolutions, executive orders |
@@ -173,7 +173,7 @@ BetterLB includes structured data for Los Baños:
 
 #### Data Pipeline for Legislative Documents
 
-Los Baños legislative documents are processed through a Python pipeline:
+Taytay legislative documents are processed through a Python pipeline:
 
 1. **Scrape** (`pipeline/1_scrape.py`) - Download PDFs from official sources
 2. **Normalize** (`pipeline/1.5_normalize.py`) - Standardize filenames and metadata
@@ -188,8 +188,8 @@ See [`pipeline/README.md`](./pipeline/README.md) for complete documentation.
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/BetterLosBanos/betterlb
-cd betterlb
+git clone https://github.com/zzelif/bettertaytay.git
+cd bettertaytay
 npm install
 ```
 
@@ -217,11 +217,11 @@ npm run format          # Format code with Prettier
 npm run build           # Combines merge_services, TypeScript, and Vite build
 ```
 
-**Note:** The build script runs `tsc && npm run merge:data && vite build` automatically
+**Note:** The build script runs `node scripts/generate-seo.js && npm run merge:services && tsc && vite build` automatically
 
 ---
 
-## 🏛️ Los Baños Government Structure
+## 🏛️ Taytay Government Structure
 
 ### Executive Branch
 - **Mayor**: Chief executive officer of the municipality
@@ -229,10 +229,10 @@ npm run build           # Combines merge_services, TypeScript, and Vite build
 - **Municipal Departments**: Administrative offices implementing municipal programs
 
 ### Legislative Branch (Sangguniang Bayan)
-The Sangguniang Bayan is the legislative body of Los Baños, composed of:
-- **Vice Mayor** (Presiding Officer)
-- **8 Regular Councilors** (District representatives)
-- **2 Ex-Officio Councilors** (ABC President and SK Federation President)
+The Sangguniang Bayan is the legislative body of Taytay, composed of:
+- **Vice Mayor** (Presiding Officer - Jan Victor B. Cabitac)
+- **8 Regular Councilors** (Joanne Marie P. Calderon, Rulf Marius G. Valera, John Tobit E. Cruz, Carizza A. Cortez, Ma. Elaine T. Leonardo, Patrick John P. Alcantara, Mitchell B. Bermundo, Kristofer Charls S. Esguerra)
+- **2 Ex-Officio Councilors** (Liga ng mga Barangay President Roseller Z. Valera and SK Federation President Lucia Marie D. Alcantara)
 
 ### Key Departments
 - **BPLO**: Business Permit and Licensing Office
@@ -244,16 +244,16 @@ The Sangguniang Bayan is the legislative body of Los Baños, composed of:
 - **Municipal Health Office**: Public health services
 - **Municipal Agriculture Office**: Agricultural programs
 
-See the [Government Directory](https://betterlb.org/government) on the live site for complete department listings and contact information.
+See the [Government Directory](https://bettertaytay.pages.dev/government) on the live site for complete department listings and contact information.
 
 ---
 
 ## Join the Grassroots Movement
-We are looking for volunteers passionate individuals who want to make Los Baños a better place. You don't need to be a developer to help!
+We are looking for volunteers passionate individuals who want to make Taytay a better place. You don't need to be a developer to help!
 
 ### How You Can Contribute:
 1.  **Non-Developers**: Visit the `/contribute` page on the live site to suggest new services or fix outdated information using our simple web form.
-2.  **Developers**: Check the [Issues](https://github.com/BetterLosBanos/betterlb/issues) tab for "Help Wanted" or "Good First Issue" labels.
+2.  **Developers**: Check the [Issues](https://github.com/zzelif/bettertaytay/issues) tab for "Help Wanted" or "Good First Issue" labels.
 3.  **Data Auditors**: Help us verify community submissions on GitHub to ensure the portal remains an authoritative source of information.
 4.  **Translators**: Help translate the portal to Filipino and other Philippine languages by working on `public/locales/` files.
 
@@ -266,12 +266,12 @@ We are looking for volunteers passionate individuals who want to make Los Baños
 
 ## 🚢 Deployment
 
-### Production Deployment (BetterLB)
+### Production Deployment (BetterTaytay)
 
-BetterLB is deployed on **Cloudflare Pages** with:
+BetterTaytay is deployed on **Cloudflare Pages** with:
 - **Frontend**: Vite build automatically deployed on push to `main` branch
 - **Backend**: Cloudflare Pages Functions for API endpoints
-- **Database**: Cloudflare D1 (`betterlb_openlgu`) for legislative data
+- **Database**: Cloudflare D1 (`bettertaytay_openlgu`) for legislative data
 - **Search**: Meilisearch instance for fuzzy search
 - **KV Storage**: Weather data caching with automatic updates
 
@@ -293,11 +293,11 @@ See [`ARCHITECTURE.md`](./ARCHITECTURE.md#deployment) for detailed deployment st
 This project is released under the [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/) dedication. The work is dedicated to the public domain and can be freely used, modified, and distributed without restriction.
 
 ### Data Attribution
-BetterLB aggregates data from multiple sources:
+BetterTaytay aggregates data from multiple sources:
 
 | Data Source | Type | Attribution |
 |-------------|------|-------------|
-| **Municipality of Los Baños** | Official government data, services directory | Public domain |
+| **Municipality of Taytay** | Official government data, services directory | Public domain |
 | **Philippine Government Procurement Portal (PhilGEPS)** | Procurement bids and awards | Republic of the Philippines |
 | **Department of Budget and Management (DBM)** | Financial releases | Republic of the Philippines |
 | **Department of Public Works and Highways (DPWH)** | Infrastructure projects | Republic of the Philippines |
@@ -309,9 +309,9 @@ BetterLB aggregates data from multiple sources:
 
 ## 📞 Contact and Support
 
-### For Los Baños Residents
-- **Website**: https://betterlb.org
-- **GitHub Issues**: Report bugs or suggest features at [github.com/BetterLosBanos/betterlb/issues](https://github.com/BetterLosBanos/betterlb/issues)
+### For Taytayeños
+- **Website**: https://bettertaytay.org
+- **GitHub Issues**: Report bugs or suggest features at [github.com/zzelif/bettertaytay/issues](https://github.com/zzelif/bettertaytay/issues)
 - **Community**: Join our community contributions via the "Contribute" page on the portal
 
 ### For Other LGUs

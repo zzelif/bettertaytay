@@ -1,8 +1,8 @@
 ## Inspiration
-The inspiration for BetterLB came from recognizing that the Municipality of Los Baños deserved a modern, accessible portal that residents could actually rely on. Official government websites are often difficult to navigate on mobile, slow to update, and lack accessibility features. We wanted to build something community-driven and open-source — a portal that puts Los Bañenses first.
+BetterTaytay is a community-driven, open-source portal for the Municipality of Taytay, Rizal. Inspired by the BetterGov, BetterSolano, and BetterLB (Better Los Baños) initiative, it recognizes that Taytayeños deserve a modern, accessible portal that residents can actually rely on. Official government websites are often difficult to navigate on mobile, slow to update, and lack accessibility features. We wanted to build something community-driven and open-source — a portal that puts Taytayeños first.
 
 ## What it does
-BetterLB serves as a community-built portal for the Municipality of Los Baños, offering:
+BetterTaytay serves as a community-built portal for the Municipality of Taytay, Rizal, offering:
 - A modern, user-friendly interface for accessing municipal government services
 - Comprehensive public services directory with requirements, fees, and step-by-step processes
 - Legislative portal with ordinances, resolutions, and executive orders from the Sangguniang Bayan
@@ -33,7 +33,7 @@ The platform is built using modern web technologies:
 - Keeping data accurate and up-to-date through community contribution workflows
 
 ## Accomplishments that we're proud of
-- Built a fully open-source, community-audited portal at zero cost to Los Baños residents
+- Built a fully open-source, community-audited portal at zero cost to Taytayeños
 - Created a searchable legislative archive of ordinances, resolutions, and executive orders
 - Implemented a powerful fuzzy search and filtering system for services and legislation
 - Developed a responsive design that works seamlessly on all devices
@@ -49,8 +49,8 @@ The platform is built using modern web technologies:
 - How to design community contribution workflows that non-developers can participate in
 - The importance of open data and transparency in local governance
 
-## What's next for BetterLB
+## What's next for BetterTaytay
 - Expanding coverage of barangay-level services and officials
 - Adding more real-time transparency data (budget execution, project tracking)
 - Growing the volunteer community of data auditors and translators
-- Helping other LGUs fork and deploy their own portals based on BetterLB
+- Helping other LGUs fork and deploy their own portals based on BetterTaytay (and the upstream BetterLB)

@@ -1,6 +1,6 @@
 #!/bin/bash
 # D1 Database Migration Automation Script
-# BetterLB - Cloudflare D1 Migration Management
+# BetterTaytay - Cloudflare D1 Migration Management
 #
 # Usage:
 #   ./scripts/migrate.sh local              # Run migrations on local database
@@ -21,7 +21,7 @@ NC='\033[0m' # No Color
 # Configuration
 MIGRATIONS_DIR="db/migrations"
 DB_BINDING="BETTERTAYTAY_DB"
-DB_NAME="betterlb_openlgu"
+DB_NAME="bettertaytay_openlgu"
 WRANGLER_CMD="npx wrangler d1 execute"
 
 # Functions

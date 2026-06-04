@@ -1,10 +1,10 @@
 # Weather API
 
-The Weather API provides current weather conditions and 3-hour forecasts for Los Baños, Philippines using the OpenWeatherMap API.
+The Weather API provides current weather conditions and 3-hour forecasts for Taytay, Philippines using the OpenWeatherMap API.
 
 ## Overview
 
-- **Base URL:** `https://betterlb.gov.ph/api/weather`
+- **Base URL:** `https://bettertaytay.org/api/weather`
 - **Authentication:** None required
 - **Data Source:** OpenWeatherMap API
 - **Cache Duration:** 1 hour (3,600 seconds)
@@ -14,7 +14,7 @@ The Weather API provides current weather conditions and 3-hour forecasts for Los
 
 - Current weather conditions (temperature, humidity, wind, visibility)
 - 3-hour forecast for the next 24 hours (8 data points)
-- Multi-city support (currently Los Baños, extensible to other municipalities)
+- Multi-city support (currently Taytay, extensible to other municipalities)
 - KV caching with automatic refresh
 - CORS-protected for authorized origins
 - Force update option for manual refresh
@@ -44,11 +44,11 @@ Retrieves current weather and 3-hour forecast data. Returns cached data if avail
 
 ```json
 {
-  "los_banos": {
-    "name": "Los Baños",
+  "taytay": {
+    "name": "Taytay",
     "coordinates": {
-      "lat": 14.1763,
-      "lon": 121.2219
+      "lat": 14.5522,
+      "lon": 121.1306
     },
     "weather": [
       {
@@ -145,7 +145,7 @@ Retrieves current weather and 3-hour forecast data. Returns cached data if avail
 
 ```json
 {
-  "los_banos": {}
+  "taytay": {}
 }
 ```
 
@@ -164,42 +164,42 @@ Retrieves current weather and 3-hour forecast data. Returns cached data if avail
 ### Get All Cities
 
 ```bash
-curl https://betterlb.gov.ph/api/weather
+curl https://bettertaytay.org/api/weather
 ```
 
 ### Get Specific City
 
 ```bash
-curl "https://betterlb.gov.ph/api/weather?city=Los Baños"
+curl "https://bettertaytay.org/api/weather?city=Taytay"
 ```
 
 ### Force Update (Bypass Cache)
 
 ```bash
-curl "https://betterlb.gov.ph/api/weather?update=true"
+curl "https://bettertaytay.org/api/weather?update=true"
 ```
 
 ### Get Specific City with Force Update
 
 ```bash
-curl "https://betterlb.gov.ph/api/weather?city=Los Baños&update=true"
+curl "https://bettertaytay.org/api/weather?city=Taytay&update=true"
 ```
 
 ### JavaScript/TypeScript Example
 
 ```typescript
 // Fetch weather data
-const response = await fetch('https://betterlb.gov.ph/api/weather');
+const response = await fetch('https://bettertaytay.org/api/weather');
 const weather = await response.json();
 
-// Access Los Baños weather
-const losBanos = weather.los_banos;
-console.log(`Temperature: ${losBanos.main.temp}°C`);
-console.log(`Humidity: ${losBanos.main.humidity}%`);
-console.log(`Description: ${losBanos.weather[0].description}`);
+// Access Taytay weather
+const taytay = weather.taytay;
+console.log(`Temperature: ${taytay.main.temp}°C`);
+console.log(`Humidity: ${taytay.main.humidity}%`);
+console.log(`Description: ${taytay.weather[0].description}`);
 
 // Access hourly forecast
-losBanos.hourly.forEach((hour, index) => {
+taytay.hourly.forEach((hour, index) => {
   console.log(`Hour ${index + 1}: ${hour.temp}°C - ${hour.description}`);
 });
 ```
@@ -210,7 +210,7 @@ losBanos.hourly.forEach((hour, index) => {
 import { useState, useEffect } from 'react';
 
 interface WeatherData {
-  los_banos: {
+  taytay: {
     main: { temp: number; humidity: number };
     weather: Array<{ description: string; icon: string }>;
     hourly: Array<{ temp: number; description: string }>;
@@ -224,7 +224,7 @@ export function WeatherWidget() {
   useEffect(() => {
     async function fetchWeather() {
       try {
-        const response = await fetch('https://betterlb.gov.ph/api/weather');
+        const response = await fetch('https://bettertaytay.org/api/weather');
         const data = await response.json();
         setWeather(data);
       } catch (error) {
@@ -240,11 +240,11 @@ export function WeatherWidget() {
   if (loading) return <div>Loading weather...</div>;
   if (!weather) return <div>Weather unavailable</div>;
 
-  const current = weather.los_banos;
+  const current = weather.taytay;
 
   return (
     <div>
-      <h2>Los Baños Weather</h2>
+      <h2>Taytay Weather</h2>
       <p>Temperature: {current.main.temp}°C</p>
       <p>Humidity: {current.main.humidity}%</p>
       <p>Conditions: {current.weather[0].description}</p>
@@ -268,13 +268,13 @@ export function WeatherWidget() {
 
 ### Supported Cities
 
-The API is configured for **Los Baños** by default. Additional cities can be added in `functions/api/weather.ts`:
+The API is configured for **Taytay** by default. Additional cities can be added in `functions/api/weather.ts`:
 
 ```typescript
 const DEFAULT_CITY: CityCoordinates = {
-  name: 'Los Baños',
-  lat: 14.1763,
-  lon: 121.2219,
+  name: 'Taytay',
+  lat: 14.5522,
+  lon: 121.1306,
 };
 
 const ADDITIONAL_CITIES: CityCoordinates[] = [
@@ -345,8 +345,8 @@ export async function scheduled(controller: ScheduledController, env: Env) {
 The API implements CORS protection for security:
 
 **Allowed Origins:**
-- `https://betterlb.pages.dev` (production)
-- `https://betterlb.gov.ph` (custom domain)
+- `https://bettertaytay.pages.dev` (production)
+- `https://bettertaytay.org` (custom domain)
 - `http://localhost:5173` (Vite dev server)
 - `http://localhost:8788` (Wrangler dev server)
 
@@ -427,19 +427,19 @@ The API is designed to support multiple cities:
 
 ```bash
 # Test basic request
-curl https://betterlb.gov.ph/api/weather
+curl https://bettertaytay.org/api/weather
 
 # Test city filtering
-curl "https://betterlb.gov.ph/api/weather?city=Los Baños"
+curl "https://bettertaytay.org/api/weather?city=Taytay"
 
 # Test force update
-curl "https://betterlb.gov.ph/api/weather?update=true"
+curl "https://bettertaytay.org/api/weather?update=true"
 
 # Test case insensitivity
-curl "https://betterlb.gov.ph/api/weather?city=los_banos"
+curl "https://bettertaytay.org/api/weather?city=taytay"
 
 # Test OPTIONS preflight
-curl -X OPTIONS https://betterlb.gov.ph/api/weather \
+curl -X OPTIONS https://bettertaytay.org/api/weather \
   -H "Origin: http://localhost:5173" \
   -v
 ```
@@ -451,9 +451,9 @@ curl -X OPTIONS https://betterlb.gov.ph/api/weather \
 const response = await fetch('http://localhost:8788/api/weather');
 const data = await response.json();
 
-assert(data.los_banos);
-assert(data.los_banos.main.temp > 0);
-assert(data.los_banos.hourly.length === 8);
+assert(data.taytay);
+assert(data.taytay.main.temp > 0);
+assert(data.taytay.hourly.length === 8);
 ```
 
 ---
@@ -468,4 +468,4 @@ assert(data.los_banos.hourly.length === 8);
 
 **Last Updated:** 2026-02-28
 **API Version:** 1.0.0
-**Maintained By:** BetterLB Development Team
+**Maintained By:** BetterTaytay Development Team

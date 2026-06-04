@@ -1,6 +1,6 @@
-# BetterLB Architecture
+# BetterTaytay Architecture
 
-High-level architecture overview for developers working on BetterLB.
+High-level architecture overview for developers working on BetterTaytay, based on the upstream BetterLB platform.
 
 ---
 
@@ -24,7 +24,7 @@ High-level architecture overview for developers working on BetterLB.
 │   (SQLite Database)      │    │   • Meilisearch          │
 │   • Legislative docs     │    │   • PAGASA Weather       │
 │   • Persons, Sessions    │    │   • BSP Forex Rates      │
-│   • Review Queue         │    │   • Google OAuth         │
+│   • Review Queue         │    │   • GitHub OAuth         │
 └──────────────────────────┘    └──────────────────────────┘
 ```
 
@@ -168,11 +168,12 @@ Component testing for complex UI components.
 
 ## Deployment
 
-### Production (BetterLB)
+### Production (BetterTaytay)
+
 - **Platform:** Cloudflare Pages
-- **Database:** D1 `betterlb_openlgu`
+- **Database:** D1 `bettertaytay_openlgu`
 - **Search:** Self-hosted Meilisearch
-- **Domain:** betterlb.org
+- **Domain:** bettertaytay.org
 
 ### For Other LGUs
 1. Connect GitHub repo to Cloudflare Pages
@@ -194,5 +195,3 @@ Component testing for complex UI components.
 | `.env.example` | Environment variables template |
 
 ---
-
-For detailed implementation guides, see `.local/docs/plans/` or create an issue.

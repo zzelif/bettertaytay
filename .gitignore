@@ -55,6 +55,7 @@ CLAUDE.md
 .local/
 pipeline/__pycache__/
 skills-markdown/
+.github/instructions/
 
 # Git worktrees
 .worktrees/

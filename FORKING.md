@@ -1,6 +1,6 @@
-# 🏛️ BetterLB - Forking Guide
+# 🏛️ BetterTaytay - Forking Guide
 
-This guide helps you adapt BetterLB for your own Local Government Unit (LGU).
+This guide helps you adapt BetterTaytay (forked from BetterLB) for your own Local Government Unit (LGU).
 
 ## 🚀 Quick Start
 
@@ -17,20 +17,20 @@ The `/config/lgu.config.json` file contains all LGU-specific branding values in 
 
 | Field | Description | Example |
 |-------|-------------|-------------|
-| `lgu.name` | "Your Municipality" | "Los Baños" |
-| `lgu.fullName` | "Municipality of Los Baños" | "Municipality of Los Baños" |
-| `lgu.province` | "Your Province" | "Laguna" |
-| `lgu.provinceWebsite` | "Province Official Website" | "https://laguna.gov.ph" |
+| `lgu.name` | "Your Municipality" | "Taytay" |
+| `lgu.fullName` | "Municipality of Taytay" | "Municipality of Taytay" |
+| `lgu.province` | "Your Province" | "Rizal" |
+| `lgu.provinceWebsite` | "Province Official Website" | "https://rizalprovince.ph" |
 | `lgu.region` | "Your Region" | "Region IV-A" |
 | `lgu.regionCode` | "Your Region Code" | "CALABARZON" |
-| `lgu.officialWebsite` | "Official LGU Website" | "https://www.losbanos.gov.ph" |
-| `portal.name` | "YourPortalName" | "BetterLB" |
-| `portal.domain` | "YourDomain" | "BetterLB.org" |
-| `portal.baseUrl` | "YourBaseURL" | "https://betterLB.org" |
+| `lgu.officialWebsite` | "Official LGU Website" | "https://www.taytayrizal.gov.ph" |
+| `portal.name` | "YourPortalName" | "BetterTaytay" |
+| `portal.domain` | "YourDomain" | "bettertaytay.org" |
+| `portal.baseUrl` | "YourBaseURL" | "https://bettertaytay.org" |
 | `portal.tagline` | "YourTagline" | "Your Slogan" |
 | `portal.description` | "YourDescription" | "Portal description..." |
 | `portal.navbarTagline` | "Navbar subtitle" | "A Community-run portal for" |
-| `portal.footerBrandName` | "Footer brand name" | "Better Los Baños" |
+| `portal.footerBrandName` | "Footer brand name" | "Better Taytay" |
 | `portal.footerTagline` | "Footer tagline" | "Community Civic Portal" |
 
 ### Example Configuration
@@ -74,7 +74,10 @@ The `/config/lgu.config.json` file contains all LGU-specific branding values in 
 
 ## 🎨 Visual Assets (Branding)
 
-To replace BetterLB branding with your LGU's visual identity, you'll need to update logos, seals, and brand colors.
+To replace BetterTaytay branding with your LGU's visual identity, you'll need to update logos, seals, and brand colors.
+
+> [!NOTE]
+> **Technical Debt Note:** BetterTaytay currently references BetterLB logo files (e.g., `BetterLB_Icon.svg`, `betterlb-blue-outline.webp`) as placeholder visual assets. You can replace them with your LGU's logo variants as described below.
 
 ### Quick Overview
 
@@ -135,9 +138,12 @@ To replace BetterLB branding with your LGU's visual identity, you'll need to upd
      - `betterlb-blue-outline.webp` → Your web-optimized version
    - Copy files to `public/logos/`
 
+> [!IMPORTANT]
+> **BetterTaytay Logo Note:** Since BetterTaytay's logo assets are still being developed, the files in `public/logos/` are currently using the BetterLB file names (e.g. `BetterLB_Icon.svg`). These are mapped to Taytay placeholders. When creating logos for your own fork, you can overwrite these existing files directly or configure new filenames in your custom codebase.
+
 4. **Replace LGU seal:**
    ```bash
-   # Replace Los Baños seal with your seal
+   # Replace LGU seal with your seal
    cp /path/to/your-municipality-seal.png public/logos/lb-seal.png
    ```
 
@@ -222,8 +228,8 @@ If you prefer new filenames (e.g., `sanpablo-icon.svg`):
 
 **Search for all logo references:**
 ```bash
-grep -r "betterlb" src/ --include="*.tsx" --include="*.ts"
-grep -r "BetterLB" src/ --include="*.tsx" --include="*.ts"
+grep -r "bettertaytay" src/ --include="*.tsx" --include="*.ts"
+grep -r "BetterTaytay" src/ --include="*.tsx" --include="*.ts"
 ```
 
 ---
@@ -311,7 +317,7 @@ See the **[Visual Assets Guide](visual-assets.md)** for comprehensive documentat
 
 ## 💾 D1 Database (Legislative Data)
 
-The D1 database (`betterlb_openlgu` remote, `BETTERTAYTAY_DB` local) contains all legislative data.
+The D1 database (`bettertaytay_openlgu` remote, `BETTERTAYTAY_DB` local) contains all legislative data.
 
 ### Core Tables to Populate
 
@@ -338,7 +344,7 @@ The D1 database (`betterlb_openlgu` remote, `BETTERTAYTAY_DB` local) contains al
 npx wrangler d1 execute BETTERTAYTAY_DB --local --file=db/migrations/001_initial_schema.sql
 
 # Remote production
-npx wrangler d1 execute betterlb_openlgu --remote --file=db/migrations/001_initial_schema.sql
+npx wrangler d1 execute bettertaytay_openlgu --remote --file=db/migrations/001_initial_schema.sql
 
 # Query local database
 npx wrangler d1 execute BETTERTAYTAY_DB --local --command="SELECT * FROM terms LIMIT 10"
@@ -413,13 +419,13 @@ Located in `src/data/statistics/`:
 
 | Location | File | What to Replace |
 |----------|------|-----------------|
-| `src/data/tourism/` | `resorts.json` | Your LGU's tourist spots |
+| `src/data/tourism/` | `tourism.json` | Your LGU's tourist spots |
 | `src/data/about/` | `history.json` | Your LGU's history |
 | `src/data/about/` | `highlights.json` | Your LGU's highlights |
 | `src/data/transparency/` | `budgetData.ts` | Your budget allocations | get from https://data.bettergov.ph/datasets/9
 | `src/data/transparency/` | `sre.json` | Your SRE evaluation results | get from https://data.bettergov.ph/datasets/9
 | `src/data/` | `navigation.ts` | Navigation structure changes (if needed) |
-| `src/data/` | `news.ts` | Your LGU's news feed |
+| `src/data/` | `lgu-news.ts` | Your LGU's news feed scraper |
 | `src/data/` | `websites.json` | Your related government sites |
 | `src/data/` | `hotlines.txt` | Your local emergency contacts |
 

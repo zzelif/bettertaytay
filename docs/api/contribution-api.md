@@ -1,10 +1,10 @@
 # Contribution API
 
-The Contribution API allows community members to submit contributions to the BetterLB project by creating GitHub issues automatically.
+The Contribution API allows community members to submit contributions to the BetterTaytay project by creating GitHub issues automatically.
 
 ## Overview
 
-- **Base URL:** `https://betterlb.gov.ph/api/submit-contribution`
+- **Base URL:** `https://bettertaytay.org/api/submit-contribution`
 - **Method:** `POST`
 - **Authentication:** None required
 - **Rate Limiting:** None (delegates to GitHub API rate limits)
@@ -20,7 +20,7 @@ The Contribution API allows community members to submit contributions to the Bet
 
 ### Description
 
-Creates a GitHub issue in the BetterLB repository with the submitted contribution details. Useful for community members to suggest improvements, report bugs, or offer contributions.
+Creates a GitHub issue in the BetterTaytay repository with the submitted contribution details. Useful for community members to suggest improvements, report bugs, or offer contributions.
 
 ### Request Headers
 
@@ -40,7 +40,7 @@ Creates a GitHub issue in the BetterLB repository with the submitted contributio
 ```json
 {
   "title": "Add weather widget to homepage",
-  "content": "I would like to suggest adding a weather widget to the homepage showing current conditions in Los Baños. This would be helpful for residents and visitors."
+  "content": "I would like to suggest adding a weather widget to the homepage showing current conditions in Taytay. This would be helpful for residents and visitors."
 }
 ```
 
@@ -51,7 +51,7 @@ Creates a GitHub issue in the BetterLB repository with the submitted contributio
 ```json
 {
   "success": true,
-  "url": "https://github.com/bettergovph/betterlb/issues/123"
+  "url": "https://github.com/zzelif/bettertaytay/issues/123"
 }
 ```
 
@@ -87,7 +87,7 @@ Creates a GitHub issue in the BetterLB repository with the submitted contributio
 ### cURL Example
 
 ```bash
-curl -X POST https://betterlb.gov.ph/api/submit-contribution \
+curl -X POST https://bettertaytay.org/api/submit-contribution \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Fix typo in About page",
@@ -99,7 +99,7 @@ curl -X POST https://betterlb.gov.ph/api/submit-contribution \
 
 ```typescript
 async function submitContribution(title: string, content: string) {
-  const response = await fetch('https://betterlb.gov.ph/api/submit-contribution', {
+  const response = await fetch('https://bettertaytay.org/api/submit-contribution', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ export function ContributionForm() {
     setSubmitting(true);
 
     try {
-      const response = await fetch('https://betterlb.gov.ph/api/submit-contribution', {
+      const response = await fetch('https://bettertaytay.org/api/submit-contribution', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, content }),
@@ -218,7 +218,7 @@ All issues created through this API are automatically labeled with `contribution
 | Variable | Required | Description | Example |
 |----------|----------|-------------|---------|
 | `GITHUB_TOKEN` | Yes | GitHub personal access token with `repo` scope | `ghp_xxxxxxxxxxxxxxxxxxxx` |
-| `GITHUB_REPO` | Yes | GitHub repository in `owner/repo` format | `bettergovph/betterlb` |
+| `GITHUB_REPO` | Yes | GitHub repository in `owner/repo` format | `zzelif/bettertaytay` |
 
 ### GitHub Token Setup
 
@@ -294,8 +294,8 @@ X-RateLimit-Reset: 1740720000
 This API supports CORS for authorized origins:
 
 **Allowed Origins:**
-- `https://betterlb.pages.dev` (production)
-- `https://betterlb.gov.ph` (custom domain)
+- `https://bettertaytay.pages.dev` (production)
+- `https://bettertaytay.org` (custom domain)
 - `http://localhost:5173` (Vite dev server)
 
 **Note:** This API does **not** include CORS headers in the implementation. If you need cross-origin requests, you'll need to add CORS support similar to the Weather API.
@@ -404,7 +404,7 @@ const ghResponse = await fetch(
       Accept: 'application/vnd.github+json',
       Authorization: `Bearer ${env.GITHUB_TOKEN}`,
       'X-GitHub-Api-Version': '2022-11-28',
-      'User-Agent': 'BetterLB-Portal',
+      'User-Agent': 'BetterTaytay-Portal',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -436,4 +436,4 @@ const ghResponse = await fetch(
 
 **Last Updated:** 2026-02-28
 **API Version:** 1.0.0
-**Maintained By:** BetterLB Development Team
+**Maintained By:** BetterTaytay Development Team

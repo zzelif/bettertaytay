@@ -1,6 +1,6 @@
-# Comment Standards for Better LB
+# Comment Standards for BetterTaytay
 
-This document outlines the standardized comment format used throughout the Better LB codebase.
+This document outlines the standardized comment format used throughout the BetterTaytay codebase.
 
 ## Table of Contents
 - [General Principles](#general-principles)
@@ -50,7 +50,7 @@ This document outlines the standardized comment format used throughout the Bette
  *
  * @example
  * ```tsx
- * const weather = await fetchWeather('Los Baños');
+ * const weather = await fetchWeather('Taytay');
  * ```
  */
 ```

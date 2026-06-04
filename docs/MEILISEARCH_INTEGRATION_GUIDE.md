@@ -1,6 +1,6 @@
 # Meilisearch Integration Guide
 
-This guide documents how Better LB integrates with [BetterGov's Meilisearch instance](https://search2.bettergov.ph) to display filtered transparency data for the Municipality of Los Baños. The key insight is that we leverage BetterGov.ph's existing Meilisearch infrastructure and national datasets—filtering and searching only for data relevant to our specific LGU.
+This guide documents how BetterTaytay integrates with [BetterGov's Meilisearch instance](https://search2.bettergov.ph) to display filtered transparency data for the Municipality of Taytay. The key insight is that we leverage BetterGov.ph's existing Meilisearch infrastructure and national datasets—filtering and searching only for data relevant to our specific LGU.
 
 Other LGUs can follow this same pattern to implement their own transparency portals without setting up their own Meilisearch instances or scraping data.
 
@@ -18,7 +18,7 @@ Other LGUs can follow this same pattern to implement their own transparency port
 
 ## Overview
 
-Better LB leverages **BetterGov.ph's existing Meilisearch infrastructure** to display transparency data. We don't host any national data ourselves—we simply query BetterGov's public search endpoint with filters for our specific LGU.
+BetterTaytay leverages **BetterGov.ph's existing Meilisearch infrastructure** to display transparency data. We don't host any national data ourselves—we simply query BetterGov's public search endpoint with filters for our specific LGU.
 
 | Feature | Data Source | How We Access It |
 |---------|-------------|------------------|
@@ -65,7 +65,7 @@ Better LB leverages **BetterGov.ph's existing Meilisearch infrastructure** to di
 
 ## Architecture
 
-Better LB follows a **"filter-downstream"** pattern—we don't host or scrape any national data ourselves. Instead, we query BetterGov's existing Meilisearch instance with LGU-specific filters.
+BetterTaytay follows a **"filter-downstream"** pattern—we don't host or scrape any national data ourselves. Instead, we query BetterGov's existing Meilisearch instance with LGU-specific filters.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -82,7 +82,7 @@ Better LB follows a **"filter-downstream"** pattern—we don't host or scrape an
                                     │ (organization_name, region, province, etc.)
                                     ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         YOUR LGU FRONTEND (Better LB)                       │
+│                        YOUR LGU FRONTEND (BetterTaytay)                      │
 │  ┌─────────────────────────────────────────────────────────────────────┐   │
 │  │  /src/lib/meilisearch.ts                                             │   │
 │  │  - Configured to point to search2.bettergov.ph                       │   │
@@ -165,7 +165,7 @@ VITE_MEILISEARCH_API_KEY=your_api_key_here
 
 1. **Organization Filter**: Filter by LGU organization name
    ```typescript
-   const ORG_NAME = 'MUNICIPALITY OF LOS BAÑOS, LAGUNA';
+   const ORG_NAME = 'MUNICIPALITY OF TAYTAY, RIZAL';
    const ORG_FILTER = `organization_name = "${ORG_NAME}"`;
    ```
 
@@ -220,7 +220,7 @@ console.log(orgs);
      'location.region = "Region IV-A"',
      // IMPORTANT: location.province includes BOTH province name AND DEO designation
      // Include both variations to capture all projects
-     '(location.province = "Laguna 2nd DEO" OR location.province = "Laguna")',
+     '(location.province = "Rizal 1st DEO" OR location.province = "Rizal")',
      // Optional: status filter
      selectedStatuses.length > 0
        ? `(${selectedStatuses.map(s => `status = "${s}"`).join(' OR ')})`
@@ -234,12 +234,12 @@ console.log(orgs);
    const exactMatches = hits.filter(h => {
      const mun = h.location.municipality?.toLowerCase() || '';
      const desc = h.description?.toLowerCase() || '';
-     const target = ['los baños', 'los banos'];
+     const target = ['taytay'];
      return target.some(t => mun.includes(t) || desc.includes(t));
    });
    ```
 
-> **Note**: `location.province` in the DPWH dataset contains both the province name AND the District Engineering Office (DEO) designation (e.g., "Laguna 2nd DEO", "Pampanga 1st DEO"). Always include BOTH the plain province name AND the DEO variant in your filter to ensure complete results.
+> **Note**: `location.province` in the DPWH dataset contains both the province name AND the District Engineering Office (DEO) designation (e.g., "Rizal 1st DEO", "Pampanga 1st DEO"). Always include BOTH the plain province name AND the DEO variant in your filter to ensure complete results.
 
 3. **Project Detail Page**: Direct API call for full project details
    ```typescript
@@ -399,7 +399,7 @@ console.log(orgs);
 ```
 
 **Examples of organization names:**
-- `MUNICIPALITY OF LOS BAÑOS, LAGUNA`
+- `MUNICIPALITY OF TAYTAY, RIZAL`
 - `CITY OF CEBU, CEBU`
 - `PROVINCIAL GOVERNMENT OF PAMPANGA`
 
@@ -417,7 +417,7 @@ You need your **region, province, and DEO designation**:
 
 **Examples:**
 - Region: `Region IV-A`, `Region III`, `NCR`
-- Province (include BOTH): `Laguna` AND `Laguna 2nd DEO`, `Pampanga` AND `Pampanga 1st DEO`
+- Province (include BOTH): `Rizal` AND `Rizal 1st DEO`, `Pampanga` AND `Pampanga 1st DEO`
 
 ### Step 4: Configure Your Filters
 
@@ -446,7 +446,7 @@ const filterConditions = [
   'location.region = "[YOUR REGION]"',           // e.g., "Region IV-A"
   // IMPORTANT: Include BOTH plain province AND DEO variant
   '(location.province = "[YOUR PROVINCE]" OR location.province = "[YOUR PROVINCE] Xth DEO")',
-  // Example: '(location.province = "Laguna" OR location.province = "Laguna 2nd DEO")'
+  // Example: '(location.province = "Rizal" OR location.province = "Rizal 1st DEO")'
   // Status filter is optional
   selectedStatuses.length > 0
     ? `(${selectedStatuses.map(s => `status = "${s}"`).join(' OR ')})`
@@ -459,8 +459,8 @@ const exactMatches = hits.filter(h => {
   const mun = h.location.municipality?.toLowerCase() || '';
   const desc = h.description?.toLowerCase() || '';
   const target = [
-    '[municipality name 1]',  // e.g., 'los baños'
-    '[municipality name 2]',  // e.g., 'los banos' (without tilde)
+    '[municipality name 1]',  // e.g., 'taytay'
+    '[municipality name 2]',  // e.g., 'taytay' (or alternate spellings)
   ];
   return target.some(t => mun.includes(t) || desc.includes(t));
 });
@@ -500,7 +500,7 @@ Always attribute BetterGov.ph as the data source:
 
 ---
 
-## Required Files from Better LB
+## Required Files from BetterTaytay
 
 You can implement this integration in two ways:
 
@@ -573,13 +573,13 @@ These components are used by the page components. You can use your own UI librar
 ### Quick Start - Minimal Copy
 
 ```bash
-# Clone Better LB to examine files
-git clone https://github.com/BetterLosBanos/betterlb.git temp-betterlb
+# Clone BetterTaytay to examine files
+git clone https://github.com/zzelif/bettertaytay.git temp-bettertaytay
 
 # Copy ONLY the core files
 mkdir -p YOUR_PROJECT/src/lib
-cp temp-betterlb/src/lib/meilisearch.ts YOUR_PROJECT/src/lib/
-cp temp-betterlb/src/lib/format.ts YOUR_PROJECT/src/lib/
+cp temp-bettertaytay/src/lib/meilisearch.ts YOUR_PROJECT/src/lib/
+cp temp-bettertaytay/src/lib/format.ts YOUR_PROJECT/src/lib/
 
 # Now you can use the Meilisearch client in your existing components!
 ```
@@ -587,24 +587,24 @@ cp temp-betterlb/src/lib/format.ts YOUR_PROJECT/src/lib/
 ### Quick Start - Full Copy
 
 ```bash
-# Clone Better LB
-git clone https://github.com/BetterLosBanos/betterlb.git temp-betterlb
+# Clone BetterTaytay
+git clone https://github.com/zzelif/bettertaytay.git temp-bettertaytay
 
 # Copy core files
-cp temp-betterlb/src/lib/meilisearch.ts YOUR_PROJECT/src/lib/
-cp temp-betterlb/src/lib/format.ts YOUR_PROJECT/src/lib/
+cp temp-bettertaytay/src/lib/meilisearch.ts YOUR_PROJECT/src/lib/
+cp temp-bettertaytay/src/lib/format.ts YOUR_PROJECT/src/lib/
 
 # Copy page components
 mkdir -p YOUR_PROJECT/src/pages/transparency/infrastructure
-cp temp-betterlb/src/pages/transparency/procurement/index.tsx YOUR_PROJECT/src/pages/transparency/
-cp temp-betterlb/src/pages/transparency/infrastructure/index.tsx YOUR_PROJECT/src/pages/transparency/infrastructure/
-cp temp-betterlb/src/pages/transparency/infrastructure/\[project\].tsx YOUR_PROJECT/src/pages/transparency/infrastructure/
-cp temp-betterlb/src/pages/transparency/layout.tsx YOUR_PROJECT/src/pages/transparency/
+cp temp-bettertaytay/src/pages/transparency/procurement/index.tsx YOUR_PROJECT/src/pages/transparency/
+cp temp-bettertaytay/src/pages/transparency/infrastructure/index.tsx YOUR_PROJECT/src/pages/transparency/infrastructure/
+cp temp-bettertaytay/src/pages/transparency/infrastructure/\[project\].tsx YOUR_PROJECT/src/pages/transparency/infrastructure/
+cp temp-bettertaytay/src/pages/transparency/layout.tsx YOUR_PROJECT/src/pages/transparency/
 
 # Copy UI components (if you don't have your own)
-cp -r temp-betterlb/src/components/ui YOUR_PROJECT/src/components/
-cp -r temp-betterlb/src/components/data-display YOUR_PROJECT/src/components/
-cp -r temp-betterlb/src/components/layout YOUR_PROJECT/src/components/
+cp -r temp-bettertaytay/src/components/ui YOUR_PROJECT/src/components/
+cp -r temp-bettertaytay/src/components/data-display YOUR_PROJECT/src/components/
+cp -r temp-bettertaytay/src/components/layout YOUR_PROJECT/src/components/
 
 # Update the filter constants in the copied page files for your LGU
 ```
@@ -613,7 +613,7 @@ cp -r temp-betterlb/src/components/layout YOUR_PROJECT/src/components/
 
 ## Cloudflare Pages Deployment
 
-Better LB is deployed on Cloudflare Pages. Here's how to configure environment variables for your deployment:
+BetterTaytay is deployed on Cloudflare Pages. Here's how to configure environment variables for your deployment:
 
 ### Setting Environment Variables in Cloudflare Pages
 
@@ -727,7 +727,7 @@ interface DPWHProject {
   progress: number;
   location: {
     region: string;        // KEY: Filter by this (e.g., "Region IV-A")
-    province: string;      // KEY: Filter by this - INCLUDES DEO (e.g., "Laguna 2nd DEO")
+    province: string;      // KEY: Filter by this - INCLUDES DEO (e.g., "Rizal 1st DEO")
     municipality?: string; // Use fuzzy search, not Meilisearch filter
     barangay?: string;
     coordinates: {
@@ -765,9 +765,9 @@ interface DPWHProject {
 1. **Include BOTH province variants** - `location.province` includes DEO designation:
    ```typescript
    // WRONG - will miss some projects
-   'location.province = "Laguna"'
+   'location.province = "Rizal"'
    // CORRECT - captures all projects
-   '(location.province = "Laguna" OR location.province = "Laguna 2nd DEO")'
+   '(location.province = "Rizal" OR location.province = "Rizal 1st DEO")'
    ```
 2. Verify values on https://transparency.bettergov.ph/dpwh - use the filter dropdowns to see exact values
 3. Try broader filters (region only) to confirm data exists for your area
@@ -801,6 +801,6 @@ interface DPWHProject {
 ## Contributing
 
 To improve this guide or report issues:
-1. Open an issue on the Better LB GitHub repository
+1. Open an issue on the BetterTaytay GitHub repository
 2. Submit a PR with documentation updates
 3. Share your LGU's implementation for case studies
