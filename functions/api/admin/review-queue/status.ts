@@ -22,7 +22,10 @@ export async function onRequestPost(context: {
       const { request, env } = c;
 
       try {
-        const body = await request.json() as { item_id?: string; status?: string };
+        const body = (await request.json()) as {
+          item_id?: string;
+          status?: string;
+        };
         const { item_id, status } = body;
 
         if (!item_id || !status) {

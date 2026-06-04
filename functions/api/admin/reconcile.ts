@@ -156,7 +156,11 @@ async function resolveConflict(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json() as { conflict_id?: string; resolved_value?: string; notes?: string };
+    const body = (await request.json()) as {
+      conflict_id?: string;
+      resolved_value?: string;
+      notes?: string;
+    };
     const { conflict_id, resolved_value, notes } = body;
 
     if (!conflict_id || resolved_value === undefined) {
@@ -220,7 +224,7 @@ async function skipConflict(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json() as { conflict_id?: string };
+    const body = (await request.json()) as { conflict_id?: string };
     const { conflict_id } = body;
 
     if (!conflict_id) {
@@ -258,8 +262,12 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
   // Route to appropriate handler
   // /api/admin/reconcile/skip -> pathParts[3] = "skip"
   if (pathParts[3] === 'skip') {
-    return withAuth<{ request: Request; env: Env }>(skipConflict, { requireCSRF: true })(context);
+    return withAuth<{ request: Request; env: Env }>(skipConflict, {
+      requireCSRF: true,
+    })(context);
   }
 
-  return withAuth<{ request: Request; env: Env }>(resolveConflict, { requireCSRF: true })(context);
+  return withAuth<{ request: Request; env: Env }>(resolveConflict, {
+    requireCSRF: true,
+  })(context);
 }

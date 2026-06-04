@@ -77,7 +77,8 @@ async function getTermsList(context: { request: Request; env: Env }) {
           LEFT JOIN persons pv ON t.vice_mayor_id = pv.id
           ORDER BY t.term_number DESC
         `;
-        const termsResult = await env.BETTERTAYTAY_DB.prepare(termsSql).all<TermResultRow>();
+        const termsResult =
+          await env.BETTERTAYTAY_DB.prepare(termsSql).all<TermResultRow>();
 
         if (termsResult.results.length === 0) {
           return { terms: [] };

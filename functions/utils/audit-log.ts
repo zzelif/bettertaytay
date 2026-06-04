@@ -71,10 +71,11 @@ export async function logAudit(
       throw new Error('Database binding unavailable');
     }
 
-    await db.prepare(
-      `INSERT INTO admin_audit_log (id, action, performed_by, target_type, target_id, details, created_at)
+    await db
+      .prepare(
+        `INSERT INTO admin_audit_log (id, action, performed_by, target_type, target_id, details, created_at)
        VALUES (?1, ?2, ?3, ?4, ?5, ?6, datetime('now'))`
-    )
+      )
       .bind(
         logId,
         entry.action,

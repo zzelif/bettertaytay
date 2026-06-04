@@ -35,9 +35,9 @@ const TravelIndex: FC = () => {
                       Outbound Visa & Travel Checker
                     </h3>
                     <p className='text-kapwa-text-support text-xs leading-relaxed max-w-xl'>
-                      Check tourist visa requirements, allowed stay periods,
-                      and mandatory departure checklists for Filipino passport holders
-                      traveling abroad.
+                      Check tourist visa requirements, allowed stay periods, and
+                      mandatory departure checklists for Filipino passport
+                      holders traveling abroad.
                     </p>
                   </div>
                 </div>

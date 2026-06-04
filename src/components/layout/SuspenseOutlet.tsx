@@ -13,4 +13,3 @@ export function SuspenseOutlet({ context }: SuspenseOutletProps) {
     </Suspense>
   );
 }
-

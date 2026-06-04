@@ -139,8 +139,12 @@ export class AuthError extends Error {
  * @param options.requirePermission - Required permission for the endpoint
  * @param options.requireRole - Required role or array of allowed roles
  */
-export function withAuth<TCtx extends { request: Request; env: Env } = { request: Request; env: Env }>(
-  handler: (context: NoInfer<TCtx> & { auth: AuthContext }) => Promise<Response> | Response,
+export function withAuth<
+  TCtx extends { request: Request; env: Env } = { request: Request; env: Env },
+>(
+  handler: (
+    context: NoInfer<TCtx> & { auth: AuthContext }
+  ) => Promise<Response> | Response,
   options: {
     requireCSRF?: boolean;
     requirePermission?: Permission;

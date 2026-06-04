@@ -58,13 +58,19 @@ export default defineConfig({
             ) {
               return 'vendor-router';
             }
-            if (normalizedId.includes('/leaflet/') || normalizedId.includes('/react-leaflet/')) {
+            if (
+              normalizedId.includes('/leaflet/') ||
+              normalizedId.includes('/react-leaflet/')
+            ) {
               return 'vendor-leaflet';
             }
             if (normalizedId.includes('/recharts/')) {
               return 'vendor-recharts';
             }
-            if (normalizedId.includes('/i18next/') || normalizedId.includes('/react-i18next/')) {
+            if (
+              normalizedId.includes('/i18next/') ||
+              normalizedId.includes('/react-i18next/')
+            ) {
               return 'vendor-i18n';
             }
             return 'vendor-core';

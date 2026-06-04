@@ -21,10 +21,10 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
   if (sessionId) {
     try {
       // Get the session data before deleting for audit log
-      const sessionData = await env.WEATHER_KV.get(
+      const sessionData = (await env.WEATHER_KV.get(
         `session:${sessionId}`,
         'json'
-      ) as { user?: { login?: string } } | null;
+      )) as { user?: { login?: string } } | null;
       const userLogin = sessionData?.user?.login || 'unknown';
 
       // Delete the session

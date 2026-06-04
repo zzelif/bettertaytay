@@ -75,7 +75,8 @@ export class MockD1Database implements D1Database {
     return Promise.resolve(new ArrayBuffer(0));
   }
 
-  exec(_query: string): Promise<D1ExecResult> { // eslint-disable-line @typescript-eslint/no-unused-vars
+  exec(_query: string): Promise<D1ExecResult> {
+    // eslint-disable-line @typescript-eslint/no-unused-vars
     return Promise.resolve({ count: 0, duration: 0 });
   }
 
@@ -191,12 +192,14 @@ class MockD1PreparedStatement implements D1PreparedStatement {
    */
   private executeQuery(): any[] {
     if (/^\s*INSERT\s+INTO/i.test(this.sql)) {
-      const match = this.sql.match(/^\s*INSERT\s+INTO\s+(\w+)\s*\(([^)]+)\)\s*VALUES\s*\(([\s\S]+)\)/i);
+      const match = this.sql.match(
+        /^\s*INSERT\s+INTO\s+(\w+)\s*\(([^)]+)\)\s*VALUES\s*\(([\s\S]+)\)/i
+      );
       if (match) {
         const tableName = match[1];
         const columns = match[2].split(',').map(c => c.trim());
         const valuesStr = match[3].split(',');
-        
+
         const newRow: Record<string, any> = {};
         columns.forEach((col, idx) => {
           const valPlaceholder = valuesStr[idx] ? valuesStr[idx].trim() : '';
@@ -583,7 +586,10 @@ export class MockKVNamespace implements KVNamespace {
       return null;
     }
 
-    const type = typeof typeOrOptions === 'string' ? typeOrOptions : (typeOrOptions?.type || 'text');
+    const type =
+      typeof typeOrOptions === 'string'
+        ? typeOrOptions
+        : typeOrOptions?.type || 'text';
 
     switch (type) {
       case 'text':
@@ -714,7 +720,10 @@ export class MockKVNamespace implements KVNamespace {
       return null;
     }
 
-    const type = typeof typeOrOptions === 'string' ? typeOrOptions : (typeOrOptions?.type || 'text');
+    const type =
+      typeof typeOrOptions === 'string'
+        ? typeOrOptions
+        : typeOrOptions?.type || 'text';
 
     let value: any;
     switch (type) {

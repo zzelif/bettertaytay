@@ -95,7 +95,9 @@ export const onRequest: PagesFunction<Env> = async context => {
     return handlePost(context);
   }
   return new Response(
-    JSON.stringify({ error: 'Method Not Allowed. Use POST to submit contributions.' }),
+    JSON.stringify({
+      error: 'Method Not Allowed. Use POST to submit contributions.',
+    }),
     {
       status: 405,
       headers: { 'Content-Type': 'application/json', Allow: 'POST' },

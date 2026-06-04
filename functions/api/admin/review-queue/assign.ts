@@ -22,7 +22,7 @@ export async function onRequestPost(context: {
       const { request, env, auth } = c;
 
       try {
-        const body = await request.json() as { item_id?: string };
+        const body = (await request.json()) as { item_id?: string };
         const { item_id } = body;
 
         if (!item_id) {

@@ -48,7 +48,9 @@ async function handleGetQueue(context: {
       LIMIT ?1
     `;
 
-    const results = await env.BETTERTAYTAY_DB.prepare(sql).bind(limit).all<Person & { full_name?: string; deleted_by?: string | null }>();
+    const results = await env.BETTERTAYTAY_DB.prepare(sql)
+      .bind(limit)
+      .all<Person & { full_name?: string; deleted_by?: string | null }>();
 
     const persons: Array<Person & { full_name: string; deleted_by?: string }> =
       [];

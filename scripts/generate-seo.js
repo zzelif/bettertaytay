@@ -6,7 +6,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const configPath = path.resolve(__dirname, '../config/lgu.config.json');
-const templatePath = path.resolve(__dirname, '../src/data/seo-metadata.template.json');
+const templatePath = path.resolve(
+  __dirname,
+  '../src/data/seo-metadata.template.json'
+);
 const outputPath = path.resolve(__dirname, '../src/data/seo-metadata.json');
 
 /**
@@ -19,11 +22,13 @@ const outputPath = path.resolve(__dirname, '../src/data/seo-metadata.json');
 function replaceTokens(value, replacements) {
   if (typeof value === 'string') {
     return value.replace(/\{\{([\w\d_]+)\}\}/g, (match, token) => {
-      return Object.prototype.hasOwnProperty.call(replacements, token) ? replacements[token] : match;
+      return Object.prototype.hasOwnProperty.call(replacements, token)
+        ? replacements[token]
+        : match;
     });
   }
   if (Array.isArray(value)) {
-    return value.map((item) => replaceTokens(item, replacements));
+    return value.map(item => replaceTokens(item, replacements));
   }
   if (value !== null && typeof value === 'object') {
     const result = {};
@@ -57,7 +62,8 @@ try {
 
   // Generate fallback domain if empty
   const portalName = config.portal.name;
-  const portalDomain = config.portal.domain || `${portalName.toLowerCase()}.org`;
+  const portalDomain =
+    config.portal.domain || `${portalName.toLowerCase()}.org`;
 
   // Define token-to-value replacements (keys match {{token}} names in template)
   const replacements = {
@@ -72,11 +78,11 @@ try {
   // Validate: all tokens in the template must be present in replacements
   const templateTokens = extractTokens(templateStr);
   const missingTokens = templateTokens.filter(
-    (token) => !Object.prototype.hasOwnProperty.call(replacements, token)
+    token => !Object.prototype.hasOwnProperty.call(replacements, token)
   );
   if (missingTokens.length > 0) {
     throw new Error(
-      `SEO template contains tokens not defined in replacements: ${missingTokens.map((t) => `{{${t}}}`).join(', ')}.\n` +
+      `SEO template contains tokens not defined in replacements: ${missingTokens.map(t => `{{${t}}}`).join(', ')}.\n` +
         `Add these keys to the replacements map in scripts/generate-seo.js.`
     );
   }

@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import {
-  useLocation,
-  useSearchParams,
-  useNavigate,
-} from 'react-router-dom';
+import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 
 import { useQueryState } from 'nuqs';
 

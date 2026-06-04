@@ -287,49 +287,141 @@
     {
       "region": "Asia-Pacific Regional Assistance",
       "offices": [
-        { "name": "Philippine Embassy in Tokyo", "city": "Tokyo, Japan", "url": "https://tokyope.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Seoul", "city": "Seoul, South Korea", "url": "https://seoulpe.dfa.gov.ph" },
-        { "name": "Philippine Consulate General in Hong Kong", "city": "Hong Kong SAR, China", "url": "https://hongkongpcg.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Beijing", "city": "Beijing, China", "url": "https://beijingpe.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Canberra", "city": "Canberra, Australia", "url": "https://canberrape.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Singapore", "city": "Singapore", "url": "https://singaporepe.dfa.gov.ph" }
+        {
+          "name": "Philippine Embassy in Tokyo",
+          "city": "Tokyo, Japan",
+          "url": "https://tokyope.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Seoul",
+          "city": "Seoul, South Korea",
+          "url": "https://seoulpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Consulate General in Hong Kong",
+          "city": "Hong Kong SAR, China",
+          "url": "https://hongkongpcg.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Beijing",
+          "city": "Beijing, China",
+          "url": "https://beijingpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Canberra",
+          "city": "Canberra, Australia",
+          "url": "https://canberrape.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Singapore",
+          "city": "Singapore",
+          "url": "https://singaporepe.dfa.gov.ph"
+        }
       ]
     },
     {
       "region": "Americas Regional Assistance",
       "offices": [
-        { "name": "Philippine Embassy in Washington D.C.", "city": "Washington D.C., USA", "url": "https://washingtonpe.dfa.gov.ph" },
-        { "name": "Philippine Consulate General in New York", "city": "New York, USA", "url": "https://newyorkpcg.dfa.gov.ph" },
-        { "name": "Philippine Consulate General in Los Angeles", "city": "Los Angeles, USA", "url": "https://losangelespcg.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Ottawa", "city": "Ottawa, Canada", "url": "https://ottawape.dfa.gov.ph" }
+        {
+          "name": "Philippine Embassy in Washington D.C.",
+          "city": "Washington D.C., USA",
+          "url": "https://washingtonpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Consulate General in New York",
+          "city": "New York, USA",
+          "url": "https://newyorkpcg.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Consulate General in Los Angeles",
+          "city": "Los Angeles, USA",
+          "url": "https://losangelespcg.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Ottawa",
+          "city": "Ottawa, Canada",
+          "url": "https://ottawape.dfa.gov.ph"
+        }
       ]
     },
     {
       "region": "Europe Regional Assistance",
       "offices": [
-        { "name": "Philippine Embassy in London", "city": "London, United Kingdom", "url": "https://londonpe.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Berlin", "city": "Berlin, Germany", "url": "https://berlinpe.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Paris", "city": "Paris, France", "url": "https://parispe.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Rome", "city": "Rome, Italy", "url": "https://romepe.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Madrid", "city": "Madrid, Spain", "url": "https://madridpe.dfa.gov.ph" },
-        { "name": "Philippine Embassy in The Hague", "city": "The Hague, Netherlands", "url": "https://thehaguepe.dfa.gov.ph" }
+        {
+          "name": "Philippine Embassy in London",
+          "city": "London, United Kingdom",
+          "url": "https://londonpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Berlin",
+          "city": "Berlin, Germany",
+          "url": "https://berlinpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Paris",
+          "city": "Paris, France",
+          "url": "https://parispe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Rome",
+          "city": "Rome, Italy",
+          "url": "https://romepe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Madrid",
+          "city": "Madrid, Spain",
+          "url": "https://madridpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in The Hague",
+          "city": "The Hague, Netherlands",
+          "url": "https://thehaguepe.dfa.gov.ph"
+        }
       ]
     },
     {
       "region": "Middle East & Africa Regional Assistance",
       "offices": [
-        { "name": "Philippine Embassy in Riyadh", "city": "Riyadh, Saudi Arabia", "url": "https://riyadhpe.dfa.gov.ph" },
-        { "name": "Philippine Consulate General in Jeddah", "city": "Jeddah, Saudi Arabia", "url": "https://jeddahpcg.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Abu Dhabi", "city": "Abu Dhabi, UAE", "url": "https://abudhabipe.dfa.gov.ph" },
-        { "name": "Philippine Consulate General in Dubai", "city": "Dubai, UAE", "url": "https://dubaipcg.dfa.gov.ph" },
-        { "name": "Philippine Embassy in Nairobi", "city": "Nairobi, Kenya", "url": "https://nairobile.dfa.gov.ph" }
+        {
+          "name": "Philippine Embassy in Riyadh",
+          "city": "Riyadh, Saudi Arabia",
+          "url": "https://riyadhpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Consulate General in Jeddah",
+          "city": "Jeddah, Saudi Arabia",
+          "url": "https://jeddahpcg.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Abu Dhabi",
+          "city": "Abu Dhabi, UAE",
+          "url": "https://abudhabipe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Consulate General in Dubai",
+          "city": "Dubai, UAE",
+          "url": "https://dubaipcg.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Embassy in Nairobi",
+          "city": "Nairobi, Kenya",
+          "url": "https://nairobile.dfa.gov.ph"
+        }
       ]
     },
     {
       "region": "Oceania Regional Assistance",
       "offices": [
-        { "name": "Philippine Embassy in Wellington", "city": "Wellington, New Zealand", "url": "https://wellingtonpe.dfa.gov.ph" },
-        { "name": "Philippine Consulate General in Sydney", "city": "Sydney, Australia", "url": "https://sydneypcg.dfa.gov.ph" }
+        {
+          "name": "Philippine Embassy in Wellington",
+          "city": "Wellington, New Zealand",
+          "url": "https://wellingtonpe.dfa.gov.ph"
+        },
+        {
+          "name": "Philippine Consulate General in Sydney",
+          "city": "Sydney, Australia",
+          "url": "https://sydneypcg.dfa.gov.ph"
+        }
       ]
     }
   ]

@@ -1,4 +1,9 @@
-import { PageHeader, SectionBlock, SidebarLayout, SuspenseOutlet } from '@/components/layout';
+import {
+  PageHeader,
+  SectionBlock,
+  SidebarLayout,
+  SuspenseOutlet,
+} from '@/components/layout';
 
 import StatisticsSidebar from './components/StatisticsSidebar';
 

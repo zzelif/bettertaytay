@@ -139,7 +139,7 @@ async function handleParsePost(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json() as { content?: string };
+    const body = (await request.json()) as { content?: string };
     const { content } = body;
 
     if (!content || typeof content !== 'string') {
@@ -174,7 +174,12 @@ async function handleParsePost(context: {
              WHERE first_name = ?1 AND last_name = ?2`
           )
             .bind(firstName, lastName)
-            .first<{ id: string; first_name: string; middle_name: string | null; last_name: string }>();
+            .first<{
+              id: string;
+              first_name: string;
+              middle_name: string | null;
+              last_name: string;
+            }>();
 
           // If no exact match, try fuzzy search
           if (!match) {
@@ -185,7 +190,12 @@ async function handleParsePost(context: {
                LIMIT 5`
             )
               .bind(`${firstName}%`, `${lastName}%`)
-              .first<{ id: string; first_name: string; middle_name: string | null; last_name: string }>();
+              .first<{
+                id: string;
+                first_name: string;
+                middle_name: string | null;
+                last_name: string;
+              }>();
           }
 
           if (match) {

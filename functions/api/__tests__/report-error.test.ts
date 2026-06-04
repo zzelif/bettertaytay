@@ -18,7 +18,8 @@ describe('Report Error Endpoint (/api/report-error)', () => {
       error_stack: 'Error: Test error message\n  at Object.run (test.js:1:1)',
       component_stack: 'at TestComponent (test.tsx:1:1)',
       url: 'https://bettertaytay.gov.ph/discover/travel/visa',
-      user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      user_agent:
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
     };
 
     const request = createMockRequest('https://example.com/api/report-error', {
@@ -40,7 +41,7 @@ describe('Report Error Endpoint (/api/report-error)', () => {
     } as any;
 
     const response = await onRequest(context);
-    const data = await response.json() as any;
+    const data = (await response.json()) as any;
 
     expect(response.status).toBe(201);
     expect(data.success).toBe(true);
@@ -77,7 +78,7 @@ describe('Report Error Endpoint (/api/report-error)', () => {
     } as any;
 
     const response = await onRequest(context);
-    const data = await response.json() as any;
+    const data = (await response.json()) as any;
 
     expect(response.status).toBe(400);
     expect(data.error).toBe('Invalid payload constraints');
@@ -110,7 +111,7 @@ describe('Report Error Endpoint (/api/report-error)', () => {
     } as any;
 
     const response = await onRequest(context);
-    const data = await response.json() as any;
+    const data = (await response.json()) as any;
 
     expect(response.status).toBe(400);
     expect(data.error).toBe('Invalid payload constraints');
@@ -130,7 +131,7 @@ describe('Report Error Endpoint (/api/report-error)', () => {
     } as any;
 
     const response = await onRequest(context);
-    const data = await response.json() as any;
+    const data = (await response.json()) as any;
 
     expect(response.status).toBe(405);
     expect(data.error).toContain('Method Not Allowed');
@@ -140,38 +141,44 @@ describe('Report Error Endpoint (/api/report-error)', () => {
   it('should rate limit client error reporting when requests exceed limits', async () => {
     // Config limit is 20 errors per minute
     for (let i = 0; i < 20; i++) {
-      const request = createMockRequest('https://example.com/api/report-error', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'CF-Connecting-IP': '127.0.0.1',
-        },
-        body: {
-          error_message: `Test error ${i}`,
-          url: 'https://bettertaytay.gov.ph/',
-        },
-      });
+      const request = createMockRequest(
+        'https://example.com/api/report-error',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'CF-Connecting-IP': '127.0.0.1',
+          },
+          body: {
+            error_message: `Test error ${i}`,
+            url: 'https://bettertaytay.gov.ph/',
+          },
+        }
+      );
 
       const context = { request, env: mockEnv } as any;
       const res = await onRequest(context);
       expect(res.status).toBe(201);
     }
 
-    const request21 = createMockRequest('https://example.com/api/report-error', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'CF-Connecting-IP': '127.0.0.1',
-      },
-      body: {
-        error_message: 'Too many errors',
-        url: 'https://bettertaytay.gov.ph/',
-      },
-    });
+    const request21 = createMockRequest(
+      'https://example.com/api/report-error',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'CF-Connecting-IP': '127.0.0.1',
+        },
+        body: {
+          error_message: 'Too many errors',
+          url: 'https://bettertaytay.gov.ph/',
+        },
+      }
+    );
 
     const context21 = { request: request21, env: mockEnv } as any;
     const response21 = await onRequest(context21);
-    const data21 = await response21.json() as any;
+    const data21 = (await response21.json()) as any;
 
     expect(response21.status).toBe(429);
     expect(data21.error).toBe('Too many requests');
