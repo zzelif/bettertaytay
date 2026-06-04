@@ -1,7 +1,4 @@
-import { Outlet } from 'react-router-dom';
-
-import { PageHeader, SectionBlock } from '@/components/layout';
-import { SidebarLayout } from '@/components/layout/SidebarLayout';
+import { PageHeader, SectionBlock, SidebarLayout, SuspenseOutlet } from '@/components/layout';
 
 import StatisticsSidebar from './components/StatisticsSidebar';
 
@@ -16,7 +13,7 @@ export default function StatisticsLayout() {
 
       <SectionBlock>
         <SidebarLayout sidebar={<StatisticsSidebar />} collapsible={true}>
-          <Outlet />
+          <SuspenseOutlet />
         </SidebarLayout>
       </SectionBlock>
     </div>

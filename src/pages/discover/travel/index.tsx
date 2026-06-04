@@ -4,26 +4,21 @@ import {
   ArrowRight,
   CloudSunIcon,
   DollarSignIcon,
-  FlagIcon,
   InfoIcon,
   PhoneIcon,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/Card';
+import { ModuleHeader } from '@/components/layout';
+import { config } from '@/lib/lguConfig';
 
 const TravelIndex: FC = () => {
   return (
     <div className='animate-in fade-in duration-500'>
       {/* Page Header */}
-      <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-        <h2 className='text-kapwa-text-strong kapwa-heading-lg mb-2 font-extrabold tracking-tight'>
-          Travel Hub
-        </h2>
-        <p className='text-kapwa-text-support max-w-2xl text-sm leading-relaxed'>
-          Essential resources for travelers visiting the Municipality of Taytay,
-          Rizal, and the Philippines — from immigration requirements to local
-          utilities.
-        </p>
-      </div>
+      <ModuleHeader
+        title='Travel Hub'
+        description={`Essential resources for ${config.lgu.name} residents planning international travel and local transit — from visa requirements to foreign exchange rates.`}
+      />
 
       {/* Main Visa Tools Card */}
       <div className='mb-8'>
@@ -37,12 +32,12 @@ const TravelIndex: FC = () => {
                 <div className='flex items-start gap-4'>
                   <div>
                     <h3 className='text-kapwa-text-strong text-base font-bold mb-1'>
-                      Philippines Visa & Entry Checker
+                      Outbound Visa & Travel Checker
                     </h3>
                     <p className='text-kapwa-text-support text-xs leading-relaxed max-w-xl'>
-                      Check tourist visa exemptions, stay periods, visa types,
-                      and extension procedures for foreign passport holders
-                      entering the Philippines.
+                      Check tourist visa requirements, allowed stay periods,
+                      and mandatory departure checklists for Filipino passport holders
+                      traveling abroad.
                     </p>
                   </div>
                 </div>

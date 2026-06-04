@@ -137,22 +137,29 @@ export default function WeatherMapSection() {
       marker.bindPopup(popupContent);
 
       // Force resize after a short delay to ensure proper rendering
-      setTimeout(() => {
-        if (mapInstance) {
+      const resizeTimer1 = setTimeout(() => {
+        if (mapInstance && mapInstance.getContainer()) {
           mapInstance.invalidateSize();
-          console.log('Map: Initial resize complete');
         }
       }, 100);
 
-      // Another resize after tiles might have loaded
-      setTimeout(() => {
-        if (mapInstance) {
+      const resizeTimer2 = setTimeout(() => {
+        if (mapInstance && mapInstance.getContainer()) {
           mapInstance.invalidateSize();
-          console.log('Map: Secondary resize complete');
         }
       }, 500);
 
-      console.log('Map: Leaflet initialized successfully');
+      return () => {
+        clearTimeout(resizeTimer1);
+        clearTimeout(resizeTimer2);
+        if (mapInstance) {
+          try {
+            mapInstance.remove();
+          } catch (e) {
+            console.warn('Map: Cleanup warning:', e);
+          }
+        }
+      };
     } catch (error) {
       console.error('Map: Initialization failed:', error);
     }

@@ -13,6 +13,7 @@ export { HotlineBar } from './HotlineBar';
 export { ScrollToTop } from './ScrollToTop';
 export { SEO, type SEOProps } from './SEO';
 export { SidebarLayout, type SidebarLayoutProps } from './SidebarLayout';
+export { SuspenseOutlet } from './SuspenseOutlet';
 
 // PageLayouts components
 export { PageHero, ModuleHeader, DetailSection } from './PageLayouts';

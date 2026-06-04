@@ -48,7 +48,7 @@ async function handleGetQueue(context: {
       LIMIT ?1
     `;
 
-    const results = await env.BETTERLB_DB.prepare(sql).bind(limit).all();
+    const results = await env.BETTERTAYTAY_DB.prepare(sql).bind(limit).all<Person & { full_name?: string; deleted_by?: string | null }>();
 
     const persons: Array<Person & { full_name: string; deleted_by?: string }> =
       [];
@@ -104,7 +104,7 @@ async function handleRestore(context: {
     }
 
     // Check if person exists and is soft-deleted
-    const person = await env.BETTERLB_DB.prepare(
+    const person = await env.BETTERTAYTAY_DB.prepare(
       `SELECT id, deleted_at FROM persons WHERE id = ?1`
     )
       .bind(person_id)
@@ -122,7 +122,7 @@ async function handleRestore(context: {
     }
 
     // Restore the person
-    await env.BETTERLB_DB.prepare(
+    await env.BETTERTAYTAY_DB.prepare(
       `UPDATE persons SET deleted_at = NULL WHERE id = ?1`
     )
       .bind(person_id)
@@ -171,7 +171,7 @@ async function handlePermanentDelete(context: {
     }
 
     // Check if person exists
-    const person = await env.BETTERLB_DB.prepare(
+    const person = await env.BETTERTAYTAY_DB.prepare(
       `SELECT id FROM persons WHERE id = ?1`
     )
       .bind(person_id)
@@ -182,13 +182,13 @@ async function handlePermanentDelete(context: {
     }
 
     // Check for remaining references
-    const memberCount = await env.BETTERLB_DB.prepare(
+    const memberCount = await env.BETTERTAYTAY_DB.prepare(
       `SELECT COUNT(*) as count FROM memberships WHERE person_id = ?1`
     )
       .bind(person_id)
       .first<{ count: number }>();
 
-    const authorCount = await env.BETTERLB_DB.prepare(
+    const authorCount = await env.BETTERTAYTAY_DB.prepare(
       `SELECT COUNT(*) as count FROM document_authors WHERE person_id = ?1`
     )
       .bind(person_id)
@@ -208,7 +208,7 @@ async function handlePermanentDelete(context: {
     }
 
     // Permanently delete the person
-    await env.BETTERLB_DB.prepare(`DELETE FROM persons WHERE id = ?1`)
+    await env.BETTERTAYTAY_DB.prepare(`DELETE FROM persons WHERE id = ?1`)
       .bind(person_id)
       .run();
 
@@ -257,7 +257,7 @@ async function handleBulkRestore(context: {
     let restoredCount = 0;
 
     for (const person_id of person_ids) {
-      await env.BETTERLB_DB.prepare(
+      await env.BETTERTAYTAY_DB.prepare(
         `UPDATE persons SET deleted_at = NULL WHERE id = ?1 AND deleted_at IS NOT NULL`
       )
         .bind(person_id)
@@ -313,13 +313,13 @@ async function handleBulkPermanentDelete(context: {
 
     for (const person_id of person_ids) {
       // Check for remaining references
-      const memberCount = await env.BETTERLB_DB.prepare(
+      const memberCount = await env.BETTERTAYTAY_DB.prepare(
         `SELECT COUNT(*) as count FROM memberships WHERE person_id = ?1`
       )
         .bind(person_id)
         .first<{ count: number }>();
 
-      const authorCount = await env.BETTERLB_DB.prepare(
+      const authorCount = await env.BETTERTAYTAY_DB.prepare(
         `SELECT COUNT(*) as count FROM document_authors WHERE person_id = ?1`
       )
         .bind(person_id)
@@ -334,7 +334,7 @@ async function handleBulkPermanentDelete(context: {
       }
 
       // Permanently delete the person
-      await env.BETTERLB_DB.prepare(`DELETE FROM persons WHERE id = ?1`)
+      await env.BETTERTAYTAY_DB.prepare(`DELETE FROM persons WHERE id = ?1`)
         .bind(person_id)
         .run();
 

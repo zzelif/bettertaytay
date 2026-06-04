@@ -9,7 +9,9 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent } from '../../../components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
+import { ModuleHeader } from '@/components/layout';
+import { lguLabels } from '@/constants/lguLabels';
 
 // Define types
 interface QuickFact {
@@ -52,14 +54,10 @@ const AboutTaytay: FC = () => {
   return (
     <div className='animate-in fade-in duration-500'>
       {/* Page Header */}
-      <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-        <h2 className='text-kapwa-text-strong kapwa-heading-lg mb-2 font-extrabold tracking-tight'>
-          About Taytay
-        </h2>
-        <p className='text-kapwa-text-support max-w-3xl text-sm leading-relaxed'>
-          {t('about.hero.description')}
-        </p>
-      </div>
+      <ModuleHeader
+        title={lguLabels.aboutLgu}
+        description={t('about.hero.description')}
+      />
 
       {/* Quick Facts */}
       <section className='mb-8'>

@@ -23,7 +23,7 @@ async function handleListTerms(context: {
       LIMIT ?1
     `;
 
-    const result = await env.BETTERLB_DB.prepare(sql).bind(limit).all();
+    const result = await env.BETTERTAYTAY_DB.prepare(sql).bind(limit).all();
 
     return Response.json({
       terms: result.results,

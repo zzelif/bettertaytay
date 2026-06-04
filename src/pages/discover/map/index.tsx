@@ -2,7 +2,6 @@ import L, { LatLngExpression, Layer, GeoJSON as LeafletGeoJSON } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
   House,
-  MapIcon,
   MapPinIcon,
   RefreshCcwIcon,
   SearchIcon,
@@ -17,6 +16,8 @@ import {
   WavesIcon,
   TreesIcon,
   XIcon,
+  CheckIcon,
+  ArrowRight,
 } from 'lucide-react';
 
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
@@ -26,13 +27,15 @@ import { ScrollArea } from '../../../components/ui/ScrollArea';
 
 import taytayBarangaysData from '../../../data/taytay-barangays.json';
 import pop2024Raw from '../../../data/statistics/population.json';
-import tourismSpots from '../../../data/discover/tourism-spots.json';
+import tourismData from '../../../data/discover/tourism.json';
+import barangayDirectory from '../../../data/directory/barangays.json';
 import config from '../../../lib/lguConfig';
 
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-// Define types for Barangay data and GeoJSON properties
+// ─── Types ───────────────────────────────────────────────────────────────────
+
 interface BarangayData {
   id: string;
   name: string;
@@ -80,6 +83,8 @@ interface TourismSpot {
 
 type MapMode = 'barangay' | 'establishments';
 
+// ─── Category Config ──────────────────────────────────────────────────────────
+
 const CATEGORY_COLORS: Record<string, string> = {
   heritage: '#8B5CF6',
   dining: '#F59E0B',
@@ -96,27 +101,35 @@ const CATEGORY_ICONS: Record<string, FC<{ className?: string }>> = {
   nature: TreesIcon,
 };
 
+const CATEGORY_LABELS: Record<string, string> = {
+  heritage: 'Heritage',
+  dining: 'Dining',
+  shopping: 'Shopping',
+  recreation: 'Recreation',
+  nature: 'Nature',
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
 const pop2024 = pop2024Raw as unknown as Population2024Data;
 
-// Create a custom Leaflet divIcon for each category
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
 const createSpotIcon = (category: string) => {
   const color = CATEGORY_COLORS[category] || '#6B7280';
   return L.divIcon({
     className: '',
     html: `<div style="
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       background: ${color};
       border: 2.5px solid white;
       border-radius: 50%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
     "></div>`,
-    iconSize: [28, 28],
-    iconAnchor: [14, 14],
-    popupAnchor: [0, -16],
+    iconSize: [26, 26],
+    iconAnchor: [13, 13],
+    popupAnchor: [0, -15],
   });
 };
 
@@ -125,13 +138,10 @@ const resolveBarangayData = (
   popData: Population2024Data
 ): BarangayData | undefined => {
   if (!geoJsonName) return undefined;
-
-  // Standardize name variants: lowercase, replace "santa" with "sta", swap spaces for hyphens
   const normalizedGeoName = geoJsonName
     .toLowerCase()
     .replace(/^santa\s/, 'sta-')
     .replace(/\s+/g, '-');
-
   return popData.barangays.find(
     b =>
       b.id === normalizedGeoName ||
@@ -139,26 +149,56 @@ const resolveBarangayData = (
   );
 };
 
+const resolveBarangayDirectory = (name: string) => {
+  if (!name) return undefined;
+  const normalized = name
+    .toUpperCase()
+    .replace(/^SANTA\s+/, 'STA ')
+    .replace(/^STA\s+/, 'STA ')
+    .trim();
+  return barangayDirectory.find(
+    b =>
+      b.barangay_name
+        .toUpperCase()
+        .replace(/^STA\s+/, 'STA ')
+        .trim() === normalized
+  );
+};
+
 const initialCenter: LatLngExpression = [
   config.location.coordinates.lat,
   config.location.coordinates.lon,
 ];
+const INITIAL_ZOOM = 12.5;
+
+// ─── Component ────────────────────────────────────────────────────────────────
 
 const TaytayMapPortal: FC = () => {
   const isMobile = useIsMobile();
+
+  // Map state
   const [mapMode, setMapMode] = useState<MapMode>('barangay');
+  const [layerPickerOpen, setLayerPickerOpen] = useState(false);
+
+  // Barangay state
   const [selectedBarangay, setSelectedBarangay] = useState<BarangayData | null>(
     null
   );
   const [hoveredBarangayName, setHoveredBarangayName] = useState<string | null>(
     null
   );
-  const [searchQuery, setSearchQuery] = useState('');
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  // Establishments state
   const [activeEstabCategory, setActiveEstabCategory] = useState<string>('all');
 
+  // Shared search
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Refs
   const mapRef = useRef<L.Map>(null);
   const geoJsonLayerRef = useRef<LeafletGeoJSON | null>(null);
+  const layerPickerRef = useRef<HTMLDivElement>(null);
 
   const [mapData] = useState<
     GeoJSON.FeatureCollection<GeoJSON.Geometry, BarangayProperties>
@@ -169,29 +209,40 @@ const TaytayMapPortal: FC = () => {
     >
   );
 
-  const initialZoom = 12.5;
+  // ── Establishments data ───────────────────────────────────────────────────
 
-  // Spots that have coordinates for the map
-  const spotsWithCoords = (tourismSpots as TourismSpot[]).filter(
+  const spotsWithCoords = (tourismData as TourismSpot[]).filter(
     s => s.latitude && s.longitude
   );
+
+  const estabCategoryCounts: Record<string, number> = {};
+  spotsWithCoords.forEach(s => {
+    estabCategoryCounts[s.category] =
+      (estabCategoryCounts[s.category] || 0) + 1;
+  });
+
   const visibleSpots =
     activeEstabCategory === 'all'
       ? spotsWithCoords
       : spotsWithCoords.filter(s => s.category === activeEstabCategory);
 
-  // Category counts for the filter buttons
-  const estabCategoryCounts: Record<string, number> = {};
-  spotsWithCoords.forEach(s => {
-    estabCategoryCounts[s.category] = (estabCategoryCounts[s.category] || 0) + 1;
+  const filteredSpots = visibleSpots.filter(s => {
+    if (!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return (
+      s.name.toLowerCase().includes(q) ||
+      s.address.toLowerCase().includes(q) ||
+      s.category.toLowerCase().includes(q) ||
+      s.tags.some(t => t.toLowerCase().includes(q))
+    );
   });
+
+  // ── Barangay interaction ──────────────────────────────────────────────────
 
   const onBarangayClick = useCallback(
     (feature: GeoJSON.Feature<GeoJSON.Geometry, BarangayProperties>) => {
       if (!feature.properties) return;
-
       const rawName = feature.properties.NAME_3;
-
       if (!isMobile) {
         const bounds = L.geoJSON(feature).getBounds();
         mapRef.current?.fitBounds(bounds, {
@@ -200,43 +251,35 @@ const TaytayMapPortal: FC = () => {
           animate: true,
         });
       }
-
       const resolved = resolveBarangayData(rawName, pop2024);
-      if (resolved) {
-        setSelectedBarangay(resolved);
-      } else {
-        setSelectedBarangay({
+      setSelectedBarangay(
+        resolved ?? {
           id: rawName.toLowerCase().replace(/\s+/g, '-'),
           name: rawName,
           history: [],
-        });
-      }
+        }
+      );
     },
     [isMobile]
   );
 
   const getFeatureName = (
     feature: GeoJSON.Feature<GeoJSON.Geometry, BarangayProperties>
-  ): string => {
-    return feature.properties?.NAME_3 || '';
-  };
+  ): string => feature.properties?.NAME_3 || '';
 
   const barangayStyle = (
     feature?: GeoJSON.Feature<GeoJSON.Geometry, BarangayProperties>
   ) => {
     if (!feature) return {};
-
     const barangayName = getFeatureName(feature);
-
     const isSelected =
       selectedBarangay?.name === barangayName ||
       (selectedBarangay?.id === 'sta-ana' && barangayName === 'Santa Ana');
-
     const isHovered = hoveredBarangayName === barangayName;
     const isMatched =
-      searchQuery &&
+      !!searchQuery &&
       barangayName.toLowerCase().includes(searchQuery.toLowerCase());
-    const isFilteredOut = searchQuery && !isMatched;
+    const isFilteredOut = !!searchQuery && !isMatched;
 
     return {
       fillColor:
@@ -245,16 +288,13 @@ const TaytayMapPortal: FC = () => {
           : isHovered
             ? 'var(--color-kapwa-brand-700)'
             : 'var(--color-kapwa-neutral-100)',
-
       weight: isSelected || isHovered || isMatched ? 2 : 1,
       opacity: 1,
-
       color:
         isSelected || isHovered || isMatched
           ? 'var(--color-kapwa-brand-800)'
           : 'var(--color-kapwa-brand-600)',
-
-      fillOpacity: isFilteredOut ? 0.2 : isSelected ? 0.7 : 0.3,
+      fillOpacity: isFilteredOut ? 0.15 : isSelected ? 0.7 : 0.3,
     };
   };
 
@@ -266,23 +306,21 @@ const TaytayMapPortal: FC = () => {
       click: () => onBarangayClick(feature),
       mouseover: e => {
         setHoveredBarangayName(getFeatureName(feature));
-        // Capture initial position
         setMousePos({ x: e.originalEvent.pageX, y: e.originalEvent.pageY });
         e.target.setStyle(barangayStyle(feature));
         e.target.bringToFront();
       },
       mousemove: e => {
-        // Update position as mouse moves
         setMousePos({ x: e.originalEvent.pageX, y: e.originalEvent.pageY });
       },
       mouseout: e => {
         setHoveredBarangayName(null);
-        if (geoJsonLayerRef.current) {
-          geoJsonLayerRef.current.resetStyle(e.target);
-        }
+        geoJsonLayerRef.current?.resetStyle(e.target);
       },
     });
   };
+
+  // ── Effects ───────────────────────────────────────────────────────────────
 
   useEffect(() => {
     if (geoJsonLayerRef.current) {
@@ -291,106 +329,95 @@ const TaytayMapPortal: FC = () => {
     }
   }, [searchQuery, mapData]);
 
+  // Close layer picker when clicking outside
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (
+        layerPickerRef.current &&
+        !layerPickerRef.current.contains(e.target as Node)
+      ) {
+        setLayerPickerOpen(false);
+      }
+    };
+    if (layerPickerOpen) {
+      document.addEventListener('mousedown', handler);
+    }
+    return () => document.removeEventListener('mousedown', handler);
+  }, [layerPickerOpen]);
+
+  // Clear search when switching modes
+  useEffect(() => {
+    setSearchQuery('');
+    setSelectedBarangay(null);
+  }, [mapMode]);
+
+  // ── Zoom controls ─────────────────────────────────────────────────────────
+
   const handleZoomIn = () => mapRef.current?.zoomIn();
   const handleZoomOut = () => mapRef.current?.zoomOut();
   const handleResetZoom = () => {
-    mapRef.current?.setZoom(initialZoom);
-    mapRef.current?.flyTo(initialCenter, initialZoom);
+    mapRef.current?.setZoom(INITIAL_ZOOM);
+    mapRef.current?.flyTo(initialCenter, INITIAL_ZOOM);
   };
-
-  useEffect(() => {
-    const zoomControls = document.getElementById('zoom-controls');
-    if (selectedBarangay) {
-      zoomControls?.classList.add('right-105');
-    } else {
-      zoomControls?.classList.remove('right-105');
-      if (!isMobile) {
-        handleResetZoom();
-      }
-    }
-  }, [selectedBarangay, isMobile]);
 
   const currentLatestPopulation =
     selectedBarangay?.history.slice(-1)[0]?.population;
 
+  // ── Render ────────────────────────────────────────────────────────────────
+
   return (
-    <div className='flex h-screen bg-kapwa-gray-50'>
-      {/* Interactive Leaflet Segment */}
+    <div className='flex h-screen bg-kapwa-gray-50 overflow-hidden'>
+      {/* ── Map Container ─────────────────────────────────────────────────── */}
       <div className='flex-1 relative'>
-        {/* Mode Toggle + Search Row */}
-        <div className='absolute top-4 left-4 right-4 z-[500] flex flex-row gap-2 flex-wrap'>
-          {/* Home button */}
-          <div>
-            <Link
-              to='/'
-              className='group flex items-center justify-center bg-kapwa-blue-500 rounded-lg p-2 border-2 border-kapwa-bg-surface text-kapwa-text-inverse font-bold transition-all duration-300 ease-in-out hover:pr-4 shadow-md active:scale-95'
-              title='Back to Home'
-            >
-              <House className='h-6 w-6' />
-              <span className='max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out group-hover:max-w-xs group-hover:ml-2'>
-                Go back home
-              </span>
-            </Link>
-          </div>
+        {/* Top bar: Home + Search (constrained width) */}
+        <div className='absolute top-4 left-4 z-500 flex flex-row gap-2 items-center'>
+          {/* Home */}
+          <Link
+            to='/'
+            className='group flex items-center justify-center bg-kapwa-blue-500 rounded-lg p-2 border-2 border-kapwa-bg-surface text-kapwa-text-inverse font-bold transition-all duration-300 ease-in-out hover:pr-4 shadow-md active:scale-95 shrink-0'
+            title='Back to Home'
+          >
+            <House className='h-6 w-6' />
+            <span className='max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out group-hover:max-w-xs group-hover:ml-2'>
+              Go back home
+            </span>
+          </Link>
 
-          {/* Mode Toggle */}
-          <div className='flex bg-kapwa-bg-surface rounded-lg border border-kapwa-border-weak shadow-md overflow-hidden'>
-            <button
-              onClick={() => {
-                setMapMode('barangay');
-                setSelectedBarangay(null);
-              }}
-              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold transition-all cursor-pointer ${
-                mapMode === 'barangay'
-                  ? 'bg-kapwa-bg-brand-default text-kapwa-text-inverse'
-                  : 'text-kapwa-text-support hover:bg-kapwa-bg-hover'
-              }`}
-            >
-              <MapIcon className='h-4 w-4' />
-              Barangays
-            </button>
-            <button
-              onClick={() => {
-                setMapMode('establishments');
-                setSelectedBarangay(null);
-              }}
-              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold transition-all cursor-pointer ${
-                mapMode === 'establishments'
-                  ? 'bg-kapwa-bg-brand-default text-kapwa-text-inverse'
-                  : 'text-kapwa-text-support hover:bg-kapwa-bg-hover'
-              }`}
-            >
-              <LayersIcon className='h-4 w-4' />
-              Establishments
-            </button>
-          </div>
-
-          {/* Search — changes context depending on mode */}
-          <div className='relative flex-1 min-w-40'>
-            <SearchIcon className='absolute left-3 top-1/2 transform -translate-y-1/2 text-kapwa-text-inverse-subtle h-5 w-5' />
+          {/* Search — max-w-xs keeps it from stretching full width */}
+          <div className='relative w-64 md:w-72'>
+            <SearchIcon className='absolute left-3 top-1/2 -translate-y-1/2 text-kapwa-text-disabled h-4 w-4 pointer-events-none' />
             <input
               type='text'
               placeholder={
                 mapMode === 'barangay'
-                  ? 'Search Taytay barangays...'
-                  : 'Search establishments...'
+                  ? 'Search barangays...'
+                  : 'Search spots...'
               }
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className='w-full pl-10 pr-4 py-2.5 bg-kapwa-bg-surface border border-kapwa-border-brand rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-kapwa-bg-brand-active text-sm'
+              className='w-full pl-9 pr-8 py-2 bg-kapwa-bg-surface border border-kapwa-border-weak rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-kapwa-bg-brand-active text-sm'
             />
+            {searchQuery && (
+              <button
+                title='Clear search'
+                onClick={() => setSearchQuery('')}
+                className='absolute right-2.5 top-1/2 -translate-y-1/2 text-kapwa-text-disabled hover:text-kapwa-text-support'
+              >
+                <XIcon className='h-3.5 w-3.5' />
+              </button>
+            )}
           </div>
         </div>
 
-        {/* Category Filters for Establishments Mode */}
+        {/* Establishments category filter pills (top-left, below search) */}
         {mapMode === 'establishments' && (
-          <div className='absolute top-16 left-4 right-4 z-[500] flex flex-row gap-1.5 flex-wrap mt-1'>
+          <div className='absolute top-18 left-4 z-500 flex flex-row gap-1.5 flex-wrap max-w-lg'>
             <button
               onClick={() => setActiveEstabCategory('all')}
-              className={`px-3 py-1 rounded-full text-xs font-bold shadow-md transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md transition-all cursor-pointer ${
                 activeEstabCategory === 'all'
                   ? 'bg-kapwa-bg-brand-default text-kapwa-text-inverse'
-                  : 'bg-kapwa-bg-surface text-kapwa-text-support hover:bg-kapwa-bg-hover border border-kapwa-border-weak'
+                  : 'bg-kapwa-bg-surface text-kapwa-text-support hover:bg-kapwa-bg-gray-hover border border-kapwa-border-weak'
               }`}
             >
               All ({spotsWithCoords.length})
@@ -403,10 +430,10 @@ const TaytayMapPortal: FC = () => {
                 <button
                   key={key}
                   onClick={() => setActiveEstabCategory(key)}
-                  className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold shadow-md transition-all cursor-pointer ${
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md transition-all cursor-pointer ${
                     activeEstabCategory === key
                       ? 'text-white border-transparent'
-                      : 'bg-kapwa-bg-surface text-kapwa-text-support hover:bg-kapwa-bg-hover border border-kapwa-border-weak'
+                      : 'bg-kapwa-bg-surface text-kapwa-text-support hover:bg-kapwa-bg-gray-hover border border-kapwa-border-weak'
                   }`}
                   style={
                     activeEstabCategory === key
@@ -415,47 +442,144 @@ const TaytayMapPortal: FC = () => {
                   }
                 >
                   <Icon className='h-3 w-3' />
-                  {key.charAt(0).toUpperCase() + key.slice(1)} ({count})
+                  {CATEGORY_LABELS[key]} ({count})
                 </button>
               );
             })}
           </div>
         )}
 
-        {/* Floating Custom Scale Control Stack */}
-        <div
-          id='zoom-controls'
-          className='absolute bottom-5 right-4 z-[500] flex flex-col gap-3'
-        >
-          <Button
-            variant='primary'
-            size='sm'
-            onClick={handleResetZoom}
-            aria-label='Reset zoom'
-          >
-            <RefreshCcwIcon className='h-4 w-4' />
-          </Button>
-          <Button
-            variant='primary'
-            size='sm'
-            onClick={handleZoomIn}
-            aria-label='Zoom in'
-          >
-            <ZoomInIcon className='h-4 w-4' />
-          </Button>
-          <Button
-            variant='primary'
-            size='sm'
-            onClick={handleZoomOut}
-            aria-label='Zoom out'
-          >
-            <ZoomOutIcon className='h-4 w-4' />
-          </Button>
+        {/* Bottom-right control cluster: Layers picker + Zoom */}
+        <div className='absolute bottom-6 right-4 z-500 flex flex-col items-end gap-2'>
+          {/* Layer Picker popover */}
+          {layerPickerOpen && (
+            <div
+              ref={layerPickerRef}
+              className='mb-1 w-52 bg-kapwa-bg-surface rounded-xl border border-kapwa-border-weak shadow-xl overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-150'
+            >
+              <div className='px-3 pt-3 pb-1.5'>
+                <p className='text-[10px] font-bold tracking-widest uppercase text-kapwa-text-disabled'>
+                  Map Layers
+                </p>
+              </div>
+              {/* Barangay option */}
+              <button
+                onClick={() => {
+                  setMapMode('barangay');
+                  setLayerPickerOpen(false);
+                }}
+                className={`w-full flex items-start gap-3 px-3 py-2.5 transition-colors cursor-pointer ${
+                  mapMode === 'barangay'
+                    ? 'bg-kapwa-bg-surface-brand'
+                    : 'hover:bg-kapwa-bg-hover'
+                }`}
+              >
+                <div
+                  className={`mt-0.5 h-4 w-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                    mapMode === 'barangay'
+                      ? 'border-kapwa-bg-brand-default bg-kapwa-bg-brand-default'
+                      : 'border-kapwa-border-strong'
+                  }`}
+                >
+                  {mapMode === 'barangay' && (
+                    <CheckIcon className='h-2.5 w-2.5 text-white' />
+                  )}
+                </div>
+                <div className='text-left'>
+                  <p className='text-xs font-bold text-kapwa-text-strong leading-snug'>
+                    Barangays
+                  </p>
+                  <p className='text-[10px] text-kapwa-text-disabled leading-snug'>
+                    Administrative districts
+                  </p>
+                </div>
+              </button>
+              {/* Establishments option */}
+              <button
+                type='button'
+                onClick={() => {
+                  setMapMode('establishments');
+                  setLayerPickerOpen(false);
+                }}
+                className={`w-full flex items-start gap-3 px-3 py-2.5 transition-colors cursor-pointer ${
+                  mapMode === 'establishments'
+                    ? 'bg-kapwa-bg-surface-brand'
+                    : 'hover:bg-kapwa-bg-hover'
+                }`}
+              >
+                <div
+                  className={`mt-0.5 h-4 w-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
+                    mapMode === 'establishments'
+                      ? 'border-kapwa-bg-brand-default bg-kapwa-bg-brand-default'
+                      : 'border-kapwa-border-strong'
+                  }`}
+                >
+                  {mapMode === 'establishments' && (
+                    <CheckIcon className='h-2.5 w-2.5 text-white' />
+                  )}
+                </div>
+                <div className='text-left'>
+                  <p className='text-xs font-bold text-kapwa-text-strong leading-snug'>
+                    Establishments
+                  </p>
+                  <p className='text-[10px] text-kapwa-text-disabled leading-snug'>
+                    Local spots, dining & shops
+                  </p>
+                </div>
+              </button>
+              <div className='h-1' />
+            </div>
+          )}
+
+          {/* Zoom + Layer button stack */}
+          <div className='flex flex-col gap-2'>
+            {/* Layers button */}
+            <Button
+              variant='primary'
+              size='sm'
+              onClick={() => setLayerPickerOpen(p => !p)}
+              aria-label='Map layers'
+              title='Map Layers'
+              className='shadow-md flex items-center gap-1.5 md:px-3'
+            >
+              <LayersIcon className='h-4 w-4' />
+            </Button>
+
+            <div className='h-1' />
+
+            <Button
+              variant='primary'
+              size='sm'
+              onClick={handleResetZoom}
+              aria-label='Reset zoom'
+              className='shadow-md'
+            >
+              <RefreshCcwIcon className='h-4 w-4' />
+            </Button>
+            <Button
+              variant='primary'
+              size='sm'
+              onClick={handleZoomIn}
+              aria-label='Zoom in'
+              className='shadow-md'
+            >
+              <ZoomInIcon className='h-4 w-4' />
+            </Button>
+            <Button
+              variant='primary'
+              size='sm'
+              onClick={handleZoomOut}
+              aria-label='Zoom out'
+              className='shadow-md'
+            >
+              <ZoomOutIcon className='h-4 w-4' />
+            </Button>
+          </div>
         </div>
 
-        {/* Legend for Establishments Mode */}
+        {/* Establishments legend (bottom-left) */}
         {mapMode === 'establishments' && (
-          <div className='absolute bottom-5 left-4 z-[500] bg-kapwa-bg-surface border border-kapwa-border-weak rounded-xl shadow-md p-3'>
+          <div className='absolute bottom-6 left-4 z-500 bg-kapwa-bg-surface border border-kapwa-border-weak rounded-xl shadow-md p-3'>
             <p className='text-[10px] font-bold tracking-widest uppercase text-kapwa-text-disabled mb-2'>
               Legend
             </p>
@@ -463,11 +587,11 @@ const TaytayMapPortal: FC = () => {
               {Object.entries(CATEGORY_COLORS).map(([cat, color]) => (
                 <div key={cat} className='flex items-center gap-2'>
                   <div
-                    className='h-3 w-3 rounded-full border border-white shadow-sm shrink-0'
+                    className='h-3 w-3 rounded-full border-2 border-white shadow-sm shrink-0'
                     style={{ backgroundColor: color }}
                   />
                   <span className='text-[10px] font-semibold text-kapwa-text-support capitalize'>
-                    {cat}
+                    {CATEGORY_LABELS[cat] || cat}
                   </span>
                 </div>
               ))}
@@ -475,9 +599,25 @@ const TaytayMapPortal: FC = () => {
           </div>
         )}
 
+        {/* Barangay hover tooltip */}
+        {mapMode === 'barangay' && hoveredBarangayName && (
+          <div
+            className='hidden md:block fixed pointer-events-none bg-kapwa-bg-surface border border-kapwa-border-weak px-3 py-1.5 rounded-lg shadow-lg z-9999'
+            style={{
+              left: `${mousePos.x + 16}px`,
+              top: `${mousePos.y + 10}px`,
+            }}
+          >
+            <p className='text-sm font-semibold text-kapwa-text-strong whitespace-nowrap'>
+              Brgy. {hoveredBarangayName}
+            </p>
+          </div>
+        )}
+
+        {/* Leaflet map */}
         <MapContainer
           center={initialCenter}
-          zoom={initialZoom}
+          zoom={INITIAL_ZOOM}
           ref={mapRef}
           zoomControl={false}
           style={{ height: '100%', width: '100%' }}
@@ -488,7 +628,7 @@ const TaytayMapPortal: FC = () => {
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
 
-          {/* Barangay GeoJSON layer — always shown as outline */}
+          {/* Barangay GeoJSON — fills in barangay mode, ghost outline in establishments */}
           {mapData && mapData.features && (
             <GeoJSON
               key={searchQuery + mapMode}
@@ -499,7 +639,7 @@ const TaytayMapPortal: FC = () => {
                   ? () => ({
                       fillColor: 'transparent',
                       weight: 1,
-                      opacity: 0.4,
+                      opacity: 0.35,
                       color: 'var(--color-kapwa-brand-600)',
                       fillOpacity: 0,
                     })
@@ -509,200 +649,233 @@ const TaytayMapPortal: FC = () => {
             />
           )}
 
-          {/* Establishment Markers — shown only in establishments mode */}
+          {/* Establishment markers */}
           {mapMode === 'establishments' &&
-            visibleSpots
-              .filter(s => {
-                if (!searchQuery) return true;
-                const q = searchQuery.toLowerCase();
-                return (
-                  s.name.toLowerCase().includes(q) ||
-                  s.address.toLowerCase().includes(q) ||
-                  s.category.toLowerCase().includes(q) ||
-                  s.tags.some(t => t.toLowerCase().includes(q))
-                );
-              })
-              .map(spot => (
-                <Marker
-                  key={spot.id}
-                  position={[spot.latitude!, spot.longitude!]}
-                  icon={createSpotIcon(spot.category)}
-                >
-                  <Popup>
-                    <div className='min-w-[200px]'>
-                      <span
-                        className='inline-block px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-widest mb-1.5'
-                        style={{
-                          backgroundColor: CATEGORY_COLORS[spot.category] || '#6B7280',
-                          color: 'white',
-                        }}
-                      >
-                        {spot.category}
-                      </span>
-                      <h4 className='font-bold text-sm leading-tight mb-1'>
-                        {spot.name}
-                      </h4>
-                      <p className='text-xs text-gray-500 leading-snug mb-1.5'>
-                        {spot.description.length > 120
-                          ? spot.description.slice(0, 120) + '...'
-                          : spot.description}
-                      </p>
-                      <div className='flex items-start gap-1 text-xs text-gray-400'>
-                        <span className='shrink-0'>📍</span>
-                        <span>{spot.address}</span>
-                      </div>
+            filteredSpots.map(spot => (
+              <Marker
+                key={spot.id}
+                position={[spot.latitude!, spot.longitude!]}
+                icon={createSpotIcon(spot.category)}
+              >
+                <Popup>
+                  <div className='min-w-50 max-w-60'>
+                    <span
+                      className='inline-block px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-widest mb-1.5'
+                      style={{
+                        backgroundColor:
+                          CATEGORY_COLORS[spot.category] || '#6B7280',
+                        color: 'white',
+                      }}
+                    >
+                      {CATEGORY_LABELS[spot.category] || spot.category}
+                    </span>
+                    <h4 className='font-bold text-sm leading-tight mb-1'>
+                      {spot.name}
+                    </h4>
+                    <p className='text-xs text-gray-500 leading-snug mb-1.5'>
+                      {spot.description.length > 120
+                        ? spot.description.slice(0, 120) + '...'
+                        : spot.description}
+                    </p>
+                    <div className='flex items-start gap-1 text-xs text-gray-400'>
+                      <MapPinIcon className='h-3 w-3 shrink-0 mt-0.5' />
+                      <span>{spot.address}</span>
                     </div>
-                  </Popup>
-                </Marker>
-              ))}
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
         </MapContainer>
-
-        {/* Barangay hover tooltip */}
-        {mapMode === 'barangay' && hoveredBarangayName && (
-          <div
-            className='hidden md:block fixed pointer-events-none bg-kapwa-bg-gray-hover border border-kapwa-bg-info-hover px-4 py-2 rounded-md shadow-md z-[9999]'
-            style={{
-              left: `${mousePos.x + 20}px`,
-              top: `${mousePos.y + 10}px`,
-            }}
-          >
-            <p className='text-sm font-semibold text-kapwa-text-accent-blue whitespace-nowrap'>
-              Brgy. {hoveredBarangayName}
-            </p>
-          </div>
-        )}
       </div>
 
-      {/* Contextual Slide-out Information Dashboard (Barangay Mode only) */}
+      {/* ── Barangay side panel (flex sibling — no absolute overlap) ─────── */}
       {mapMode === 'barangay' && selectedBarangay && (
-        <div
-          className={`absolute right-0 top-20px h-full w-full md:w-100 bg-kapwa-bg-surface shadow-xl z-10 transition-transform duration-300 ${
-            selectedBarangay ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <div className='h-full flex flex-col'>
-            <div className='p-6 border-b'>
-              <div className='flex justify-between items-start'>
-                <div className='flex-1'>
-                  <h2 className='text-2xl font-bold text-kapwa-text-support'>
-                    Brgy. {selectedBarangay.name}
-                  </h2>
-                  <p className='text-sm text-kapwa-text-on-disabled mt-1 mb-4'>
-                    Taytay, Rizal Administrative Sector
-                  </p>
-
-                  <div className='flex flex-wrap gap-3'>
-                    <div
-                      className='flex items-center gap-2 bg-kapwa-blue-50 px-3 py-1.5 rounded-full cursor-help group relative'
-                      title='Total Population'
-                    >
-                      <UsersIcon className='h-4 w-4 text-kapwa-text-brand' />
-                      <span className='text-sm font-medium text-kapwa-text-accent-blue'>
-                        {currentLatestPopulation
-                          ? `${currentLatestPopulation.toLocaleString('en-PH')} (Latest)`
-                          : 'No Data'}
-                      </span>
-                      {/* Tooltip */}
-                      <div className='absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-kapwa-gray-900 text-kapwa-text-inverse text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50'>
-                        Total Population (2024)
-                        <div className='absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-kapwa-gray-900'></div>
-                      </div>
-                    </div>
-                    <div
-                      className='flex items-center gap-2 bg-kapwa-purple-50 px-3 py-1.5 rounded-full cursor-help group relative'
-                      title='Land Area'
-                    >
-                      <MapPinIcon className='h-4 w-4 text-kapwa-purple-600' />
-                      <span className='text-sm font-medium text-kapwa-purple-700'>
-                        Area: 1.2 km²
-                      </span>
-                      {/* Tooltip */}
-                      <div className='absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-kapwa-gray-900 text-kapwa-text-inverse text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50'>
-                        Land Area (km²)
-                        <div className='absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-kapwa-gray-900'></div>
-                      </div>
-                    </div>
+        <div className='w-full md:w-96 bg-kapwa-bg-surface shadow-xl z-10 flex flex-col border-l border-kapwa-border-weak transition-all duration-300 animate-in slide-in-from-right-4'>
+          {/* Panel header */}
+          <div className='p-5 border-b border-kapwa-border-weak'>
+            <div className='flex justify-between items-start gap-3'>
+              <div className='flex-1 min-w-0'>
+                <h2 className='text-xl font-bold text-kapwa-text-strong truncate'>
+                  Brgy. {selectedBarangay.name}
+                </h2>
+                <p className='text-xs text-kapwa-text-disabled mt-0.5'>
+                  Taytay, Rizal — Administrative Sector
+                </p>
+                <div className='flex flex-wrap gap-2 mt-3'>
+                  <div className='flex items-center gap-1.5 bg-kapwa-blue-50 px-2.5 py-1 rounded-full'>
+                    <UsersIcon className='h-3.5 w-3.5 text-kapwa-text-brand' />
+                    <span className='text-xs font-semibold text-kapwa-text-accent-blue'>
+                      {currentLatestPopulation
+                        ? currentLatestPopulation.toLocaleString('en-PH')
+                        : 'No Data'}
+                    </span>
+                  </div>
+                  <div className='flex items-center gap-1.5 bg-kapwa-purple-50 px-2.5 py-1 rounded-full'>
+                    <MapPinIcon className='h-3.5 w-3.5 text-kapwa-purple-600' />
+                    <span className='text-xs font-semibold text-kapwa-purple-700'>
+                      1.2 km²
+                    </span>
                   </div>
                 </div>
-
-                <button
-                  type='button'
-                  onClick={() => setSelectedBarangay(null)}
-                  className='text-kapwa-text-inverse-subtle hover:text-kapwa-text-support'
-                  aria-label='Close details'
-                >
-                  <XIcon className='h-6 w-6' />
-                </button>
               </div>
+              <button
+                type='button'
+                onClick={() => setSelectedBarangay(null)}
+                className='text-kapwa-text-disabled hover:text-kapwa-text-support p-1 rounded-lg hover:bg-kapwa-bg-hover transition-colors shrink-0'
+                aria-label='Close details'
+              >
+                <XIcon className='h-5 w-5' />
+              </button>
             </div>
-            <ScrollArea className='flex-1'>
-              <div className='p-6 space-y-6'>
-                {/* Static Context Overview Snippet */}
-                <div>
-                  <div className='flex justify-between items-center mb-2'>
-                    <h3 className='text-lg font-semibold text-kapwa-gray-900'>
-                      Overview
-                    </h3>
-                    <a
-                      href={`https://www.philatlas.com/luzon/r04a/rizal/taytay/${selectedBarangay.id}.html`}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='text-sm text-kapwa-text-link hover:text-kapwa-text-link-hover hover:underline transition-colors duration-200 flex items-center gap-1'
-                    >
-                      PhilAtlas Sheet
-                      <svg
-                        className='h-3 w-3'
-                        fill='none'
-                        stroke='currentColor'
-                        viewBox='0 0 24 24'
-                      >
-                        <path
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          strokeWidth={2}
-                          d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                  <p className='leading-relaxed text-kapwa-text-support'>
-                    {selectedBarangay.name} is an official administrative ward
-                    in the municipality of Taytay, Rizal.
-                    {currentLatestPopulation &&
-                      ` As of our latest indicators, it houses a community of ${currentLatestPopulation.toLocaleString('en-PH')} residents.`}
-                  </p>
-                </div>
+          </div>
 
-                <div>
-                  {/* Historical Census Timeline Data Graph / List */}
-                  {selectedBarangay.history &&
-                    selectedBarangay.history.length > 0 && (
-                      <div className='flex flex-col gap-4'>
-                        <div className='flex-row flex items-center gap-2'>
-                          <h3 className='text-lg font-semibold text-kapwa-gray-900'>
-                            Historical Growth Metrics
-                          </h3>
-                          <TrendingUpIcon className='h-4 w-4 text-kapwa-bg-brand' />
+          {/* Panel body */}
+          <ScrollArea className='flex-1'>
+            <div className='p-5 space-y-5'>
+              {/* Overview */}
+              <div>
+                <div className='flex items-center justify-between mb-2'>
+                  <h3 className='text-sm font-bold text-kapwa-text-strong'>
+                    Overview
+                  </h3>
+                  <a
+                    href={`https://www.philatlas.com/luzon/r04a/rizal/taytay/${selectedBarangay.id}.html`}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-xs text-kapwa-text-link hover:underline flex items-center gap-1'
+                  >
+                    PhilAtlas
+                    <svg
+                      className='h-3 w-3'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <p className='text-sm leading-relaxed text-kapwa-text-support'>
+                  {selectedBarangay.name} is an official administrative ward in
+                  the municipality of Taytay, Rizal.
+                  {currentLatestPopulation &&
+                    ` It houses a community of ${currentLatestPopulation.toLocaleString('en-PH')} residents as of our latest data.`}
+                </p>
+              </div>
+
+              {/* Historical census data */}
+              {selectedBarangay.history &&
+                selectedBarangay.history.length > 0 && (
+                  <div>
+                    <div className='flex items-center gap-2 mb-2'>
+                      <h3 className='text-sm font-bold text-kapwa-text-strong'>
+                        Historical Growth
+                      </h3>
+                      <TrendingUpIcon className='h-3.5 w-3.5 text-kapwa-text-brand' />
+                    </div>
+                    <div className='rounded-lg overflow-hidden border border-kapwa-border-weak divide-y divide-kapwa-border-weak'>
+                      {selectedBarangay.history.map(record => (
+                        <div
+                          key={record.year}
+                          className='flex justify-between items-center px-3 py-2 text-xs bg-kapwa-bg-surface-raised hover:bg-kapwa-bg-hover transition-colors'
+                        >
+                          <span className='text-kapwa-text-support'>
+                            Census {record.year}
+                          </span>
+                          <span className='font-bold text-kapwa-text-strong'>
+                            {record.population.toLocaleString('en-PH')}
+                          </span>
                         </div>
-                        <div className='border border-kapwa-gray-900 rounded-lg overflow-hidden divide-y divide-kapwa-border-strong'>
-                          {selectedBarangay.history.map(record => (
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+              {/* Leadership section */}
+              {(() => {
+                const directoryEntry = resolveBarangayDirectory(
+                  selectedBarangay.name
+                );
+                if (!directoryEntry) return null;
+
+                const punongBarangay = directoryEntry.officials.find(
+                  o => o.role === 'Punong Barangay'
+                );
+                const sbMembers = directoryEntry.officials.filter(
+                  o => o.role === 'SB Member'
+                );
+                const skChairperson = directoryEntry.officials.find(
+                  o => o.role === 'SK Chairperson'
+                );
+
+                return (
+                  <div className='space-y-4 border-t border-kapwa-border-weak pt-4'>
+                    <div className='flex items-center gap-2 mb-1'>
+                      <h3 className='text-sm font-bold text-kapwa-text-strong'>
+                        Barangay Leadership
+                      </h3>
+                      <UsersIcon className='h-3.5 w-3.5 text-kapwa-text-brand' />
+                    </div>
+
+                    {punongBarangay && (
+                      <div className='bg-kapwa-bg-surface-raised border border-kapwa-border-weak rounded-xl p-3 shadow-xs'>
+                        <span className='text-[10px] uppercase tracking-widest font-extrabold text-kapwa-text-disabled'>
+                          Punong Barangay
+                        </span>
+                        <h4 className='text-sm font-bold text-kapwa-text-strong mt-0.5'>
+                          {punongBarangay.name}
+                        </h4>
+                      </div>
+                    )}
+
+                    {sbMembers.length > 0 && (
+                      <div>
+                        <span className='text-[10px] uppercase tracking-widest font-extrabold text-kapwa-text-disabled block mb-2'>
+                          Barangay Kagawads (Council Members)
+                        </span>
+                        <div className='grid grid-cols-1 gap-2 sm:grid-cols-2'>
+                          {sbMembers.map((member, idx) => (
                             <div
-                              key={record.year}
-                              className='flex justify-between items-center p-3 text-sm leading-relaxed bg-kapwa-bg-surface-brand-active hover:bg-kapwa-bg-surface-brand transition-colors'
+                              key={idx}
+                              className='bg-kapwa-bg-surface-raised border border-kapwa-border-weak rounded-lg px-2.5 py-1.5 text-xs text-kapwa-text-support font-semibold'
                             >
-                              <span>Census Year {record.year}</span>
-                              <span>
-                                {record.population.toLocaleString('en-PH')}
-                              </span>
+                              {member.name}
                             </div>
                           ))}
                         </div>
                       </div>
                     )}
-                </div>
-              </div>
-            </ScrollArea>
-          </div>
+
+                    {skChairperson && (
+                      <div className='bg-kapwa-bg-surface-raised border border-kapwa-border-weak rounded-xl p-3 shadow-xs'>
+                        <span className='text-[10px] uppercase tracking-widest font-extrabold text-kapwa-text-disabled'>
+                          SK Chairperson
+                        </span>
+                        <h4 className='text-xs font-bold text-kapwa-text-strong mt-0.5'>
+                          {skChairperson.name}
+                        </h4>
+                      </div>
+                    )}
+
+                    <div className='pt-2'>
+                      <Link
+                        to={`/government/barangays/${directoryEntry.slug}`}
+                        className='w-full bg-kapwa-bg-brand-default text-white hover:bg-kapwa-bg-brand-active text-xs font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-1.5 transition-all shadow-xs'
+                      >
+                        View Full Barangay Profile
+                        <ArrowRight className='h-3.5 w-3.5' />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })()}
+            </div>
+          </ScrollArea>
         </div>
       )}
     </div>

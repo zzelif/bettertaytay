@@ -17,8 +17,10 @@ import {
 import { Link } from 'react-router-dom';
 
 import { Card, CardContent } from '@/components/ui/Card';
+import { ModuleHeader } from '@/components/layout';
+import { config } from '@/lib/lguConfig';
 
-import tourismSpots from '@/data/discover/tourism-spots.json';
+import tourismData from '@/data/discover/tourism.json';
 
 // Category config
 interface CategoryConfig {
@@ -65,7 +67,7 @@ const TourismPage: FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredSpots = tourismSpots.filter(spot => {
+  const filteredSpots = tourismData.filter(spot => {
     const matchesCategory =
       activeCategory === 'all' || spot.category === activeCategory;
     const matchesSearch =
@@ -78,30 +80,24 @@ const TourismPage: FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const featuredSpots = tourismSpots.filter(s => s.featured);
+  const featuredSpots = tourismData.filter(s => s.featured);
   const showFeatured = activeCategory === 'all' && !searchTerm;
 
   // Count per category
   const categoryCounts = Object.fromEntries(
     Object.keys(CATEGORIES).map(key => [
       key,
-      tourismSpots.filter(s => s.category === key).length,
+      tourismData.filter(s => s.category === key).length,
     ])
   );
 
   return (
     <div className='animate-in fade-in duration-500'>
       {/* Page Header */}
-      <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-        <h2 className='text-kapwa-text-strong kapwa-heading-lg mb-2 font-extrabold tracking-tight'>
-          Tourism & Attractions
-        </h2>
-        <p className='text-kapwa-text-support max-w-2xl text-sm leading-relaxed'>
-          Discover what makes Taytay special — from centuries-old churches and
-          bustling garment markets to local delicacies and family-friendly
-          resorts.
-        </p>
-      </div>
+      <ModuleHeader
+        title='Tourism & Attractions'
+        description={`Discover what makes ${config.lgu.name} special — from centuries-old churches and bustling garment markets to local delicacies and family-friendly resorts.`}
+      />
 
       {/* Featured Spots — Only when showing "All" with no search */}
       {showFeatured && (
@@ -174,6 +170,7 @@ const TourismPage: FC = () => {
             />
             {searchTerm && (
               <button
+                title='Clear search'
                 onClick={() => setSearchTerm('')}
                 className='text-kapwa-text-disabled hover:text-kapwa-text-support absolute inset-y-0 right-0 flex items-center pr-3'
               >
@@ -192,7 +189,7 @@ const TourismPage: FC = () => {
                   : 'bg-kapwa-bg-surface text-kapwa-text-support hover:bg-kapwa-bg-hover'
               }`}
             >
-              All ({tourismSpots.length})
+              All ({tourismData.length})
             </button>
             {Object.entries(CATEGORIES).map(([key, cat]) => {
               const Icon = cat.icon;

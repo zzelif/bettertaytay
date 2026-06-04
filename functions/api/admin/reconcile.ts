@@ -82,7 +82,7 @@ async function handleGetReconcile(context: {
   `;
 
   try {
-    const result = await env.BETTERLB_DB.prepare(sql)
+    const result = await env.BETTERTAYTAY_DB.prepare(sql)
       .bind(limit.toString(), offset.toString())
       .all();
 
@@ -94,11 +94,11 @@ async function handleGetReconcile(context: {
       // Check for moved_by conflicts (if we have Facebook data)
       if (doc.source_type === 'facebook' && doc.moved_by) {
         // Try to find corresponding PDF record
-        const pdfDoc = await env.BETTERLB_DB.prepare(
+        const pdfDoc = await env.BETTERTAYTAY_DB.prepare(
           `SELECT moved_by, seconded_by FROM documents WHERE number = ?1 AND type = ?2 AND source_type = 'pdf'`
         )
           .bind(doc.number, doc.type)
-          .first();
+          .first<{ moved_by: string | null; seconded_by: string | null }>();
 
         if (pdfDoc && pdfDoc.moved_by !== doc.moved_by) {
           items.push({
@@ -156,7 +156,7 @@ async function resolveConflict(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json();
+    const body = await request.json() as { conflict_id?: string; resolved_value?: string; notes?: string };
     const { conflict_id, resolved_value, notes } = body;
 
     if (!conflict_id || resolved_value === undefined) {
@@ -181,7 +181,7 @@ async function resolveConflict(context: {
       return Response.json({ error: 'Invalid conflict type' }, { status: 400 });
     }
 
-    await env.BETTERLB_DB.prepare(updateSql)
+    await env.BETTERTAYTAY_DB.prepare(updateSql)
       .bind(resolved_value, notes || '', documentId)
       .run();
 
@@ -220,7 +220,7 @@ async function skipConflict(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json();
+    const body = await request.json() as { conflict_id?: string };
     const { conflict_id } = body;
 
     if (!conflict_id) {
@@ -258,8 +258,8 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
   // Route to appropriate handler
   // /api/admin/reconcile/skip -> pathParts[3] = "skip"
   if (pathParts[3] === 'skip') {
-    return withAuth(skipConflict, { requireCSRF: true })(context);
+    return withAuth<{ request: Request; env: Env }>(skipConflict, { requireCSRF: true })(context);
   }
 
-  return withAuth(resolveConflict, { requireCSRF: true })(context);
+  return withAuth<{ request: Request; env: Env }>(resolveConflict, { requireCSRF: true })(context);
 }

@@ -79,7 +79,7 @@ export function ContactItem({
         href={href}
         target={external ? '_blank' : undefined}
         rel={external ? 'noreferrer' : undefined}
-        className='focus:ring-kapwa-border-brand block min-h-[44px] rounded-xl focus:ring-2 focus:outline-none'
+        className='focus:ring-kapwa-border-brand block min-h-11 rounded-xl focus:ring-2 focus:outline-none'
         aria-label={`${label}: ${Array.isArray(value) ? value[0] : value}`}
       >
         {content}

@@ -1,43 +1,15 @@
 import { FC, useState } from 'react';
 
-import {
-  ChevronDown,
-  Church,
-  Feather,
-  ForkKnifeCrossed,
-  Gavel,
-  Leaf,
-  LucideIcon,
-  MapPin,
-  Mountain,
-  Scroll,
-  Shirt,
-  ToolCase,
-  Waves,
-  ArrowRight,
-} from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { Button } from '@bettergov/kapwa/button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { ModuleHeader } from '@/components/layout';
 
 import { config } from '@/lib/lguConfig';
 
 import historyData from '@/data/about/history.json';
-
-const ICON_MAP: Record<string, LucideIcon> = {
-  Waves,
-  Feather,
-  Scroll,
-  Leaf,
-  Gavel,
-  Mountain,
-  MapPin,
-  ForkKnifeCrossed,
-  Church,
-  Shirt,
-  ToolCase,
-};
 
 const HistoryPage: FC = () => {
   const [showAll, setShowAll] = useState(false);
@@ -50,16 +22,10 @@ const HistoryPage: FC = () => {
   return (
     <div className='animate-in fade-in duration-500'>
       {/* Page Header */}
-      <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-        <h2 className='text-kapwa-text-strong kapwa-heading-lg mb-2 font-extrabold tracking-tight'>
-          History of {config.lgu.name}
-        </h2>
-        <p className='text-kapwa-text-support max-w-2xl text-sm leading-relaxed'>
-          From its origins in the pre-Hispanic Kingdom of Namayan to its modern
-          identity as the Garments Capital of the Philippines, Taytay's history
-          spans centuries of resilience, faith, and enterprise.
-        </p>
-      </div>
+      <ModuleHeader
+        title={`History of ${config.lgu.name}`}
+        description={`From its origins in the pre-Hispanic Kingdom of Namayan to its modern identity as the Garments Capital of the Philippines, ${config.lgu.name}'s history spans centuries of resilience, faith, and enterprise.`}
+      />
 
       {/* Quick Stats */}
       <div className='mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>

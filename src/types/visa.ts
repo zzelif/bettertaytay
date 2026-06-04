@@ -1,60 +1,60 @@
-export interface VisaSubtype {
-  id: string;
-  name: string;
-  description: string;
-  requirements:
-    | string[]
-    | {
-        businessOwners?: string[];
-        employees?: string[];
-      };
-}
-
-export interface VisaType {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  minimumRequirements: string[];
-  subtypes?: VisaSubtype[];
-}
-
-export interface VisaFreeEntryPolicy {
+export interface OutboundRequirement {
   id: string;
   title: string;
   description: string;
-  countries?: string[];
-  requirements?: string[];
-  additionalInfo?: string;
-  eligibleGroups?: string[];
-  policies?: {
-    group: string;
-    policy: string;
-  }[];
+  icon: string;
+  link?: string;
+  linkLabel?: string;
 }
 
-export interface VisaRequiredNationals {
+export interface ImportantVisaInfo {
+  id: string;
+  title: string;
   description: string;
+  link?: string;
+  linkLabel?: string;
+  note?: string;
+}
+
+export interface VisaTypeItem {
+  code: string;
+  name: string;
+  description: string;
+  link?: string;
+  linkLabel?: string;
+}
+
+export interface VisaTypeCategory {
+  category: string;
+  description: string;
+  items: VisaTypeItem[];
+}
+
+export interface CountryVisaPolicy {
+  name: string;
+  visaFree: boolean;
+  allowedStay: string;
+  visaType: string;
+  requirements: string;
+}
+
+export interface EmbassyOffice {
+  name: string;
+  city: string;
   url: string;
 }
 
-export interface SourceInfo {
-  officialSource: string;
+export interface EmbassyRegion {
+  region: string;
+  offices: EmbassyOffice[];
+}
+
+export interface FilipinoOutboundTravelPolicy {
   lastUpdated: string;
   disclaimer: string;
-}
-
-export interface PhilippinesVisaPolicy {
-  visaTypes: VisaType[];
-  visaFreeEntryPolicies: VisaFreeEntryPolicy[];
-  visaRequiredNationals: VisaRequiredNationals;
-  sourceInfo: SourceInfo;
-}
-
-export interface VisaRequirement {
-  type: 'visa-free' | 'visa-required' | 'special-condition';
-  duration?: string;
-  description?: string;
-  requirements?: string[];
-  additionalInfo?: string;
+  entryRequirements: OutboundRequirement[];
+  importantVisaInfo: ImportantVisaInfo[];
+  visaTypes: VisaTypeCategory[];
+  countries: CountryVisaPolicy[];
+  embassies: EmbassyRegion[];
 }

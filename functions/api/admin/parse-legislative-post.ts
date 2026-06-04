@@ -397,7 +397,7 @@ async function matchPersonsToDatabase(
     const lastName = nameParts[nameParts.length - 1];
 
     // Try exact match on first and last name
-    let match = await env.BETTERLB_DB.prepare(
+    let match = await env.BETTERTAYTAY_DB.prepare(
       `SELECT id, first_name, middle_name, last_name, suffix
        FROM persons
        WHERE LOWER(first_name) = LOWER(?1) AND LOWER(last_name) = LOWER(?2)`
@@ -413,7 +413,7 @@ async function matchPersonsToDatabase(
 
     // If no exact match, try fuzzy search
     if (!match) {
-      match = await env.BETTERLB_DB.prepare(
+      match = await env.BETTERTAYTAY_DB.prepare(
         `SELECT id, first_name, middle_name, last_name, suffix
          FROM persons
          WHERE LOWER(first_name) LIKE LOWER(?1) OR LOWER(last_name) LIKE LOWER(?2)
@@ -431,7 +431,7 @@ async function matchPersonsToDatabase(
 
     // If still no match, try searching full name
     if (!match) {
-      match = await env.BETTERLB_DB.prepare(
+      match = await env.BETTERTAYTAY_DB.prepare(
         `SELECT id, first_name, middle_name, last_name, suffix
          FROM persons
          WHERE first_name || ' ' || last_name LIKE ?1
@@ -475,7 +475,7 @@ async function handleParseLegislativePost(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json();
+    const body = await request.json() as { content?: string };
     const { content } = body;
 
     if (!content || typeof content !== 'string') {

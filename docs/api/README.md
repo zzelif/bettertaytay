@@ -244,7 +244,7 @@ curl "https://betterlb.gov.ph/api/admin/audit-logs?action=create_document&limit=
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `BETTERLB_DB` | D1 database binding | Cloudflare D1 binding |
+| `BETTERTAYTAY_DB` | D1 database binding | Cloudflare D1 binding |
 | `WEATHER_KV` | KV namespace for weather caching | Cloudflare KV binding |
 
 ### Required for Admin APIs

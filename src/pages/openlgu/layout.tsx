@@ -1,9 +1,8 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { parseAsStringEnum, useQueryState } from 'nuqs';
 
-import { PageHeader } from '@/components/layout';
-import { SidebarLayout } from '@/components/layout/SidebarLayout';
+import { PageHeader, SidebarLayout, SuspenseOutlet } from '@/components/layout';
 import SearchInput from '@/components/ui/SearchInput';
 
 import useOpenLGU from '@/hooks/useOpenLGU';
@@ -100,7 +99,7 @@ export default function OpenLGULayout() {
         />
       }
     >
-      <Outlet
+      <SuspenseOutlet
         context={{
           searchQuery,
           setSearchQuery,

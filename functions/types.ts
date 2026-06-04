@@ -5,7 +5,7 @@ export interface Env {
   BROWSER_KV: KVNamespace;
 
   // D1 Database
-  BETTERLB_DB: D1Database;
+  BETTERTAYTAY_DB: D1Database;
   DB: D1Database; // Legacy name for backward compatibility
 
   // Environment variables
@@ -25,6 +25,8 @@ export interface Env {
   GOOGLE_CLIENT_SECRET?: string;
   GOOGLE_REDIRECT_URI?: string;
   AUTHORIZED_USERS?: string;
+  REQUEST_SIZE_LIMIT?: string;
+  ENVIRONMENT?: string;
 }
 
 // Interface for Philippine city coordinates

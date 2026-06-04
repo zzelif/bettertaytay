@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import {
   Navigate,
   Route,
@@ -15,77 +16,104 @@ import { HotlineBar } from '@/components/layout/HotlineBar';
 import { SEO } from '@/components/layout/SEO';
 import { ScrollToTop } from '@/components/layout/ScrollToTop';
 import Ticker from '@/components/ui/Ticker';
+import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
+import { config } from '@/lib/lguConfig';
+import 'leaflet/dist/leaflet.css';
 
-import ContactUs from '@/pages/ContactUs';
-import Discord from '@/pages/Discord';
-// --- Pages ---
-import Home from '@/pages/Home';
-import Ideas from '@/pages/Ideas';
-import JoinUs from '@/pages/JoinUs';
-import NotFound from '@/pages/NotFound';
-import SearchPage from '@/pages/Search';
-import Hotlines from '@/pages/Hotlines';
-import TermsOfService from '@/pages/TermsOfService';
-import AboutPage from '@/pages/about';
-import AccessibilityPage from '@/pages/accessibility';
-import AdminAuditLog from '@/pages/admin/AuditLog';
-import AdminDocuments from '@/pages/admin/Documents';
-import AdminErrorLog from '@/pages/admin/ErrorLog';
-import AdminReconcile from '@/pages/admin/Reconcile';
-import AdminReviewQueue from '@/pages/admin/ReviewQueue';
-import DeletionQueue from '@/pages/admin/components/DeletionQueue';
-import PersonMergeTool from '@/pages/admin/components/PersonMergeTool';
-import AdminDashboard from '@/pages/admin/index';
-// Admin Routes
-import AdminLayout from '@/pages/admin/layout';
-import ForexPage from '@/pages/data/forex';
-// --- Data Pages ---
-import WeatherPage from '@/pages/data/weather';
-import BarangaysIndex from '@/pages/government/barangays';
-import BarangayDetail from '@/pages/government/barangays/[barangay]';
-import BarangaysLayout from '@/pages/government/barangays/layout';
-import DepartmentsIndex from '@/pages/government/departments';
-import DepartmentDetail from '@/pages/government/departments/[department]';
-import DepartmentsLayout from '@/pages/government/departments/layout';
-// --- Discover Pages ---
-import TaytayMapPortal from '@/pages/discover/map';
-import AboutTaytay from '@/pages/discover/about';
-import HistoryPage from '@/pages/discover/history';
-import CulturePage from '@/pages/discover/culture';
-import TourismPage from '@/pages/discover/tourism';
-import TravelIndex from '@/pages/discover/travel';
-import VisaChecker from '@/pages/discover/travel/visa';
-import DiscoverLayout from '@/pages/discover/layout';
-// --- Directory Modules ---
-import ElectedOfficialsIndex from '@/pages/government/elected-officials';
-import ElectedOfficialsLayout from '@/pages/government/elected-officials/layout';
-import MunicipalCommitteesPage from '@/pages/government/elected-officials/municipal-committees';
-import GovernmentRootLayout from '@/pages/government/layout';
-import ReferenceImplementationPage from '@/pages/government/reference-implementation';
-import LegacyDocumentRedirect from '@/pages/openlgu/LegacyDocumentRedirect';
-import LegislationDetail from '@/pages/openlgu/[document]';
-import PersonDetail from '@/pages/openlgu/[person]';
-import SessionDetail from '@/pages/openlgu/[session]';
-import TermDetail from '@/pages/openlgu/[term]';
-import LegislationIndex from '@/pages/openlgu/index';
-import OpenLGULayout from '@/pages/openlgu/layout';
-import OfficialsIndex from '@/pages/openlgu/officials';
-import TermsIndex from '@/pages/openlgu/terms';
-// --- Services & Legislation ---
-import Services from '@/pages/services';
-import ServiceDetail from '@/pages/services/[service]';
-import ServicesLayout from '@/pages/services/layout';
-import SitemapPage from '@/pages/sitemap';
-import CompetitivenessPage from '@/pages/statistics/CompetitivenessPage';
-import MunicipalIncomePage from '@/pages/statistics/MunicipalIncomePage';
-import PopulationPage from '@/pages/statistics/PopulationPage';
-import StatisticsLayout from '@/pages/statistics/layout';
-import FinancialPage from '@/pages/transparency/financial';
-import TransparencyIndex from '@/pages/transparency/index';
-import InfrastructurePage from '@/pages/transparency/infrastructure';
-import InfrastructureDetail from '@/pages/transparency/infrastructure/[project]';
-import TransparencyLayout from '@/pages/transparency/layout';
-import ProcurementPage from '@/pages/transparency/procurement';
+const ContactUs = lazy(() => import('@/pages/ContactUs'));
+const Discord = lazy(() => import('@/pages/Discord'));
+const Home = lazy(() => import(/* @vite-preload */ '@/pages/Home'));
+const Ideas = lazy(() => import('@/pages/Ideas'));
+const JoinUs = lazy(() => import('@/pages/JoinUs'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
+const SearchPage = lazy(() => import('@/pages/Search'));
+const Hotlines = lazy(() => import('@/pages/Hotlines'));
+const TermsOfService = lazy(() => import('@/pages/TermsOfService'));
+const AboutPage = lazy(() => import('@/pages/about'));
+const AccessibilityPage = lazy(() => import('@/pages/accessibility'));
+const AdminAuditLog = lazy(() => import('@/pages/admin/AuditLog'));
+const AdminDocuments = lazy(() => import('@/pages/admin/Documents'));
+const AdminErrorLog = lazy(() => import('@/pages/admin/ErrorLog'));
+const AdminReconcile = lazy(() => import('@/pages/admin/Reconcile'));
+const AdminReviewQueue = lazy(() => import('@/pages/admin/ReviewQueue'));
+const DeletionQueue = lazy(
+  () => import('@/pages/admin/components/DeletionQueue')
+);
+const PersonMergeTool = lazy(
+  () => import('@/pages/admin/components/PersonMergeTool')
+);
+const AdminDashboard = lazy(() => import('@/pages/admin/index'));
+const AdminLayout = lazy(() => import('@/pages/admin/layout'));
+const ForexPage = lazy(() => import('@/pages/data/forex'));
+const WeatherPage = lazy(() => import('@/pages/data/weather'));
+const BarangaysIndex = lazy(() => import('@/pages/government/barangays'));
+const BarangayDetail = lazy(
+  () => import('@/pages/government/barangays/[barangay]')
+);
+const BarangaysLayout = lazy(
+  () => import('@/pages/government/barangays/layout')
+);
+const DepartmentsIndex = lazy(() => import('@/pages/government/departments'));
+const DepartmentDetail = lazy(
+  () => import('@/pages/government/departments/[department]')
+);
+const DepartmentsLayout = lazy(
+  () => import('@/pages/government/departments/layout')
+);
+const TaytayMapPortal = lazy(() => import('@/pages/discover/map'));
+const AboutTaytay = lazy(() => import('@/pages/discover/about'));
+const HistoryPage = lazy(() => import('@/pages/discover/history'));
+const CulturePage = lazy(() => import('@/pages/discover/culture'));
+const TourismPage = lazy(() => import('@/pages/discover/tourism'));
+const TravelIndex = lazy(() => import('@/pages/discover/travel'));
+const VisaChecker = lazy(() => import('@/pages/discover/travel/visa'));
+const DiscoverLayout = lazy(() => import('@/pages/discover/layout'));
+const ElectedOfficialsIndex = lazy(
+  () => import('@/pages/government/elected-officials')
+);
+const ElectedOfficialsLayout = lazy(
+  () => import('@/pages/government/elected-officials/layout')
+);
+const MunicipalCommitteesPage = lazy(
+  () => import('@/pages/government/elected-officials/municipal-committees')
+);
+const GovernmentRootLayout = lazy(() => import('@/pages/government/layout'));
+const ReferenceImplementationPage = lazy(
+  () => import('@/pages/government/reference-implementation')
+);
+const LegacyDocumentRedirect = lazy(
+  () => import('@/pages/openlgu/LegacyDocumentRedirect')
+);
+const LegislationDetail = lazy(() => import('@/pages/openlgu/[document]'));
+const PersonDetail = lazy(() => import('@/pages/openlgu/[person]'));
+const SessionDetail = lazy(() => import('@/pages/openlgu/[session]'));
+const TermDetail = lazy(() => import('@/pages/openlgu/[term]'));
+const LegislationIndex = lazy(() => import('@/pages/openlgu/index'));
+const OpenLGULayout = lazy(() => import('@/pages/openlgu/layout'));
+const OfficialsIndex = lazy(() => import('@/pages/openlgu/officials'));
+const TermsIndex = lazy(() => import('@/pages/openlgu/terms'));
+const Services = lazy(() => import('@/pages/services'));
+const ServiceDetail = lazy(() => import('@/pages/services/[service]'));
+const ServicesLayout = lazy(() => import('@/pages/services/layout'));
+const SitemapPage = lazy(() => import('@/pages/sitemap'));
+const CompetitivenessPage = lazy(
+  () => import('@/pages/statistics/CompetitivenessPage')
+);
+const MunicipalIncomePage = lazy(
+  () => import('@/pages/statistics/MunicipalIncomePage')
+);
+const PopulationPage = lazy(() => import('@/pages/statistics/PopulationPage'));
+const StatisticsLayout = lazy(() => import('@/pages/statistics/layout'));
+const FinancialPage = lazy(() => import('@/pages/transparency/financial'));
+const TransparencyIndex = lazy(() => import('@/pages/transparency/index'));
+const InfrastructurePage = lazy(
+  () => import('@/pages/transparency/infrastructure')
+);
+const InfrastructureDetail = lazy(
+  () => import('@/pages/transparency/infrastructure/[project]')
+);
+const TransparencyLayout = lazy(() => import('@/pages/transparency/layout'));
+const ProcurementPage = lazy(() => import('@/pages/transparency/procurement'));
 
 function App() {
   return (
@@ -112,42 +140,153 @@ function AppContent() {
 
       <Routes>
         {/* Standard Global Pages */}
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/contact' element={<ContactUs />} />
-        <Route path='/accessibility' element={<AccessibilityPage />} />
-        <Route path='/search' element={<SearchPage />} />
-        <Route path='/hotlines' element={<Hotlines />} />
-        <Route path='/ideas' element={<Ideas />} />
-        <Route path='/join-us' element={<JoinUs />} />
-        <Route path='/terms-of-service' element={<TermsOfService />} />
-        <Route path='/sitemap' element={<SitemapPage />} />
+        <Route
+          path='/'
+          element={
+            <ErrorBoundary level='route' context='Home'>
+              <Home />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/about'
+          element={
+            <ErrorBoundary level='route' context='About'>
+              <AboutPage />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/contact'
+          element={
+            <ErrorBoundary level='route' context='Contact'>
+              <ContactUs />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/accessibility'
+          element={
+            <ErrorBoundary level='route' context='Accessibility'>
+              <AccessibilityPage />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/search'
+          element={
+            <ErrorBoundary level='route' context='Search'>
+              <SearchPage />
+            </ErrorBoundary>
+          }
+        />
+        {config.features.hotlines && (
+          <Route
+            path='/hotlines'
+            element={
+              <ErrorBoundary level='route' context='Hotlines'>
+                <Hotlines />
+              </ErrorBoundary>
+            }
+          />
+        )}
+        <Route
+          path='/ideas'
+          element={
+            <ErrorBoundary level='route' context='Ideas'>
+              <Ideas />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/join-us'
+          element={
+            <ErrorBoundary level='route' context='JoinUs'>
+              <JoinUs />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/terms-of-service'
+          element={
+            <ErrorBoundary level='route' context='TermsOfService'>
+              <TermsOfService />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/sitemap'
+          element={
+            <ErrorBoundary level='route' context='Sitemap'>
+              <SitemapPage />
+            </ErrorBoundary>
+          }
+        />
         <Route path='/discord' Component={Discord} />
 
         {/* Data Utilities */}
-        <Route path='/data/weather' element={<WeatherPage />} />
-        <Route path='/data/forex' element={<ForexPage />} />
+        <Route
+          path='/data/weather'
+          element={
+            <ErrorBoundary level='route' context='Weather'>
+              <WeatherPage />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path='/data/forex'
+          element={
+            <ErrorBoundary level='route' context='Forex'>
+              <ForexPage />
+            </ErrorBoundary>
+          }
+        />
 
         {/* Discover Hub */}
-        <Route path='/discover' element={<DiscoverLayout />}>
-          <Route index element={<Navigate to='about' replace />} />
-          <Route path='about' element={<AboutTaytay />} />
-          <Route path='history' element={<HistoryPage />} />
-          <Route path='culture' element={<CulturePage />} />
-          <Route path='tourism' element={<TourismPage />} />
-          <Route path='travel' element={<TravelIndex />} />
-          <Route path='travel/visa' element={<VisaChecker />} />
-          <Route path='map' element={<TaytayMapPortal />} />
-        </Route>
+        {config.features.discover && (
+          <Route
+            path='/discover'
+            element={
+              <ErrorBoundary level='route' context='Discover'>
+                <DiscoverLayout />
+              </ErrorBoundary>
+            }
+          >
+            <Route index element={<Navigate to='about' replace />} />
+            <Route path='about' element={<AboutTaytay />} />
+            <Route path='history' element={<HistoryPage />} />
+            <Route path='culture' element={<CulturePage />} />
+            {config.features.tourism && (
+              <Route path='tourism' element={<TourismPage />} />
+            )}
+            <Route path='travel' element={<TravelIndex />} />
+            <Route path='travel/visa' element={<VisaChecker />} />
+            <Route path='map' element={<TaytayMapPortal />} />
+          </Route>
+        )}
 
         {/* Services Module (Detail nested in Layout for Sidebar persistence) */}
-        <Route path='/services' element={<ServicesLayout />}>
+        <Route
+          path='/services'
+          element={
+            <ErrorBoundary level='route' context='Services'>
+              <ServicesLayout />
+            </ErrorBoundary>
+          }
+        >
           <Route index element={<Services />} />
           <Route path=':service' element={<ServiceDetail />} />
         </Route>
 
         {/* Government Directory Hub */}
-        <Route path='/government' element={<GovernmentRootLayout />}>
+        <Route
+          path='/government'
+          element={
+            <ErrorBoundary level='route' context='Government'>
+              <GovernmentRootLayout />
+            </ErrorBoundary>
+          }
+        >
           <Route index element={<Navigate to='elected-officials' replace />} />
 
           {/* 1. Elected Officials */}
@@ -176,43 +315,80 @@ function AppContent() {
         </Route>
 
         {/* Statistics Dashboard */}
-        <Route path='statistics' element={<StatisticsLayout />}>
-          <Route index element={<PopulationPage />} />
-          <Route path='population' element={<PopulationPage />} />
-          <Route path='municipal-income' element={<MunicipalIncomePage />} />
-          <Route path='competitiveness' element={<CompetitivenessPage />} />
-        </Route>
+        {config.features.statistics && (
+          <Route
+            path='statistics'
+            element={
+              <ErrorBoundary level='route' context='Statistics'>
+                <StatisticsLayout />
+              </ErrorBoundary>
+            }
+          >
+            <Route index element={<PopulationPage />} />
+            <Route path='population' element={<PopulationPage />} />
+            <Route path='municipal-income' element={<MunicipalIncomePage />} />
+            <Route path='competitiveness' element={<CompetitivenessPage />} />
+          </Route>
+        )}
 
         {/* OpenLGU Portal */}
-        <Route path='openlgu' element={<OpenLGULayout />}>
-          <Route index element={<LegislationIndex />} />
-          <Route path='officials' element={<OfficialsIndex />} />
-          <Route path='terms' element={<TermsIndex />} />
-          {/* Legacy redirect for backward compatibility */}
-          <Route path=':type/:document' element={<LegacyDocumentRedirect />} />
-          {/* New unified document route */}
-          <Route path='documents/:document' element={<LegislationDetail />} />
-          <Route path='session/:sessionId' element={<SessionDetail />} />
-          <Route path='person/:personId' element={<PersonDetail />} />
-          <Route path='term/:termId' element={<TermDetail />} />
-        </Route>
+        {config.features.openLGU && (
+          <Route
+            path='openlgu'
+            element={
+              <ErrorBoundary level='route' context='OpenLGU'>
+                <OpenLGULayout />
+              </ErrorBoundary>
+            }
+          >
+            <Route index element={<LegislationIndex />} />
+            <Route path='officials' element={<OfficialsIndex />} />
+            <Route path='terms' element={<TermsIndex />} />
+            {/* Legacy redirect for backward compatibility */}
+            <Route
+              path=':type/:document'
+              element={<LegacyDocumentRedirect />}
+            />
+            {/* New unified document route */}
+            <Route path='documents/:document' element={<LegislationDetail />} />
+            <Route path='session/:sessionId' element={<SessionDetail />} />
+            <Route path='person/:personId' element={<PersonDetail />} />
+            <Route path='term/:termId' element={<TermDetail />} />
+          </Route>
+        )}
 
         {/* Transparency Portal */}
-        <Route path='/transparency' element={<TransparencyLayout />}>
-          <Route index element={<TransparencyIndex />} />
-          <Route path='financial' element={<FinancialPage />} />
-          <Route path='procurement' element={<ProcurementPage />} />
-          <Route path='/transparency/infrastructure'>
-            <Route index element={<InfrastructurePage />} />
-            <Route path=':contractId' element={<InfrastructureDetail />} />
+        {config.features.transparency && (
+          <Route
+            path='/transparency'
+            element={
+              <ErrorBoundary level='route' context='Transparency'>
+                <TransparencyLayout />
+              </ErrorBoundary>
+            }
+          >
+            <Route index element={<TransparencyIndex />} />
+            <Route path='financial' element={<FinancialPage />} />
+            <Route path='procurement' element={<ProcurementPage />} />
+            <Route path='/transparency/infrastructure'>
+              <Route index element={<InfrastructurePage />} />
+              <Route path=':contractId' element={<InfrastructureDetail />} />
+            </Route>
           </Route>
-        </Route>
+        )}
 
         {/* Community Contribution Flow */}
         {/* <Route path='contribute' element={<ContributePage />} /> */}
 
         {/* Admin Routes */}
-        <Route path='/admin' element={<AdminLayout />}>
+        <Route
+          path='/admin'
+          element={
+            <ErrorBoundary level='route' context='Admin'>
+              <AdminLayout />
+            </ErrorBoundary>
+          }
+        >
           <Route index element={<AdminDashboard />} />
           <Route path='documents' element={<AdminDocuments />} />
           <Route path='persons/merge' element={<PersonMergeTool />} />

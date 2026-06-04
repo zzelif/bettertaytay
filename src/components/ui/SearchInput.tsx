@@ -44,6 +44,7 @@ const SearchInput = ({
         {icon}
       </div>
       <input
+        name='search'
         type='text'
         value={value}
         onChange={e => onChangeValue(e.target.value)}
@@ -60,6 +61,7 @@ const SearchInput = ({
       />
       {clearable && value && (
         <button
+          title='Clear'
           type='button'
           className='text-kapwa-text-disabled hover:text-kapwa-text-on-disabled absolute inset-y-0 right-0 flex items-center pr-3 transition-colors'
           onClick={handleClear}

@@ -50,7 +50,7 @@ async function handleListSessions(context: {
     sql += ` ORDER BY s.date DESC LIMIT ?${paramIndex++} OFFSET ?${paramIndex++}`;
     params.push(limit.toString(), offset.toString());
 
-    const result = await env.BETTERLB_DB.prepare(sql)
+    const result = await env.BETTERTAYTAY_DB.prepare(sql)
       .bind(...params)
       .all();
 
@@ -121,7 +121,7 @@ async function handleCreateSession(context: {
     const sessionId = `session_${generateCryptoId()}`;
 
     // Insert session - use correct column name 'type' and 'number'
-    await env.BETTERLB_DB.prepare(
+    await env.BETTERTAYTAY_DB.prepare(
       `INSERT INTO sessions (id, term_id, type, number, date)
        VALUES (?1, ?2, ?3, ?4, ?5)`
     )
@@ -137,7 +137,7 @@ async function handleCreateSession(context: {
     // Add absences if provided
     if (body.absent_person_ids && body.absent_person_ids.length > 0) {
       for (const personId of body.absent_person_ids) {
-        await env.BETTERLB_DB.prepare(
+        await env.BETTERTAYTAY_DB.prepare(
           `INSERT INTO session_absences (session_id, person_id) VALUES (?1, ?2)`
         )
           .bind(sessionId, personId)

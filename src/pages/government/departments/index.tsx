@@ -10,7 +10,6 @@ import SearchInput from '@/components/ui/SearchInput';
 
 import { officeIcons } from '@/lib/officeIcons';
 import { formatGovName, toTitleCase } from '@/lib/stringUtils';
-import { toTelUri } from '@/lib/utils';
 
 import departmentsData from '@/data/directory/generated_departments.json';
 
@@ -96,23 +95,14 @@ export default function DepartmentsIndex() {
                   {/* Bottom Row: Contact & Website */}
                   <div className='mt-auto flex items-center justify-between gap-4 border-t border-kapwa-border-weak pt-3'>
                     {dept.trunkline ? (
-                      <a
-                        href={
-                          toTelUri(
-                            Array.isArray(dept.trunkline)
-                              ? dept.trunkline[0]
-                              : dept.trunkline
-                          ) || '#'
-                        }
-                        className='text-kapwa-text-disabled flex items-center gap-1.5 text-[11px] font-medium hover:text-kapwa-text-brand transition-colors'
-                      >
+                      <div className='text-kapwa-text-disabled flex items-center gap-1.5 text-[11px] font-medium'>
                         <Phone className='text-kapwa-text-brand h-3 w-3' />
                         <span>
                           {Array.isArray(dept.trunkline)
                             ? dept.trunkline[0]
                             : dept.trunkline}
                         </span>
-                      </a>
+                      </div>
                     ) : (
                       <div className='text-kapwa-text-support text-[10px] italic'>
                         No contact

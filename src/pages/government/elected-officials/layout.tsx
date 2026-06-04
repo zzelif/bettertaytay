@@ -1,6 +1,6 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-import { SidebarLayout } from '@/components/layout/SidebarLayout';
+import { SidebarLayout, SuspenseOutlet } from '@/components/layout';
 
 import ElectedOfficialsSidebar from './components/ElectedOfficialsSidebar';
 
@@ -16,7 +16,7 @@ export default function ElectedOfficialsLayout() {
       collapsible={true}
       defaultCollapsed={isDeepPage}
     >
-      <Outlet />
+      <SuspenseOutlet />
     </SidebarLayout>
   );
 }

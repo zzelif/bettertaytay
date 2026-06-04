@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 interface Env {
   GITHUB_TOKEN: string;
   GITHUB_REPO: string;
@@ -19,7 +20,7 @@ interface GitHubErrorResponse {
   message: string;
 }
 
-export const onRequestPost: PagesFunction<Env> = async context => {
+async function handlePost(context: EventContext<Env, any, any>) {
   const { env, request } = context;
 
   try {
@@ -87,4 +88,17 @@ export const onRequestPost: PagesFunction<Env> = async context => {
       headers: { 'Content-Type': 'application/json' },
     });
   }
+}
+
+export const onRequest: PagesFunction<Env> = async context => {
+  if (context.request.method === 'POST') {
+    return handlePost(context);
+  }
+  return new Response(
+    JSON.stringify({ error: 'Method Not Allowed. Use POST to submit contributions.' }),
+    {
+      status: 405,
+      headers: { 'Content-Type': 'application/json', Allow: 'POST' },
+    }
+  );
 };

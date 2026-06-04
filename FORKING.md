@@ -311,7 +311,7 @@ See the **[Visual Assets Guide](visual-assets.md)** for comprehensive documentat
 
 ## 💾 D1 Database (Legislative Data)
 
-The D1 database (`betterlb_openlgu` remote, `BETTERLB_DB` local) contains all legislative data.
+The D1 database (`betterlb_openlgu` remote, `BETTERTAYTAY_DB` local) contains all legislative data.
 
 ### Core Tables to Populate
 
@@ -335,13 +335,13 @@ The D1 database (`betterlb_openlgu` remote, `BETTERLB_DB` local) contains all le
 
 ```bash
 # Local development
-npx wrangler d1 execute BETTERLB_DB --local --file=db/migrations/001_initial_schema.sql
+npx wrangler d1 execute BETTERTAYTAY_DB --local --file=db/migrations/001_initial_schema.sql
 
 # Remote production
 npx wrangler d1 execute betterlb_openlgu --remote --file=db/migrations/001_initial_schema.sql
 
 # Query local database
-npx wrangler d1 execute BETTERLB_DB --local --command="SELECT * FROM terms LIMIT 10"
+npx wrangler d1 execute BETTERTAYTAY_DB --local --command="SELECT * FROM terms LIMIT 10"
 ```
 
 ### Data Pipeline Scripts

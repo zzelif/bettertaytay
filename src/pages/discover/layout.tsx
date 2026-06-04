@@ -1,6 +1,6 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-import { PageHeader, SectionBlock } from '@/components/layout';
+import { PageHeader, SectionBlock, SuspenseOutlet } from '@/components/layout';
 import { SidebarLayout } from '@/components/layout/SidebarLayout';
 
 import DiscoverSidebar from './components/DiscoverSidebar';
@@ -11,7 +11,7 @@ export default function DiscoverLayout() {
 
   // The map page renders fullscreen without layout chrome
   if (isMapRoute) {
-    return <Outlet />;
+    return <SuspenseOutlet />;
   }
 
   return (
@@ -24,7 +24,7 @@ export default function DiscoverLayout() {
 
       <SectionBlock>
         <SidebarLayout sidebar={<DiscoverSidebar />} collapsible={true}>
-          <Outlet />
+          <SuspenseOutlet />
         </SidebarLayout>
       </SectionBlock>
     </div>

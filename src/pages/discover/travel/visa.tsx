@@ -19,46 +19,15 @@ import {
   BookOpenIcon,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/Card';
+import { ModuleHeader } from '@/components/layout';
 import visaData from '@/data/discover/visa.json';
-
-interface CountryVisa {
-  name: string;
-  visaFree: boolean;
-  allowedStay: string;
-  visaType: string;
-  requirements: string;
-}
-
-interface EntryRequirement {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  link?: string;
-  linkLabel?: string;
-}
-
-interface VisaInfoItem {
-  id: string;
-  title: string;
-  description: string;
-  link?: string;
-  linkLabel?: string;
-}
-
-interface VisaTypeItem {
-  code: string;
-  name: string;
-  description: string;
-  link?: string;
-  linkLabel?: string;
-}
-
-interface VisaTypeCategory {
-  category: string;
-  description: string;
-  items: VisaTypeItem[];
-}
+import {
+  CountryVisaPolicy,
+  OutboundRequirement,
+  ImportantVisaInfo,
+  VisaTypeCategory,
+  EmbassyRegion,
+} from '@/types/visa';
 
 const ENTRY_ICONS: Record<string, FC<{ className?: string }>> = {
   passport: BadgeCheckIcon,
@@ -69,20 +38,35 @@ const ENTRY_ICONS: Record<string, FC<{ className?: string }>> = {
 
 const VisaChecker: FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState<'all' | 'free' | 'required'>('all');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>('Non-Immigrant Visas');
+  const [filterType, setFilterType] = useState<'all' | 'free' | 'required'>(
+    'all'
+  );
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(
+    'Non-Immigrant Visas'
+  );
+  const [expandedEmbassyRegion, setExpandedEmbassyRegion] = useState<
+    string | null
+  >(null);
 
-  const filteredCountries = (visaData.countries as CountryVisa[]).filter(country => {
-    const matchesSearch = country.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter =
-      filterType === 'all' ||
-      (filterType === 'free' && country.visaFree) ||
-      (filterType === 'required' && !country.visaFree);
-    return matchesSearch && matchesFilter;
-  });
+  const filteredCountries = (visaData.countries as CountryVisaPolicy[]).filter(
+    country => {
+      const matchesSearch = country.name
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+      const matchesFilter =
+        filterType === 'all' ||
+        (filterType === 'free' && country.visaFree) ||
+        (filterType === 'required' && !country.visaFree);
+      return matchesSearch && matchesFilter;
+    }
+  );
 
-  const visaFreeCount = (visaData.countries as CountryVisa[]).filter(c => c.visaFree).length;
-  const visaRequiredCount = (visaData.countries as CountryVisa[]).filter(c => !c.visaFree).length;
+  const visaFreeCount = (visaData.countries as CountryVisaPolicy[]).filter(
+    c => c.visaFree
+  ).length;
+  const visaRequiredCount = (visaData.countries as CountryVisaPolicy[]).filter(
+    c => !c.visaFree
+  ).length;
 
   return (
     <div className='animate-in fade-in duration-500'>
@@ -96,28 +80,26 @@ const VisaChecker: FC = () => {
       </Link>
 
       {/* Page Header */}
-      <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-        <h2 className='text-kapwa-text-strong kapwa-heading-lg mb-2 font-extrabold tracking-tight'>
-          Philippines Visa Information
-        </h2>
-        <p className='text-kapwa-text-support mt-2 max-w-2xl text-sm leading-relaxed'>
-          Find out if you need a visa to visit the Philippines and learn about entry requirements.
-          Official data from the Bureau of Immigration and Philippine Department of Foreign Affairs.
-        </p>
-        <p className='text-kapwa-text-disabled mt-1 text-xs'>
+      <ModuleHeader
+        title='Outbound Travel & Visa Checker'
+        description='Planning to travel abroad? Check visa requirements, travel preparation guidelines, and embassy information for Filipino passport holders visiting countries worldwide.'
+      >
+        <div className='text-kapwa-text-disabled text-xs font-semibold whitespace-nowrap self-end'>
           Last Updated: {visaData.lastUpdated}
-        </p>
-      </div>
+        </div>
+      </ModuleHeader>
 
       {/* Legal Disclaimer */}
       <div className='border-l-4 border-l-amber-400 bg-amber-50 dark:bg-amber-950/20 text-kapwa-text-strong mb-8 flex items-start gap-3 rounded-r-xl p-4 shadow-sm'>
         <AlertTriangleIcon className='text-amber-500 h-5 w-5 shrink-0 mt-0.5' />
         <div>
           <h4 className='text-xs font-bold leading-none mb-1.5'>
-            Official Disclaimer & Information Notice
+            Official Travel Advisory Notice
           </h4>
           <p className='text-kapwa-text-support text-xs leading-relaxed'>
-            {visaData.disclaimer} This page is a community-maintained information mirror and is not a substitute for official legal guidance or an immigration officer's determination.
+            {visaData.disclaimer} This page is a community-maintained
+            information mirror and is not a substitute for official travel
+            guidance or foreign immigration determination.
           </p>
         </div>
       </div>
@@ -125,120 +107,163 @@ const VisaChecker: FC = () => {
       {/* Entry Requirements Checklist */}
       <section className='mb-10'>
         <h3 className='text-kapwa-text-strong mb-1 text-lg font-bold'>
-          Entry Requirements
+          Outbound Travel Checklist
         </h3>
         <p className='text-kapwa-text-support mb-4 text-xs leading-relaxed'>
-          All visitors must meet these baseline requirements regardless of visa status.
+          Make sure you meet these baseline requirements and prepare your
+          documents before departing from the Philippines.
         </p>
         <div className='grid grid-cols-1 gap-3 sm:grid-cols-2'>
-          {(visaData.entryRequirements as EntryRequirement[]).map((req, idx) => {
-            const Icon = ENTRY_ICONS[req.icon] || CheckCircle2;
-            return (
-              <div
-                key={req.id}
-                className='animate-in fade-in slide-in-from-bottom-2 duration-300'
-                style={{ animationDelay: `${idx * 60}ms` }}
-              >
-                <Card className='border-kapwa-border-weak bg-kapwa-bg-surface shadow-sm h-full'>
-                  <CardContent className='p-4 h-full flex flex-col'>
-                    <div className='flex items-start gap-3 flex-1'>
-                      <div className='bg-kapwa-bg-surface-brand text-kapwa-text-brand flex h-9 w-9 shrink-0 items-center justify-center rounded-lg'>
-                        <Icon className='h-4.5 w-4.5' />
+          {(visaData.entryRequirements as OutboundRequirement[]).map(
+            (req, idx) => {
+              const Icon = ENTRY_ICONS[req.icon] || CheckCircle2;
+              return (
+                <div
+                  key={req.id}
+                  className='animate-in fade-in slide-in-from-bottom-2 duration-300'
+                  style={{ animationDelay: `${idx * 60}ms` }}
+                >
+                  <Card className='border-kapwa-border-weak bg-kapwa-bg-surface shadow-sm h-full'>
+                    <CardContent className='p-4 h-full flex flex-col'>
+                      <div className='flex items-start gap-3 flex-1'>
+                        <div className='bg-kapwa-bg-surface-brand text-kapwa-text-brand flex h-9 w-9 shrink-0 items-center justify-center rounded-lg'>
+                          <Icon className='h-4.5 w-4.5' />
+                        </div>
+                        <div className='flex-1 min-w-0'>
+                          <h4 className='text-kapwa-text-strong text-sm font-bold mb-1'>
+                            {req.title}
+                          </h4>
+                          <p className='text-kapwa-text-support text-xs leading-relaxed'>
+                            {req.description}
+                          </p>
+                          {req.link && (
+                            <a
+                              href={req.link}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='text-kapwa-text-brand hover:underline mt-2 inline-flex items-center gap-1 text-xs font-semibold'
+                            >
+                              {req.linkLabel}
+                              <ExternalLink className='h-3 w-3' />
+                            </a>
+                          )}
+                        </div>
                       </div>
-                      <div className='flex-1 min-w-0'>
-                        <h4 className='text-kapwa-text-strong text-sm font-bold mb-1'>
-                          {req.title}
-                        </h4>
-                        <p className='text-kapwa-text-support text-xs leading-relaxed'>
-                          {req.description}
-                        </p>
-                        {req.link && (
-                          <a
-                            href={req.link}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className='text-kapwa-text-brand hover:underline mt-2 inline-flex items-center gap-1 text-xs font-semibold'
-                          >
-                            {req.linkLabel}
-                            <ExternalLink className='h-3 w-3' />
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            );
-          })}
+                    </CardContent>
+                  </Card>
+                </div>
+              );
+            }
+          )}
         </div>
       </section>
 
       {/* Important Visa Information */}
       <section className='mb-10'>
         <h3 className='text-kapwa-text-strong mb-1 text-lg font-bold'>
-          Important Visa Information
+          Important Visa & Departure Information
         </h3>
         <p className='text-kapwa-text-support mb-4 text-xs leading-relaxed'>
-          Key visa categories and procedures for temporary visitors.
+          Key visa procedures and mandatory regulations for Filipino travelers.
         </p>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
-          {(visaData.importantVisaInfo as VisaInfoItem[]).map((info, idx) => (
-            <div
-              key={info.id}
-              className='animate-in fade-in slide-in-from-bottom-2 duration-300'
-              style={{ animationDelay: `${idx * 80}ms` }}
-            >
-              <Card className='border-kapwa-border-weak bg-kapwa-bg-surface shadow-sm h-full'>
-                <CardContent className='p-5 h-full flex flex-col justify-between'>
-                  <div>
-                    <div className='flex items-center gap-2 mb-3'>
-                      <div className='bg-kapwa-bg-surface-brand text-kapwa-text-brand flex h-8 w-8 shrink-0 items-center justify-center rounded-lg'>
-                        <FileTextIcon className='h-4 w-4' />
+          {(visaData.importantVisaInfo as ImportantVisaInfo[]).map(
+            (info, idx) => (
+              <div
+                key={info.id}
+                className='animate-in fade-in slide-in-from-bottom-2 duration-300'
+                style={{ animationDelay: `${idx * 80}ms` }}
+              >
+                <Card className='border-kapwa-border-weak bg-kapwa-bg-surface shadow-sm h-full'>
+                  <CardContent className='p-5 h-full flex flex-col justify-between'>
+                    <div>
+                      <div className='flex items-center gap-2 mb-3'>
+                        <div className='bg-kapwa-bg-surface-brand text-kapwa-text-brand flex h-8 w-8 shrink-0 items-center justify-center rounded-lg'>
+                          <FileTextIcon className='h-4 w-4' />
+                        </div>
+                        <h4 className='text-kapwa-text-strong text-sm font-bold leading-tight'>
+                          {info.title}
+                        </h4>
                       </div>
-                      <h4 className='text-kapwa-text-strong text-sm font-bold leading-tight'>
-                        {info.title}
-                      </h4>
+                      <p className='text-kapwa-text-support text-xs leading-relaxed'>
+                        {info.description}
+                      </p>
                     </div>
-                    <p className='text-kapwa-text-support text-xs leading-relaxed'>
-                      {info.description}
-                    </p>
-                  </div>
-                  {info.link && (
-                    <a
-                      href={info.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='text-kapwa-text-brand hover:underline mt-4 inline-flex items-center gap-1 text-xs font-semibold'
-                    >
-                      {info.linkLabel}
-                      <ExternalLink className='h-3 w-3' />
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
-          ))}
+                    {info.link && (
+                      <a
+                        href={info.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-kapwa-text-brand hover:underline mt-4 inline-flex items-center gap-1 text-xs font-semibold'
+                      >
+                        {info.linkLabel}
+                        <ExternalLink className='h-3 w-3' />
+                      </a>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
+            )
+          )}
+        </div>
+
+        {/* Returning to PH travel registration note */}
+        <div className='mt-4 flex items-start gap-2.5 border border-kapwa-border-brand-soft bg-kapwa-bg-surface-brand rounded-xl px-4 py-3'>
+          <div className='shrink-0 mt-0.5 h-5 w-5 rounded-full bg-kapwa-bg-brand-default flex items-center justify-center'>
+            <span className='text-white text-[9px] font-black leading-none'>
+              !
+            </span>
+          </div>
+          <div>
+            <p className='text-xs text-kapwa-text-brand font-bold mb-0.5'>
+              Returning to the Philippines?
+            </p>
+            <p className='text-xs text-kapwa-text-brand leading-relaxed'>
+              For your return trip, don&apos;t forget to register online at the
+              official{' '}
+              <a
+                href='https://etravel.gov.ph'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='underline font-bold hover:opacity-80'
+              >
+                e-Travel Portal
+              </a>{' '}
+              within 72 hours before arrival back in the Philippines. This is a
+              mandatory requirement for all arriving passengers (both Filipinos
+              and foreigners).
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Visa Country Checker */}
       <section className='mb-10'>
         <h3 className='text-kapwa-text-strong mb-1 text-lg font-bold'>
-          Visa Exemption Checker
+          Visa Exemption Checker for Filipinos
         </h3>
         <p className='text-kapwa-text-support mb-4 text-xs leading-relaxed'>
-          Search your passport country to find out your visa status when entering the Philippines.
+          Search your destination country to check if a Filipino passport holder
+          needs a visa to enter.
         </p>
 
         {/* Summary Stats */}
         <div className='grid grid-cols-2 gap-3 mb-5'>
           <div className='bg-kapwa-bg-surface-brand border border-kapwa-border-brand-soft rounded-xl p-3 text-center'>
-            <div className='text-kapwa-text-brand text-xl font-extrabold'>{visaFreeCount}</div>
-            <div className='text-kapwa-text-brand text-[10px] font-semibold tracking-widest uppercase mt-0.5'>Visa-Free Countries</div>
+            <div className='text-kapwa-text-brand text-xl font-extrabold'>
+              {visaFreeCount}
+            </div>
+            <div className='text-kapwa-text-brand text-[10px] font-semibold tracking-widest uppercase mt-0.5'>
+              Visa-Free / eTA Destinations
+            </div>
           </div>
           <div className='bg-kapwa-bg-surface-raised border border-kapwa-border-weak rounded-xl p-3 text-center'>
-            <div className='text-kapwa-text-strong text-xl font-extrabold'>{visaRequiredCount}</div>
-            <div className='text-kapwa-text-disabled text-[10px] font-semibold tracking-widest uppercase mt-0.5'>Visa Required</div>
+            <div className='text-kapwa-text-strong text-xl font-extrabold'>
+              {visaRequiredCount}
+            </div>
+            <div className='text-kapwa-text-disabled text-[10px] font-semibold tracking-widest uppercase mt-0.5'>
+              Visa Required
+            </div>
           </div>
         </div>
 
@@ -251,13 +276,16 @@ const VisaChecker: FC = () => {
               </div>
               <input
                 type='text'
-                placeholder='Search your passport country...'
+                placeholder='Search destination country...'
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                 className='border-kapwa-border-weak bg-kapwa-bg-surface focus:ring-kapwa-border-brand focus:border-kapwa-border-brand block w-full rounded-lg border py-2 pr-10 pl-10 text-sm leading-5 focus:ring-1 focus:outline-none'
               />
               {searchTerm && (
                 <button
+                  type='button'
+                  title='Clear search'
+                  aria-label='Clear search'
                   onClick={() => setSearchTerm('')}
                   className='text-kapwa-text-disabled hover:text-kapwa-text-support absolute inset-y-0 right-0 flex items-center pr-3'
                 >
@@ -325,8 +353,12 @@ const VisaChecker: FC = () => {
 
                 <div className='space-y-2 border-t border-kapwa-border-weak pt-2.5'>
                   <div className='flex items-center justify-between text-xs'>
-                    <span className='text-kapwa-text-support font-semibold'>Allowed Stay:</span>
-                    <span className='text-kapwa-text-strong font-bold'>{country.allowedStay}</span>
+                    <span className='text-kapwa-text-support font-semibold'>
+                      Allowed Stay:
+                    </span>
+                    <span className='text-kapwa-text-strong font-bold'>
+                      {country.allowedStay}
+                    </span>
                   </div>
                   <div className='text-xs'>
                     <p className='text-kapwa-text-disabled leading-relaxed bg-kapwa-bg-surface-raised border border-kapwa-border-weak rounded-lg p-2'>
@@ -343,7 +375,9 @@ const VisaChecker: FC = () => {
         {filteredCountries.length === 0 && (
           <div className='border-kapwa-border-weak bg-kapwa-bg-surface rounded-xl border p-12 text-center shadow-sm'>
             <AlertCircle className='text-kapwa-text-disabled mx-auto mb-4 h-12 w-12' />
-            <h4 className='text-kapwa-text-strong text-base font-bold'>No passport matches found</h4>
+            <h4 className='text-kapwa-text-strong text-base font-bold'>
+              No passport matches found
+            </h4>
             <p className='text-kapwa-text-disabled mt-1 text-sm'>
               Try typing another country name, or check your spelling.
             </p>
@@ -351,13 +385,14 @@ const VisaChecker: FC = () => {
         )}
       </section>
 
-      {/* Philippines Visa Types Explorer */}
+      {/* Outbound Visa Categories */}
       <section className='mb-10'>
         <h3 className='text-kapwa-text-strong mb-1 text-lg font-bold'>
-          Philippines Visa Types Explorer
+          Outbound Visa Categories
         </h3>
         <p className='text-kapwa-text-support mb-4 text-xs leading-relaxed'>
-          Explore the different types of visas available for travel to, work in, or residence in the Philippines.
+          Understand the common visa types and documentation requirements for
+          Filipinos traveling abroad.
         </p>
 
         <div className='space-y-3'>
@@ -383,7 +418,9 @@ const VisaChecker: FC = () => {
                     <h4 className='text-kapwa-text-strong text-sm font-bold leading-tight'>
                       {cat.category}
                     </h4>
-                    <p className='text-kapwa-text-disabled text-[10px] mt-0.5'>{cat.description}</p>
+                    <p className='text-kapwa-text-disabled text-[10px] mt-0.5'>
+                      {cat.description}
+                    </p>
                   </div>
                 </div>
                 {expandedCategory === cat.category ? (
@@ -431,10 +468,99 @@ const VisaChecker: FC = () => {
         </div>
       </section>
 
+      {/* Philippine Embassies & Consulates */}
+      <section className='mb-10'>
+        <div className='flex items-start justify-between gap-4 mb-1'>
+          <h3 className='text-kapwa-text-strong text-lg font-bold'>
+            Philippine Embassies &amp; Consulates General Abroad
+          </h3>
+          <a
+            href='https://dfa.gov.ph/list-of-philippine-embassies-and-consulates-general'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-xs text-kapwa-text-brand hover:underline font-semibold shrink-0 flex items-center gap-1 mt-1'
+          >
+            Full DFA List
+            <ExternalLink className='h-3 w-3' />
+          </a>
+        </div>
+        <p className='text-kapwa-text-support mb-4 text-xs leading-relaxed'>
+          Contact the nearest Philippine foreign service post for emergency
+          consular assistance, passport services, or travel registration while
+          overseas.
+        </p>
+
+        <div className='space-y-2'>
+          {(visaData.embassies as EmbassyRegion[]).map(region => (
+            <div
+              key={region.region}
+              className='border border-kapwa-border-weak rounded-xl bg-kapwa-bg-surface overflow-hidden shadow-sm'
+            >
+              <button
+                onClick={() =>
+                  setExpandedEmbassyRegion(
+                    expandedEmbassyRegion === region.region
+                      ? null
+                      : region.region
+                  )
+                }
+                className='w-full flex items-center justify-between px-4 py-3 text-left hover:bg-kapwa-bg-hover transition-colors cursor-pointer'
+              >
+                <div>
+                  <h4 className='text-kapwa-text-strong text-sm font-bold'>
+                    {region.region}
+                  </h4>
+                  <p className='text-kapwa-text-disabled text-[10px] mt-0.5'>
+                    {region.offices.length} office
+                    {region.offices.length !== 1 ? 's' : ''}
+                  </p>
+                </div>
+                {expandedEmbassyRegion === region.region ? (
+                  <ChevronDownIcon className='text-kapwa-text-disabled h-4 w-4 shrink-0' />
+                ) : (
+                  <ChevronRightIcon className='text-kapwa-text-disabled h-4 w-4 shrink-0' />
+                )}
+              </button>
+
+              {expandedEmbassyRegion === region.region && (
+                <div className='border-t border-kapwa-border-weak divide-y divide-kapwa-border-weak'>
+                  {region.offices.map(office => (
+                    <div
+                      key={office.name}
+                      className='flex items-center justify-between px-4 py-3 hover:bg-kapwa-bg-hover transition-colors'
+                    >
+                      <div className='min-w-0 mr-3'>
+                        <p className='text-xs font-semibold text-kapwa-text-strong truncate'>
+                          {office.name}
+                        </p>
+                        <p className='text-[10px] text-kapwa-text-disabled mt-0.5'>
+                          {office.city}
+                        </p>
+                      </div>
+                      <a
+                        href={office.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-xs text-kapwa-text-brand hover:text-kapwa-text-brand-active hover:underline font-semibold flex items-center gap-1 shrink-0'
+                      >
+                        Visit
+                        <ExternalLink className='h-3 w-3' />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Official Resources */}
       <div className='border-kapwa-border-weak bg-kapwa-bg-surface-raised rounded-xl border p-5 shadow-sm'>
-        <h4 className='text-kapwa-text-strong text-sm font-bold mb-3'>Official Resources</h4>
-        <div className='grid grid-cols-1 gap-2 sm:grid-cols-3'>
+        <h4 className='text-kapwa-text-strong text-sm font-bold mb-3'>
+          Official Resources
+        </h4>
+        <div className='grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4'>
           {[
             {
               label: 'Bureau of Immigration',
@@ -443,6 +569,10 @@ const VisaChecker: FC = () => {
             {
               label: 'Dept. of Foreign Affairs',
               url: 'https://dfa.gov.ph',
+            },
+            {
+              label: 'DFA Passport Booking',
+              url: 'https://passport.gov.ph',
             },
             {
               label: 'e-Travel Portal',

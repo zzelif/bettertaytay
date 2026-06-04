@@ -1,144 +1,100 @@
 {
-  "lastUpdated": "2026-06-01",
-  "disclaimer": "This tool is for informational purposes only. Immigration policies and entry requirements can change dynamically. Always verify requirements with the official Bureau of Immigration (BI) or the Philippine Embassy/Consulate in your country before traveling.",
+  "lastUpdated": "2026-06-03",
+  "disclaimer": "This travel checker is for informational purposes only. Visa policies, exemptions, and passport requirements change frequently. Philippine citizens must always confirm the latest travel rules with the official embassy of their destination country or the Department of Foreign Affairs (DFA) before booking travel.",
   "entryRequirements": [
     {
       "id": "passport-validity",
-      "title": "Passport Validity",
-      "description": "Your passport must be valid for at least 6 months beyond your intended period of stay in the Philippines.",
+      "title": "Passport 6-Month Validity",
+      "description": "Your Philippine passport must be valid for at least 6 months beyond your planned date of departure from your destination country.",
       "icon": "passport"
     },
     {
-      "id": "return-ticket",
-      "title": "Return or Onward Ticket",
-      "description": "Proof of a confirmed return or onward travel ticket to your port of origin or next destination is required upon arrival.",
-      "icon": "ticket"
+      "id": "travel-tax",
+      "title": "Philippine Travel Tax",
+      "description": "Philippine citizens departing for international travel must pay the Travel Tax (generally PHP 1,620 for economy/tourist class) online or at the airport before boarding.",
+      "icon": "wallet",
+      "link": "https://traveltax.tieza.gov.ph",
+      "linkLabel": "Pay Travel Tax Online"
     },
     {
-      "id": "etravel",
-      "title": "e-Travel Registration",
-      "description": "All arriving passengers must register at the official Philippine e-Travel portal (etravel.gov.ph) within 72 hours before departure.",
+      "id": "etravel-outbound",
+      "title": "Outbound e-Travel",
+      "description": "All departing Filipino citizens must register online at the official e-Travel portal (etravel.gov.ph) within 72 hours before their flight out of the Philippines.",
       "icon": "globe",
       "link": "https://etravel.gov.ph",
-      "linkLabel": "Register at e-Travel Portal"
+      "linkLabel": "Register Outbound e-Travel"
     },
     {
-      "id": "sufficient-funds",
-      "title": "Proof of Sufficient Funds",
-      "description": "Immigration officers may require evidence that you have sufficient funds to support your stay (generally PHP 1,000 per day of stay, or equivalent in foreign currency).",
-      "icon": "wallet"
+      "id": "supporting-docs",
+      "title": "Immigration Inspection Documents",
+      "description": "Immigration officers may request proof of your employment (ID, COE), return ticket, hotel reservation, and financial capability to ensure compliance and prevent offloading.",
+      "icon": "ticket"
     }
   ],
   "importantVisaInfo": [
     {
-      "id": "9a-tourist-visa",
-      "title": "Temporary Visitor's Visa (9a)",
-      "description": "The 9(a) Temporary Visitor's Visa is for foreign nationals visiting the Philippines for business, tourism, medical treatment, or other temporary purposes.",
-      "link": "https://dfa.gov.ph/visa-application",
-      "linkLabel": "Learn more about Temporary Visitor's Visa"
+      "id": "schengen-visa",
+      "title": "Schengen Visa (Europe)",
+      "description": "For travel to most European Union countries, Filipinos must apply for a Schengen Visa. Applications should be submitted through accredited service providers (like VFS Global or BLS International) at least 15 days, and up to 6 months, before departure.",
+      "link": "https://www.schengenvisainfo.com/",
+      "linkLabel": "Schengen Visa Information"
     },
     {
-      "id": "visa-extensions",
-      "title": "Visa Extensions",
-      "description": "Visitors who wish to extend their stay in the Philippines beyond their authorized period can apply for an extension at the Bureau of Immigration. Extensions may be granted in increments of up to 2 months at a time.",
-      "link": "https://immigration.gov.ph",
-      "linkLabel": "Visit Bureau of Immigration website"
+      "id": "us-visa",
+      "title": "US Non-Immigrant Visa (B1/B2)",
+      "description": "Filipinos traveling to the United States require a B1/B2 Tourist/Business Visa. This requires completing the online DS-160 application form, paying the fee, and scheduling an in-person interview at the US Embassy in Manila.",
+      "link": "https://ustraveldocs.com/ph/",
+      "linkLabel": "US Visa Application Portal"
+    },
+    {
+      "id": "e-visa-e-travel-reentry",
+      "title": "Returning to the Philippines",
+      "description": "Upon your return trip to the Philippines, all passengers (including returning Filipino citizens) must register on the e-Travel portal within 72 hours prior to arrival. Keep your QR code ready for quarantine and immigration clearance.",
+      "link": "https://etravel.gov.ph",
+      "linkLabel": "e-Travel Arrival Portal",
+      "note": "Re-entry checklist: Register inbound on e-Travel within 72 hours of your flight back to the Philippines."
     }
   ],
   "visaTypes": [
     {
-      "category": "Non-Immigrant Visas",
-      "description": "For temporary stays for tourism, business, work, or study purposes.",
+      "category": "Outbound Visa Classes",
+      "description": "Common visa classes that Filipino passport holders apply for when traveling internationally.",
       "items": [
         {
-          "code": "9(a)",
-          "name": "Temporary Visitor's Visa",
-          "description": "For tourism, business visits, medical treatment, or other short-term temporary purposes."
+          "code": "Visa-Free / eTA",
+          "name": "Visa-Free Entry or Electronic Travel Authorization",
+          "description": "Allows Philippine citizens to enter without a pre-approved embassy visa for short stays (usually 14-30 days), sometimes requiring an online registration (eTA) prior to boarding."
         },
         {
-          "code": "9(b)",
-          "name": "Alien Seaman Visa",
-          "description": "For foreign nationals serving as crew members on vessels calling at Philippine ports."
+          "code": "e-Visa / Online",
+          "name": "Electronic Visa (e-Visa)",
+          "description": "An online visa application process where approval is received digitally (PDF) rather than a physical stamp or sticker in the passport."
         },
         {
-          "code": "9(d)",
-          "name": "Treaty Trader / Treaty Investor Visa",
-          "description": "For nationals of countries with treaties of commerce and navigation with the Philippines involved in trade or investment."
+          "code": "Visa on Arrival",
+          "name": "Visa on Arrival (VoA)",
+          "description": "Allows travelers to apply and pay for a tourist visa upon landing at the destination country's airport or border checkpoint."
         },
         {
-          "code": "9(e)",
-          "name": "Diplomatic / Official Visa",
-          "description": "For accredited diplomats, consular officers, and government officials on official missions."
-        },
-        {
-          "code": "9(f)",
-          "name": "Student Visa",
-          "description": "For foreign nationals pursuing full-time academic or vocational courses at CHED-accredited institutions."
-        },
-        {
-          "code": "9(g)",
-          "name": "Pre-Arranged Employee Visa",
-          "description": "For foreign nationals employed by a local company in a position requiring specialized skills or knowledge."
+          "code": "Embassy Visa",
+          "name": "Consular / Embassy Sticker Visa",
+          "description": "Requires submitting physical application forms, original passport, photos, and extensive financial documents directly to the destination country's embassy in Manila or their official visa center (e.g. VFS Global)."
         }
       ]
     },
     {
-      "category": "Immigrant Visas",
-      "description": "For foreign nationals seeking to reside permanently in the Philippines.",
+      "category": "Overseas Employment & Long Stays",
+      "description": "Required credentials for Filipinos working, studying, or moving abroad.",
       "items": [
         {
-          "code": "13(a)",
-          "name": "Non-Quota Immigrant Visa (Spouse)",
-          "description": "For foreign nationals married to Filipino citizens, allowing permanent residency."
+          "code": "OEC / OFW",
+          "name": "Overseas Employment Certificate",
+          "description": "A mandatory exit clearance issued by the Department of Migrant Workers (DMW) to Filipino workers (OFWs) departing to work abroad, exempting them from travel tax."
         },
         {
-          "code": "13(b-g)",
-          "name": "Quota Immigrant Visa",
-          "description": "For foreign nationals who do not qualify for non-quota status; subject to annual numerical quotas per nationality."
-        },
-        {
-          "code": "13(e)",
-          "name": "Returning Former Citizen Visa",
-          "description": "For former Filipino citizens who have acquired foreign citizenship and wish to return to the Philippines for permanent residency."
-        }
-      ]
-    },
-    {
-      "category": "Special Visas",
-      "description": "Visas providing incentives for retirees and investors.",
-      "items": [
-        {
-          "code": "SRRV",
-          "name": "Special Resident Retiree's Visa",
-          "description": "For foreign retirees aged 35 and above who make a qualifying bank deposit. Offers multiple-entry privileges and residency benefits. Issued by the Philippine Retirement Authority (PRA).",
-          "link": "https://pra.gov.ph",
-          "linkLabel": "Philippine Retirement Authority"
-        },
-        {
-          "code": "SIRV",
-          "name": "Special Investor's Resident Visa",
-          "description": "For foreign nationals making a minimum qualifying investment in the Philippines, granting multiple-entry residency."
-        }
-      ]
-    },
-    {
-      "category": "Special Permits",
-      "description": "For short-term work or specific activities without a full employment visa.",
-      "items": [
-        {
-          "code": "SWP",
-          "name": "Special Work Permit",
-          "description": "A temporary permit valid up to 3 months for foreign nationals performing short-term, project-based employment activities in the Philippines."
-        },
-        {
-          "code": "PWP",
-          "name": "Provisional Work Permit",
-          "description": "A bridge permit allowing foreign nationals to legally work while their 9(g) Pre-Arranged Employee Visa application is being processed. Valid up to 6 months."
-        },
-        {
-          "code": "9-day BOC",
-          "name": "9-Day Boat of Convenience Permit",
-          "description": "A short-stay permit for crew members traveling through the Philippines on vessels of convenience for up to 9 days."
+          "code": "Student Visa",
+          "name": "International Student Visa",
+          "description": "Issued by foreign governments for pursuing full-time studies or vocational courses. Usually requires acceptance letters, health certificates, and proof of financial sponsorship."
         }
       ]
     }
@@ -146,185 +102,235 @@
   "countries": [
     {
       "name": "United States",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Varies (typically 180 days)",
+      "visaType": "B1/B2 Tourist Visa Required",
+      "requirements": "Philippine passport holders must apply for a visa at the US Embassy in Manila, submit DS-160, pay the fee, and schedule an interview."
     },
     {
       "name": "Japan",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "15 or 30 days",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Visa application must be filed through accredited travel agencies. E-Visa system available for single-entry tourist visas under specific travel agencies."
     },
     {
       "name": "South Korea",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "30 or 59 days",
+      "visaType": "Tourist Visa Required",
+      "requirements": "Visa application through designated travel agencies. E-Group visa is available for official tour groups."
     },
     {
       "name": "Singapore",
       "visaFree": true,
       "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408 / ASEAN)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaType": "Visa-Free (ASEAN)",
+      "requirements": "Valid Philippine passport, return/onward ticket, and SG Arrival Card (SGAC) online registration within 3 days prior to arrival."
     },
     {
       "name": "United Kingdom",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Typically 6 months",
+      "visaType": "Standard Visitor Visa Required",
+      "requirements": "Online application via UK Visas and Immigration, biometric appointment at VFS Global Manila/Cebu, and extensive financial documentation."
     },
     {
       "name": "Australia",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Typically 3 months",
+      "visaType": "Visitor Visa (Subclass 600) Required",
+      "requirements": "Online application via ImmiAccount. No physical label; visa is digitally linked to the passport."
     },
     {
       "name": "Canada",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 6 months",
+      "visaType": "Visa or eTA Required",
+      "requirements": "eTA eligible if holding valid US non-immigrant visa or held Canadian visa in last 10 years. Otherwise, Visitor Visa required."
     },
     {
       "name": "Germany",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 90 days",
+      "visaType": "Schengen Visa Required",
+      "requirements": "Apply at the German Embassy (via VFS Global Manila). Valid for transit and tourism across the entire Schengen zone."
     },
     {
       "name": "France",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 90 days",
+      "visaType": "Schengen Visa Required",
+      "requirements": "Apply at the French Embassy (via VFS Global Manila). Valid for transit and tourism across the entire Schengen zone."
     },
     {
       "name": "Italy",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 90 days",
+      "visaType": "Schengen Visa Required",
+      "requirements": "Apply at the Italian Embassy (via VFS Global Manila). Valid for transit and tourism across the entire Schengen zone."
     },
     {
       "name": "Spain",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 90 days",
+      "visaType": "Schengen Visa Required",
+      "requirements": "Apply at the Spanish Embassy (via BLS International Manila). Valid for transit and tourism across the Schengen zone."
     },
     {
       "name": "Netherlands",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 90 days",
+      "visaType": "Schengen Visa Required",
+      "requirements": "Apply at the Netherlands Embassy (via VFS Global Manila). Valid for travel across the Schengen zone."
     },
     {
       "name": "Switzerland",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Up to 90 days",
+      "visaType": "Schengen Visa Required",
+      "requirements": "Apply at the Swiss Embassy (via VFS Global Manila). Valid for travel across the Schengen zone."
     },
     {
       "name": "New Zealand",
-      "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaFree": false,
+      "allowedStay": "Typically 9 months",
+      "visaType": "Visitor Visa Required",
+      "requirements": "Online application via Immigration New Zealand portal. No physical sticker is placed on passport."
     },
     {
       "name": "Malaysia",
       "visaFree": true,
       "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408 / ASEAN)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaType": "Visa-Free (ASEAN)",
+      "requirements": "Valid passport, return ticket, and Malaysia Digital Arrival Card (MDAC) registration."
     },
     {
       "name": "Indonesia",
       "visaFree": true,
       "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408 / ASEAN)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaType": "Visa-Free (ASEAN)",
+      "requirements": "Valid passport, return ticket, and Satusehat Health Pass online registration."
     },
     {
       "name": "Thailand",
       "visaFree": true,
       "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408 / ASEAN)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaType": "Visa-Free (ASEAN)",
+      "requirements": "Valid passport, return ticket, and proof of sufficient funds (10,000 THB per person, or 20,000 THB per family)."
     },
     {
       "name": "Vietnam",
       "visaFree": true,
-      "allowedStay": "30 days",
-      "visaType": "Visa-Free (EO 408 / ASEAN)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "allowedStay": "21 days",
+      "visaType": "Visa-Free (ASEAN)",
+      "requirements": "Valid passport and return/onward ticket."
     },
     {
       "name": "Brunei",
       "visaFree": true,
       "allowedStay": "14 days",
       "visaType": "Visa-Free (ASEAN)",
-      "requirements": "Passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "requirements": "Valid passport, return ticket, and E-Arrival Card registration."
     },
     {
       "name": "Hong Kong",
       "visaFree": true,
       "allowedStay": "14 days",
-      "visaType": "Visa-Free (SAR)",
-      "requirements": "HKSAR or BN(O) passport valid for at least 6 months beyond stay, return/onward ticket, and e-Travel registration."
+      "visaType": "Visa-Free",
+      "requirements": "Valid passport and return ticket. Mandatory Arrival Card declaration."
     },
     {
       "name": "Taiwan",
-      "visaFree": false,
-      "allowedStay": "30 days",
-      "visaType": "Electronic Travel Authorization (eTA)",
-      "requirements": "Online eTA application required before travel, passport valid for at least 6 months, return/onward ticket, and e-Travel registration."
+      "visaFree": true,
+      "allowedStay": "14 days",
+      "visaType": "Visa-Free (Trial Policy)",
+      "requirements": "Valid passport, return/onward ticket, proof of hotel booking, and online arrival card registration."
     },
     {
       "name": "China",
       "visaFree": false,
       "allowedStay": "Varies",
-      "visaType": "Tourist Visa Required",
-      "requirements": "Philippine entry visa required from embassy/consulate beforehand. Exception: Chinese nationals holding a valid visa from US, Japan, Australia, Canada, or Schengen member states may enter visa-free for up to 7 days."
+      "visaType": "Tourist Visa (L) Required",
+      "requirements": "Apply at Chinese Embassy in Manila. Requires submission of invitation letter or detailed flight and hotel itineraries."
     },
     {
       "name": "India",
       "visaFree": false,
-      "allowedStay": "Varies",
-      "visaType": "Tourist Visa Required",
-      "requirements": "Philippine entry visa required beforehand. Exception: Indian nationals holding a valid AJACSS visa or residence permit (Australia, Japan, US, Canada, Schengen, Singapore, UK) may enter visa-free for up to 14 days."
+      "allowedStay": "30 days to 5 years",
+      "visaType": "e-Tourist Visa Required",
+      "requirements": "Apply online at official Indian e-Visa portal at least 4 days prior to travel."
     },
     {
       "name": "Russia",
       "visaFree": false,
-      "allowedStay": "N/A",
-      "visaType": "Tourist Visa Required",
-      "requirements": "Philippine tourist visa required from a Philippine Embassy or Consulate before travel."
+      "allowedStay": "16 days",
+      "visaType": "Unified e-Visa Required",
+      "requirements": "Apply online on Russian MFA portal at least 4 days before travel. Single entry only."
     },
     {
       "name": "Saudi Arabia",
       "visaFree": false,
-      "allowedStay": "N/A",
+      "allowedStay": "Typically 90 days",
       "visaType": "Tourist Visa Required",
-      "requirements": "Philippine tourist visa required from a Philippine Embassy or Consulate before travel."
+      "requirements": "Apply for a tourist visa via accredited agencies, or online e-Visa if holding valid US/Schengen visa and traveling via Saudi airlines."
     },
     {
       "name": "Nigeria",
       "visaFree": false,
       "allowedStay": "N/A",
       "visaType": "Tourist Visa Required",
-      "requirements": "Philippine tourist visa required from a Philippine Embassy or Consulate before travel."
+      "requirements": "Apply for tourist visa at the Nigerian Embassy in Manila."
+    }
+  ],
+  "embassies": [
+    {
+      "region": "Asia-Pacific Regional Assistance",
+      "offices": [
+        { "name": "Philippine Embassy in Tokyo", "city": "Tokyo, Japan", "url": "https://tokyope.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Seoul", "city": "Seoul, South Korea", "url": "https://seoulpe.dfa.gov.ph" },
+        { "name": "Philippine Consulate General in Hong Kong", "city": "Hong Kong SAR, China", "url": "https://hongkongpcg.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Beijing", "city": "Beijing, China", "url": "https://beijingpe.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Canberra", "city": "Canberra, Australia", "url": "https://canberrape.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Singapore", "city": "Singapore", "url": "https://singaporepe.dfa.gov.ph" }
+      ]
+    },
+    {
+      "region": "Americas Regional Assistance",
+      "offices": [
+        { "name": "Philippine Embassy in Washington D.C.", "city": "Washington D.C., USA", "url": "https://washingtonpe.dfa.gov.ph" },
+        { "name": "Philippine Consulate General in New York", "city": "New York, USA", "url": "https://newyorkpcg.dfa.gov.ph" },
+        { "name": "Philippine Consulate General in Los Angeles", "city": "Los Angeles, USA", "url": "https://losangelespcg.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Ottawa", "city": "Ottawa, Canada", "url": "https://ottawape.dfa.gov.ph" }
+      ]
+    },
+    {
+      "region": "Europe Regional Assistance",
+      "offices": [
+        { "name": "Philippine Embassy in London", "city": "London, United Kingdom", "url": "https://londonpe.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Berlin", "city": "Berlin, Germany", "url": "https://berlinpe.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Paris", "city": "Paris, France", "url": "https://parispe.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Rome", "city": "Rome, Italy", "url": "https://romepe.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Madrid", "city": "Madrid, Spain", "url": "https://madridpe.dfa.gov.ph" },
+        { "name": "Philippine Embassy in The Hague", "city": "The Hague, Netherlands", "url": "https://thehaguepe.dfa.gov.ph" }
+      ]
+    },
+    {
+      "region": "Middle East & Africa Regional Assistance",
+      "offices": [
+        { "name": "Philippine Embassy in Riyadh", "city": "Riyadh, Saudi Arabia", "url": "https://riyadhpe.dfa.gov.ph" },
+        { "name": "Philippine Consulate General in Jeddah", "city": "Jeddah, Saudi Arabia", "url": "https://jeddahpcg.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Abu Dhabi", "city": "Abu Dhabi, UAE", "url": "https://abudhabipe.dfa.gov.ph" },
+        { "name": "Philippine Consulate General in Dubai", "city": "Dubai, UAE", "url": "https://dubaipcg.dfa.gov.ph" },
+        { "name": "Philippine Embassy in Nairobi", "city": "Nairobi, Kenya", "url": "https://nairobile.dfa.gov.ph" }
+      ]
+    },
+    {
+      "region": "Oceania Regional Assistance",
+      "offices": [
+        { "name": "Philippine Embassy in Wellington", "city": "Wellington, New Zealand", "url": "https://wellingtonpe.dfa.gov.ph" },
+        { "name": "Philippine Consulate General in Sydney", "city": "Sydney, Australia", "url": "https://sydneypcg.dfa.gov.ph" }
+      ]
     }
   ]
 }

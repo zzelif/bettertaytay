@@ -4,10 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && npm run merge:services && vite build",
+    "dev": "node scripts/generate-seo.js && vite",
+    "build": "node scripts/generate-seo.js && npm run merge:services && tsc --noEmit && vite build",
     "preview": "vite preview",
+    "postinstall": "node scripts/generate-seo.js",
     "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit && tsc --project functions/tsconfig.json --noEmit",
     "format": "prettier --write .",
     "test": "vitest",
     "test:ui": "vitest --ui",
@@ -17,12 +19,12 @@
     "merge:data": "python scripts/merge_services.py",
     "flag:sessions": "python scripts/flag_sessions_for_review.py",
     "wrangler": "wrangler",
-    "functions:dev": "npx wrangler pages dev --proxy 5173",
+    "functions:dev": "npx wrangler pages dev --proxy 5173 --d1 BETTERTAYTAY_DB --kv WEATHER_KV --kv BROWSER_KV --kv FOREX_KV",
     "generate:sitemap": "node ./scripts/generate-sitemap.js",
-    "db:migrate": "./scripts/migrate.sh local",
-    "db:migrate:remote": "./scripts/migrate.sh remote",
-    "db:migrate:status": "./scripts/migrate.sh status",
-    "db:migrate:create": "./scripts/migrate.sh create"
+    "db:migrate": "node scripts/migrate.js local",
+    "db:migrate:remote": "node scripts/migrate.js remote",
+    "db:migrate:status": "node scripts/migrate.js status",
+    "db:migrate:create": "node scripts/migrate.js create"
   },
   "dependencies": {
     "@bettergov/kapwa": "^1.2.4",

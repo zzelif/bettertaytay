@@ -11,6 +11,7 @@ import {
   UtensilsIcon,
 } from 'lucide-react';
 
+import { config } from '@/lib/lguConfig';
 import {
   SidebarContainer,
   SidebarGroup,
@@ -42,12 +43,14 @@ export default function DiscoverSidebar() {
       </SidebarGroup>
 
       <SidebarGroup title='Explore'>
-        <SidebarItem
-          path='/discover/tourism'
-          label='Tourism'
-          icon={UtensilsIcon}
-          description='Spots, dining & resorts'
-        />
+        {config.features.tourism && (
+          <SidebarItem
+            path='/discover/tourism'
+            label='Tourism'
+            icon={UtensilsIcon}
+            description='Spots, dining & resorts'
+          />
+        )}
         <SidebarItem
           path='/discover/travel'
           label='Travel Hub'

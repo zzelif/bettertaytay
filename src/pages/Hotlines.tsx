@@ -125,6 +125,7 @@ const Hotlines: FC = () => {
           />
           {searchTerm && (
             <button
+              title='Clear search'
               onClick={() => setSearchTerm('')}
               className='absolute inset-y-0 right-0 pr-3 flex items-center text-kapwa-text-disabled hover:text-kapwa-text-support'
             >
@@ -200,8 +201,8 @@ const Hotlines: FC = () => {
 
         <div className='mt-12 text-center'>
           <p className='text-sm text-kapwa-text-support'>
-            These hotlines are collected from official government sources. If you
-            notice any outdated information, please report it.
+            These hotlines are collected from official government sources. If
+            you notice any outdated information, please report it.
           </p>
         </div>
       </div>

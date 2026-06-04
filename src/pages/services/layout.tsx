@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import {
-  Outlet,
   useLocation,
   useSearchParams,
   useNavigate,
@@ -9,8 +8,7 @@ import {
 
 import { useQueryState } from 'nuqs';
 
-import { PageHeader } from '@/components/layout';
-import { SidebarLayout } from '@/components/layout/SidebarLayout';
+import { PageHeader, SidebarLayout, SuspenseOutlet } from '@/components/layout';
 import SearchInput from '@/components/ui/SearchInput';
 
 import ServicesSidebar from './components/ServicesSidebar';
@@ -105,7 +103,7 @@ export default function ServicesLayout() {
         />
       }
     >
-      <Outlet
+      <SuspenseOutlet
         context={{
           searchQuery,
           selectedCategorySlug,

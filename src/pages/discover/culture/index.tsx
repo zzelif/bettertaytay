@@ -12,6 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import { Card, CardContent } from '@/components/ui/Card';
+import { ModuleHeader } from '@/components/layout';
 
 import highlightsData from '@/data/about/highlights.json';
 import holidayData from '@/data/discover/holiday.json';
@@ -37,16 +38,10 @@ const CulturePage: FC = () => {
   return (
     <div className='animate-in fade-in duration-500'>
       {/* Page Header */}
-      <div className='border-kapwa-border-weak mb-8 border-b pb-6'>
-        <h2 className='text-kapwa-text-strong kapwa-heading-lg mb-2 font-extrabold tracking-tight'>
-          Culture & Festivals
-        </h2>
-        <p className='text-kapwa-text-support max-w-2xl text-sm leading-relaxed'>
-          Taytay&apos;s cultural identity is woven from centuries of faith,
-          craftsmanship, and community — from its patron saint festivities to
-          its thriving garment industry.
-        </p>
-      </div>
+      <ModuleHeader
+        title='Culture & Festivals'
+        description="Taytay's cultural identity is woven from centuries of faith, craftsmanship, and community — from its patron saint festivities to its thriving garments industry."
+      />
 
       {/* Cultural Highlights */}
       <section className='mb-10'>

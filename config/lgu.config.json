@@ -51,6 +51,8 @@
     "openLGU": true,
     "transparency": true,
     "tourism": true,
-    "statistics": true
+    "statistics": true,
+    "discover": true,
+    "hotlines": true
   }
 }

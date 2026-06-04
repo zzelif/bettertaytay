@@ -1,9 +1,9 @@
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { Building2Icon, ChevronRight, HomeIcon, UsersIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-import { PageHeader, SectionBlock } from '@/components/layout';
+import { PageHeader, SectionBlock, SuspenseOutlet } from '@/components/layout';
 
 import { cn } from '@/lib/utils';
 
@@ -137,7 +137,7 @@ export default function GovernmentRootLayout() {
       {/* Content Area */}
       <SectionBlock>
         <div className='animate-in fade-in slide-in-from-bottom-4 duration-500'>
-          <Outlet />
+          <SuspenseOutlet />
         </div>
       </SectionBlock>
     </div>

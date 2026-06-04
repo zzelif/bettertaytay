@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@bettergov/kapwa/button';
 
 import { config } from '@/lib/lguConfig';
+import { lguLabels } from '@/constants';
 import { cn } from '@/lib/utils';
 
 import { mainNavigation } from '../../data/navigation';
@@ -22,6 +23,35 @@ export const Navbar: FC = () => {
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
   const { t, i18n } = useTranslation('common');
   const location = useLocation();
+
+  const filteredNav = mainNavigation
+    .filter(item => {
+      if (item.label === 'OpenLGU' && !config.features.openLGU) return false;
+      if (item.label === 'Transparency' && !config.features.transparency)
+        return false;
+      if (item.label === 'Statistics' && !config.features.statistics)
+        return false;
+      if (item.label === 'Discover' && !config.features.discover) return false;
+      return true;
+    })
+    .map(item => {
+      if (item.label === 'Discover' && item.children) {
+        return {
+          ...item,
+          children: item.children.filter(child => {
+            if (child.label === 'Tourism' && !config.features.tourism)
+              return false;
+            if (
+              child.label === 'Emergency Hotlines' &&
+              !config.features.hotlines
+            )
+              return false;
+            return true;
+          }),
+        };
+      }
+      return item;
+    });
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -83,6 +113,7 @@ export const Navbar: FC = () => {
             </Link>
             <div className='flex items-center pl-2 border-l shrink-0 border-kapwa-border-weak'>
               <select
+                name='language'
                 aria-label='Select Language'
                 value={i18n.language}
                 onChange={e => changeLanguage(e.target.value as LanguageType)}
@@ -110,22 +141,22 @@ export const Navbar: FC = () => {
           >
             <img
               src='/logos/webp/betterlb-blue-outline.webp'
-              alt='BetterLB Logo'
+              alt={`${lguLabels.portalName} Logo`}
               className='mr-3 w-10 h-10 transition-transform shrink-0 group-hover:scale-105 md:h-12 md:w-12'
             />
             <div className='flex flex-col justify-center min-w-0'>
               <div className='text-lg font-black tracking-tighter leading-none text-kapwa-text-strong md:text-xl'>
-                {config.portal.name}
+                {lguLabels.portalName}
               </div>
               <div className='line-clamp-2 text-[9px] leading-tight font-medium text-kapwa-text-support md:line-clamp-1 md:text-xs md:leading-normal'>
-                A Community-run portal for the Municipality of {config.lgu.name}
+                {config.portal.navbarTagline} the {lguLabels.lguFullName}
               </div>
             </div>
           </Link>
 
           {/* Desktop Menu */}
           <div className='hidden items-center space-x-1 lg:flex xl:space-x-4'>
-            {mainNavigation.map(item => {
+            {filteredNav.map(item => {
               const active = isActiveRoute(item.href);
               const hasChildren = item.children && item.children.length > 0;
               const isMegaMenu = item.children?.[0]?.isGroup;
@@ -254,7 +285,7 @@ export const Navbar: FC = () => {
       {isOpen && (
         <div className='animate-in slide-in-from-right fixed inset-0 top-26 z-40 overflow-y-auto bg-kapwa-bg-surface duration-300 lg:hidden'>
           <div className='flex flex-col p-4 pb-20'>
-            {mainNavigation.map(item => {
+            {filteredNav.map(item => {
               const hasChildren = item.children && item.children.length > 0;
               const isSubOpen = activeMobileSubmenu === item.label;
               const isMegaMenu = item.children?.[0]?.isGroup;
@@ -347,7 +378,7 @@ export const Navbar: FC = () => {
                 onClick={closeMenu}
                 className='block p-4 text-xs font-bold tracking-widest uppercase text-kapwa-text-support'
               >
-                About Better LB
+                {lguLabels.aboutLgu}
               </Link>
               <Link
                 to='/contact'

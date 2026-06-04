@@ -9,14 +9,28 @@ import {
   SiInstagram,
   SiYoutube,
 } from '@icons-pack/react-simple-icons';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import { config } from '@/lib/lguConfig';
+import { lguLabels } from '@/constants';
 
 import { footerNavigation } from '../../data/navigation';
 
 export const Footer: FC = () => {
-  const { t } = useTranslation('common');
+  // const { t } = useTranslation('common');
+
+  const filteredFooterSections = footerNavigation.mainSections.map(section => ({
+    ...section,
+    links: section.links.filter(link => {
+      if (link.label === 'OpenLGU Portal' && !config.features.openLGU)
+        return false;
+      if (link.label === 'Transparency' && !config.features.transparency)
+        return false;
+      if (link.label === 'Discovery Portal' && !config.features.discover)
+        return false;
+      return true;
+    }),
+  }));
 
   const getSocialIcon = (label: string) => {
     switch (label) {
@@ -44,22 +58,22 @@ export const Footer: FC = () => {
             <div className='flex items-center'>
               <img
                 src={config.portal.logoWhitePath}
-                alt='BetterLB'
+                alt={lguLabels.footerBrandName}
                 className='mr-4 w-12 h-12'
               />
               <div>
                 <div className='text-xl font-black tracking-tighter'>
-                  {config.portal.footerBrandName}
+                  {lguLabels.footerBrandName}
                 </div>
                 <div className='text-[10px] font-bold tracking-widest text-kapwa-text-disabled uppercase'>
-                  {config.portal.footerTagline}
+                  {lguLabels.tagline}
                 </div>
               </div>
             </div>
             <p className='max-w-sm text-sm leading-relaxed text-kapwa-text-disabled'>
               An open-source initiative providing transparent access to
               municipal services, local legislation, and public data for the
-              people of {config.lgu.name}.
+              people of {lguLabels.lguName}.
             </p>
             <div className='flex space-x-4'>
               {footerNavigation.socialLinks.map(link => (
@@ -77,7 +91,7 @@ export const Footer: FC = () => {
           </div>
 
           {/* Navigation Columns */}
-          {footerNavigation.mainSections.map(section => (
+          {filteredFooterSections.map(section => (
             <div key={section.title} className='col-span-1'>
               <h3 className='mb-6 text-[10px] font-bold tracking-[0.2em] text-kapwa-text-disabled uppercase'>
                 {section.title}
@@ -117,7 +131,7 @@ export const Footer: FC = () => {
             </p>
             <span className='hidden w-1 h-1 rounded-full bg-kapwa-border-strong md:block' />
             <p className='text-xs font-bold md:text-sm'>
-              Cost to the People of {config.lgu.name} ={' '}
+              Cost to the People of {lguLabels.lguName} ={' '}
               <span className='text-kapwa-text-success'>₱0</span>
             </p>
           </div>
@@ -126,7 +140,7 @@ export const Footer: FC = () => {
         {/* Bottom Bar */}
         <div className='flex flex-col gap-6 justify-between items-center pt-8 mt-16 border-t border-kapwa-border-strong md:flex-row'>
           <p className='text-[10px] font-bold tracking-widest text-kapwa-text-disabled uppercase'>
-            {t('footer.copyright')}
+            {lguLabels.copyrightStatement()}
           </p>
           <div className='flex gap-6'>
             <a

@@ -142,9 +142,9 @@ async function getDocumentsList(context: { request: Request; env: Env }) {
         sql += ` ORDER BY d.date_enacted DESC LIMIT ?${paramIndex++} OFFSET ?${paramIndex++}`;
         params.push(limit.toString(), offset.toString());
 
-        const result = await env.BETTERLB_DB.prepare(sql)
+        const result = await env.BETTERTAYTAY_DB.prepare(sql)
           .bind(...params)
-          .all();
+          .all<DocumentRow>();
 
         // Get document IDs for batch fetching author IDs
         const documentIds = result.results
@@ -170,7 +170,7 @@ async function getDocumentsList(context: { request: Request; env: Env }) {
               ORDER BY document_id, person_id
             `;
 
-            const authorsResult = await env.BETTERLB_DB.prepare(authorsSql)
+            const authorsResult = await env.BETTERTAYTAY_DB.prepare(authorsSql)
               .bind(...batch)
               .all();
 
@@ -217,7 +217,7 @@ async function getDocumentsList(context: { request: Request; env: Env }) {
           countParams.push(termId);
         }
 
-        const countResult = await env.BETTERLB_DB.prepare(countSql)
+        const countResult = await env.BETTERTAYTAY_DB.prepare(countSql)
           .bind(...countParams)
           .first<{ count: number }>();
         const total = countResult?.count || 0;
@@ -360,7 +360,7 @@ async function getDocumentDetail(context: { request: Request; env: Env }) {
           session_ordinal: string;
         }
 
-        const doc = await env.BETTERLB_DB.prepare(sql)
+        const doc = await env.BETTERTAYTAY_DB.prepare(sql)
           .bind(documentId)
           .first<DocResult>();
 
@@ -381,7 +381,7 @@ async function getDocumentDetail(context: { request: Request; env: Env }) {
           middle_name: string | null;
           last_name: string;
         }
-        const authorsResult = await env.BETTERLB_DB.prepare(authorsSql)
+        const authorsResult = await env.BETTERTAYTAY_DB.prepare(authorsSql)
           .bind(documentId)
           .all<AuthorResult>();
         const authors = authorsResult.results.map(row => ({
@@ -401,7 +401,7 @@ async function getDocumentDetail(context: { request: Request; env: Env }) {
         interface SubjectResult {
           name: string;
         }
-        const subjectsResult = await env.BETTERLB_DB.prepare(subjectsSql)
+        const subjectsResult = await env.BETTERTAYTAY_DB.prepare(subjectsSql)
           .bind(documentId)
           .all<SubjectResult>();
         const subjects = subjectsResult.results.map(row => row.name);

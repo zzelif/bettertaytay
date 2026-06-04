@@ -1,9 +1,10 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { Shield } from 'lucide-react';
 
 import { Footer } from '@/components/layout/Footer';
 import { Navbar } from '@/components/layout/Navbar';
+import { SuspenseOutlet } from '@/components/layout';
 import {
   Breadcrumb,
   BreadcrumbHome,
@@ -108,7 +109,7 @@ function AdminContent() {
           </BreadcrumbList>
         </Breadcrumb>
 
-        <Outlet />
+        <SuspenseOutlet />
       </div>
       <Footer />
     </div>

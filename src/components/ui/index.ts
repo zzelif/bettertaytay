@@ -11,6 +11,7 @@
 export { Badge } from './Badge';
 export { Button } from '@bettergov/kapwa/button';
 export { Card } from './Card';
+export { ErrorBoundary } from './ErrorBoundary';
 
 // Form and input components
 export { default as SearchInput } from './SearchInput';

@@ -77,7 +77,7 @@ async function getTermsList(context: { request: Request; env: Env }) {
           LEFT JOIN persons pv ON t.vice_mayor_id = pv.id
           ORDER BY t.term_number DESC
         `;
-        const termsResult = await env.BETTERLB_DB.prepare(termsSql).all();
+        const termsResult = await env.BETTERTAYTAY_DB.prepare(termsSql).all<TermResultRow>();
 
         if (termsResult.results.length === 0) {
           return { terms: [] };
@@ -94,7 +94,7 @@ async function getTermsList(context: { request: Request; env: Env }) {
           WHERE term_id IN (${placeholders})
           GROUP BY term_id
         `;
-        const memberCountsResult = await env.BETTERLB_DB.prepare(
+        const memberCountsResult = await env.BETTERTAYTAY_DB.prepare(
           memberCountsSql
         )
           .bind(...termIds)
@@ -113,7 +113,7 @@ async function getTermsList(context: { request: Request; env: Env }) {
           WHERE s.term_id IN (${placeholders})
           GROUP BY s.term_id
         `;
-        const docCountsResult = await env.BETTERLB_DB.prepare(docCountsSql)
+        const docCountsResult = await env.BETTERTAYTAY_DB.prepare(docCountsSql)
           .bind(...termIds)
           .all<DocCountRow>();
 
@@ -221,7 +221,7 @@ async function getTermDetail(context: { request: Request; env: Env }) {
           LEFT JOIN persons pv ON t.vice_mayor_id = pv.id
           WHERE t.id = ?
         `;
-        const term = await env.BETTERLB_DB.prepare(termSql)
+        const term = await env.BETTERTAYTAY_DB.prepare(termSql)
           .bind(termId)
           .first<TermDetailRow>();
 
@@ -243,9 +243,9 @@ async function getTermDetail(context: { request: Request; env: Env }) {
           WHERE m.term_id = ?
           ORDER BY m.rank ASC, p.last_name ASC, c.name ASC
         `;
-        const membersResult = await env.BETTERLB_DB.prepare(membersSql)
+        const membersResult = await env.BETTERTAYTAY_DB.prepare(membersSql)
           .bind(termId)
-          .all();
+          .all<Record<string, unknown>>();
 
         // Reconstruct the frontend-expected structure: persons with memberships
         const personsMap = new Map<
@@ -320,7 +320,9 @@ async function getTermDetail(context: { request: Request; env: Env }) {
           GROUP BY c.id, c.name, c.type
           ORDER BY c.name ASC
         `;
-        const committeesResult = await env.BETTERLB_DB.prepare(committeesSql)
+        const committeesResult = await env.BETTERTAYTAY_DB.prepare(
+          committeesSql
+        )
           .bind(termId)
           .all<CommitteeResultRow>();
 
@@ -334,7 +336,7 @@ async function getTermDetail(context: { request: Request; env: Env }) {
           FROM sessions
           WHERE term_id = ?
         `;
-        const statsResult = await env.BETTERLB_DB.prepare(statsSql)
+        const statsResult = await env.BETTERTAYTAY_DB.prepare(statsSql)
           .bind(termId)
           .first<StatsResultRow>();
 
@@ -348,7 +350,7 @@ async function getTermDetail(context: { request: Request; env: Env }) {
           WHERE s.term_id = ?
           GROUP BY type
         `;
-        const docStatsResult = await env.BETTERLB_DB.prepare(docStatsSql)
+        const docStatsResult = await env.BETTERTAYTAY_DB.prepare(docStatsSql)
           .bind(termId)
           .all<DocStatsResultRow>();
 

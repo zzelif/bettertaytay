@@ -41,7 +41,7 @@ async function handleUpdateAttendance(context: {
 
     // Start a transaction
     // 1. Delete all existing absences for this session
-    await env.BETTERLB_DB.prepare(
+    await env.BETTERTAYTAY_DB.prepare(
       `DELETE FROM session_absences WHERE session_id = ?1`
     )
       .bind(sessionId)
@@ -49,7 +49,7 @@ async function handleUpdateAttendance(context: {
 
     // 2. Insert new absences
     for (const personId of absent_person_ids) {
-      await env.BETTERLB_DB.prepare(
+      await env.BETTERTAYTAY_DB.prepare(
         `INSERT INTO session_absences (session_id, person_id) VALUES (?1, ?2)`
       )
         .bind(sessionId, personId)
@@ -57,7 +57,7 @@ async function handleUpdateAttendance(context: {
     }
 
     // 3. Update the session's updated_at timestamp
-    await env.BETTERLB_DB.prepare(
+    await env.BETTERTAYTAY_DB.prepare(
       `UPDATE sessions SET updated_at = ?1 WHERE id = ?2`
     )
       .bind(new Date().toISOString(), sessionId)

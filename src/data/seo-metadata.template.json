@@ -1,0 +1,239 @@
+{
+  "/": {
+    "title": "{{portalDomain}} | {{lguFullName}} | Community Powered Government Portal",
+    "description": "Find important information about {{lguFullName}} through {{portalDomain}}, the community-powered government portal."
+  },
+  "/about": {
+    "title": "About {{portalDomain}} | {{lguFullName}}",
+    "description": "Learn more about {{portalDomain}}, the official community-powered portal promoting transparency and civic engagement in {{lguFullName}}."
+  },
+  "/accessibility": {
+    "title": "Accessibility Statement | {{portalDomain}}",
+    "description": "Find web accessibility compliance information for the {{portalDomain}} portal."
+  },
+  "/data/forex": {
+    "title": "Forex: Currency Converter - {{portalDomain}}",
+    "description": "Foreign exchange converter tool and exchange rate lookup on the {{portalDomain}} portal."
+  },
+  "/data/weather": {
+    "title": "Weather Forecast | {{portalDomain}}",
+    "description": "Current weather conditions, forecasts, and climate data for {{lguName}}, {{province}} via PAGASA and OpenWeather."
+  },
+  "/discover/about": {
+    "title": "About {{lguName}}, {{province}} | {{portalDomain}}",
+    "description": "Learn about the {{lguFullName}}, Rizal — the Garments Capital of the Philippines. Quick facts, geography, population, and key information."
+  },
+  "/discover/history": {
+    "title": "History of {{lguName}}, {{province}} | {{portalDomain}}",
+    "description": "Explore the rich history of {{lguName}} from pre-Hispanic Namayan through Spanish colonization, the Philippine Revolution, and its modern identity."
+  },
+  "/discover/culture": {
+    "title": "Culture & Festivals of {{lguName}}, {{province}} | {{portalDomain}}",
+    "description": "Discover {{lguName}}'s cultural identity — from local festivities and garments industry heritage to craftsmanship and traditions."
+  },
+  "/discover/tourism": {
+    "title": "Tourism & Attractions in {{lguName}}, {{province}} | {{portalDomain}}",
+    "description": "Explore tourist spots, dining, shopping, heritage sites, and recreation in {{lguName}} — including the famous garments Tiangge."
+  },
+  "/discover/map": {
+    "title": "Interactive Barangay Map of {{lguName}}, {{province}} | {{portalDomain}}",
+    "description": "Interactive map showing the 5 barangay boundaries of the {{lguFullName}}, Rizal with geographic data."
+  },
+  "/discover/travel": {
+    "title": "Travel Hub - {{portalDomain}}",
+    "description": "Essential resources for {{lguName}} residents planning international travel and local transit — from visa requirements to foreign exchange rates."
+  },
+  "/discover/travel/visa": {
+    "title": "Outbound Travel & Visa Checker - {{portalDomain}}",
+    "description": "Check tourist visa requirements, allowed stay periods, and departure checklists for Filipino passport holders traveling from {{lguName}}."
+  },
+  "/government": {
+    "title": "Local Government Directory - {{portalDomain}}",
+    "description": "Access information on elected leaders, municipal departments, and component barangays of {{lguName}}."
+  },
+  "/government/departments": {
+    "title": "Municipal Departments & Offices | {{portalDomain}}",
+    "description": "Browse active executive offices, trunklines, department heads, and contact information for the Municipality of {{lguName}}."
+  },
+  "/government/elected-officials": {
+    "title": "Elected Officials & Leaders | {{portalDomain}}",
+    "description": "Meet your Mayor, Vice Mayor, and Councilors serving the Municipality of {{lguName}}."
+  },
+  "/government/barangays": {
+    "title": "Barangay Directory | {{portalDomain}}",
+    "description": "Get contact information, boundaries, and maps for the component barangays of {{lguName}}."
+  },
+  "/ideas": {
+    "title": "Project Ideas & Feedback | {{portalDomain}}",
+    "description": "Submit and view community ideas for improving civic systems, public services, and portal features in {{lguName}}."
+  },
+  "/statistics": {
+    "title": "Municipal Statistics Dashboard | {{portalDomain}}",
+    "description": "Data-driven insights into the population, economy, and performance index of {{lguName}}."
+  },
+  "/openlgu": {
+    "title": "OpenLGU Portal | {{portalDomain}}",
+    "description": "Browse official local ordinances, resolutions, and executive orders of the {{lguName}} Sangguniang Bayan."
+  },
+  "/transparency": {
+    "title": "Transparency Portal | {{portalDomain}}",
+    "description": "A community-led initiative to make {{lguName}} public transparency data accessible, readable, and verifiable for every citizen."
+  },
+  "/terms-of-service": {
+    "title": "Terms of Service | {{portalDomain}}",
+    "description": "Terms and conditions for using the {{portalDomain}} portal."
+  },
+  "/not-found": {
+    "title": "Page Not Found | {{portalDomain}}",
+    "description": "The page you requested could not be found."
+  },
+  "/services": {
+    "_default": {
+      "subject": "Government Services in {{lguName}}"
+    },
+    "category=business-trade": {
+      "subject": "Business and Trade Services in {{lguName}}"
+    },
+    "category=business-trade&subcategory=business-copyright-trademark-patent": {
+      "subject": "Business and Trade – Business Copyright, Trademark and Patent"
+    },
+    "category=business-trade&subcategory=business-registration": {
+      "subject": "Business and Trade Services in {{lguName}} – Business Registration, Certificates and Compliance"
+    },
+    "category=business-trade&subcategory=complaints": {
+      "subject": "Business and Trade Government Services in {{lguName}}"
+    },
+    "category=certificates-ids": {
+      "subject": "Certificates and ID Services in {{lguName}}"
+    },
+    "category=certificates-ids&subcategory=certificates": {
+      "subject": "Certificate Services in {{lguName}}"
+    },
+    "category=certificates-ids&subcategory=clearances": {
+      "subject": "Government Certificates and ID Clearances in {{lguName}}"
+    },
+    "category=certificates-ids&subcategory=id": {
+      "subject": "ID Services in {{lguName}}"
+    },
+    "category=contributions": {
+      "subject": "Contribution Services in {{lguName}}"
+    },
+    "category=contributions&subcategory=benefits-registration": {
+      "subject": "Contributions and Benefits Registration Services in {{lguName}}"
+    },
+    "category=contributions&subcategory=salary-loans": {
+      "subject": "Government Contribution Salary Loans in {{lguName}}"
+    },
+    "category=disaster-weather": {
+      "subject": "Disaster and Weather Services in {{lguName}}"
+    },
+    "category=disaster-weather&subcategory=disaster-prone-areas": {
+      "subject": "Government Disaster and Weather Services"
+    },
+    "category=disaster-weather&subcategory=weather": {
+      "subject": "Disaster and Weather Services in {{lguName}} – Weather"
+    },
+    "category=education": {
+      "subject": "Education Services in {{lguName}}"
+    },
+    "category=education&subcategory=financial-assistance": {
+      "subject": "Education Financial Assistance Services in {{lguName}}"
+    },
+    "category=education&subcategory=professionals": {
+      "subject": "Government Education Services in {{lguName}}"
+    },
+    "category=education&subcategory=research-proposal": {
+      "subject": "Education, Research and Proposal Services in {{lguName}}"
+    },
+    "category=employment": {
+      "subject": "Employment Services in {{lguName}}"
+    },
+    "category=employment&subcategory=professionals": {
+      "subject": "Government Employment Services"
+    },
+    "category=employment&subcategory=salary-loans": {
+      "subject": "Government Employment Salary Loans in {{lguName}}"
+    },
+    "category=employment&subcategory=union-association": {
+      "subject": "Employment Union Association Services in {{lguName}}"
+    },
+    "category=health": {
+      "subject": "Government Health Services in {{lguName}}"
+    },
+    "category=health&subcategory=financial-assistance": {
+      "subject": "Government Financial Assistance Services in {{lguName}}"
+    },
+    "category=health&subcategory=health-programs": {
+      "title": "Government Health Programs in {{lguName}} | {{portalDomain}}",
+      "description": "Explore health programs, public initiatives, and opportunities designed to support citizens in {{lguName}}."
+    },
+    "category=health&subcategory=health-research": {
+      "subject": "Government Health Research Services in {{lguName}}"
+    },
+    "category=housing": {
+      "subject": "Government Housing Services in {{lguName}}"
+    },
+    "category=housing&subcategory=housing-loans": {
+      "subject": "Housing Loan Services in {{lguName}}"
+    },
+    "category=housing&subcategory=land-titles": {
+      "subject": "Housing and Land Title Services in {{lguName}}"
+    },
+    "category=passport-travel": {
+      "subject": "Passport and Travel Services in {{lguName}}"
+    },
+    "category=passport-travel&subcategory=travel": {
+      "subject": "Government Passport and Travel Services in {{lguName}}"
+    },
+    "category=passport-travel&subcategory=visa-citizenship": {
+      "title": "Passport and Travel: Visa and Citizenship Services in {{lguName}} | {{portalDomain}}",
+      "description": "Access clear information about visa requirements, travel policies, and immigration services at {{portalDomain}}."
+    },
+    "category=social-services": {
+      "subject": "Social Services in {{lguName}}"
+    },
+    "category=social-services&subcategory=benefits-registration": {
+      "subject": "Social Services: Benefits Registration in {{lguName}}"
+    },
+    "category=social-services&subcategory=file-complaints": {
+      "title": "Social Services: File Complaints in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Social Services: File Complaints in {{lguName}} through {{portalDomain}}."
+    },
+    "category=social-services&subcategory=salary-loans": {
+      "title": "Social Service Salary Loans in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Social Service Salary Loans in {{lguName}} through {{portalDomain}}."
+    },
+    "category=tax": {
+      "title": "Government Tax Services in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Government Tax Services in {{lguName}} through {{portalDomain}}."
+    },
+    "category=tax&subcategory=calculator": {
+      "title": "Tax Calculators in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Tax Calculators in {{lguName}} through {{portalDomain}}."
+    },
+    "category=tax&subcategory=certificates": {
+      "title": "Tax Certificate Services in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Tax Certificate Services in {{lguName}} through {{portalDomain}}."
+    },
+    "category=tax&subcategory=register": {
+      "title": "Tax Registration Services in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Tax Registration Services in {{lguName}} through {{portalDomain}}."
+    },
+    "category=transport-driving": {
+      "title": "Government Transport and Driving Services in {{lguName}} - {{portalDomain}}",
+      "description": "Find important information about Government Transport and Driving Services in {{lguName}} through {{portalDomain}}."
+    },
+    "category=transport-driving&subcategory=financial-assistance": {
+      "title": "Transport and Driving Financial Assistance Services in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Transport and Driving Financial Assistance Services in {{lguName}} through {{portalDomain}}."
+    },
+    "category=transport-driving&subcategory=license": {
+      "title": "Transport and Driving License Services in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Transport and Driving License Services in {{lguName}} through {{portalDomain}}."
+    },
+    "category=transport-driving&subcategory=transport-complaints": {
+      "title": "Transport and Driving Complaints Services in {{lguName}} | {{portalDomain}}",
+      "description": "Find important information about Transport and Driving Complaints Services in {{lguName}} through {{portalDomain}}."
+    }
+  }
+}

@@ -66,8 +66,8 @@ function ElectedLeaderCard({ leader }: { leader: ExecutiveOfficial }) {
     leader.slug.includes('mayor') && !leader.slug.includes('vice');
   const Icon = isMayor ? Landmark : Gavel;
 
-  const card = (
-    <Card hover={!!leader.personId} className='group h-full'>
+  return (
+    <Card className='h-full border-kapwa-border-weak flex flex-col shadow-xs'>
       <CardContent className='flex h-full flex-col items-center space-y-4 py-6 text-center'>
         <div className='relative'>
           <div
@@ -117,26 +117,19 @@ function ElectedLeaderCard({ leader }: { leader: ExecutiveOfficial }) {
           </div>
         )}
 
-        {leader.personId && (
-          <div className='border-kapwa-border-weak w-full border-t pt-4'>
-            <span className='text-kapwa-text-brand text-sm font-bold'>
-              View Full Profile →
-            </span>
-          </div>
-        )}
+        <div className='border-kapwa-border-weak w-full border-t pt-4'>
+          {leader.personId && (
+            <Link
+              to={`/openlgu/person/${leader.personId}`}
+              className='text-kapwa-text-brand hover:text-kapwa-text-brand-bold flex items-center gap-1 text-xs font-bold transition-colors'
+            >
+              View Profile
+              <ArrowRight className='h-3 w-3 transition-transform' />
+            </Link>
+          )}
+        </div>
       </CardContent>
     </Card>
-  );
-
-  return leader.personId ? (
-    <Link
-      to={`/openlgu/person/${leader.personId}`}
-      className='group block h-full'
-    >
-      {card}
-    </Link>
-  ) : (
-    card
   );
 }
 
@@ -147,19 +140,12 @@ function CouncilMemberCard({
   member: CouncilMember;
   chairedCommittees: Committee[];
 }) {
-  const card = (
-    <Card
-      hover={!!member.personId}
-      className={`group flex h-full flex-col shadow-xs ${
-        member.personId
-          ? 'border-kapwa-border-weak cursor-pointer'
-          : 'border-kapwa-border-weak'
-      }`}
-    >
+  return (
+    <Card className='border-kapwa-border-weak flex h-full flex-col shadow-xs'>
       <CardContent className='flex h-full flex-col space-y-4 p-4'>
         {/* Row 1: Icon, Role, Name */}
         <div className='flex items-start gap-3'>
-          <div className='border-kapwa-border-brand bg-kapwa-bg-surface text-kapwa-text-brand group-hover:bg-kapwa-bg-brand-default group-hover:text-kapwa-text-inverse shrink-0 rounded-lg border p-2 shadow-sm transition-colors'>
+          <div className='border-kapwa-border-brand bg-kapwa-bg-surface text-kapwa-text-brand shrink-0 rounded-lg border p-2 shadow-sm'>
             <UserIcon className='h-5 w-5' />
           </div>
           <div className='min-w-0 flex-1'>
@@ -169,11 +155,6 @@ function CouncilMemberCard({
             <h4 className='text-kapwa-text-strong text-base font-bold leading-tight'>
               {toTitleCase(member.name)}
             </h4>
-            {member.personId && (
-              <p className='text-kapwa-text-brand mt-1 text-[10px] font-medium tracking-wide uppercase'>
-                View Profile
-              </p>
-            )}
           </div>
         </div>
 
@@ -204,17 +185,13 @@ function CouncilMemberCard({
           <div className='flex-1' />
         )}
 
-        {/* Row 3: Social footer */}
-        {member.website && (
-          <div className='border-kapwa-border-weak mt-auto flex items-center justify-between border-t pt-3'>
-            <span className='text-kapwa-text-disabled text-[10px] font-medium tracking-wide uppercase'>
-              Social Profile
-            </span>
+        {/* Row 3: Footer — social + profile link */}
+        <div className='border-kapwa-border-weak mt-auto flex items-center justify-between border-t pt-3'>
+          {member.website && (
             <a
               href={member.website}
               target='_blank'
               rel='noreferrer'
-              onClick={e => member.personId && e.stopPropagation()}
               className='hover:border-kapwa-border-brand hover:text-kapwa-text-brand border-kapwa-border-weak bg-kapwa-bg-surface flex items-center gap-2 rounded-lg border px-3 py-1.5 shadow-sm transition-all'
             >
               <span className='text-[10px] font-bold tracking-wider uppercase'>
@@ -222,18 +199,20 @@ function CouncilMemberCard({
               </span>
               <SiFacebook className='h-3.5 w-3.5' />
             </a>
-          </div>
-        )}
+          )}
+
+          {member.personId && (
+            <Link
+              to={`/openlgu/person/${member.personId}`}
+              className='text-kapwa-text-brand hover:text-kapwa-text-brand-bold flex items-center gap-1 text-xs font-bold transition-colors'
+            >
+              View Profile
+              <ArrowRight className='h-3 w-3 transition-transform' />
+            </Link>
+          )}
+        </div>
       </CardContent>
     </Card>
-  );
-
-  return member.personId ? (
-    <Link to={`/openlgu/person/${member.personId}`} className='block group'>
-      {card}
-    </Link>
-  ) : (
-    card
   );
 }
 

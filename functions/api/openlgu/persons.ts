@@ -128,9 +128,9 @@ async function getPersonsList(context: { request: Request; env: Env }) {
         sql += ' ORDER BY t.term_number DESC, p.last_name ASC LIMIT ? OFFSET ?';
         params.push(limit.toString(), offset.toString());
 
-        const result = await env.BETTERLB_DB.prepare(sql)
+        const result = await env.BETTERTAYTAY_DB.prepare(sql)
           .bind(...params)
-          .all();
+          .all<PersonResultRow>();
 
         // Get committee memberships for all persons
         const personIds = result.results
@@ -148,7 +148,9 @@ async function getPersonsList(context: { request: Request; env: Env }) {
             WHERE cm.person_id IN (${placeholders})
             ORDER BY cm.term_id, c.name ASC
           `;
-          const committeeResult = await env.BETTERLB_DB.prepare(committeeSql)
+          const committeeResult = await env.BETTERTAYTAY_DB.prepare(
+            committeeSql
+          )
             .bind(...personIds)
             .all<CommitteeMembershipRow>();
           committeeMemberships = committeeResult.results;
@@ -306,7 +308,7 @@ async function getPersonsList(context: { request: Request; env: Env }) {
           countParams.push(termId);
         }
 
-        const countResult = await env.BETTERLB_DB.prepare(countSql)
+        const countResult = await env.BETTERTAYTAY_DB.prepare(countSql)
           .bind(...countParams)
           .first<{ count: number }>();
         const total = countResult?.count || 0;
@@ -354,7 +356,7 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
       async () => {
         // Get person
         const personSql = 'SELECT * FROM persons WHERE id = ?';
-        const person = await env.BETTERLB_DB.prepare(personSql)
+        const person = await env.BETTERTAYTAY_DB.prepare(personSql)
           .bind(personId)
           .first();
 
@@ -372,7 +374,9 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
           WHERE m.person_id = ?
           ORDER BY t.term_number DESC
         `;
-        const membershipsResult = await env.BETTERLB_DB.prepare(membershipsSql)
+        const membershipsResult = await env.BETTERTAYTAY_DB.prepare(
+          membershipsSql
+        )
           .bind(personId)
           .all();
 
@@ -400,7 +404,9 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
             WHERE cm.person_id = ? AND cm.term_id IN (${placeholders})
             ORDER BY cm.term_id, c.name ASC
           `;
-          const committeeResult = await env.BETTERLB_DB.prepare(committeeSql)
+          const committeeResult = await env.BETTERTAYTAY_DB.prepare(
+            committeeSql
+          )
             .bind(personId, ...termIds)
             .all();
 
@@ -414,7 +420,7 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
 
           // Group by term_id
           for (const row of committeeResult.results) {
-            const committeeRow = row as CommitteeRow;
+            const committeeRow = row as unknown as CommitteeRow;
             if (!committeeMembershipsByTerm.has(committeeRow.term_id)) {
               committeeMembershipsByTerm.set(committeeRow.term_id, []);
             }
@@ -444,7 +450,7 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
           ORDER BY d.date_enacted DESC
           LIMIT 100
         `;
-        const documentsResult = await env.BETTERLB_DB.prepare(documentsSql)
+        const documentsResult = await env.BETTERTAYTAY_DB.prepare(documentsSql)
           .bind(personId)
           .all();
 
@@ -458,7 +464,9 @@ async function getPersonDetail(context: { request: Request; env: Env }) {
           LEFT JOIN session_absences sa ON sa.session_id = s.id AND sa.person_id = m.person_id
           WHERE m.person_id = ?
         `;
-        const attendanceResult = await env.BETTERLB_DB.prepare(attendanceSql)
+        const attendanceResult = await env.BETTERTAYTAY_DB.prepare(
+          attendanceSql
+        )
           .bind(personId)
           .first<{
             total_sessions: number;

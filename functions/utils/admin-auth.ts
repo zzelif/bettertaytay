@@ -139,15 +139,15 @@ export class AuthError extends Error {
  * @param options.requirePermission - Required permission for the endpoint
  * @param options.requireRole - Required role or array of allowed roles
  */
-export function withAuth<T extends { request: Request; env: Env }>(
-  handler: (context: T & { auth: AuthContext }) => Promise<Response> | Response,
+export function withAuth<TCtx extends { request: Request; env: Env } = { request: Request; env: Env }>(
+  handler: (context: NoInfer<TCtx> & { auth: AuthContext }) => Promise<Response> | Response,
   options: {
     requireCSRF?: boolean;
     requirePermission?: Permission;
     requireRole?: UserRole | UserRole[];
   } = {}
-): (context: T) => Promise<Response> {
-  return async (context: T) => {
+): (context: TCtx) => Promise<Response> {
+  return async (context: TCtx) => {
     try {
       const auth = await verifyAdminSession(context.request, context.env);
 
@@ -192,7 +192,7 @@ export function withAuth<T extends { request: Request; env: Env }>(
         }
       }
 
-      return handler({ ...context, auth });
+      return handler({ ...context, auth } as TCtx & { auth: AuthContext });
     } catch (error) {
       if (error instanceof AuthError) {
         return Response.json(

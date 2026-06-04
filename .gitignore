@@ -68,3 +68,4 @@ docs/qa-reports/*
 docs/decisions/*
 docs/plans/*
 docs/audits/*
+src/data/seo-metadata.json

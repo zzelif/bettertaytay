@@ -1,7 +1,6 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-import { PageHeader } from '@/components/layout';
-import { SidebarLayout } from '@/components/layout/SidebarLayout';
+import { PageHeader, SidebarLayout, SuspenseOutlet } from '@/components/layout';
 
 import TransparencySidebar from './components/TransparencySidebar';
 
@@ -32,7 +31,7 @@ export default function TransparencyLayout() {
         )
       }
     >
-      <Outlet />
+      <SuspenseOutlet />
     </SidebarLayout>
   );
 }

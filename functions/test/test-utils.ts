@@ -64,8 +64,8 @@ export class MockD1Database implements D1Database {
   /**
    * Execute a batch of statements
    */
-  batch(statements: D1PreparedStatement[]): Promise<D1Result[]> {
-    return Promise.all(statements.map(stmt => stmt.all()));
+  batch<T = any>(statements: D1PreparedStatement[]): Promise<D1Result<T>[]> {
+    return Promise.all(statements.map(stmt => stmt.all<T>()));
   }
 
   /**
@@ -73,6 +73,15 @@ export class MockD1Database implements D1Database {
    */
   dump(): Promise<ArrayBuffer> {
     return Promise.resolve(new ArrayBuffer(0));
+  }
+
+  exec(_query: string): Promise<D1ExecResult> { // eslint-disable-line @typescript-eslint/no-unused-vars
+    return Promise.resolve({ count: 0, duration: 0 });
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  withSession(_options?: any): any {
+    return this;
   }
 }
 
@@ -110,6 +119,22 @@ class MockD1PreparedStatement implements D1PreparedStatement {
   }
 
   /**
+   * Execute query and return raw arrays of values
+   */
+  async raw(options?: any): Promise<any> {
+    const results = this.executeQuery();
+    if (options?.columnNames) {
+      if (results.length === 0) {
+        return [[]];
+      }
+      const columns = Object.keys(results[0]);
+      const rows = results.map(row => Object.values(row));
+      return [columns, ...rows];
+    }
+    return results.map(row => Object.values(row));
+  }
+
+  /**
    * Execute query and return all results
    */
   async all<T = any>(): Promise<D1Result<T>> {
@@ -121,6 +146,7 @@ class MockD1PreparedStatement implements D1PreparedStatement {
         duration: 0,
         rows_read: results.length,
         rows_written: 0,
+        changes: 0,
         last_row_id: null,
         changed_db: false,
         size_after: 0,
@@ -140,15 +166,16 @@ class MockD1PreparedStatement implements D1PreparedStatement {
   /**
    * Execute query and return results
    */
-  async run(): Promise<D1Result> {
+  async run<T = Record<string, unknown>>(): Promise<D1Result<T>> {
     const results = this.executeQuery();
     return {
-      results,
+      results: results as T[],
       success: true,
       meta: {
         duration: 0,
         rows_read: results.length,
         rows_written: 0,
+        changes: 0,
         last_row_id: null,
         changed_db: false,
         size_after: 0,
@@ -163,6 +190,33 @@ class MockD1PreparedStatement implements D1PreparedStatement {
    * Supports basic JOINs for table aliases (e.g., "p.id" maps to "id" in result)
    */
   private executeQuery(): any[] {
+    if (/^\s*INSERT\s+INTO/i.test(this.sql)) {
+      const match = this.sql.match(/^\s*INSERT\s+INTO\s+(\w+)\s*\(([^)]+)\)\s*VALUES\s*\(([\s\S]+)\)/i);
+      if (match) {
+        const tableName = match[1];
+        const columns = match[2].split(',').map(c => c.trim());
+        const valuesStr = match[3].split(',');
+        
+        const newRow: Record<string, any> = {};
+        columns.forEach((col, idx) => {
+          const valPlaceholder = valuesStr[idx] ? valuesStr[idx].trim() : '';
+          if (valPlaceholder.startsWith('?')) {
+            const paramIdx = parseInt(valPlaceholder.substring(1)) - 1;
+            newRow[col] = this.params[paramIdx];
+          } else if (valPlaceholder.toLowerCase().includes("datetime('now')")) {
+            newRow[col] = new Date().toISOString();
+          } else {
+            newRow[col] = valPlaceholder.replace(/'/g, '');
+          }
+        });
+
+        const existingRows = this.data.get(tableName) || [];
+        existingRows.push(newRow);
+        this.data.set(tableName, existingRows);
+      }
+      return [];
+    }
+
     // Parse SELECT columns to understand column mapping
     // Use [\s\S]+? instead of .+? to match across newlines
     const selectMatch = this.sql.match(/SELECT\s+([\s\S]+?)\s+FROM/i);
@@ -306,7 +360,7 @@ class MockD1PreparedStatement implements D1PreparedStatement {
                 const joinedKeyValue = joinedRow[joinedTableCol];
                 if (joinedKeyValue === baseKeyValue) {
                   // Create merged row - spread baseRow last so it takes precedence
-                  const mergedRow: any = { ...matchedRow, ...baseRow };
+                  const mergedRow: any = { ...joinedRow, ...baseRow };
                   newRows.push(mergedRow);
                 }
               }
@@ -516,10 +570,7 @@ export class MockKVNamespace implements KVNamespace {
   /**
    * Get a value from KV
    */
-  async get(
-    key: string,
-    type: 'text' | 'arrayBuffer' | 'stream' | 'json'
-  ): Promise<any> {
+  async get(key: any, typeOrOptions?: any): Promise<any> {
     const entry = this.store.get(key);
 
     if (!entry) {
@@ -531,6 +582,8 @@ export class MockKVNamespace implements KVNamespace {
       this.store.delete(key);
       return null;
     }
+
+    const type = typeof typeOrOptions === 'string' ? typeOrOptions : (typeOrOptions?.type || 'text');
 
     switch (type) {
       case 'text':
@@ -614,9 +667,10 @@ export class MockKVNamespace implements KVNamespace {
     cursor?: string;
     prefix?: string;
   }): Promise<{
-    keys: Array<{ name: string }>;
+    keys: Array<{ name: string; expiration?: number; metadata?: any }>;
     list_complete: boolean;
-    cursor?: string;
+    cursor: string;
+    cacheStatus: string | null;
   }> {
     let keys = Array.from(this.store.keys());
 
@@ -628,18 +682,27 @@ export class MockKVNamespace implements KVNamespace {
     const paginatedKeys = keys.slice(0, limit);
 
     return {
-      keys: paginatedKeys.map(name => ({ name })),
+      keys: paginatedKeys.map(name => {
+        const entry = this.store.get(name);
+        return {
+          name,
+          expiration: entry?.expiration,
+          metadata: entry?.metadata,
+        };
+      }),
       list_complete: paginatedKeys.length >= keys.length,
+      cursor: '',
+      cacheStatus: null,
     };
   }
 
   /**
    * Get with metadata
    */
-  async getWithMetadata<CF = unknown>(
-    key: string,
-    type: 'text' | 'arrayBuffer' | 'stream' | 'json'
-  ): Promise<{ value: any; metadata: CF | null } | null> {
+  async getWithMetadata<T = any, M = any>(
+    key: any,
+    typeOrOptions?: any
+  ): Promise<any> {
     const entry = this.store.get(key);
 
     if (!entry) {
@@ -650,6 +713,8 @@ export class MockKVNamespace implements KVNamespace {
       this.store.delete(key);
       return null;
     }
+
+    const type = typeof typeOrOptions === 'string' ? typeOrOptions : (typeOrOptions?.type || 'text');
 
     let value: any;
     switch (type) {
@@ -670,11 +735,14 @@ export class MockKVNamespace implements KVNamespace {
           },
         });
         break;
+      default:
+        value = entry.value;
     }
 
     return {
-      value,
-      metadata: (entry.metadata as CF) || null,
+      value: value as T,
+      metadata: (entry.metadata as M) || null,
+      cacheStatus: null,
     };
   }
 }

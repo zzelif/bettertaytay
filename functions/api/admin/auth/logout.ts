@@ -24,7 +24,7 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
       const sessionData = await env.WEATHER_KV.get(
         `session:${sessionId}`,
         'json'
-      );
+      ) as { user?: { login?: string } } | null;
       const userLogin = sessionData?.user?.login || 'unknown';
 
       // Delete the session

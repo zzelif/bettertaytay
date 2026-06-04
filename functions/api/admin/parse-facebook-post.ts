@@ -139,7 +139,7 @@ async function handleParsePost(context: {
   const { request, env } = context;
 
   try {
-    const body = await request.json();
+    const body = await request.json() as { content?: string };
     const { content } = body;
 
     if (!content || typeof content !== 'string') {
@@ -168,24 +168,24 @@ async function handleParsePost(context: {
           const lastName = nameParts[nameParts.length - 1];
 
           // Try exact match first
-          let match = await env.BETTERLB_DB.prepare(
+          let match = await env.BETTERTAYTAY_DB.prepare(
             `SELECT id, first_name, middle_name, last_name
              FROM persons
              WHERE first_name = ?1 AND last_name = ?2`
           )
             .bind(firstName, lastName)
-            .first();
+            .first<{ id: string; first_name: string; middle_name: string | null; last_name: string }>();
 
           // If no exact match, try fuzzy search
           if (!match) {
-            match = await env.BETTERLB_DB.prepare(
+            match = await env.BETTERTAYTAY_DB.prepare(
               `SELECT id, first_name, middle_name, last_name
                FROM persons
                WHERE first_name LIKE ?1 OR last_name LIKE ?2
                LIMIT 5`
             )
               .bind(`${firstName}%`, `${lastName}%`)
-              .first();
+              .first<{ id: string; first_name: string; middle_name: string | null; last_name: string }>();
           }
 
           if (match) {

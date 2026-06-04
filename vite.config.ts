@@ -46,6 +46,32 @@ const proxyConfig: Record<string, ProxyOptions> = {
 export default defineConfig({
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          const normalizedId = id.replace(/\\/g, '/');
+          if (normalizedId.includes('node_modules')) {
+            if (
+              normalizedId.includes('/react-router-dom/') ||
+              normalizedId.includes('/react-router/') ||
+              normalizedId.includes('/nuqs/')
+            ) {
+              return 'vendor-router';
+            }
+            if (normalizedId.includes('/leaflet/') || normalizedId.includes('/react-leaflet/')) {
+              return 'vendor-leaflet';
+            }
+            if (normalizedId.includes('/recharts/')) {
+              return 'vendor-recharts';
+            }
+            if (normalizedId.includes('/i18next/') || normalizedId.includes('/react-i18next/')) {
+              return 'vendor-i18n';
+            }
+            return 'vendor-core';
+          }
+        },
+      },
+    },
   },
   plugins: [react(), tailwindcss()],
   resolve: {

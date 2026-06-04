@@ -22,7 +22,7 @@ export async function onRequestPost(context: {
       const { request, env } = c;
 
       try {
-        const body = await request.json();
+        const body = await request.json() as { item_id?: string; status?: string };
         const { item_id, status } = body;
 
         if (!item_id || !status) {
@@ -44,7 +44,9 @@ export async function onRequestPost(context: {
         WHERE id = ?2
       `;
 
-        await env.BETTERLB_DB.prepare(updateSql).bind(status, item_id).run();
+        await env.BETTERTAYTAY_DB.prepare(updateSql)
+          .bind(status, item_id)
+          .run();
 
         // Log the status update
         await logAudit(env, {

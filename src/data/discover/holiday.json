@@ -1,16 +1,16 @@
 {
   "localFestivals": [
     {
-      "name": "Fiesta ng Taytay — Feast of St. John the Baptist",
-      "date": "June 24",
-      "description": "The grandest celebration in Taytay, honoring the town's patron saint, St. John the Baptist. The week-long festivities include religious processions, street dancing, parades, cultural shows, beauty pageants, and the traditional basaan (water-splashing) on the feast day itself.",
+      "name": "Hamaka Festival",
+      "date": "February (3rd Sunday)",
+      "description": "A week-long cultural and thanksgiving festival in Taytay to celebrate the garments and woodworking industries of the town. The event showcases the garments and woodworking industries, with which aided the town to rise up from the ravages of war and continue to prosper since then. Furthermore, it is a celebration of creativity, artistry, and craftsmanship and talent of its people through job fair, sports, cooking contest, competitions, socio-civic activities fashion show, religious events, concerts, talent competitions, beauty pageants, variety show, and Liberation Day.",
       "type": "fiesta"
     },
     {
-      "name": "Taytay Founding Anniversary",
-      "date": "June 11",
-      "description": "Commemorates the establishment of Taytay as a municipality under the Province of Rizal, created by Act No. 137 of the First Philippine Commission in 1901.",
-      "type": "celebration"
+      "name": "Feast of St. John the Baptist",
+      "date": "June 24",
+      "description": "The grandest celebration in Taytay, honoring the town's patron saint, St. John the Baptist. The week-long festivities include religious processions, street dancing, parades, cultural shows, beauty pageants, and the traditional basaan (water-splashing) on the feast day itself.",
+      "type": "fiesta"
     },
     {
       "name": "Tiangge Festival",
@@ -19,15 +19,9 @@
       "type": "festival"
     },
     {
-      "name": "Buwan ng Wika",
-      "date": "August",
-      "description": "Month-long celebration of the Filipino language and Taytay's local cultural heritage, featuring literary contests, Tagalog poetry readings, and traditional performing arts.",
-      "type": "celebration"
-    },
-    {
       "name": "Araw ng Rizal",
-      "date": "June 19",
-      "description": "Provincial celebration honoring Dr. José Rizal, the national hero and namesake of the Province of Rizal. Taytay participates with wreath-laying ceremonies and civic programs.",
+      "date": "June 11",
+      "description": "Provincial celebration to commemorate its founding anniversary, honoring Dr. José Rizal, the national hero and namesake of the Province of Rizal. Taytay participates with wreath-laying ceremonies and civic programs.",
       "type": "celebration"
     }
   ],

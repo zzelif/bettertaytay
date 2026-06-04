@@ -76,7 +76,7 @@ async function handleGetDuplicates(context: {
       ORDER BY MIN(p.created_at) DESC
     `;
 
-    const exactResults = await env.BETTERLB_DB.prepare(sql_exact).all();
+    const exactResults = await env.BETTERTAYTAY_DB.prepare(sql_exact).all();
 
     for (const row of exactResults.results as Array<{
       person_ids: string;
@@ -87,7 +87,7 @@ async function handleGetDuplicates(context: {
       // Get actual person records
       const personRecords: Person[] = [];
       for (const id of ids) {
-        const person = await env.BETTERLB_DB.prepare(
+        const person = await env.BETTERTAYTAY_DB.prepare(
           `SELECT id, first_name, middle_name, last_name, suffix FROM persons WHERE id = ?1`
         )
           .bind(id)
@@ -96,19 +96,19 @@ async function handleGetDuplicates(context: {
       }
 
       // Count related records for the first person
-      const docCount = await env.BETTERLB_DB.prepare(
+      const docCount = await env.BETTERTAYTAY_DB.prepare(
         `SELECT COUNT(*) as count FROM document_authors WHERE person_id IN (${ids.map(() => '?').join(',')})`
       )
         .bind(...ids)
         .first<{ count: number }>();
 
-      const memberCount = await env.BETTERLB_DB.prepare(
+      const memberCount = await env.BETTERTAYTAY_DB.prepare(
         `SELECT COUNT(*) as count FROM memberships WHERE person_id IN (${ids.map(() => '?').join(',')})`
       )
         .bind(...ids)
         .first<{ count: number }>();
 
-      const committeeCount = await env.BETTERLB_DB.prepare(
+      const committeeCount = await env.BETTERTAYTAY_DB.prepare(
         `SELECT COUNT(*) as count FROM committee_memberships WHERE person_id IN (${ids.map(() => '?').join(',')})`
       )
         .bind(...ids)
@@ -136,7 +136,7 @@ async function handleGetDuplicates(context: {
       LIMIT 50
     `;
 
-    const middleResults = await env.BETTERLB_DB.prepare(sql_middle).all();
+    const middleResults = await env.BETTERTAYTAY_DB.prepare(sql_middle).all();
 
     for (const row of middleResults.results as Array<{
       id1: string;
@@ -147,7 +147,7 @@ async function handleGetDuplicates(context: {
       mn2: string | null;
       suffix: string | null;
     }>) {
-      const person1 = await env.BETTERLB_DB.prepare(
+      const person1 = await env.BETTERTAYTAY_DB.prepare(
         `SELECT id, first_name, middle_name, last_name, suffix FROM persons WHERE id = ?1`
       )
         .bind(row.id1)
@@ -159,7 +159,7 @@ async function handleGetDuplicates(context: {
           suffix: string | null;
         }>();
 
-      const person2 = await env.BETTERLB_DB.prepare(
+      const person2 = await env.BETTERTAYTAY_DB.prepare(
         `SELECT id, first_name, middle_name, last_name, suffix FROM persons WHERE id = ?1`
       )
         .bind(row.id2)
@@ -172,19 +172,19 @@ async function handleGetDuplicates(context: {
         }>();
 
       if (person1 && person2) {
-        const docCount = await env.BETTERLB_DB.prepare(
+        const docCount = await env.BETTERTAYTAY_DB.prepare(
           `SELECT COUNT(*) as count FROM document_authors WHERE person_id IN (?1, ?2)`
         )
           .bind(row.id1, row.id2)
           .first<{ count: number }>();
 
-        const memberCount = await env.BETTERLB_DB.prepare(
+        const memberCount = await env.BETTERTAYTAY_DB.prepare(
           `SELECT COUNT(*) as count FROM memberships WHERE person_id IN (?1, ?2)`
         )
           .bind(row.id1, row.id2)
           .first<{ count: number }>();
 
-        const committeeCount = await env.BETTERLB_DB.prepare(
+        const committeeCount = await env.BETTERTAYTAY_DB.prepare(
           `SELECT COUNT(*) as count FROM committee_memberships WHERE person_id IN (?1, ?2)`
         )
           .bind(row.id1, row.id2)
@@ -242,7 +242,7 @@ async function handleMerge(context: {
     }
 
     // Validate that keep_person_id exists
-    const keepPerson = await env.BETTERLB_DB.prepare(
+    const keepPerson = await env.BETTERTAYTAY_DB.prepare(
       `SELECT id FROM persons WHERE id = ?1`
     )
       .bind(keep_person_id)
@@ -254,7 +254,7 @@ async function handleMerge(context: {
 
     // Validate all merge_person_ids exist
     for (const id of merge_person_ids) {
-      const person = await env.BETTERLB_DB.prepare(
+      const person = await env.BETTERTAYTAY_DB.prepare(
         `SELECT id FROM persons WHERE id = ?1`
       )
         .bind(id)
@@ -273,7 +273,7 @@ async function handleMerge(context: {
     const flagged_ids: string[] = [];
 
     // 1. Update memberships - change person_id to keep_person_id
-    const memberUpdate = await env.BETTERLB_DB.prepare(
+    const memberUpdate = await env.BETTERTAYTAY_DB.prepare(
       `UPDATE memberships SET person_id = ?1 WHERE person_id IN (${merge_person_ids.map(() => '?').join(',')})`
     )
       .bind(keep_person_id, ...merge_person_ids)
@@ -282,7 +282,7 @@ async function handleMerge(context: {
     updatedTables.memberships = memberUpdate.meta.changes || 0;
 
     // 2. Update document_authors
-    const authorUpdate = await env.BETTERLB_DB.prepare(
+    const authorUpdate = await env.BETTERTAYTAY_DB.prepare(
       `UPDATE document_authors SET person_id = ?1 WHERE person_id IN (${merge_person_ids.map(() => '?').join(',')})`
     )
       .bind(keep_person_id, ...merge_person_ids)
@@ -291,7 +291,7 @@ async function handleMerge(context: {
     updatedTables.document_authors = authorUpdate.meta.changes || 0;
 
     // 3. Update session_absences
-    const absenceUpdate = await env.BETTERLB_DB.prepare(
+    const absenceUpdate = await env.BETTERTAYTAY_DB.prepare(
       `UPDATE session_absences SET person_id = ?1 WHERE person_id IN (${merge_person_ids.map(() => '?').join(',')})`
     )
       .bind(keep_person_id, ...merge_person_ids)
@@ -300,7 +300,7 @@ async function handleMerge(context: {
     updatedTables.session_absences = absenceUpdate.meta.changes || 0;
 
     // 4. Update committee_memberships
-    const committeeUpdate = await env.BETTERLB_DB.prepare(
+    const committeeUpdate = await env.BETTERTAYTAY_DB.prepare(
       `UPDATE committee_memberships SET person_id = ?1 WHERE person_id IN (${merge_person_ids.map(() => '?').join(',')})`
     )
       .bind(keep_person_id, ...merge_person_ids)
@@ -309,7 +309,7 @@ async function handleMerge(context: {
     updatedTables.committee_memberships = committeeUpdate.meta.changes || 0;
 
     // 5. Detect and remove duplicate committee_memberships
-    const committeeDuplicates = await env.BETTERLB_DB.prepare(
+    const committeeDuplicates = await env.BETTERTAYTAY_DB.prepare(
       `
       DELETE FROM committee_memberships
       WHERE id IN (
@@ -331,7 +331,7 @@ async function handleMerge(context: {
       committeeDuplicates.meta.changes || 0;
 
     // 6. Detect and remove duplicate session_absences
-    const absenceDuplicates = await env.BETTERLB_DB.prepare(
+    const absenceDuplicates = await env.BETTERTAYTAY_DB.prepare(
       `
       DELETE FROM session_absences
       WHERE id IN (
@@ -351,7 +351,7 @@ async function handleMerge(context: {
       absenceDuplicates.meta.changes || 0;
 
     // 7. Detect and remove duplicate memberships
-    const membershipDuplicates = await env.BETTERLB_DB.prepare(
+    const membershipDuplicates = await env.BETTERTAYTAY_DB.prepare(
       `
       DELETE FROM memberships
       WHERE id IN (
@@ -374,13 +374,13 @@ async function handleMerge(context: {
     for (const id of merge_person_ids) {
       if (deletion_mode === 'delete') {
         // Immediate deletion
-        await env.BETTERLB_DB.prepare(`DELETE FROM persons WHERE id = ?1`)
+        await env.BETTERTAYTAY_DB.prepare(`DELETE FROM persons WHERE id = ?1`)
           .bind(id)
           .run();
         deleted_ids.push(id);
       } else if (deletion_mode === 'flag') {
         // Soft delete - set deleted_at timestamp
-        await env.BETTERLB_DB.prepare(
+        await env.BETTERTAYTAY_DB.prepare(
           `UPDATE persons SET deleted_at = datetime('now') WHERE id = ?1`
         )
           .bind(id)
