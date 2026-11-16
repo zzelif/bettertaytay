@@ -38,6 +38,7 @@ e2e/**/__snapshots__/
 .claude/
 .gemini/
 .agents/
+.clinerules/
 
 
 functions/wrangler.toml
@@ -52,9 +53,11 @@ wrangler.toml
 _worker.bundle
 pipeline/*
 CLAUDE.md
+AGENTS.md
 .local/
 pipeline/__pycache__/
 skills-markdown/
+skills/
 .github/instructions/
 
 # Git worktrees
